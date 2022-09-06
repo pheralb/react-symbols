@@ -19,21 +19,27 @@
 
 ```bash
 # npm ->
-npm install @symbols/react
+npm install @react-symbols/icons
 # pnpm ->
-pnpm add @symbols/react
+pnpm add @react-symbols/icons
 # yarn ->
-yarn add @symbols/react
+yarn add @react-symbols/icons
 ```
 
 ### - Usage:
 
 ```jsx
 import React from 'react';
-import { Document } from '@symbols/react';
+import { Angular, Astro, Document } from '@react-symbols/icons';
 
 const MyComponent = () => {
-  return <Document width={22} height={22} />;
+  return (
+    <>
+      <Angular width={128} height={128} />
+      <Astro width={128} height={128} />
+      <Document width={128} height={128} />
+    </>
+  );
 };
 
 export default MyComponent;
