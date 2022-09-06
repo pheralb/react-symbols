@@ -1,23 +1,42 @@
 {
   "name": "@symbols/react",
   "version": "1.0.0",
-  "description": "A file icons for React apps.",
-  "author": "@misolori & @pheralb_",
+  "description": "File icons by Miguel Solorio for React",
+  "author": "@pheralb_",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pheralb/symbols-react.git"
+  },
+  "contributors": [
+    {
+      "name": "pheralb",
+      "github": "https://github.com/pheralb"
+    },
+    {
+      "name": "misolori",
+      "github": "https://github.com/misolori"
+    }
+  ],
   "license": "MIT",
-  "main": "dist/cjs/index.js",
-  "module": "dist/esm/index.js",
+  "main": "build/index.js",
+  "module": "build/index.js",
+  "types:": "build/types/index.d.ts",
+  "typings": "build/types/index.d.ts",
+  "type": "module",
   "files": [
-    "dist"
+    "build"
   ],
   "scripts": {
-    "build": "npm run build:esm && npm run build:cjs",
-    "build:esm": "tsc",
-    "build:cjs": "tsc --module CommonJS --outDir dist/cjs"
+    "dev": "swc ./src -d ./build",
+    "build": "swc ./src -d ./build && tsc --emitDeclarationOnly --declaration --outDir build/types",
+    "prepublishOnly": "npm run build"
   },
   "devDependencies": {
     "@types/node": "18.7.15",
     "@types/react": "18.0.18",
     "@types/react-dom": "18.0.6",
+    "@swc/cli": "0.1.57",
+    "@swc/core": "1.2.248",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "tsup": "6.2.3",
