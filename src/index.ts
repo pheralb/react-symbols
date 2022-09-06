@@ -17,7 +17,7 @@ export { default as CodePurple } from './library/codePurple';
 export { default as CodeRed } from './library/codeRed';
 export { default as CodeYellow } from './library/codeYellow';
 export { default as CodeSky } from './library/codeSky';
-export { default as CoffeeScript } from './library/coffeeScript';
+export { default as CoffeeScript } from './library/coffeescript';
 export { default as Cplus } from './library/cplus';
 export { default as Csharp } from './library/csharp';
 export { default as Document } from './library/document';

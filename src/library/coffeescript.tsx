@@ -1,7 +1,7 @@
 import React from 'react';
 import { SvgInterface } from '../interfaces/svgInterface';
 
-const Coffeescript: React.FC<SvgInterface> = (props: SvgInterface) => {
+const CoffeeScript: React.FC<SvgInterface> = (props: SvgInterface) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -43,4 +43,4 @@ const Coffeescript: React.FC<SvgInterface> = (props: SvgInterface) => {
   );
 };
 
-export default Coffeescript;
+export default CoffeeScript;
