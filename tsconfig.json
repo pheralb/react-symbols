@@ -14,10 +14,11 @@
     "moduleResolution": "node",
     "noImplicitAny": true,
     "noUnusedLocals": true,
-    "outDir": "dist/esm",
+    "outDir": "build",
     "sourceMap": true,
     "strict": true,
-    "target": "es6"
+    "target": "es6",
+    "typeRoots": ["node_modules/@types", "src/interfaces"]
   },
   "include": ["src/**/*.ts", "src/**/*.tsx"]
 }
