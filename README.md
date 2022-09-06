@@ -1,5 +1,7 @@
 <div align="center">
-<img src="https://i.ibb.co/Ns3n17R/rsymbols-og-banner.jpg" width="75%">
+<a href="https://www.npmjs.com/package/@react-symbols/icons">
+<img src="https://i.ibb.co/FVtQNWq/react-symbols-readme-banner.png" width="100%">
+</a>
 
 ![GitHub releases](https://img.shields.io/github/release/pheralb/react-symbols)
 ![GitHub stars](https://img.shields.io/github/stars/pheralb/react-symbols)
