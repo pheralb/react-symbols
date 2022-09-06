@@ -1,6 +1,6 @@
 {
   "name": "@react-symbols/icons",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "File icons by Miguel Solorio for React",
   "author": "@pheralb_",
   "repository": {
@@ -27,8 +27,8 @@
     "build"
   ],
   "scripts": {
-    "dev": "swc ./src -d ./build",
-    "build": "swc ./src -d ./build && tsc --emitDeclarationOnly --declaration --outDir build/types",
+    "dev": "tsc && swc ./src -d ./build",
+    "build": "tsc && swc ./src -d ./build && tsc --emitDeclarationOnly --declaration --outDir build/types",
     "prepublishOnly": "npm run build"
   },
   "devDependencies": {
