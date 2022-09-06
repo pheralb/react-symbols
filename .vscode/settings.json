@@ -5,6 +5,6 @@
   "editor.formatOnPaste": true,
   "editor.wordWrap": "on",
   "[typescript]": {
-    "editor.defaultFormatter": "ms-vsliveshare.vsliveshare"
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   }
 }
