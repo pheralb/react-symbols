@@ -1,7 +1,7 @@
 import React from 'react';
 import { SvgInterface } from '../interfaces/svgInterface';
 
-const Document: React.FC<SvgInterface> = (
+const CodeBlue: React.FC<SvgInterface> = (
   props: SvgInterface
 ) => {
   return (
@@ -13,19 +13,14 @@ const Document: React.FC<SvgInterface> = (
       viewBox="0 0 24 24"
     >
       <path
-        stroke="#64748B"
+        stroke="#2563EB"
+        strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth="2"
-        d="M6 3a1 1 0 00-1 1v16a1 1 0 001 1h12a1 1 0 001-1V8a1 1 0 00-.375-.78l-5-4A1 1 0 0013 3H6z"
-      ></path>
-      <path
-        stroke="#64748B"
-        strokeLinejoin="round"
-        strokeWidth="2"
-        d="M12 4v5h6"
+        d="M6.778 8.519L3 12.297l3.778 3.779M17.222 8.519L21 12.297l-3.778 3.779M9.271 18.595L14.73 6"
       ></path>
     </svg>
   );
 };
 
-export default Document;
+export default CodeBlue;
