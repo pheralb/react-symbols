@@ -7,5 +7,5 @@ yarn.lock
 # Optional npm cache directory =>
 .npm
 
-# Dist folder =>
-dist
+# Build folder =>
+build
