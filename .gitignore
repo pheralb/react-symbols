@@ -1,0 +1,11 @@
+# Dependencies =>
+node_modules
+package-lock.json
+pnpm-lock.json
+yarn.lock
+
+# Optional npm cache directory =>
+.npm
+
+# Dist folder =>
+dist
