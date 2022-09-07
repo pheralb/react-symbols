@@ -1,7 +1,9 @@
-import React from 'preact';
-
 const Home = () => {
-  return <div>index</div>;
+  return (
+    <div>
+      <h1>page</h1>
+    </div>
+  );
 };
 
 export default Home;
