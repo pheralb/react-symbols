@@ -1,7 +1,9 @@
 <div align="center">
 <a href="https://www.npmjs.com/package/@react-symbols/icons">
-<img src="https://i.ibb.co/FVtQNWq/react-symbols-readme-banner.png" width="100%">
+<img src="https://i.ibb.co/FVtQNWq/react-symbols-readme-banner.png">
 </a>
+
+<p>⚡ React-Symbols is a library for React with the icons of the VSCode theme "<a href="https://github.com/misolori/vscode-symbols" target="_blank">Symbols</a>" by <a href="https://github.com/misolori" target="_blank">Miguel Solorio (@misolori)</a>.</p>
 
 ![GitHub releases](https://img.shields.io/github/release/pheralb/react-symbols)
 ![GitHub stars](https://img.shields.io/github/stars/pheralb/react-symbols)
@@ -11,13 +13,16 @@
 
 </div>
 
-> 🚧 This project is still in development 🚧
+## 🎉 Features
 
-> ⚡ React-Symbols is a library for React with the icons of the VSCode theme "[Symbols](https://github.com/misolori/vscode-symbols)" by [Miguel Solorio (@misolori)](https://github.com/misolori).
+- 📦 +40 icons.
+- 🍃 Lightweight.
+- 💙 Ready to use with Typescript.
+- 🧡 SVG optimized and minified.
 
 ## 🚀 Getting Started
 
-### - Installation:
+### - Installation
 
 ```bash
 # npm ->
@@ -28,7 +33,7 @@ pnpm add @react-symbols/icons
 yarn add @react-symbols/icons
 ```
 
-### - Usage:
+### - Usage
 
 ```jsx
 import React from 'react';
