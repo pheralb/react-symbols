@@ -27,6 +27,8 @@
 ```bash
 # npm ->
 npm install @react-symbols/icons
+# snpm ->
+snpm install @react-symbols/icons 
 # pnpm ->
 pnpm add @react-symbols/icons
 # yarn ->
