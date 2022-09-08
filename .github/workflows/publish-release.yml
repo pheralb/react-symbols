@@ -12,9 +12,15 @@ jobs:
         with:
           node-version: '16.x'
           registry-url: 'https://registry.npmjs.org'
-      - run: echo "📦 Install dependencies"
+      - run: echo "- Install dependencies =>"
       - run: npm install
-      - run: echo "🚀 Publishing package to NPM"
+      - run: echo "- Build =>"
+      - run: npm run build
+      - run: |
+          echo @pheralb:https://npm.pkg.github.com/ > build/.npmrc
+          echo '//npm.pkg.github.com/:_authToken=${NPM_TOKEN}' >> build/.npmrc
+      - run: echo "- Publish =>"
       - run: npm publish --access public
+        working-directory: ./build
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
