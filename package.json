@@ -1,7 +1,14 @@
 {
   "name": "@react-symbols/icons",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "File icons by Miguel Solorio for React",
+  "keywords": [
+    "react",
+    "icons",
+    "svg",
+    "icons",
+    "lightweight"
+  ],
   "author": "@pheralb_",
   "repository": {
     "type": "git",
