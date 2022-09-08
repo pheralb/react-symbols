@@ -21,6 +21,5 @@ jobs:
           echo '//npm.pkg.github.com/:_authToken=${NPM_TOKEN}' >> build/.npmrc
       - run: echo "- Publish =>"
       - run: npm publish --access public
-        working-directory: ./build
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
