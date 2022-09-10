@@ -9,3 +9,13 @@ yarn.lock
 
 # Build folder =>
 build
+
+# Remix =>
+.cache
+.env
+.vercel
+.output
+/build/
+/public/build
+/api/index.js
+/api/index.js.map
