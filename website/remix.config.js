@@ -4,7 +4,7 @@ module.exports = {
   server: process.env.NODE_ENV === 'development' ? undefined : './server.js',
   ignoredRouteFiles: ['**/.*'],
   appDirectory: 'src',
-  mdx: async (filename) => {
+  mdx: async () => {
     const [rehypeHighlight] = await Promise.all([
       import('rehype-highlight').then((mod) => mod.default)
     ]);
