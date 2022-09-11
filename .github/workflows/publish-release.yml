@@ -1,4 +1,4 @@
-name: '✈️ Publish Release to NPM'
+name: Publish Package to NPM
 on:
   release:
     types: [created]
@@ -12,14 +12,14 @@ jobs:
         with:
           node-version: '16.x'
           registry-url: 'https://registry.npmjs.org'
-      - name: '📦 Install dependencies'
+      - run: echo "- Install dependencies =>"
       - run: npm install
-      - name: '⚒️ Build'
+      - run: echo "- Build =>"
       - run: npm run build
       - run: |
           echo @pheralb:https://npm.pkg.github.com/ > build/.npmrc
           echo '//npm.pkg.github.com/:_authToken=${NPM_TOKEN}' >> build/.npmrc
-      - name: '🚀 Publish'
+      - run: echo "- Publish =>"
       - run: npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
