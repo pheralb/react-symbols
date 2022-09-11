@@ -11,7 +11,7 @@ yarn.lock
 build
 
 # Remix =>
-.api
+api
 .cache
 .env
 .vercel
