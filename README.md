@@ -54,6 +54,11 @@ const MyComponent = () => {
 export default MyComponent;
 ```
 
+## 📦 Icons:
+
+- ✅ Ready [Icons/files](https://github.com/miguelsolorio/vscode-symbols/tree/main/src/icons/files).
+- 🧩 Working... [Icons/folders](https://github.com/miguelsolorio/vscode-symbols/tree/main/src/icons/folders).
+
 ## 🔑 License
 
 - [MIT](https://github.com/pheralb/react-symbols/blob/main/LICENSE).
