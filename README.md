@@ -28,7 +28,7 @@
 # npm ->
 npm install @react-symbols/icons
 # snpm ->
-snpm install @react-symbols/icons 
+snpm install @react-symbols/icons
 # pnpm ->
 pnpm add @react-symbols/icons
 # yarn ->
@@ -38,7 +38,7 @@ yarn add @react-symbols/icons
 ### - Usage
 
 ```jsx
-import React from 'react';
+import React, { ComponentProps } from 'react';
 import { Angular, Astro, Document } from '@react-symbols/icons';
 
 const MyComponent = () => {
@@ -53,8 +53,8 @@ const MyComponent = () => {
 
 export default MyComponent;
 ```
-
-⚠️ If you are using [Remix](https://remix.run/), add in the **remix.config.js**:
+--
+> ⚠️ If you are using [Remix](https://remix.run/), add in the **remix.config.js**:
 
 ```js
 module.exports = {
@@ -63,6 +63,7 @@ module.exports = {
   ...
 };
 ```
+
 - [More information - Importing ESM Packages - Remix Docs](https://remix.run/docs/en/v1/pages/gotchas#importing-esm-packages).
 
 ## 📦 Icons:
