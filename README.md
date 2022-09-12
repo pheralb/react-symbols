@@ -54,6 +54,17 @@ const MyComponent = () => {
 export default MyComponent;
 ```
 
+⚠️ If you are using [Remix](https://remix.run/), add in the **remix.config.js**:
+
+```js
+module.exports = {
+  ...
+  serverDependenciesToBundle: ["@react-symbols/icons"], // <-
+  ...
+};
+```
+- [More information - Importing ESM Packages - Remix Docs](https://remix.run/docs/en/v1/pages/gotchas#importing-esm-packages).
+
 ## 📦 Icons:
 
 - ✅ [Icons/files](https://github.com/miguelsolorio/vscode-symbols/tree/main/src/icons/files) - Ready.
