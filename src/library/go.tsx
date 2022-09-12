@@ -1,14 +1,12 @@
-import React from 'react';
-import { SvgInterface } from '../interfaces/svgInterface';
+import React, { ComponentProps } from 'react';
 
-const Go: React.FC<SvgInterface> = (props: SvgInterface) => {
+const Go: React.FC<ComponentProps<'svg'>> = (props) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width={props.width || 25}
-      height={props.height || 24}
       fill="none"
       viewBox="0 0 25 24"
+      {...props}
     >
       <g fill="#60A5FA" clipPath="url(#clip0_20558_611)">
         <path

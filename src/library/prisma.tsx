@@ -1,14 +1,12 @@
-import React from 'react';
-import { SvgInterface } from '../interfaces/svgInterface';
+import React, { ComponentProps } from 'react';
 
-const Prisma: React.FC<SvgInterface> = (props: SvgInterface) => {
+const Prisma: React.FC<ComponentProps<'svg'>> = (props) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width={props.width || 23}
-      height={props.height || 24}
       fill="none"
       viewBox="0 0 23 24"
+      {...props}
     >
       <path
         fill="#14B8A6"

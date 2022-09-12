@@ -1,14 +1,12 @@
-import React from 'react';
-import { SvgInterface } from '../interfaces/svgInterface';
+import React, { ComponentProps } from 'react';
 
-const Svelte: React.FC<SvgInterface> = (props: SvgInterface) => {
+const Svelte: React.FC<ComponentProps<'svg'>> = (props) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width={props.width || 25}
-      height={props.height || 24}
       fill="none"
       viewBox="0 0 25 24"
+      {...props}
     >
       <mask
         id="path-1-outside-1_20571_794"

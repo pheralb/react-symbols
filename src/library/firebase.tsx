@@ -1,15 +1,13 @@
-import React from 'react';
-import { SvgInterface } from '../interfaces/svgInterface';
+import React, { ComponentProps } from 'react';
 
-const Firebase: React.FC<SvgInterface> = (props: SvgInterface) => {
+const Firebase: React.FC<ComponentProps<'svg'>> = (props) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
-      width={props.width || 24}
-      height={props.height || 24}
       fill="none"
       viewBox="0 0 24 24"
+      {...props}
     >
       <mask
         id="mask0_20545_578"

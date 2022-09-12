@@ -1,14 +1,12 @@
-import React from 'react';
-import { SvgInterface } from '../interfaces/svgInterface';
+import React, { ComponentProps } from 'react';
 
-const Hugo: React.FC<SvgInterface> = (props: SvgInterface) => {
+const Hugo: React.FC<ComponentProps<'svg'>> = (props) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width={props.width || 25}
-      height={props.height || 24}
       fill="none"
       viewBox="0 0 25 24"
+      {...props}
     >
       <path
         fill="#DB2777"

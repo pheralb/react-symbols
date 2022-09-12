@@ -1,14 +1,12 @@
-import React from 'react';
-import { SvgInterface } from '../interfaces/svgInterface';
+import React, { ComponentProps } from 'react';
 
-const XML: React.FC<SvgInterface> = (props: SvgInterface) => {
+const XML: React.FC<ComponentProps<'svg'>> = (props) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width={props.width || 24}
-      height={props.height || 24}
       fill="none"
       viewBox="0 0 24 24"
+      {...props}
     >
       <circle cx="5" cy="19" r="2" fill="#EA580C"></circle>
       <mask
