@@ -11,6 +11,7 @@ import {
 // Styles =>
 import custom from '@/styles/custom.css';
 import tailwindcss from '@/styles/tailwind.css';
+import Header from './components/header';
 
 // Metas =>
 export const meta: MetaFunction = () => ({
@@ -61,7 +62,8 @@ export default function App() {
         <Meta />
         <Links />
       </head>
-      <body className="font-sans">
+      <body className="font-sans text-white bg-midnight">
+        <Header />
         <Outlet />
         <ScrollRestoration />
         <Scripts />
