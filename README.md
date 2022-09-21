@@ -15,7 +15,7 @@
 
 ## 🎉 Features
 
-- 📦 +40 icons.
+- 📦 +80 icons.
 - 🍃 Lightweight.
 - 💙 Ready to use with Typescript.
 - 🧡 SVG optimized and minified.
@@ -53,7 +53,7 @@ const MyComponent = () => {
 
 export default MyComponent;
 ```
---
+
 > ⚠️ If you are using [Remix](https://remix.run/), add in the **remix.config.js**:
 
 ```js
@@ -64,9 +64,9 @@ module.exports = {
 };
 ```
 
-- [More information - Importing ESM Packages - Remix Docs](https://remix.run/docs/en/v1/pages/gotchas#importing-esm-packages).
+- [Importing ESM Packages - Remix Docs](https://remix.run/docs/en/v1/pages/gotchas#importing-esm-packages).
 
-## 📦 Icons:
+## 📦 Icons
 
 - ✅ [Icons/files](https://github.com/miguelsolorio/vscode-symbols/tree/main/src/icons/files) - Ready.
 - 🧩 [Icons/folders](https://github.com/miguelsolorio/vscode-symbols/tree/main/src/icons/folders) - Working...
