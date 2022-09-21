@@ -18,7 +18,7 @@ const Header = () => {
               target="_blank"
               className='mr-5 text-sm text-gray-400'
             >
-              VSCode Theme
+              VS Code Theme
             </a>
             <a
               href="https://github.com/pheralb/react-symbols"
