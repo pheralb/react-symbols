@@ -18,8 +18,18 @@ import Footer from './components/footer';
 export const meta: MetaFunction = () => ({
   charset: 'utf-8',
   viewport: 'width=device-width,initial-scale=1',
-  title: 'React-Symbols - A beautifully icons library for React.'
+  title: 'React-Symbols - A beautiful icons library for React.',
+  image: 'https://react-symbols.vercel.app/images/og_image.jpg',
+  'twitter:image': 'https://react-symbols.vercel.app/images/og_image.jpg',
+  'twitter:card': 'summary_large_image',
+  'twitter:creator': '@pheralb_',
+  'twitter:site': '@pheralb_',
+  'twitter:title': 'React Symbols',
+  'twitter:description': 'A beautiful icons library for React'
 });
+
+// Toaster
+import { Toaster } from 'react-hot-toast';
 
 export const links: LinksFunction = () => [
   // Styles =>
@@ -70,6 +80,7 @@ export default function App() {
         <Scripts />
         <LiveReload />
         <Footer />
+        <Toaster position="bottom-center" reverseOrder={false} />
       </body>
     </html>
   );
