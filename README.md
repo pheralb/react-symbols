@@ -1,5 +1,5 @@
 <div align="center">
-<a href="https://www.npmjs.com/package/@react-symbols/icons">
+<a href="https://react-symbols.vercel.app/">
 <img src="https://i.ibb.co/FVtQNWq/react-symbols-readme-banner.png">
 </a>
 
