@@ -5,7 +5,8 @@ import {
   Meta,
   Outlet,
   Scripts,
-  ScrollRestoration
+  ScrollRestoration,
+  useCatch
 } from '@remix-run/react';
 
 // Styles =>
@@ -81,6 +82,30 @@ export default function App() {
         <LiveReload />
         <Footer />
         <Toaster position="bottom-center" reverseOrder={false} />
+      </body>
+    </html>
+  );
+}
+
+export function CatchBoundary() {
+  const caught = useCatch();
+  return (
+    <html>
+      <head>
+        <title>Oops!</title>
+        <Meta />
+        <Links />
+      </head>
+      <body className="font-sans text-white bg-zinc-900">
+        <Header />
+        <div className="flex flex-col items-center justify-center pt-5">
+          <h1 className='text-7xl'>
+            {caught.status}
+          </h1>
+          <p className='mb-6'>{caught.statusText}</p>
+        </div>
+        <Scripts />
+        <Footer />
       </body>
     </html>
   );

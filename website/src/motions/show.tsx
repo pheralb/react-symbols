@@ -1,11 +1,24 @@
-import React from 'react'
+import React, { FC } from "react";
+import { motion } from "framer-motion";
 
-type Props = {}
+type ShowProps = {
+  children: React.ReactNode;
+  delay?: number;
+};
 
-const Show = (props: Props) => {
+const Show = ({ children, delay }: ShowProps) => {
   return (
-    <div>Show</div>
-  )
-}
+    <motion.div
+      initial={{ y: 10, opacity: 0 }}
+      animate={{ y: 0, opacity: 0.9 }}
+      transition={{
+        duration: 0.4,
+        delay: delay,
+      }}
+    >
+      {children}
+    </motion.div>
+  );
+};
 
-export default Show
+export default Show;
