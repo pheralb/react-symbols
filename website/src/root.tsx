@@ -12,6 +12,7 @@ import {
 import custom from '@/styles/custom.css';
 import tailwindcss from '@/styles/tailwind.css';
 import Header from './components/header';
+import Footer from './components/footer';
 
 // Metas =>
 export const meta: MetaFunction = () => ({
@@ -62,12 +63,13 @@ export default function App() {
         <Meta />
         <Links />
       </head>
-      <body className="font-sans text-white bg-midnight">
+      <body className="font-sans text-white bg-zinc-900">
         <Header />
         <Outlet />
         <ScrollRestoration />
         <Scripts />
         <LiveReload />
+        <Footer />
       </body>
     </html>
   );
