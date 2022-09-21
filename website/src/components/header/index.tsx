@@ -10,14 +10,13 @@ const Header = () => {
             <div className="flex items-center">
               <img src="/images/logo.png" alt="logo" className="w-8 h-8 mr-2" />
               <h1 className="ml-1 text-1xl">React-Symbols</h1>
-              <span className='ml-2 text-gray-500'>v1</span>
             </div>
           </Link>
           <div className="flex items-center">
             <a
               href="https://marketplace.visualstudio.com/items?itemName=miguelsolorio.symbols"
               target="_blank"
-              className='mr-5 text-sm text-gray-400'
+              className='hidden mr-5 text-sm text-gray-400 lg:block'
             >
               VS Code Theme
             </a>

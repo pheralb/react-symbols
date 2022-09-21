@@ -41,11 +41,11 @@ export default function Index() {
           </Show>
           <Show delay={0.1}>
             <p className="text-gray-400">
-              📦 with Symbols icons by{' '}
+              🖌️ Icons designed by
               <a
                 href="https://twitter.com/miguelsolorio_"
                 target="_blank"
-                className="underline"
+                className="ml-1 underline"
               >
                 Miguel Solorio
               </a>
