@@ -1,5 +1,5 @@
 <div align="center">
-<a href="https://www.npmjs.com/package/@react-symbols/icons">
+<a href="https://react-symbols.vercel.app/">
 <img src="https://i.ibb.co/FVtQNWq/react-symbols-readme-banner.png">
 </a>
 
@@ -37,8 +37,9 @@ yarn add @react-symbols/icons
 
 ### - Usage
 
+Subscribe to [my channel](https://twitch.tv/desarrolloutil)
+
 ```jsx
-import React, { ComponentProps } from 'react';
 import { Angular, Astro, Document } from '@react-symbols/icons';
 
 const MyComponent = () => {

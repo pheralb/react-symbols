@@ -1,23 +1,15 @@
 import { Icons } from '@/data/icons';
-import type { LoaderFunction } from '@remix-run/node';
-import { Link, useLoaderData } from '@remix-run/react';
-import { json } from '@remix-run/node';
-import { NPM } from '@react-symbols/icons';
-import toast from 'react-hot-toast';
 import Show from '@/motions/show';
-
-export const loader: LoaderFunction = async () => {
-  return json(Icons);
-};
+import { NPM } from '@react-symbols/icons';
+import type { ComponentProps, FC } from 'react';
+import toast from 'react-hot-toast';
 
 interface IconData {
   name: string;
-  iconPath: string;
+  icon: FC<ComponentProps<'svg'>>;
 }
 
 export default function Index() {
-  const iconsData = useLoaderData();
-
   const copyToClipboard = async (txt: string) => {
     try {
       const clipboardItem = new ClipboardItem({
@@ -45,6 +37,7 @@ export default function Index() {
               <a
                 href="https://twitter.com/miguelsolorio_"
                 target="_blank"
+                rel="noopener noreferrer"
                 className="ml-1 underline"
               >
                 Miguel Solorio
@@ -62,17 +55,19 @@ export default function Index() {
       </div>
       <div className="container px-4 py-1 mx-auto">
         <div className="grid grid-cols-1 gap-4 p-12 mx-auto sm:grid-cols-2 lg:grid-cols-6">
-          {iconsData.map((icon: IconData) => (
-            <div
-              key={icon.iconPath}
-              title={`Copy ${icon.name} to clipboard`}
-              className="flex flex-col items-center justify-center py-4 border rounded-md cursor-pointer border-zinc-800 hover:-translate-y-1 transition-all hover:border-[#c085fd]"
-              onClick={() => copyToClipboard(icon.name)}
-            >
-              <img src={icon.iconPath} alt="icon" className="w-16 h-16" />
-              <p className="font-light text-gray-300">{icon.name}</p>
-            </div>
-          ))}
+          {Icons.sort((iconA, iconB) => (iconA.name > iconB.name ? 1 : -1)).map(
+            ({ name, icon: Icon }: IconData) => (
+              <div
+                key={name}
+                title={`Copy ${name} to clipboard`}
+                className="flex flex-col items-center justify-center py-4 border rounded-md cursor-pointer border-zinc-800 hover:-translate-y-1 transition-all hover:border-[#c085fd]"
+                onClick={() => copyToClipboard(name)}
+              >
+                <Icon className="w-16 h-16" />
+                <p className="font-light text-gray-300">{name}</p>
+              </div>
+            )
+          )}
         </div>
       </div>
     </>
