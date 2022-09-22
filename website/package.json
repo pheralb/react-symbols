@@ -30,7 +30,7 @@
     "dev:css": "tailwindcss -w -i ./styles/globals.css -o src/styles/tailwind.css"
   },
   "dependencies": {
-    "@react-symbols/icons": "1.1.0",
+    "@react-symbols/icons": "*",
     "@remix-run/node": "1.7.2",
     "@remix-run/react": "1.7.2",
     "@remix-run/vercel": "1.7.2",

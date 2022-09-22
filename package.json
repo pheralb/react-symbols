@@ -1,56 +1,22 @@
 {
-  "name": "@react-symbols/icons",
-  "version": "1.1.0",
-  "description": "File icons by Miguel Solorio for React",
-  "keywords": [
-    "react",
-    "icons",
-    "svg",
-    "icons",
-    "lightweight"
-  ],
-  "author": "@pheralb_",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/pheralb/react-symbols.git"
-  },
-  "contributors": [
-    {
-      "name": "pheralb",
-      "github": "https://github.com/pheralb"
-    },
-    {
-      "name": "misolori",
-      "github": "https://github.com/misolori"
-    }
-  ],
-  "license": "MIT",
-  "main": "build/index.js",
-  "module": "build/index.js",
-  "types:": "build/types/index.d.ts",
-  "typings": "build/types/index.d.ts",
-  "type": "module",
-  "files": [
-    "build"
+  "private": true,
+  "workspaces": [
+    "website",
+    "library"
   ],
   "scripts": {
-    "dev": "tsc && swc ./src -d ./build",
-    "build": "tsc && swc ./src -d ./build && tsc --emitDeclarationOnly --declaration --outDir build/types",
-    "prepublishOnly": "npm run build"
+    "build": "turbo run build",
+    "dev": "turbo run dev --parallel",
+    "format": "prettier --write .",
+    "lint": "turbo run lint"
   },
+  "dependencies": {},
   "devDependencies": {
-    "@swc/cli": "0.1.57",
-    "@swc/core": "1.3.2",
-    "@types/node": "18.7.18",
-    "@types/react": "18.0.21",
-    "@types/react-dom": "18.0.6",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "tsup": "6.2.3",
-    "typescript": "4.8.3"
+    "prettier": "2.7.1",
+    "turbo": "1.4.3"
   },
-  "peerDependencies": {
-    "react": ">=16.8.0",
-    "react-dom": ">=16.8.0"
+  "engines": {
+    "node": ">=14.0.0",
+    "npm": ">=7.0.0"
   }
 }
