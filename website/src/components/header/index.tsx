@@ -1,13 +1,13 @@
-import { Github } from '@react-symbols/icons';
-import { Link } from 'react-router-dom';
+import { Github } from "@react-symbols/icons";
+import { Link } from "react-router-dom";
 
 const Header = () => (
   <div className="sticky top-0 z-50 w-full pb-6 pl-4 pr-4 bg-black lg:pl-0 lg:pr-0">
-    <div className="container pt-6 mx-auto ">
+    <div className="container pt-4 mx-auto ">
       <div className="flex items-center justify-between">
         <Link to="/">
           <div className="flex items-center">
-            <img src="/images/logo.png" alt="logo" className="w-8 h-8 mr-2" />
+            <img src="/images/logo.png" alt="logo" className="w-12 h-12 mr-1" />
             <h1 className="ml-1 text-1xl">React-Symbols</h1>
           </div>
         </Link>
