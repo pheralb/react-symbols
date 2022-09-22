@@ -37,8 +37,9 @@ yarn add @react-symbols/icons
 
 ### - Usage
 
+Subscribe to [my channel](https://twitch.tv/desarrolloutil)
+
 ```jsx
-import React, { ComponentProps } from 'react';
 import { Angular, Astro, Document } from '@react-symbols/icons';
 
 const MyComponent = () => {
