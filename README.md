@@ -27,10 +27,13 @@
 ```bash
 # npm ->
 npm install @react-symbols/icons
-# snpm ->
-fnpm install @react-symbols/icons
+
 # pnpm ->
 pnpm add @react-symbols/icons
+
+# fnpm ->
+fnpm install @react-symbols/icons
+
 # yarn ->
 yarn add @react-symbols/icons
 ```
