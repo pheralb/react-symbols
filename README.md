@@ -28,7 +28,7 @@
 # npm ->
 npm install @react-symbols/icons
 # snpm ->
-snpm install @react-symbols/icons
+fnpm install @react-symbols/icons
 # pnpm ->
 pnpm add @react-symbols/icons
 # yarn ->
@@ -38,7 +38,7 @@ yarn add @react-symbols/icons
 ### - Usage
 
 ```jsx
-import { Angular, Astro, Document } from '@react-symbols/icons';
+import { Angular, Astro, Document } from "@react-symbols/icons";
 
 const MyComponent = () => {
   return (
