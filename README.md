@@ -37,8 +37,6 @@ yarn add @react-symbols/icons
 
 ### - Usage
 
-Subscribe to [my channel](https://twitch.tv/desarrolloutil)
-
 ```jsx
 import { Angular, Astro, Document } from '@react-symbols/icons';
 
@@ -71,6 +69,11 @@ module.exports = {
 
 - ✅ [Icons/files](https://github.com/miguelsolorio/vscode-symbols/tree/main/src/icons/files) - Ready.
 - 🧩 [Icons/folders](https://github.com/miguelsolorio/vscode-symbols/tree/main/src/icons/folders) - Working...
+
+## 🙌 Contributing
+
+- ⭐ [Josyto](https://github.com/Josyto).
+- ⭐ [pablocdev](https://github.com/pablocdev).
 
 ## 🔑 License
 
