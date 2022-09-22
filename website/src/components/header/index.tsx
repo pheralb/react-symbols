@@ -2,7 +2,7 @@ import { Github } from "@react-symbols/icons";
 import { Link } from "react-router-dom";
 
 const Header = () => (
-  <div className="sticky top-0 z-50 w-full pb-6 pl-4 pr-4 bg-black lg:pl-0 lg:pr-0">
+  <div className="sticky top-0 z-50 w-full pb-4 pl-4 pr-4 bg-black lg:pl-0 lg:pr-0">
     <div className="container pt-4 mx-auto ">
       <div className="flex items-center justify-between">
         <Link to="/">

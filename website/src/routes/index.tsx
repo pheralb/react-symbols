@@ -1,33 +1,40 @@
-import { Icons } from '@/data/icons';
-import Show from '@/motions/show';
-import { NPM } from '@react-symbols/icons';
-import type { ComponentProps, FC } from 'react';
-import toast from 'react-hot-toast';
+import { Icons } from "@/data/icons";
+import Show from "@/motions/show";
+import { NPM } from "@react-symbols/icons";
+import type { ComponentProps, FC } from "react";
+import toast from "react-hot-toast";
 
 interface IconData {
   name: string;
-  icon: FC<ComponentProps<'svg'>>;
+  icon: FC<ComponentProps<"svg">>;
 }
 
 export default function Index() {
   const copyToClipboard = async (txt: string) => {
     try {
       const clipboardItem = new ClipboardItem({
-        'text/plain': new Blob([txt], { type: 'text/plain' })
+        "text/plain": new Blob([txt], { type: "text/plain" }),
       });
       await navigator.clipboard.write([clipboardItem]);
     } catch (error) {
       await navigator.clipboard.writeText(txt);
     }
-    toast('Copied to clipboard!');
+    toast("Copied to clipboard!", {
+      icon: "🥳",
+      style: {
+        borderRadius: "10px",
+        background: "#121212",
+        color: "#fff",
+      },
+    });
   };
 
   return (
     <>
-      <div className="p-12 bg-black border-b-2 border-[#2562ea]">
+      <div className="pt-6 pb-6 bg-black border-b-2 border-[#2562ea]">
         <div className="flex flex-col items-center justify-center pt-1 pb-5 lg:pt-5">
           <Show>
-            <h1 className="mb-5 font-sans text-4xl font-bold lg:text-6xl">
+            <h1 className="mb-5 font-sans text-2xl font-bold text-center lg:text-6xl">
               A beautiful icons library for React
             </h1>
           </Show>
@@ -45,7 +52,7 @@ export default function Index() {
             </p>
             <div
               className="flex p-3 mt-4 mb-2 rounded-md cursor-pointer bg-zinc-900 cursor-poiner hover:bg-zinc-800"
-              onClick={() => copyToClipboard('npm i @react-symbols/icons')}
+              onClick={() => copyToClipboard("npm i @react-symbols/icons")}
             >
               <NPM width="26px" className="mr-2" />
               <p>npm i @react-symbols/icons</p>
