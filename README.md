@@ -3,7 +3,7 @@
 <img src="https://i.ibb.co/FVtQNWq/react-symbols-readme-banner.png">
 </a>
 
-<p>⚡ React-Symbols is a library for React with the icons of the VSCode theme "<a href="https://github.com/misolori/vscode-symbols" target="_blank">Symbols</a>" by <a href="https://github.com/misolori" target="_blank">Miguel Solorio (@misolori)</a>.</p>
+<p>⚡ React-Symbols is a library for React with the icons of the VSCode theme "<a href="https://github.com/misolori/vscode-symbols" target="_blank">Symbols</a>" by <a href="https://github.com/miguelsolorio" target="_blank">Miguel Solorio (@miguelsolorio)</a>.</p>
 
 ![GitHub releases](https://img.shields.io/github/release/pheralb/react-symbols)
 ![GitHub stars](https://img.shields.io/github/stars/pheralb/react-symbols)
