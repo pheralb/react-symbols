@@ -34,7 +34,7 @@ export default function Index() {
       <div className="pt-6 pb-6 bg-black border-b-2 border-[#2562ea]">
         <div className="flex flex-col items-center justify-center pt-1 pb-5 lg:pt-5">
           <Show>
-            <h1 className="mb-5 font-sans text-2xl font-bold text-center lg:text-6xl">
+            <h1 className="mb-5 font-sans text-4xl font-bold text-center lg:text-6xl">
               A beautiful icons library for React
             </h1>
           </Show>
@@ -53,6 +53,7 @@ export default function Index() {
             <div
               className="flex p-3 mt-4 mb-2 rounded-md cursor-pointer bg-zinc-900 cursor-poiner hover:bg-zinc-800"
               onClick={() => copyToClipboard("npm i @react-symbols/icons")}
+              title="Copy command :)"
             >
               <NPM width="26px" className="mr-2" />
               <p>npm i @react-symbols/icons</p>
@@ -67,7 +68,7 @@ export default function Index() {
               <div
                 key={name}
                 title={`Copy ${name} to clipboard`}
-                className="flex flex-col items-center justify-center py-4 border rounded-md cursor-pointer border-zinc-800 hover:-translate-y-1 transition-all hover:border-[#c085fd]"
+                className="flex flex-col items-center justify-center py-4 transition duration-200 ease-in-out transform border rounded-md cursor-pointer bg-zinc-900 hover:bg-zinc-800 hover:scale-105 border-zinc-800 hover:border-neutral-900"
                 onClick={() => copyToClipboard(name)}
               >
                 <Icon className="w-16 h-16" />
