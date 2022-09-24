@@ -10,10 +10,12 @@
     "format": "prettier --write .",
     "lint": "turbo run lint"
   },
-  "dependencies": {},
+  "dependencies": {
+    "@react-symbols/icons": "*"
+  },
   "devDependencies": {
     "prettier": "2.7.1",
-    "turbo": "1.4.3"
+    "turbo": "1.5.3"
   },
   "engines": {
     "node": ">=14.0.0",
