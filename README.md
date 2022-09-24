@@ -1,6 +1,6 @@
 <div align="center">
 <a href="https://react-symbols.vercel.app/">
-<img src="https://i.ibb.co/FVtQNWq/react-symbols-readme-banner.png">
+<img src="https://i.ibb.co/BK91kdq/banner.png">
 </a>
 
 <p>⚡ React-Symbols is a library for React with the icons of the VSCode theme "<a href="https://github.com/misolori/vscode-symbols" target="_blank">Symbols</a>" by <a href="https://github.com/miguelsolorio" target="_blank">Miguel Solorio (@miguelsolorio)</a>.</p>
