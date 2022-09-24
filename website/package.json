@@ -1,6 +1,6 @@
 {
   "name": "@react-symbols/website",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Docs - File icons by Miguel Solorio for React",
   "author": "@pheralb_",
   "keywords": [
@@ -34,7 +34,7 @@
     "@remix-run/node": "1.7.2",
     "@remix-run/react": "1.7.2",
     "@remix-run/vercel": "1.7.2",
-    "@vercel/node": "2.5.17",
+    "@vercel/node": "2.5.18",
     "framer-motion": "7.3.6",
     "react": "18.2.0",
     "react-dom": "18.2.0",
@@ -50,7 +50,7 @@
     "@types/react-dom": "18.0.6",
     "autoprefixer": "10.4.12",
     "concurrently": "7.4.0",
-    "eslint": "8.23.1",
+    "eslint": "8.24.0",
     "postcss": "8.4.16",
     "tailwindcss": "3.1.8",
     "typescript": "4.8.3"
