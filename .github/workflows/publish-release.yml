@@ -21,13 +21,13 @@ jobs:
           scope: "@pheralb"
 
       # Install & build =>
-      - run: echo "- Install dependencies =>"
+      - name: Install dependencies
       - run: npm install
-      - run: echo "- Build =>"
+      - name: Build
       - run: npm run build
 
       # Publish to npm =>
-      - run: echo "- Publish =>"
+      - name: Publish to NPM
       - run: npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
@@ -45,6 +45,7 @@ jobs:
           ~/.npmrc
 
       # Publish to GitHub Packages =>
+      - name: Publish to GitHub Packages
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
