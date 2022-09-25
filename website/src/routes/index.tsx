@@ -39,7 +39,7 @@ export default function Index() {
             </h1>
           </Show>
           <Show delay={0.1}>
-            <p className="text-gray-400">
+            <p className="text-center text-gray-400">
               🖌️ Icons designed by
               <a
                 href="https://twitter.com/miguelsolorio_"
@@ -51,14 +51,15 @@ export default function Index() {
               </a>
             </p>
             <div
-              className="flex p-3 mt-4 mb-2 rounded-md cursor-pointer bg-zinc-900 cursor-poiner hover:bg-zinc-800"
+              className="flex p-3 mt-4 mb-3 rounded-md cursor-pointer bg-zinc-900 cursor-poiner hover:bg-zinc-800"
               onClick={() => copyToClipboard("npm i @react-symbols/icons")}
               title="Copy command :)"
             >
               <NPM width="26px" className="mr-2" />
-              <p>npm i @react-symbols/icons</p>
+              <p>npm install @react-symbols/icons</p>
             </div>
           </Show>
+          <p className="text-gray-500">📦 {Icons.length} icons</p>
         </div>
       </div>
       <div className="container px-4 py-1 mx-auto">

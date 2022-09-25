@@ -6,7 +6,7 @@ const Header = () => (
     <div className="container pt-4 mx-auto ">
       <div className="flex items-center justify-between">
         <Link to="/">
-          <div className="flex items-center">
+          <div className="flex items-center duration-200 ease-in-out hover:-translate-y-0.5">
             <img src="/images/logo.png" alt="logo" className="w-12 h-12 mr-1" />
             <h1 className="ml-1 text-1xl">React-Symbols</h1>
           </div>
@@ -16,15 +16,15 @@ const Header = () => (
             href="https://marketplace.visualstudio.com/items?itemName=miguelsolorio.symbols"
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden mr-5 text-sm text-gray-400 lg:block"
+            className="hidden mr-5 text-sm text-gray-400 duration-200 ease-in-out lg:block hover:-translate-y-0.5"
           >
-            VS Code Theme
+            VSCode Theme
           </a>
           <a
             href="https://github.com/pheralb/react-symbols"
             target="_blank"
             rel="noopener noreferrer"
-            className="transition-all hover:transform hover:scale-110"
+            className="duration-200 ease-in-out hover:-translate-y-0.5"
           >
             <Github width="26px" />
           </a>
