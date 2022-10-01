@@ -1,33 +1,34 @@
-name: publish-to-npm
-on:
-  release:
-    types: [created]
+name: Release
 
-defaults:
-  run:
-    working-directory: library
+on:
+  push:
+    branches:
+      - main
+
+concurrency: ${{ github.workflow }}-${{ github.ref }}
 
 jobs:
-  build:
+  release:
+    name: Release
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout Repo
+        uses: actions/checkout@v2
 
-      # Setup .npmrc file to publish to npm =>
-      - uses: actions/setup-node@v3
+      - name: Setup Node.js 16.x
+        uses: actions/setup-node@v2
         with:
-          node-version: "16.x"
-          registry-url: "https://registry.npmjs.org"
-          scope: "@pheralb"
+          node-version: 16.x
 
-      # Install & build =>
-      - name: Install dependencies
-      - run: npm install
-      - name: Build
-      - run: npm run build
+      - name: Install Dependencies
+        run: npm install
 
-      # Publish to npm =>
-      - name: Publish to NPM
-      - run: npm publish --access public
+      - name: Create Release Pull Request or Publish to npm
+        id: changesets
+        uses: changesets/action@v1
+        with:
+          # This expects you to have a script called release which does a build for your packages and calls changeset publish
+          publish: npm run release
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
