@@ -1,6 +1,6 @@
 <div align="center">
 <a href="https://react-symbols.vercel.app/">
-<img src="https://i.ibb.co/BK91kdq/banner.png">
+<img src="website/public/images/banner.png">
 </a>
 
 ![GitHub releases](https://img.shields.io/github/release/pheralb/react-symbols)

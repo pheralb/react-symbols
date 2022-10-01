@@ -28,6 +28,7 @@ export { default as Docker } from './library/docker.js';
 export { default as Document } from './library/document.js';
 export { default as Dts } from './library/dts.js';
 export { default as Eslint } from './library/eslint.js';
+export { default as Elixir } from './library/elixir.js';
 export { default as Firebase } from './library/firebase.js';
 export { default as Fsharp } from './library/fsharp.js';
 export { default as Gear } from './library/gear.js';
