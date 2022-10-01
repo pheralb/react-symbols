@@ -1,6 +1,6 @@
 {
   "name": "@react-symbols/icons",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "File icons by Miguel Solorio for React",
   "keywords": [
     "react",
@@ -13,6 +13,9 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/pheralb/react-symbols.git"
+  },
+  "publishConfig": {
+    "@pheralb:registry": "https://npm.pkg.github.com"
   },
   "contributors": [
     {
