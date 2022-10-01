@@ -8,9 +8,13 @@
     "build": "turbo run build",
     "dev": "turbo run dev --parallel",
     "format": "prettier --write .",
-    "lint": "turbo run lint"
+    "lint": "turbo run lint",
+    "changeset": "changeset",
+    "version-packages": "changeset version",
+    "release": "turbo run build --filter=website^... && changeset publish"
   },
   "dependencies": {
+    "@changesets/cli": "2.25.0",
     "@react-symbols/icons": "*"
   },
   "devDependencies": {
