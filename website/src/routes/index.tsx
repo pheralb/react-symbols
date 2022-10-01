@@ -33,12 +33,12 @@ export default function Index() {
     <>
       <div className="pt-7">
         <div className="flex flex-col items-center justify-center pt-1 pb-5 lg:pt-5">
-          <Show delay={0.2}>
+          <Show delay={0.1}>
             <h1 className="mb-5 font-sans text-4xl font-bold lg:text-6xl">
               A beautiful icons library for React
             </h1>
           </Show>
-          <Show delay={0.4}>
+          <Show delay={0.3}>
             <p className="text-gray-400">
               🖌️ Icons designed by
               <a
@@ -51,7 +51,7 @@ export default function Index() {
               </a>
             </p>
           </Show>
-          <Show delay={0.6}>
+          <Show delay={0.5}>
             <div className="relative mt-8 mb-4 group">
               <div className="absolute  rounded-lg opacity-75 -inset-0.5  blur-xl bg-gradient-to-r from-blue-800 to-indigo-800 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt"></div>
               <button

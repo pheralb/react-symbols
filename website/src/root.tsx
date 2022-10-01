@@ -52,7 +52,6 @@ export const links: LinksFunction = () => [
     crossOrigin: "anonymous",
   },
   // Icons =>
-  { rel: "icon", href: "/images/favicon.ico" },
   {
     rel: "apple-touch-icon",
     sizes: "180x180",
@@ -96,11 +95,11 @@ export function CatchBoundary() {
         <Meta />
         <Links />
       </head>
-      <body className="font-sans text-white bg-black">
+      <body className="font-sans text-white bg-midnight">
         <Header />
         <div className="flex flex-col items-center justify-center pt-5">
-          <h1 className="text-7xl">{caught.status}</h1>
-          <p className="mb-6">{caught.statusText}</p>
+          <h1 className="mb-2 font-medium text-7xl">{caught.status}</h1>
+          <p className="mb-6 text-gray-400">{caught.statusText}</p>
         </div>
         <Scripts />
         <Footer />
