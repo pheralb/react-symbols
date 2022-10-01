@@ -1,5 +1,5 @@
-import { motion } from 'framer-motion';
-import type { FC, ReactNode } from 'react';
+import { motion } from "framer-motion";
+import type { FC, ReactNode } from "react";
 
 type ShowProps = {
   children: ReactNode;
@@ -8,11 +8,11 @@ type ShowProps = {
 
 const Show: FC<ShowProps> = ({ children, delay }) => (
   <motion.div
-    initial={{ y: 10, opacity: 0 }}
-    animate={{ y: 0, opacity: 0.9 }}
+    initial={{ y: -4, opacity: 0 }}
+    animate={{ y: 0, opacity: 1 }}
     transition={{
       duration: 0.4,
-      delay: delay
+      delay: delay,
     }}
   >
     {children}
