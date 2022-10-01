@@ -73,12 +73,12 @@ export default function App() {
         <Meta />
         <Links />
       </head>
-      <body className="font-sans text-white bg-[#08070B]">
+      <body className="font-sans text-white bg-midnight">
         <Header />
         <Outlet />
-        <ScrollRestoration />
         <Scripts />
         <LiveReload />
+        <ScrollRestoration />
         <Footer />
         <Toaster position="bottom-center" reverseOrder={false} />
       </body>
