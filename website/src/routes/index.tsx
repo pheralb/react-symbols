@@ -31,15 +31,15 @@ export default function Index() {
 
   return (
     <>
-      <div className="pt-6 pb-6 bg-black border-b-2 border-[#2562ea]">
+      <div className="pt-7">
         <div className="flex flex-col items-center justify-center pt-1 pb-5 lg:pt-5">
-          <Show>
-            <h1 className="mb-5 font-sans text-4xl font-bold text-center lg:text-6xl">
+          <Show delay={0.2}>
+            <h1 className="mb-5 font-sans text-4xl font-bold lg:text-6xl">
               A beautiful icons library for React
             </h1>
           </Show>
-          <Show delay={0.1}>
-            <p className="text-center text-gray-400">
+          <Show delay={0.4}>
+            <p className="text-gray-400">
               🖌️ Icons designed by
               <a
                 href="https://twitter.com/miguelsolorio_"
@@ -50,26 +50,32 @@ export default function Index() {
                 Miguel Solorio
               </a>
             </p>
-            <div
-              className="flex p-3 mt-4 mb-3 rounded-md cursor-pointer bg-zinc-900 cursor-poiner hover:bg-zinc-800"
-              onClick={() => copyToClipboard("npm i @react-symbols/icons")}
-              title="Copy command :)"
-            >
-              <NPM width="26px" className="mr-2" />
-              <p>npm install @react-symbols/icons</p>
+          </Show>
+          <Show delay={0.6}>
+            <div className="relative mt-8 mb-4 group">
+              <div className="absolute  rounded-lg opacity-75 -inset-0.5  blur-xl bg-gradient-to-r from-blue-800 to-indigo-800 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt"></div>
+              <button
+                className="relative flex items-center py-4 leading-none bg-black divide-x divide-gray-600 rounded-lg cursor-pointer px-7"
+                onClick={() => copyToClipboard("npm i @react-symbols/icons")}
+                title="Copy command :)"
+              >
+                <NPM width="40px" className="pr-3" />
+                <span className="pl-3 text-gray-300 transition duration-400 group-hover:text-gray-100">
+                  npm install @react-symbols/icons
+                </span>
+              </button>
             </div>
           </Show>
-          <p className="text-gray-500">📦 {Icons.length} icons</p>
         </div>
       </div>
-      <div className="container px-4 py-1 mx-auto">
+      <div className="container py-1 mx-auto">
         <div className="grid grid-cols-1 gap-4 p-12 mx-auto sm:grid-cols-2 lg:grid-cols-6">
           {Icons.sort((iconA, iconB) => (iconA.name > iconB.name ? 1 : -1)).map(
             ({ name, icon: Icon }: IconData) => (
               <div
                 key={name}
                 title={`Copy ${name} to clipboard`}
-                className="flex flex-col items-center justify-center py-4 transition duration-200 ease-in-out transform border rounded-md cursor-pointer bg-zinc-900 hover:bg-zinc-800 hover:scale-105 border-zinc-800 hover:border-neutral-900"
+                className="flex flex-col items-center justify-center py-4 transition duration-200 ease-in-out transform border-2 rounded-md cursor-pointer bg-midgnight hover:bg-midnightLight border-zinc-900 hover:border-indigo-900"
                 onClick={() => copyToClipboard(name)}
               >
                 <Icon className="w-16 h-16" />
