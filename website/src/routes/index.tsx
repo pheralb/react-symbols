@@ -38,9 +38,9 @@ export default function Index() {
 
   return (
     <>
-      <div className="flex flex-col items-center justify-center mt-3 mb-4 lg:mt-10 lg:mb-10">
+      <div className="flex flex-col items-center content-center justify-center pl-5 pr-5 mt-3 mb-4 lg:mt-10 lg:mb-10 lg:pl-0 lg:pr-0">
         <Show delay={0.1}>
-          <h1 className="mb-5 font-sans text-4xl font-bold lg:text-6xl">
+          <h1 className="mb-5 font-sans text-4xl font-bold text-center lg:text-6xl">
             A beautiful icons library for React
           </h1>
         </Show>
