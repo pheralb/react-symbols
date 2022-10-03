@@ -3,6 +3,12 @@
 <img src="website/public/images/banner.png">
 </a>
 
+<a href="https://react-symbols.vercel.app/">Website</a>
+<span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
+<a href="https://github.com/pheralb/react-symbols/tree/next">Next</a>
+<span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
+<a href="https://marketplace.visualstudio.com/items?itemName=miguelsolorio.symbols">VSCode Theme</a>
+
 ![GitHub releases](https://img.shields.io/github/release/pheralb/react-symbols)
 ![GitHub stars](https://img.shields.io/github/stars/pheralb/react-symbols)
 ![GitHub issues](https://img.shields.io/github/issues/pheralb/react-symbols)
@@ -63,9 +69,11 @@ export default MyComponent;
 <details>
   <summary>📀 Config for use the library in Remix.</summary>
   
-- Add in the **remix.config.js**:
+
 
 ```js
+// Add in the remix.config.js:
+
 module.exports = {
   ...
   serverDependenciesToBundle: ["@react-symbols/icons"], // <-
