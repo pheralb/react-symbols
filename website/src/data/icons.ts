@@ -81,6 +81,7 @@ export const Icons = [
   { name: "Svelte", icon: ReactSymbols.Svelte },
   { name: "Svg", icon: ReactSymbols.SVG },
   { name: "Swift", icon: ReactSymbols.Swift },
+  { name: "Supabase", icon: ReactSymbols.Supabase },
   { name: "Tailwind", icon: ReactSymbols.Tailwind },
   { name: "Text", icon: ReactSymbols.Text },
   { name: "Ts", icon: ReactSymbols.TypeScript },

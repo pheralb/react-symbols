@@ -77,6 +77,7 @@ export { default as Storybook } from './library/storybook.js';
 export { default as Stylus } from './library/stylus.js';
 export { default as Svelte } from './library/svelte.js';
 export { default as SVG } from './library/svg.js';
+export { default as Supabase } from './library/supabase.js';
 export { default as Swift } from './library/swift.js';
 export { default as Tailwind } from './library/tailwind.js';
 export { default as Text } from './library/text.js';
