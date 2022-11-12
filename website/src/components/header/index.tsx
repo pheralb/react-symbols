@@ -21,6 +21,16 @@ const Header = () => (
             VSCode Theme
           </a>
           <a
+            href="https://www.producthunt.com/posts/react-symbols?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-react&#0045;symbols"
+            target="_blank"
+          >
+            <img
+              src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=362706&theme=dark"
+              alt="React&#0045;Symbols - ⭐&#0032;A&#0032;beautiful&#0032;icons&#0032;library&#0032;for&#0032;React&#0046; | Product Hunt"
+              className="w-40 mr-5"
+            />
+          </a>
+          <a
             href="https://github.com/pheralb/react-symbols"
             target="_blank"
             rel="noopener noreferrer"
