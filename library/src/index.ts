@@ -1,3 +1,5 @@
+// Files =>
+
 export { default as Angular } from './library/angular.js';
 export { default as Astro } from './library/astro.js';
 export { default as BracketsBlue } from './library/bracketsBlue.js';
@@ -88,3 +90,31 @@ export { default as Webpack } from './library/webpack.js';
 export { default as XML } from './library/xml.js';
 export { default as Yaml } from './library/yaml.js';
 export { default as Yarn } from './library/yarn.js';
+
+// Folders =>
+
+export { default as Folder } from './library/folders/folder.js';
+export { default as FolderAssets } from './library/folders/folderAssets.js';
+export { default as FolderBlue } from './library/folders/folderBlue.js';
+export { default as FolderBlueCode } from './library/folders/folderBlueCode.js';
+export { default as FolderBlueOutline } from './library/folders/folderBlueOutline.js';
+export { default as FolderGray } from './library/folders/folderGray.js';
+export { default as FolderGrayCode } from './library/folders/folderGrayCode.js';
+export { default as FolderGrayOutline } from './library/folders/folderGrayOutline.js';
+export { default as FolderGreen } from './library/folders/folderGreen.js';
+export { default as FolderGreenCode } from './library/folders/folderGreenCode.js';
+export { default as FolderGreenOutline } from './library/folders/folderGreenOutline.js';
+export { default as FolderOpen } from './library/folders/folderOpen.js';
+export { default as FolderOrange } from './library/folders/folderOrange.js';
+export { default as FolderOrangeCode } from './library/folders/folderOrangeCode.js';
+export { default as FolderOrangeOutline } from './library/folders/folderOrangeOutline.js';
+export { default as FolderPurple } from './library/folders/folderPurple.js';
+export { default as FolderPurpleCode } from './library/folders/folderPurpleCode.js';
+export { default as FolderPurpleOutline } from './library/folders/folderPurpleOutline.js';
+export { default as FolderRed } from './library/folders/folderRed.js';
+export { default as FolderRedCode } from './library/folders/folderRedCode.js';
+export { default as FolderRedOutline } from './library/folders/folderRedOutline.js';
+export { default as FolderSky } from './library/folders/folderSky.js';
+export { default as FolderSkyCode } from './library/folders/folderSkyCode.js';
+export { default as FolderSkyOutline } from './library/folders/folderSkyOutline.js';
+export { default as FolderSrc } from './library/folders/folderSrc.js';
