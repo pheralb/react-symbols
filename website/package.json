@@ -1,7 +1,7 @@
 {
   "name": "@react-symbols/website",
-  "version": "1.1.1",
-  "description": "Docs - File icons by Miguel Solorio for React",
+  "version": "2.0.0",
+  "description": "Symbols by Miguel Solorio for React.",
   "author": "@pheralb_",
   "keywords": [
     "react",
@@ -31,29 +31,29 @@
   },
   "dependencies": {
     "@react-symbols/icons": "*",
-    "@remix-run/node": "1.7.5",
-    "@remix-run/react": "1.7.5",
-    "@remix-run/vercel": "1.7.5",
-    "@vercel/node": "2.6.2",
-    "framer-motion": "7.6.6",
+    "@remix-run/node": "1.7.6",
+    "@remix-run/react": "1.7.6",
+    "@remix-run/vercel": "1.7.6",
+    "@vercel/node": "2.7.0",
+    "framer-motion": "7.6.15",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-hot-toast": "2.4.0",
     "rehype-highlight": "6.0.0"
   },
   "devDependencies": {
-    "@remix-run/dev": "1.7.5",
-    "@remix-run/eslint-config": "1.7.5",
-    "@remix-run/serve": "1.7.5",
+    "@remix-run/dev": "1.7.6",
+    "@remix-run/eslint-config": "1.7.6",
+    "@remix-run/serve": "1.7.6",
     "@tailwindcss/typography": "0.5.8",
     "@types/react": "18.0.25",
-    "@types/react-dom": "18.0.8",
+    "@types/react-dom": "18.0.9",
     "autoprefixer": "10.4.13",
-    "concurrently": "7.5.0",
-    "eslint": "8.27.0",
+    "concurrently": "7.6.0",
+    "eslint": "8.28.0",
     "postcss": "8.4.19",
     "tailwindcss": "3.2.4",
-    "typescript": "4.8.4"
+    "typescript": "4.9.3"
   },
   "engines": {
     "node": ">=14"
