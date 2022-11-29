@@ -1,9 +1,7 @@
-import Card from "@/components/card";
-import Command from "@/components/command";
-import Header from "@/components/header";
-import { Icons } from "@/data/icons";
-import { NPM } from "@react-symbols/icons";
 import { ComponentProps, FC, useState } from "react";
+import { Folders } from "@/data/icons";
+import Card from "@/components/card";
+import { NPM } from "@react-symbols/icons";
 import toast from "react-hot-toast";
 
 interface IconData {
@@ -11,11 +9,11 @@ interface IconData {
   icon: FC<ComponentProps<"svg">>;
 }
 
-export default function Index() {
+export default function FoldersPage() {
   const [search, setSearch] = useState("");
 
   // Search
-  const filteredIcons = Icons.filter((icon) =>
+  const filteredIcons = Folders.filter((icon) =>
     icon.name.toLowerCase().includes(search.toLowerCase())
   );
 
