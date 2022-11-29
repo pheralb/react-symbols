@@ -3,6 +3,14 @@
 <img src="website/public/images/banner.png">
 </a>
 
+<p></p>
+
+<a href="https://react-symbols.vercel.app/">🔎 Discover</a>
+<span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
+<a href="#-getting-started">🤝 Contribute</a>
+<span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
+<a href="https://twitter.com/pheralb_">🐦 Twitter</a>
+
 ![GitHub releases](https://img.shields.io/github/release/pheralb/react-symbols)
 ![GitHub stars](https://img.shields.io/github/stars/pheralb/react-symbols)
 ![GitHub issues](https://img.shields.io/github/issues/pheralb/react-symbols)
@@ -17,7 +25,7 @@
 
 ## 🎉 Features
 
-- 📦 +80 icons.
+- 📦 +90 icons.
 - 🍃 Lightweight.
 - 💙 Ready to use with Typescript.
 - 🧡 SVG optimized and minified.
@@ -35,8 +43,8 @@ npm install @react-symbols/icons
 # pnpm ->
 pnpm add @react-symbols/icons
 
-# fnpm ->
-fnpm install @react-symbols/icons
+# ultra ->
+ultra install @react-symbols/icons
 
 # yarn ->
 yarn add @react-symbols/icons
@@ -79,12 +87,12 @@ module.exports = {
 ## 📦 Icons
 
 - ✅ [Icons/files](https://github.com/miguelsolorio/vscode-symbols/tree/main/src/icons/files) - Ready.
-- 🧩 [Icons/folders](https://github.com/miguelsolorio/vscode-symbols/tree/main/src/icons/folders) - Working...
+- 🧩 [Icons/folders](https://github.com/miguelsolorio/vscode-symbols/tree/main/src/icons/folders) - Ready.
 
 ## 🙌 Contributing
 
-- ⭐ [Josyto](https://github.com/Josyto).
-- ⭐ [pablocdev](https://github.com/pablocdev).
+- [Josyto](https://github.com/Josyto).
+- [pablocdev](https://github.com/pablocdev).
 
 ## 🔑 License
 
