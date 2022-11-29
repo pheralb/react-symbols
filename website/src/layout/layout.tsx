@@ -1,10 +1,7 @@
+import React from "react";
 import Header from "@/components/header";
 import LayoutLink from "@/components/layoutLink";
-import { Folder, NPM, Github } from "@react-symbols/icons";
-import { Link } from "@remix-run/react";
-import React from "react";
-import { NavLink } from "react-router-dom";
-
+import { Folder, NPM, Github, CodeSky } from "@react-symbols/icons";
 interface LayoutProps {
   children: React.ReactNode;
 }
@@ -45,6 +42,15 @@ const Layout = (props: LayoutProps) => {
           >
             <Github width="20px" />
             <span className="font-medium text-md">Repository</span>
+          </a>
+          <a
+            href="https://marketplace.visualstudio.com/items?itemName=miguelsolorio.symbols"
+            target="_blank"
+            rel="noreferrer"
+            className="flex items-center px-2 py-2 mb-2 space-x-2 transition-all duration-150 rounded-md hover:bg-zinc-800"
+          >
+            <CodeSky width="20px" />
+            <span className="font-medium text-md">VSCode Theme</span>
           </a>
         </div>
       </nav>
