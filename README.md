@@ -70,10 +70,11 @@ export default MyComponent;
 
 <details>
   <summary>📀 Config for use the library in Remix.</summary>
-  
-- Add in the **remix.config.js**:
+
 
 ```js
+// Add in the remix.config.js:
+
 module.exports = {
   ...
   serverDependenciesToBundle: ["@react-symbols/icons"], // <-
