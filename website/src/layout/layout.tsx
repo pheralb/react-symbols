@@ -56,7 +56,7 @@ const Layout = (props: LayoutProps) => {
       </nav>
       <div className="ml-0 md:ml-56">
         <div className="flex flex-col pl-5 pr-5 mt-3 mb-4 lg:mt-10 lg:mb-10 lg:pl-0 lg:pr-0">
-          <div className="container py-1 pl-5 pr-5 mx-auto mb-6 lg:pl-0 lg:pr-0">
+          <div className="container py-1 pl-3 pr-3 mx-auto mb-6">
             <Header />
             {props.children}
           </div>
