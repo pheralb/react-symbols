@@ -31,6 +31,7 @@ export const meta: MetaFunction = () => ({
 
 // Toaster
 import { Toaster } from "react-hot-toast";
+import Layout from "./layout/layout";
 
 export const links: LinksFunction = () => [
   // Styles =>
@@ -47,7 +48,7 @@ export const links: LinksFunction = () => [
   {
     rel: "preload",
     as: "font",
-    href: "/fonts/Inter.woff2",
+    href: "/fonts/Satoshi-Variable.woff2",
     type: "font/woff2",
     crossOrigin: "anonymous",
   },
@@ -73,9 +74,10 @@ export default function App() {
         <Meta />
         <Links />
       </head>
-      <body className="font-sans text-white bg-midnight">
-        <Header />
-        <Outlet />
+      <body className="font-sans leading-5 text-white bg-midnight">
+        <Layout>
+          <Outlet />
+        </Layout>
         <Scripts />
         <LiveReload />
         <ScrollRestoration />
@@ -96,11 +98,12 @@ export function CatchBoundary() {
         <Links />
       </head>
       <body className="font-sans text-white bg-midnight">
-        <Header />
-        <div className="flex flex-col items-center justify-center pt-5">
-          <h1 className="mb-2 font-medium text-7xl">{caught.status}</h1>
-          <p className="mb-6 text-gray-400">{caught.statusText}</p>
-        </div>
+        <Layout>
+          <div className="flex flex-col items-center justify-center pt-5">
+            <h1 className="mb-2 font-medium text-7xl">{caught.status}</h1>
+            <p className="mb-6 text-gray-400">{caught.statusText}</p>
+          </div>
+        </Layout>
         <Scripts />
         <Footer />
       </body>

@@ -18,7 +18,7 @@
     "@react-symbols/icons": "*"
   },
   "devDependencies": {
-    "prettier": "2.7.1",
+    "prettier": "2.8.0",
     "turbo": "1.6.3"
   },
   "engines": {

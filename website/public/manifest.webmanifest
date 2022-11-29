@@ -1,12 +1,12 @@
 {
-  "theme_color": "#000000",
-  "background_color": "#000000",
+  "theme_color": "#1C1C1F",
+  "background_color": "#1C1C1F",
   "display": "standalone",
   "scope": "/",
   "start_url": "/",
   "name": "React-Symbols",
   "short_name": "React-Symbols",
-  "description": "A beautifully icons library for React",
+  "description": "Symbols by Miguel Solorio, for React.",
   "icons": [
     {
       "src": "/images/icon-192x192.png",
