@@ -4,30 +4,13 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["Inter", "sans-serif"],
+        sans: ["Satoshi", "sans-serif"],
         mono: ["JetBrainsMono-Regular", "monospace"],
       },
       colors: {
         transparent: "transparent",
         current: "currentColor",
-        midnight: "#08070B",
-        midnightLight: "#13101C",
-      },
-      animation: {
-        tilt: "tilt 5s infinite linear",
-      },
-      keyframes: {
-        tilt: {
-          "0%, 50%, 100%": {
-            transform: "rotate(0deg)",
-          },
-          "25%": {
-            transform: "rotate(1deg)",
-          },
-          "75%": {
-            transform: "rotate(-1deg)",
-          },
-        },
+        midnight: "#1C1C1F",
       },
     },
   },
