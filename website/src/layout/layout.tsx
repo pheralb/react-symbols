@@ -11,7 +11,7 @@ const Layout = (props: LayoutProps) => {
     <>
       <nav className="sticky z-40 w-full border-b md:border-r md:overflow-y-auto md:overflow-x-hidden md:pb-10 md:h-full md:w-56 md:left-0 md:top-0 md:fixed bg-midnight border-neutral-800">
         <div className="flex flex-col px-4 mt-7 md:mt-0 md:py-7">
-          <div className="flex items-center pb-4 mb-3 space-x-2 border-b border-neutral-800 hover:text-gray-500">
+          <div className="flex items-center pb-4 mb-3 space-x-2 border-b border-neutral-800">
             <img src="/images/logo.png" alt="logo" className="mr-1 w-7 h-7" />
             <h3 className="text-xl font-medium">React-Symbols</h3>
           </div>
