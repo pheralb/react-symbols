@@ -1,10 +1,6 @@
 import Card from "@/components/card";
-import Command from "@/components/command";
-import Header from "@/components/header";
 import { Icons } from "@/data/icons";
-import { NPM } from "@react-symbols/icons";
 import { ComponentProps, FC, useState } from "react";
-import toast from "react-hot-toast";
 
 interface IconData {
   name: string;

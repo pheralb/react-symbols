@@ -2,6 +2,7 @@
 
 export { default as Angular } from './library/angular.js';
 export { default as Astro } from './library/astro.js';
+export { default as Audio } from './library/audio.js';
 export { default as BracketsBlue } from './library/bracketsBlue.js';
 export { default as BracketsGray } from './library/bracketsGray.js';
 export { default as BracketsGreen } from './library/bracketsGreen.js';
@@ -31,8 +32,10 @@ export { default as Database } from './library/database.js';
 export { default as Docker } from './library/docker.js';
 export { default as Document } from './library/document.js';
 export { default as Dts } from './library/dts.js';
+export { default as Drawio } from './library/drawio.js';
 export { default as Eslint } from './library/eslint.js';
 export { default as Elixir } from './library/elixir.js';
+export { default as Exe } from './library/exe.js';
 export { default as Firebase } from './library/firebase.js';
 export { default as Fsharp } from './library/fsharp.js';
 export { default as Gear } from './library/gear.js';
@@ -62,9 +65,12 @@ export { default as Node } from './library/node.js';
 export { default as Nodemon } from './library/nodemon.js';
 export { default as Notebook } from './library/notebook.js';
 export { default as NPM } from './library/npm.js';
+export { default as Patch } from './library/patch.js';
 export { default as Perl } from './library/perl.js';
 export { default as PNPM } from './library/pnpm.js';
+export { default as PHP } from './library/php.js';
 export { default as PostCSS } from './library/postcss.js';
+export { default as Proto } from './library/proto.js';
 export { default as Prettier } from './library/prettier.js';
 export { default as Prisma } from './library/prisma.js';
 export { default as Pug } from './library/pug.js';
@@ -94,12 +100,17 @@ export { default as Terraform } from './library/terraform.js';
 export { default as Tsconfig } from './library/tsconfig.js';
 export { default as TsTest } from './library/tsTest.js';
 export { default as TypeScript } from './library/typescript.js';
+export { default as Tex } from './library/tex.js';
 export { default as Vite } from './library/vite.js';
+export { default as Video } from './library/video.js';
+export { default as Vlang } from './library/vlang.js';
 export { default as Vue } from './library/vue.js';
 export { default as Webpack } from './library/webpack.js';
 export { default as XML } from './library/xml.js';
 export { default as Yaml } from './library/yaml.js';
 export { default as Yarn } from './library/yarn.js';
+export { default as Zig } from './library/zig.js';
+export { default as Http } from './library/http.js';
 
 // Folders =>
 
@@ -128,3 +139,4 @@ export { default as FolderSky } from './library/folders/folderSky.js';
 export { default as FolderSkyCode } from './library/folders/folderSkyCode.js';
 export { default as FolderSkyOutline } from './library/folders/folderSkyOutline.js';
 export { default as FolderSrc } from './library/folders/folderSrc.js';
+export { default as FolderConfig } from './library/folders/folderConfig.js';
