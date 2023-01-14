@@ -7,7 +7,7 @@
 
 <a href="https://react-symbols.vercel.app/">🔎 Discover</a>
 <span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
-<a href="#-getting-started">🤝 Contribute</a>
+<a href="#-getting-started">🚀 Getting Started</a>
 <span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
 <a href="https://twitter.com/pheralb_">🐦 Twitter</a>
 
@@ -19,16 +19,16 @@
 
 </div>
 
-## 🤔 About
+## 👋 Introduction
 
-**⚡ React-Symbols** is a library for React with the icons of the VSCode theme ["Symbols"](https://marketplace.visualstudio.com/items?itemName=miguelsolorio.symbols) by [Miguel Solorio (@miguelsolorio)](https://github.com/miguelsolorio).
+[**React-Symbols**](https://react-symbols.vercel.app/) is a library for React with the icons of the VSCode theme ["Symbols"](https://marketplace.visualstudio.com/items?itemName=miguelsolorio.symbols) by [Miguel Solorio (@miguelsolorio)](https://github.com/miguelsolorio).
 
 ## 🎉 Features
 
-- 📦 +90 icons.
-- 🍃 Lightweight.
-- 💙 Ready to use with Typescript.
-- 🧡 SVG optimized and minified.
+- **+100** icons.
+- **Lightweight**.
+- Ready to use with **Typescript**.
+- **SVG optimized** and **minified**.
 
 ## 🚀 Getting Started
 
@@ -71,7 +71,6 @@ export default MyComponent;
 <details>
   <summary>📀 Config for use the library in Remix.</summary>
 
-
 ```js
 // Add in the remix.config.js:
 
@@ -87,13 +86,16 @@ module.exports = {
 
 ## 📦 Icons
 
-- ✅ [Icons/files](https://github.com/miguelsolorio/vscode-symbols/tree/main/src/icons/files) - Ready.
-- 🧩 [Icons/folders](https://github.com/miguelsolorio/vscode-symbols/tree/main/src/icons/folders) - Ready.
+- ✅ [Icons/files](https://github.com/miguelsolorio/vscode-symbols/tree/main/src/icons/files).
+- 🧩 [Icons/folders](https://github.com/miguelsolorio/vscode-symbols/tree/main/src/icons/folders).
 
 ## 🙌 Contributing
 
-- [Josyto](https://github.com/Josyto).
-- [pablocdev](https://github.com/pablocdev).
+<a href="https://github.com/pheralb/react-symbols/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=pheralb/react-symbols" />
+</a>
+
+<p></p>
 
 ## 🔑 License
 
