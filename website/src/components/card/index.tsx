@@ -28,7 +28,7 @@ const Card = (props: CardProps) => {
   return (
     <div
       title={`Copy ${props.name} to clipboard`}
-      className="flex flex-col items-center justify-center py-4 transition duration-200 ease-in-out transform border-2 rounded-md cursor-pointer bg-midgnight border-neutral-800 hover:border-indigo-900"
+      className="flex flex-col items-center justify-center py-4 transition duration-200 ease-in-out transform border-2 rounded-md cursor-pointer bg-midgnight border-neutral-800 hover:border-indigo-800"
       onClick={() => copyToClipboard(`<${props.name} />`)}
     >
       {props.icon}

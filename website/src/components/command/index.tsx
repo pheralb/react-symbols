@@ -11,7 +11,7 @@ const Command = () => {
       await navigator.clipboard.writeText(txt);
     }
     toast("Copied to clipboard", {
-      icon: "🚀🚀",
+      icon: "🚀",
       style: {
         borderRadius: "10px",
         background: "#121212",
