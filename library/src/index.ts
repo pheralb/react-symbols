@@ -111,6 +111,12 @@ export { default as Yaml } from './library/yaml.js';
 export { default as Yarn } from './library/yarn.js';
 export { default as Zig } from './library/zig.js';
 export { default as Http } from './library/http.js';
+export { default as Vercel } from './library/vercel.js';
+export { default as Rescript } from './library/rescript.js';
+export { default as RescriptInterface } from './library/rescriptInterface.js';
+export { default as Netlify } from './library/netlify.js';
+export { default as EditorConfig } from './library/editorConfig.js';
+export { default as Deno } from './library/deno.js';
 
 // Folders =>
 

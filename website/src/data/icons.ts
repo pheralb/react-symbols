@@ -112,6 +112,12 @@ export const Icons = [
   { name: "Yarn", icon: ReactSymbols.Yarn },
   { name: "Zig", icon: ReactSymbols.Zig },
   { name: "Http", icon: ReactSymbols.Http },
+  { name: "Deno", icon: ReactSymbols.Deno },
+  { name: "Vercel", icon: ReactSymbols.Vercel },
+  { name: "Netlify", icon: ReactSymbols.Netlify },
+  { name: "EditorConfig", icon: ReactSymbols.EditorConfig },
+  { name: "Rescript", icon: ReactSymbols.Rescript },
+  { name: "RescriptInterface", icon: ReactSymbols.RescriptInterface },
 ];
 
 export const Folders = [
