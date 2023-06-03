@@ -14,11 +14,12 @@ yarn.lock
 build
 
 # Remix =>
-api
 .cache
 .env
 .vercel
 .output
+api
+
 /build/
 /public/build
 /api/index.js
