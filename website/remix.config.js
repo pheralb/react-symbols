@@ -1,20 +1,13 @@
 /** @type {import('@remix-run/dev').AppConfig} */
 module.exports = {
-  serverBuildTarget: 'vercel',
-  serverDependenciesToBundle: ["@react-symbols/icons"],
-  server: process.env.NODE_ENV === 'development' ? undefined : './server.js',
-  ignoredRouteFiles: ['**/.*'],
-  appDirectory: 'src',
-  mdx: async () => {
-    const [rehypeHighlight] = await Promise.all([
-      import('rehype-highlight').then((mod) => mod.default)
-    ]);
-    return {
-      rehypePlugins: [rehypeHighlight],
-      remarkPlugins: []
-    };
+  ignoredRouteFiles: ["**/.*"],
+  server: process.env.NODE_ENV === "development" ? undefined : "./server.ts",
+  serverBuildPath: "api/index.js",
+  appDirectory: "src",
+  future: {
+    v2_errorBoundary: true,
+    v2_meta: true,
+    v2_normalizeFormMethod: true,
+    v2_routeConvention: true
   }
-  // assetsBuildDirectory: "public/build",
-  // serverBuildPath: "api/index.js",
-  // publicPath: "/build/",
-};
+}
