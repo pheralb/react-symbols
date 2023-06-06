@@ -1,6 +1,6 @@
 import type { ReactNode } from "react"
-import { Link } from "@remix-run/react"
-import { Folder, Github, NPM } from "@react-symbols/icons"
+import { NavLink, useLocation } from "@remix-run/react"
+import { Folder, FolderOpen, Github, NPM } from "@react-symbols/icons"
 
 import SidebarItem from "./item"
 import ExternalLink from "../externalLink"
@@ -11,43 +11,70 @@ interface SidebarProps {
   children: ReactNode
 }
 
+const iconSidebarSize = 21
+
 const SidebarContent = () => {
+  const location = useLocation()
   return (
     <nav className="fixed left-0 top-0 h-full w-60 overflow-y-auto overflow-x-hidden border-r border-neutral-800 pb-10">
       <div className="mx-5 flex flex-col pt-7">
-        <Link to="/">
+        <NavLink to="/">
           <div className="flex items-center space-x-3 border-b border-neutral-800 pb-3 transition-colors duration-75 hover:text-neutral-300">
             <img src="/images/favicon.ico" alt="logo" className="h-8 w-8" />
             <span className="text-xl font-medium tracking-wider">
               React-Symbols
             </span>
           </div>
-        </Link>
+        </NavLink>
         <div className="mt-3 flex flex-col space-y-1 border-b border-neutral-800 pb-3">
-          <Link to="/">
-            <SidebarItem icon={<Folder width={21} />} text="Files" />
-          </Link>
-          <Link to="/folders">
-            <SidebarItem icon={<Folder width={21} />} text="Folders" />
-          </Link>
+          <NavLink to="/">
+            <SidebarItem
+              icon={
+                location.pathname === "/" ? (
+                  <FolderOpen width={iconSidebarSize} />
+                ) : (
+                  <Folder width={iconSidebarSize} />
+                )
+              }
+              text="Files"
+              active={location.pathname === "/"}
+            />
+          </NavLink>
+          <NavLink to="/folders">
+            <SidebarItem
+              icon={
+                location.pathname === "/folders" ? (
+                  <FolderOpen width={iconSidebarSize} />
+                ) : (
+                  <Folder width={iconSidebarSize} />
+                )
+              }
+              text="Folders"
+              active={location.pathname === "/folders"}
+            />
+          </NavLink>
         </div>
         <div className="mt-3 flex flex-col space-y-1 pb-3">
           <ExternalLink href="https://github.com/pheralb/react-symbols">
             <SidebarItem
-              icon={<Github width={21} />}
+              icon={<Github width={iconSidebarSize} />}
               text="GitHub"
               external={true}
             />
           </ExternalLink>
           <ExternalLink href="https://marketplace.visualstudio.com/items?itemName=miguelsolorio.symbols">
             <SidebarItem
-              icon={<VSCode width={21} />}
+              icon={<VSCode width={iconSidebarSize} />}
               text="VSCode Theme"
               external={true}
             />
           </ExternalLink>
           <ExternalLink href="https://www.npmjs.com/package/@react-symbols/icons">
-            <SidebarItem icon={<NPM width={21} />} text="npm" external={true} />
+            <SidebarItem
+              icon={<NPM width={iconSidebarSize} />}
+              text="npm"
+              external={true}
+            />
           </ExternalLink>
         </div>
       </div>
@@ -58,14 +85,14 @@ const SidebarContent = () => {
           </p>
           <ExternalLink href="https://twitter.com/pheralb_">
             <SidebarItem
-              icon={<Twitter width={21} />}
+              icon={<Twitter width={iconSidebarSize} />}
               text="@pheralb_"
               external={true}
             />
           </ExternalLink>
           <ExternalLink href="https://twitter.com/miguelsolorio_">
             <SidebarItem
-              icon={<Twitter width={21} />}
+              icon={<Twitter width={iconSidebarSize} />}
               text="@miguelsolorio_"
               external={true}
             />
@@ -80,7 +107,7 @@ const Sidebar = (props: SidebarProps) => {
   return (
     <section className="min-h-screen">
       <SidebarContent />
-      <div className="ml-60">{props.children}</div>
+      <div className="mb-12 ml-60">{props.children}</div>
     </section>
   )
 }
