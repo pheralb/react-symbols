@@ -1,6 +1,6 @@
 import type { ReactNode } from "react"
 import { NavLink, useLocation } from "@remix-run/react"
-import { Folder, FolderOpen, Github, NPM } from "@react-symbols/icons"
+import { Folder, FolderOpen, Github, NPM, Symbols } from "@react-symbols/icons"
 
 import SidebarItem from "./item"
 import ExternalLink from "../externalLink"
@@ -20,7 +20,7 @@ const SidebarContent = () => {
       <div className="mx-5 flex flex-col pt-7">
         <NavLink to="/">
           <div className="flex items-center space-x-3 border-b border-neutral-800 pb-3 transition-colors duration-75 hover:text-neutral-300">
-            <img src="/images/favicon.ico" alt="logo" className="h-8 w-8" />
+            <Symbols className="h-8 w-8" />
             <span className="text-xl font-medium tracking-wider">
               React-Symbols
             </span>
