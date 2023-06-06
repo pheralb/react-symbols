@@ -36,7 +36,8 @@
   "scripts": {
     "dev": "tsc && swc ./src -d ./build",
     "build": "tsc && swc ./src -d ./build && tsc --emitDeclarationOnly --declaration --outDir build/types",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "npm run build",
+    "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
     "@swc/cli": "0.1.62",
