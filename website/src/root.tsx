@@ -1,4 +1,4 @@
-import type { LinksFunction } from "@remix-run/node"
+import type { LinksFunction, V2_MetaFunction } from "@remix-run/node"
 import {
   Links,
   LiveReload,
@@ -21,7 +21,33 @@ import Hero from "./components/hero"
 // Link CSS:
 export const links: LinksFunction = () => [
   { rel: "stylesheet", href: stylesheet },
+  {
+    rel: "apple-touch-icon",
+    sizes: "180x180",
+    href: "/images/apple-touch-icon-180x180",
+  },
+  {
+    rel: "icon",
+    type: "image/svg+xml",
+    sizes: "32x32",
+    href: "/images/logo_svg.svg",
+  },
+  {
+    rel: "icon",
+    type: "image/png",
+    sizes: "32x32",
+    href: "/images/logo_svg.svg",
+  },
+  { rel: "manifest", href: "/manifest.webmanifest" },
+  { rel: "icon", href: "/images/favicon.ico" },
 ]
+
+export const meta: V2_MetaFunction = () => {
+  return [
+    { title: "New Remix App" },
+    { name: "description", content: "Welcome to Remix!" },
+  ]
+}
 
 // Root Component:
 export default function App() {

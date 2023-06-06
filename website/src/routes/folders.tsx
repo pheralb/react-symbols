@@ -8,10 +8,7 @@ import type { iSVG } from "@/types/svgs.type"
 import Card from "@/components/card"
 
 export const meta: V2_MetaFunction = () => {
-  return [
-    { title: "New Remix App" },
-    { name: "description", content: "Welcome to Remix!" },
-  ]
+  return [{ title: "Folders - React-Symbols" }]
 }
 
 export default function FoldersPage() {
