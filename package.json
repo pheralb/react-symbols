@@ -19,7 +19,7 @@
     "@react-symbols/icons": "*"
   },
   "devDependencies": {
-    "@types/node": "20.2.5",
+    "@types/node": "18.16.3",
     "prettier": "2.8.8",
     "prettier-plugin-tailwindcss": "0.3.0",
     "turbo": "1.10.1"
