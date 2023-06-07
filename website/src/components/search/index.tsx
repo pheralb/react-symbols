@@ -6,7 +6,7 @@ import XIcon from "../icons/x"
 export interface InputProps
   extends React.InputHTMLAttributes<HTMLInputElement> {
   clear?: boolean
-  clearAction?: () => void
+  clearaction?: () => void
 }
 
 const Search = forwardRef<HTMLInputElement, InputProps>(
@@ -28,7 +28,7 @@ const Search = forwardRef<HTMLInputElement, InputProps>(
         {clear && (
           <div className="absolute inset-y-0 right-0 flex items-center pr-3 text-neutral-400">
             <button
-              onClick={props.clearAction}
+              onClick={props.clearaction}
               className="focus:ring-0.5 rounded-md border-neutral-700 p-1 hover:bg-neutral-700/10 focus:border focus:outline-none focus:ring-neutral-700"
             >
               <div className="pointer-events-none">
