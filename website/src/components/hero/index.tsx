@@ -32,7 +32,7 @@ const Hero = () => {
       <Container>
         <div className="sm:flex sm:items-center sm:justify-between">
           <div className="flex flex-col space-y-4 text-center sm:text-left">
-            <h1 className="text-2xl font-medium tracking-wider text-neutral-100 sm:text-4xl">
+            <h1 className="text-2xl font-medium text-neutral-100 sm:text-4xl">
               Files & folders icons by Miguel Solorio
             </h1>
             <div className="flex items-center justify-between rounded-md border border-neutral-800 p-2">
@@ -63,10 +63,9 @@ const Hero = () => {
               </Popover>
             </div>
           </div>
-
-          <div className="mt-4 flex flex-col gap-4 sm:mt-0 sm:flex-row sm:items-center">
+          <div className="mt-2 flex flex-col gap-4 sm:mt-0 sm:flex-row sm:items-center md:mt-4">
             <ExternalLink href="https://github.com/pheralb/react-symbols#-getting-started">
-              <div className="group inline-flex items-center justify-center gap-1.5 rounded-lg border border-neutral-800 bg-neutral-900 px-5 py-3 transition hover:bg-neutral-800/50 focus:outline-none focus:ring">
+              <div className="group inline-flex w-full items-center justify-center gap-1.5 rounded-lg border border-neutral-800 bg-neutral-900 px-5 py-3 transition hover:bg-neutral-800/50 focus:outline-none focus:ring">
                 <span className="text-sm font-medium">Getting Started</span>
                 <ExternalArrow className="inline-block h-4 w-4 text-neutral-300 transition-transform duration-300 group-hover:translate-x-0.5" />
               </div>

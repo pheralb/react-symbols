@@ -25,6 +25,8 @@ export default function FoldersPage() {
         value={search}
         onChange={(e) => setSearch(e.target.value)}
         autoFocus
+        clear={search.length > 0}
+        clearAction={() => setSearch("")}
       />
       <div className="mx-auto mt-3 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-6">
         {filteredIcons
