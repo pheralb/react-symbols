@@ -78,21 +78,34 @@ const SidebarContent = () => {
           </ExternalLink>
         </div>
       </div>
-      <div className="hidden items-center justify-center md:block md:flex">
+      <div className="hidden items-center justify-center md:flex">
         <div className="fixed bottom-0 mb-4 flex flex-col space-y-1 rounded-xl bg-neutral-800/50 p-3">
           <p className="mb-1 mt-1 text-sm font-medium text-neutral-400">
             ✨ Created by
           </p>
-          <ExternalLink href="https://twitter.com/pheralb_">
+          <ExternalLink
+            href="https://twitter.com/pheralb_"
+            className="group transition"
+          >
             <SidebarItem
-              icon={<Twitter width={iconSidebarSize} />}
+              icon={
+                <Twitter
+                  width={iconSidebarSize}
+                  className="transition duration-500 group-hover:-rotate-12"
+                />
+              }
               text="@pheralb_"
               external={true}
             />
           </ExternalLink>
           <ExternalLink href="https://twitter.com/miguelsolorio_">
             <SidebarItem
-              icon={<Twitter width={iconSidebarSize} />}
+              icon={
+                <Twitter
+                  width={iconSidebarSize}
+                  className="transition duration-500 group-hover:-rotate-12"
+                />
+              }
               text="@miguelsolorio_"
               external={true}
             />
