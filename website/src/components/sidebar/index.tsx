@@ -16,11 +16,11 @@ const iconSidebarSize = 21
 const SidebarContent = () => {
   const location = useLocation()
   return (
-    <nav className="fixed left-0 top-0 h-full w-60 overflow-y-auto overflow-x-hidden border-r border-neutral-800 pb-10">
+    <nav className="w-full overflow-y-auto overflow-x-hidden border-b border-neutral-800 md:fixed md:left-0 md:top-0 md:h-full md:w-60 md:border-r md:pb-10">
       <div className="mx-5 flex flex-col pt-7">
         <NavLink to="/">
-          <div className="flex items-center space-x-3 border-b border-neutral-800 pb-3 transition-colors duration-75 hover:text-neutral-300">
-            <Symbols className="h-8 w-8" />
+          <div className="group flex items-center space-x-3 border-b border-neutral-800 pb-3 transition duration-75 hover:text-neutral-300">
+            <Symbols className="h-8 w-8 transition duration-700 group-hover:rotate-90" />
             <span className="text-xl font-medium tracking-wider">
               React-Symbols
             </span>
@@ -54,7 +54,7 @@ const SidebarContent = () => {
             />
           </NavLink>
         </div>
-        <div className="mt-3 flex flex-col space-y-1 pb-3">
+        <div className="mt-3 flex items-center space-x-1 overflow-x-auto pb-3 md:flex-col md:items-start md:space-x-0 md:space-y-1 md:overflow-y-auto">
           <ExternalLink href="https://github.com/pheralb/react-symbols">
             <SidebarItem
               icon={<Github width={iconSidebarSize} />}
@@ -65,7 +65,7 @@ const SidebarContent = () => {
           <ExternalLink href="https://marketplace.visualstudio.com/items?itemName=miguelsolorio.symbols">
             <SidebarItem
               icon={<VSCode width={iconSidebarSize} />}
-              text="VSCode Theme"
+              text="VSCode"
               external={true}
             />
           </ExternalLink>
@@ -78,7 +78,7 @@ const SidebarContent = () => {
           </ExternalLink>
         </div>
       </div>
-      <div className="flex items-center justify-center">
+      <div className="hidden items-center justify-center md:block md:flex">
         <div className="fixed bottom-0 mb-4 flex flex-col space-y-1 rounded-xl bg-neutral-800/50 p-3">
           <p className="mb-1 mt-1 text-sm font-medium text-neutral-400">
             ✨ Created by
@@ -107,7 +107,7 @@ const Sidebar = (props: SidebarProps) => {
   return (
     <section className="min-h-screen">
       <SidebarContent />
-      <div className="mb-12 ml-60">{props.children}</div>
+      <div className="mb-12 md:ml-60">{props.children}</div>
     </section>
   )
 }
