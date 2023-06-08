@@ -1,6 +1,6 @@
 {
   "name": "@react-symbols/icons",
-  "version": "1.1.9",
+  "version": "1.2.0",
   "description": "Symbols icons by Miguel Solorio for React",
   "keywords": [
     "react",
@@ -27,16 +27,17 @@
   "license": "MIT",
   "main": "build/index.js",
   "module": "build/index.js",
-  "types:": "build/types/index.d.ts",
-  "typings": "build/types/index.d.ts",
+  "types": "build/index.d.ts",
+  "typings": "build/index.d.ts",
   "type": "module",
   "files": [
     "build"
   ],
   "scripts": {
     "dev": "tsc && swc ./src -d ./build",
-    "build": "tsc && swc ./src -d ./build && tsc --emitDeclarationOnly --declaration --outDir build/types",
-    "prepublishOnly": "npm run build",
+    "build:swc-tsc": "tsc && swc ./src -d ./build && tsc --emitDeclarationOnly --declaration --outDir build/types",
+    "build": "tsc && swc ./src -d ./build",
+    "prepublishOnly": "npm run build:swc",
     "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
