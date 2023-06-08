@@ -36,7 +36,7 @@
   "scripts": {
     "dev": "tsc && swc ./src -d ./build",
     "build:swc-tsc": "tsc && swc ./src -d ./build && tsc --emitDeclarationOnly --declaration --outDir build/types",
-    "build:swc": "tsc && swc ./src -d ./build",
+    "build": "tsc && swc ./src -d ./build",
     "prepublishOnly": "npm run build:swc",
     "typecheck": "tsc --noEmit"
   },
