@@ -1,4 +1,4 @@
-import { ComponentProps, FC } from 'react';
+import type { ComponentProps, FC } from "react"
 
 const Supabase: FC<ComponentProps<'svg'>> = (props) => (
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 26" {...props}>

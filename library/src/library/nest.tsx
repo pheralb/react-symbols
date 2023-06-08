@@ -1,4 +1,4 @@
-import { ComponentProps, FC } from "react"
+import type { ComponentProps, FC } from "react"
 
 const Nest: FC<ComponentProps<"svg">> = (props) => (
   <svg
