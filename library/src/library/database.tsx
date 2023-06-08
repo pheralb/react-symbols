@@ -1,6 +1,6 @@
-import type { ComponentProps, FC } from "react"
+import { ComponentProps, FC } from "react"
 
-const Database: FC<ComponentProps<'svg'>> = (props) => (
+const Database: FC<ComponentProps<"svg">> = (props) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     fill="none"
@@ -18,6 +18,6 @@ const Database: FC<ComponentProps<'svg'>> = (props) => (
       fill="#F472B6"
     />
   </svg>
-);
+)
 
-export default Database;
+export default Database

@@ -1,6 +1,6 @@
-import type { ComponentProps, FC } from "react"
+import { ComponentProps, FC } from "react"
 
-const DrawIO: FC<ComponentProps<'svg'>> = (props) => (
+const DrawIO: FC<ComponentProps<"svg">> = (props) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     fill="none"
@@ -22,6 +22,6 @@ const DrawIO: FC<ComponentProps<'svg'>> = (props) => (
       transform="scale(-1 1) rotate(-60 6.697 23.199)"
     ></path>
   </svg>
-);
+)
 
-export default DrawIO;
+export default DrawIO

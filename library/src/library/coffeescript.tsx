@@ -1,6 +1,6 @@
-import type { ComponentProps, FC } from "react"
+import { ComponentProps, FC } from "react"
 
-const CoffeeScript: FC<ComponentProps<'svg'>> = (props) => (
+const CoffeeScript: FC<ComponentProps<"svg">> = (props) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     fill="none"
@@ -14,7 +14,7 @@ const CoffeeScript: FC<ComponentProps<'svg'>> = (props) => (
     ></path>
     <mask
       id="mask0_20564_632"
-      style={{ maskType: 'alpha' }}
+      style={{ maskType: "alpha" }}
       width="4"
       height="8"
       x="1"
@@ -37,6 +37,6 @@ const CoffeeScript: FC<ComponentProps<'svg'>> = (props) => (
       ></circle>
     </g>
   </svg>
-);
+)
 
-export default CoffeeScript;
+export default CoffeeScript

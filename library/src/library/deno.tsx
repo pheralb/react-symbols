@@ -1,6 +1,6 @@
-import type { ComponentProps, FC } from "react"
+import { ComponentProps, FC } from "react"
 
-const Deno: FC<ComponentProps<'svg'>> = (props) => (
+const Deno: FC<ComponentProps<"svg">> = (props) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     fill="none"
@@ -18,6 +18,6 @@ const Deno: FC<ComponentProps<'svg'>> = (props) => (
       d="M12.234 9.305a.625.625 0 110 1.25.625.625 0 010-1.25z"
     ></path>
   </svg>
-);
+)
 
-export default Deno;
+export default Deno

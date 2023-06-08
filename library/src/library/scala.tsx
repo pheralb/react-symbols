@@ -1,6 +1,6 @@
-import type { ComponentProps, FC } from "react"
+import { ComponentProps, FC } from "react"
 
-const Scala: FC<ComponentProps<'svg'>> = (props) => (
+const Scala: FC<ComponentProps<"svg">> = (props) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     fill="none"
@@ -20,6 +20,6 @@ const Scala: FC<ComponentProps<'svg'>> = (props) => (
       clipRule="evenodd"
     ></path>
   </svg>
-);
+)
 
-export default Scala;
+export default Scala

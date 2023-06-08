@@ -1,6 +1,6 @@
-import type { ComponentProps, FC } from "react"
+import { ComponentProps, FC } from "react"
 
-const Firebase: FC<ComponentProps<'svg'>> = (props) => (
+const Firebase: FC<ComponentProps<"svg">> = (props) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     xmlnsXlink="http://www.w3.org/1999/xlink"
@@ -10,7 +10,7 @@ const Firebase: FC<ComponentProps<'svg'>> = (props) => (
   >
     <mask
       id="mask0_20545_578"
-      style={{ maskType: 'alpha' }}
+      style={{ maskType: "alpha" }}
       width="15"
       height="19"
       x="5"
@@ -118,6 +118,6 @@ const Firebase: FC<ComponentProps<'svg'>> = (props) => (
       ></image>
     </defs>
   </svg>
-);
+)
 
-export default Firebase;
+export default Firebase

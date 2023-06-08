@@ -1,6 +1,6 @@
-import type { ComponentProps, FC } from "react"
+import { ComponentProps, FC } from "react"
 
-const Pug: FC<ComponentProps<'svg'>> = (props) => (
+const Pug: FC<ComponentProps<"svg">> = (props) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     fill="none"
@@ -48,6 +48,6 @@ const Pug: FC<ComponentProps<'svg'>> = (props) => (
       d="M16.02 10.562a.359.359 0 100-.718.359.359 0 000 .718zM8.137 10.562a.359.359 0 100-.718.359.359 0 000 .718z"
     ></path>
   </svg>
-);
+)
 
-export default Pug;
+export default Pug

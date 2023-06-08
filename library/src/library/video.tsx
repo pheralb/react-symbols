@@ -1,6 +1,6 @@
-import type { ComponentProps, FC } from "react"
+import { ComponentProps, FC } from "react"
 
-const Video: FC<ComponentProps<'svg'>> = (props) => (
+const Video: FC<ComponentProps<"svg">> = (props) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     fill="none"
@@ -14,6 +14,6 @@ const Video: FC<ComponentProps<'svg'>> = (props) => (
       clipRule="evenodd"
     ></path>
   </svg>
-);
+)
 
-export default Video;
+export default Video

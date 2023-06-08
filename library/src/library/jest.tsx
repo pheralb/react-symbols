@@ -1,6 +1,6 @@
-import type { ComponentProps, FC } from "react"
+import { ComponentProps, FC } from "react"
 
-const Jest: FC<ComponentProps<'svg'>> = (props) => (
+const Jest: FC<ComponentProps<"svg">> = (props) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     fill="none"
@@ -20,6 +20,6 @@ const Jest: FC<ComponentProps<'svg'>> = (props) => (
       d="M18.128 14.48a2.642 2.642 0 01-2.55-1.973h-.99a2.642 2.642 0 01-2.957 1.943 7.91 7.91 0 01-1.225 1.455 8.114 8.114 0 01-2.827 1.755l-.242.089-.224-.118c-1.237-.636-1.873-1.926-1.649-3.175a2.283 2.283 0 01-.406-.106c-.024.041-.042.088-.065.136-.377.777-.772 1.578-.913 2.438-.153.919-.218 2.598 1.078 3.493.565.389 1.16.583 1.826.583 1.278 0 2.656-.683 4.117-1.408 1.143-.565 2.32-1.154 3.546-1.455a15 15 0 011.39-.247c.83-.118 1.62-.236 2.262-.607a2.602 2.602 0 001.16-3.163c-.389.224-.842.36-1.331.36z"
     ></path>
   </svg>
-);
+)
 
-export default Jest;
+export default Jest

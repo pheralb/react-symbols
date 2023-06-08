@@ -1,6 +1,6 @@
-import type { ComponentProps, FC } from "react"
+import { ComponentProps, FC } from "react"
 
-const Shell: FC<ComponentProps<'svg'>> = (props) => (
+const Shell: FC<ComponentProps<"svg">> = (props) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     fill="none"
@@ -15,6 +15,6 @@ const Shell: FC<ComponentProps<'svg'>> = (props) => (
       d="M4.336 17l6-6-6-6M12.336 19h8"
     ></path>
   </svg>
-);
+)
 
-export default Shell;
+export default Shell

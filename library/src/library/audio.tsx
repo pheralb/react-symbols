@@ -1,6 +1,6 @@
-import type { ComponentProps, FC } from "react"
+import { ComponentProps, FC } from "react"
 
-const Audio: FC<ComponentProps<'svg'>> = (props) => (
+const Audio: FC<ComponentProps<"svg">> = (props) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     fill="none"
@@ -13,6 +13,6 @@ const Audio: FC<ComponentProps<'svg'>> = (props) => (
     <rect width="2" height="12" x="15" y="6" fill="#64748B" rx="1"></rect>
     <rect width="2" height="8" x="19" y="8" fill="#64748B" rx="1"></rect>
   </svg>
-);
+)
 
-export default Audio;
+export default Audio

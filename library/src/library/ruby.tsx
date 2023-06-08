@@ -1,6 +1,6 @@
-import type { ComponentProps, FC } from "react"
+import { ComponentProps, FC } from "react"
 
-const Ruby: FC<ComponentProps<'svg'>> = (props) => (
+const Ruby: FC<ComponentProps<"svg">> = (props) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     fill="none"
@@ -9,7 +9,7 @@ const Ruby: FC<ComponentProps<'svg'>> = (props) => (
   >
     <mask
       id="mask0_20571_807"
-      style={{ maskType: 'alpha' }}
+      style={{ maskType: "alpha" }}
       width="20"
       height="17"
       x="2"
@@ -44,6 +44,6 @@ const Ruby: FC<ComponentProps<'svg'>> = (props) => (
       clipRule="evenodd"
     ></path>
   </svg>
-);
+)
 
-export default Ruby;
+export default Ruby

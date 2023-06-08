@@ -1,6 +1,6 @@
-import type { ComponentProps, FC } from "react"
+import { ComponentProps, FC } from "react"
 
-const GoMod: FC<ComponentProps<'svg'>> = (props) => (
+const GoMod: FC<ComponentProps<"svg">> = (props) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     fill="none"
@@ -30,6 +30,6 @@ const GoMod: FC<ComponentProps<'svg'>> = (props) => (
       </clipPath>
     </defs>
   </svg>
-);
+)
 
-export default GoMod;
+export default GoMod
