@@ -1,4 +1,4 @@
-import { ComponentProps, FC } from "react"
+import type { ComponentProps, FC } from "react"
 
 const FolderGreenOutline: FC<ComponentProps<"svg">> = (props) => (
   <svg
