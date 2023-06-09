@@ -1,4 +1,4 @@
-name: Release
+name: 📦 Publish
 
 on:
   push:
@@ -8,8 +8,28 @@ on:
 concurrency: ${{ github.workflow }}-${{ github.ref }}
 
 jobs:
+  typecheck:
+    name: Typecheck
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: library
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Setup Node.js 18.x
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18.x
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run typecheck
+        run: npm run typecheck
+
   release:
-    name: 🚀 Release
+    name: Release
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repo

@@ -3,7 +3,6 @@
 
 # Dependencies =>
 node_modules
-package-lock.json
 pnpm-lock.json
 yarn.lock
 
@@ -14,11 +13,12 @@ yarn.lock
 build
 
 # Remix =>
-api
 .cache
 .env
 .vercel
 .output
+api
+
 /build/
 /public/build
 /api/index.js

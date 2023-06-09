@@ -1,6 +1,6 @@
-import { ComponentProps, FC } from 'react';
+import type { ComponentProps, FC } from "react"
 
-const FolderPurple: FC<ComponentProps<'svg'>> = (props) => (
+const FolderPurple: FC<ComponentProps<"svg">> = (props) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     fill="none"
@@ -15,6 +15,6 @@ const FolderPurple: FC<ComponentProps<'svg'>> = (props) => (
     ></path>
     <circle cx="20" cy="16" r="4" fill="#8B5CF6"></circle>
   </svg>
-);
+)
 
-export default FolderPurple;
+export default FolderPurple

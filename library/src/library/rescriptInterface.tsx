@@ -1,6 +1,6 @@
-import { ComponentProps, FC } from 'react';
+import type { ComponentProps, FC } from "react"
 
-const RescriptInterface: FC<ComponentProps<'svg'>> = (props) => (
+const RescriptInterface: FC<ComponentProps<"svg">> = (props) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     fill="none"
@@ -16,6 +16,6 @@ const RescriptInterface: FC<ComponentProps<'svg'>> = (props) => (
       d="M9.513 7.114c-.714 0-1.073 0-1.345.138-.24.123-.436.319-.56.56-.138.272-.138.63-.138 1.348v6.259c0 .594 0 .894.097 1.128.13.313.378.561.69.69.234.097.535.097 1.128.097.598 0 .894 0 1.129-.096.312-.13.56-.378.69-.691.096-.234.096-.534.096-1.128V7.114H9.514zm5.86.075a2.253 2.253 0 000 4.506h.002a2.251 2.251 0 001.59-3.846 2.252 2.252 0 00-1.593-.66z"
     ></path>
   </svg>
-);
+)
 
-export default RescriptInterface;
+export default RescriptInterface

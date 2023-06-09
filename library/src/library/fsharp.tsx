@@ -1,6 +1,6 @@
-import { ComponentProps, FC } from 'react';
+import type { ComponentProps, FC } from "react"
 
-const FSharp: FC<ComponentProps<'svg'>> = (props) => (
+const FSharp: FC<ComponentProps<"svg">> = (props) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     fill="none"
@@ -16,6 +16,6 @@ const FSharp: FC<ComponentProps<'svg'>> = (props) => (
       </clipPath>
     </defs>
   </svg>
-);
+)
 
-export default FSharp;
+export default FSharp

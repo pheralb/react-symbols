@@ -1,6 +1,6 @@
-import { ComponentProps, FC } from 'react';
+import type { ComponentProps, FC } from "react"
 
-const Vlang: FC<ComponentProps<'svg'>> = (props) => (
+const Vlang: FC<ComponentProps<"svg">> = (props) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     fill="none"
@@ -9,7 +9,7 @@ const Vlang: FC<ComponentProps<'svg'>> = (props) => (
   >
     <mask
       id="mask0_20924_557"
-      style={{ maskType: 'luminance' }}
+      style={{ maskType: "luminance" }}
       width="18"
       height="18"
       x="3"
@@ -57,6 +57,6 @@ const Vlang: FC<ComponentProps<'svg'>> = (props) => (
       </filter>
     </defs>
   </svg>
-);
+)
 
-export default Vlang;
+export default Vlang

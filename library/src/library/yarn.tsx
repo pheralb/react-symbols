@@ -1,6 +1,6 @@
-import { ComponentProps, FC } from 'react';
+import type { ComponentProps, FC } from "react"
 
-const Yarn: FC<ComponentProps<'svg'>> = (props) => (
+const Yarn: FC<ComponentProps<"svg">> = (props) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     fill="none"
@@ -14,6 +14,6 @@ const Yarn: FC<ComponentProps<'svg'>> = (props) => (
       clipRule="evenodd"
     ></path>
   </svg>
-);
+)
 
-export default Yarn;
+export default Yarn

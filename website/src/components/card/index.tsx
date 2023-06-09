@@ -1,40 +1,34 @@
-import toast from "react-hot-toast";
+import type { ReactNode } from "react"
+import { toast } from "sonner"
+
+import useCopyToClipboard from "@/hooks/useCopyToClipboard"
 
 interface CardProps {
-  name: string;
-  icon: React.ReactNode;
+  name: string
+  icon: ReactNode
 }
 
-const copyToClipboard = async (txt: string) => {
-  try {
-    const clipboardItem = new ClipboardItem({
-      "text/plain": new Blob([txt], { type: "text/plain" }),
-    });
-    await navigator.clipboard.write([clipboardItem]);
-  } catch (error) {
-    await navigator.clipboard.writeText(txt);
-  }
-  toast("Copied to clipboard!", {
-    icon: "🥳",
-    style: {
-      borderRadius: "10px",
-      background: "#121212",
-      color: "#fff",
-    },
-  });
-};
-
 const Card = (props: CardProps) => {
+  const [value, copy] = useCopyToClipboard()
+
+  const copyToClipboard = async (txt: string) => {
+    copy(txt)
+    toast("Copied to clipboard!", {
+      icon: "✨",
+      description: `${txt}`,
+    })
+  }
+
   return (
     <div
       title={`Copy ${props.name} to clipboard`}
-      className="flex flex-col items-center justify-center py-4 transition duration-200 ease-in-out transform border-2 rounded-md cursor-pointer bg-midgnight border-neutral-800 hover:border-indigo-800"
+      className="bg-midgnight flex transform cursor-pointer flex-col items-center justify-center rounded-md border border-neutral-800 py-3 transition duration-200 ease-in-out hover:border-neutral-800 hover:bg-neutral-800/40"
       onClick={() => copyToClipboard(`<${props.name} />`)}
     >
       {props.icon}
       <p className="mt-2 font-medium text-gray-300">{props.name}</p>
     </div>
-  );
-};
+  )
+}
 
-export default Card;
+export default Card

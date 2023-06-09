@@ -1,6 +1,6 @@
-import { ComponentProps, FC } from 'react';
+import type { ComponentProps, FC } from "react"
 
-const Text: FC<ComponentProps<'svg'>> = (props) => (
+const Text: FC<ComponentProps<"svg">> = (props) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     fill="none"
@@ -11,6 +11,6 @@ const Text: FC<ComponentProps<'svg'>> = (props) => (
     <rect width="12" height="2" x="4" y="11" fill="#64748B" rx="1"></rect>
     <rect width="16" height="2" x="4" y="16" fill="#64748B" rx="1"></rect>
   </svg>
-);
+)
 
-export default Text;
+export default Text

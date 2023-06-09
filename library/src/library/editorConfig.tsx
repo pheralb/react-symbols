@@ -1,6 +1,6 @@
-import { ComponentProps, FC } from 'react';
+import type { ComponentProps, FC } from "react"
 
-const EditorConfig: FC<ComponentProps<'svg'>> = (props) => (
+const EditorConfig: FC<ComponentProps<"svg">> = (props) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     fill="none"
@@ -41,6 +41,6 @@ const EditorConfig: FC<ComponentProps<'svg'>> = (props) => (
       clipRule="evenodd"
     ></path>
   </svg>
-);
+)
 
-export default EditorConfig;
+export default EditorConfig

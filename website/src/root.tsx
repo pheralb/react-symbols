@@ -1,4 +1,4 @@
-import type { LinksFunction, MetaFunction } from "@remix-run/node";
+import type { LinksFunction, V2_MetaFunction } from "@remix-run/node"
 import {
   Links,
   LiveReload,
@@ -6,52 +6,21 @@ import {
   Outlet,
   Scripts,
   ScrollRestoration,
-  useCatch,
-} from "@remix-run/react";
+} from "@remix-run/react"
 
-// Styles =>
-import custom from "@/styles/custom.css";
-import tailwindcss from "@/styles/tailwind.css";
-import Footer from "./components/footer";
+// Global Providers:
+import { Toaster } from "sonner"
 
-// Metas =>
-export const meta: MetaFunction = () => ({
-  charset: "utf-8",
-  viewport: "width=device-width,initial-scale=1",
-  title: "React-Symbols - A beautiful icons library for React.",
-  image: "https://react-symbols.vercel.app/images/og_image.jpg",
-  "twitter:image": "https://react-symbols.vercel.app/images/og_image.jpg",
-  "twitter:card": "summary_large_image",
-  "twitter:creator": "@pheralb_",
-  "twitter:site": "@pheralb_",
-  "twitter:title": "React Symbols",
-  "twitter:description": "A beautiful icons library for React",
-});
+// Global CSS:
+import stylesheet from "@/styles/globals.css"
 
-// Toaster
-import { Toaster } from "react-hot-toast";
-import Layout from "./layout/layout";
+// Global Sidebar:
+import Sidebar from "./components/sidebar"
+import Hero from "./components/hero"
 
+// Link CSS:
 export const links: LinksFunction = () => [
-  // Styles =>
-  { rel: "stylesheet", href: custom },
-  { rel: "stylesheet", href: tailwindcss },
-  // Fonts =>
-  {
-    rel: "preload",
-    as: "font",
-    href: "/fonts/JetBrainsMono-Regular.woff2",
-    type: "font/woff2",
-    crossOrigin: "anonymous",
-  },
-  {
-    rel: "preload",
-    as: "font",
-    href: "/fonts/Satoshi-Variable.woff2",
-    type: "font/woff2",
-    crossOrigin: "anonymous",
-  },
-  // Icons =>
+  { rel: "stylesheet", href: stylesheet },
   {
     rel: "apple-touch-icon",
     sizes: "180x180",
@@ -59,53 +28,62 @@ export const links: LinksFunction = () => [
   },
   {
     rel: "icon",
-    type: "image/png",
-    href: "/images/logo.png",
+    type: "image/svg+xml",
+    sizes: "32x32",
+    href: "/images/logo_svg.svg",
   },
-  // Manifest =>
+  {
+    rel: "icon",
+    type: "image/png",
+    sizes: "32x32",
+    href: "/images/logo_svg.svg",
+  },
   { rel: "manifest", href: "/manifest.webmanifest" },
-];
+  { rel: "icon", href: "/images/favicon.ico" },
+]
 
+// Meta tags:
+export const meta: V2_MetaFunction = () => {
+  return [
+    { title: "React-Symbols" },
+    {
+      property: "og:title",
+      content: "React-Symbols",
+    },
+    {
+      name: "description",
+      content: "Symbols VSCode Icons Theme by Miguel Solorio, for React.",
+    },
+  ];
+};
+
+// Root Component:
 export default function App() {
   return (
     <html lang="en">
       <head>
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
         <Meta />
         <Links />
       </head>
-      <body className="font-sans leading-5 text-white bg-midnight">
-        <Layout>
+      <body className="bg-neutral-900 font-sans text-neutral-100 antialiased">
+        <Sidebar>
+          <Hero />
           <Outlet />
-        </Layout>
+        </Sidebar>
+        <ScrollRestoration />
         <Scripts />
         <LiveReload />
-        <ScrollRestoration />
-        <Footer />
-        <Toaster position="bottom-center" reverseOrder={false} />
+        <Toaster
+          theme="dark"
+          position="bottom-right"
+          toastOptions={{
+            style: { background: "#171717" },
+            className: "font-sans text-md tracking-wide",
+          }}
+        />
       </body>
     </html>
-  );
-}
-
-export function CatchBoundary() {
-  const caught = useCatch();
-  return (
-    <html>
-      <head>
-        <title>Oops!</title>
-        <Meta />
-        <Links />
-      </head>
-      <body className="font-sans text-white bg-midnight">
-        <Layout>
-          <div className="flex flex-col items-center justify-center pt-5">
-            <h1 className="mb-2 font-medium text-7xl">{caught.status}</h1>
-            <p className="mb-6 text-gray-400">{caught.statusText}</p>
-          </div>
-        </Layout>
-        <Scripts />
-        <Footer />
-      </body>
-    </html>
-  );
+  )
 }

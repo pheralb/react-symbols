@@ -1,6 +1,6 @@
-import { ComponentProps, FC } from 'react';
+import type { ComponentProps, FC } from "react"
 
-const FolderSrc: FC<ComponentProps<'svg'>> = (props) => (
+const FolderSrc: FC<ComponentProps<"svg">> = (props) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     fill="none"
@@ -21,6 +21,6 @@ const FolderSrc: FC<ComponentProps<'svg'>> = (props) => (
       d="M16.09 13.467l-1.894 1.894 1.895 1.895M21.328 13.467l1.894 1.894-1.894 1.895M17.34 18.52l2.738-6.317"
     ></path>
   </svg>
-);
+)
 
-export default FolderSrc;
+export default FolderSrc

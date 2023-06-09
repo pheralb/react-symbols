@@ -25,7 +25,8 @@
 
 [**React-Symbols**](https://react-symbols.vercel.app/) is a library for React with the icons of the VSCode theme ["Symbols"](https://marketplace.visualstudio.com/items?itemName=miguelsolorio.symbols) by [Miguel Solorio (@miguelsolorio)](https://github.com/miguelsolorio):
 
-- **+100** icons.
+- **+100** files & folders icons.
+- Support React Server Components (RSC) & Next.js 13 /app directory.
 - **Lightweight**.
 - Ready to use with **Typescript**.
 - **SVG optimized** and **minified**.
@@ -53,7 +54,7 @@ yarn add @react-symbols/icons
 ### - Usage
 
 ```jsx
-import { Angular, Astro, Document } from "@react-symbols/icons";
+import { Angular, Astro, Document } from "@react-symbols/icons"
 
 const MyComponent = () => {
   return (
@@ -62,19 +63,19 @@ const MyComponent = () => {
       <Astro width={128} height={128} />
       <Document width={128} height={128} />
     </>
-  );
-};
+  )
+}
 
-export default MyComponent;
+export default MyComponent
 ```
 
-- 📀 Config for use the library with [Remix](https://remix.run/):
+- Config for use the library with [**Remix**](https://remix.run/):
 
 ```js
 // Add in the remix.config.js:
 module.exports = {
   ...
-  serverDependenciesToBundle: ["@react-symbols/icons"], // 👈
+  serverDependenciesToBundle: ["@react-symbols/icons"],
   ...
 };
 ```
@@ -86,15 +87,18 @@ This is a [Turborepo](https://turbo.build/repo) project bootstrapped with [`crea
 **For library:**
 
 - [SWC](https://swc.rs/) - Rust-based platform for the Web.
-- [React 18](https://reactjs.org/) - A JavaScript library for building user interfaces.
-- [Typescript](https://www.typescriptlang.org/) - Typed JavaScript at Any Scale.
+- [tsup (alternative)](https://tsup.egoist.dev/) - The simplest and fastest way to bundle your TypeScript libraries.
+- [React](https://reactjs.org/) - A JavaScript library for building user interfaces.
+- [Typescript](https://www.typescriptlang.org/) - TypeScript is JavaScript with syntax for types.
 
 **For website:**
 
 - [Remix](https://remix.run/) - Create modern, resilient user experiences with web fundamentals.
-- [Typescript](https://www.typescriptlang.org/) - Typed JavaScript at Any Scale.
+- [Typescript](https://www.typescriptlang.org/) - TypeScript is JavaScript with syntax for types.
 - [Tailwind CSS](https://tailwindcss.com/) - A utility-first CSS framework for rapidly building custom designs.
-- [react-hot-toast](https://react-hot-toast.com/) - Beautifully React notifications.
+- [tailwindcss-animate](https://github.com/jamiebuilds/tailwindcss-animate) - A Tailwind CSS plugin for creating beautiful animations.
+- [shadcn/ui + Radix UI](https://ui.shadcn.com/) - An opinionated toast component for React.
+- [Sonner](https://sonner.emilkowal.ski/) - An opinionated toast component for React.
 
 ## 🙌 Contributing
 

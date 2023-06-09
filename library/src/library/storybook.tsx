@@ -1,6 +1,6 @@
-import { ComponentProps, FC } from 'react';
+import type { ComponentProps, FC } from "react"
 
-const Storybook: FC<ComponentProps<'svg'>> = (props) => (
+const Storybook: FC<ComponentProps<"svg">> = (props) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     fill="none"
@@ -9,7 +9,7 @@ const Storybook: FC<ComponentProps<'svg'>> = (props) => (
   >
     <mask
       id="mask0_20590_698"
-      style={{ maskType: 'alpha' }}
+      style={{ maskType: "alpha" }}
       width="16"
       height="18"
       x="4"
@@ -30,6 +30,6 @@ const Storybook: FC<ComponentProps<'svg'>> = (props) => (
       ></path>
     </g>
   </svg>
-);
+)
 
-export default Storybook;
+export default Storybook

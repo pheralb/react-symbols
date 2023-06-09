@@ -1,6 +1,6 @@
-import { ComponentProps, FC } from 'react';
+import type { ComponentProps, FC } from "react"
 
-const FolderOrangeOutline: FC<ComponentProps<'svg'>> = (props) => (
+const FolderOrangeOutline: FC<ComponentProps<"svg">> = (props) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     fill="none"
@@ -15,6 +15,6 @@ const FolderOrangeOutline: FC<ComponentProps<'svg'>> = (props) => (
     ></path>
     <circle cx="20" cy="16" r="3" stroke="#EA580C" strokeWidth="2"></circle>
   </svg>
-);
+)
 
-export default FolderOrangeOutline;
+export default FolderOrangeOutline
