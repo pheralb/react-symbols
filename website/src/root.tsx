@@ -24,7 +24,7 @@ export const links: LinksFunction = () => [
   {
     rel: "apple-touch-icon",
     sizes: "180x180",
-    href: "/images/apple-touch-icon-180x180",
+    href: "/images/apple-touch-icon-180x180.png",
   },
   {
     rel: "icon",
@@ -42,12 +42,20 @@ export const links: LinksFunction = () => [
   { rel: "icon", href: "/images/favicon.ico" },
 ]
 
+// Meta tags:
 export const meta: V2_MetaFunction = () => {
   return [
-    { title: "New Remix App" },
-    { name: "description", content: "Welcome to Remix!" },
-  ]
-}
+    { title: "React-Symbols" },
+    {
+      property: "og:title",
+      content: "React-Symbols",
+    },
+    {
+      name: "description",
+      content: "Symbols VSCode Icons Theme by Miguel Solorio, for React.",
+    },
+  ];
+};
 
 // Root Component:
 export default function App() {
