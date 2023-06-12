@@ -10,6 +10,14 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "Hack";
+  src: url("/fonts/Hack.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+
 body {
   --sb-track-color: #171717;
   --sb-thumb-color: #3f3f46;

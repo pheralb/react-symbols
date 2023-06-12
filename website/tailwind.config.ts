@@ -6,7 +6,7 @@ export default {
     extend: {
       fontFamily: {
         sans: ["General-Sans", "sans-serif"],
-        mono: ["JetBrainsMono-Regular", "monospace"],
+        mono: ["Hack", "monospace"],
       },
     },
   },
