@@ -1,6 +1,6 @@
 <div align="center">
 <a href="https://react-symbols.vercel.app/">
-<img src="website/public/images/og_image.png">
+<img src="website/public/images/og.png">
 </a>
 
 <p></p>
@@ -69,7 +69,7 @@ const MyComponent = () => {
 export default MyComponent
 ```
 
-- Config for use the library with [**Remix**](https://remix.run/):
+> Config for use the library with [**Remix**](https://remix.run/):
 
 ```js
 // Add in the remix.config.js:
