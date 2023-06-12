@@ -37,8 +37,8 @@ const Hero = () => {
             </h1>
             <div className="flex items-center justify-between rounded-md border border-neutral-800 p-2">
               <div className="flex items-center space-x-1">
-                <span>✌️</span>
-                <p className="cursor-copy text-neutral-300">
+                <span>📦</span>
+                <p className="cursor-copy text-neutral-300 font-mono">
                   {value ?? commands[0].command}
                 </p>
               </div>
