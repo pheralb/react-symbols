@@ -1,4 +1,5 @@
 import type { LinksFunction, V2_MetaFunction } from "@remix-run/node"
+
 import {
   Links,
   LiveReload,
@@ -6,6 +7,8 @@ import {
   Outlet,
   Scripts,
   ScrollRestoration,
+  isRouteErrorResponse,
+  useRouteError,
 } from "@remix-run/react"
 
 // Global Providers:
@@ -17,6 +20,7 @@ import stylesheet from "@/styles/globals.css"
 // Global Sidebar:
 import Sidebar from "./components/sidebar"
 import Hero from "./components/hero"
+import ArrowLeft from "./components/icons/arrowLeft"
 
 // Link CSS:
 export const links: LinksFunction = () => [
@@ -86,4 +90,42 @@ export default function App() {
       </body>
     </html>
   )
+}
+
+// Custom error 4xx/5xx Page:
+export function ErrorBoundary() {
+  const error = useRouteError();
+  if (isRouteErrorResponse(error)) {
+    return (
+      <html lang="en">
+        <head>
+          <meta charSet="utf-8" />
+          <meta name="viewport" content="width=device-width,initial-scale=1" />
+          <Meta />
+          <Links />
+        </head>
+        <body className="bg-neutral-900 font-sans text-neutral-100 antialiased">
+          <Sidebar>
+            <Hero />
+            <div className="flex flex-col space-y-2 items-center justify-center">
+              <div className="flex flex-col space-y-2 pb-3 items-center border-b border-neutral-700 mb-2">
+                <h1 className="text-4xl font-semibold">Error</h1>
+                <p className="text-xl">{error.status}</p>
+                <p className="font-mono">{error.statusText}</p>
+              </div>
+              <a href="/" className="flex items-center space-x-2 hover:underline duration-75">
+                <ArrowLeft width={20} />
+                <span>Go Home</span>
+              </a>
+            </div>
+            <Outlet />
+          </Sidebar>
+          <ScrollRestoration />
+          <Scripts />
+          <LiveReload />
+        </body>
+      </html>
+    );
+  }
+  return null;
 }
