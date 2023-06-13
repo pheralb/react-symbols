@@ -4,8 +4,11 @@ import { Folder, FolderOpen, Github, NPM, Symbols } from "@react-symbols/icons"
 
 import SidebarItem from "./item"
 import ExternalLink from "../externalLink"
+
+// Custom Icons:
 import VSCode from "../icons/vscode"
 import Twitter from "../icons/twitter"
+import Figma from "../icons/figma"
 
 interface SidebarProps {
   children: ReactNode
@@ -73,6 +76,13 @@ const SidebarContent = () => {
             <SidebarItem
               icon={<NPM width={iconSidebarSize} />}
               text="npm"
+              external={true}
+            />
+          </ExternalLink>
+          <ExternalLink href="https://www.figma.com/file/HYLMyRbIdSbIJQlqnd9pSN/Symbols---File-Icons?type=design&node-id=20537-804&t=F5YRpTBiNwKqtOsT-0">
+            <SidebarItem
+              icon={<Figma width={iconSidebarSize} className="text-indigo-300" />}
+              text="Figma"
               external={true}
             />
           </ExternalLink>
