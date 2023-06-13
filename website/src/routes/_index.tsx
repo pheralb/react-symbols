@@ -4,7 +4,6 @@ import Container from "@/components/container"
 import Search from "@/components/search"
 
 import { Icons } from "@/data/svgs"
-import type { iSVG } from "@/types/svgs.type"
 import Card from "@/components/card"
 
 export const meta: V2_MetaFunction = () => {
@@ -31,8 +30,7 @@ export default function Index() {
       <div className="mx-auto mt-3 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-6">
         {filteredIcons
           .sort((iconA, iconB) => (iconA.name > iconB.name ? 1 : -1))
-          .map(({ name, icon: SVGIcon }: iSVG) => (
-            //@ts-ignore
+          .map(({ name, icon: SVGIcon }) => (
             <Card key={name} name={name} icon={<SVGIcon width={50} />} />
           ))}
       </div>
