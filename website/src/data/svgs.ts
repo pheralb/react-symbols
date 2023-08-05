@@ -134,6 +134,10 @@ export const Icons = [
  { name: "Nunjucks", icon: ReactSymbols.Nunjucks },
  { name: "VanillaExtract", icon: ReactSymbols.VanillaExtract },
  { name: "VisualStudio", icon: ReactSymbols.VisualStudio },
+ { name: "CloudflareWorkers", icon: ReactSymbols.CloudflareWorkers },
+ { name: "Gif", icon: ReactSymbols.Gif },
+ { name: "Rome", icon: ReactSymbols.Rome },
+ { name: "Turborepo", icon: ReactSymbols.Turborepo },
 ]
 
 export const Folders = [
@@ -164,4 +168,11 @@ export const Folders = [
  { name: "FolderSkyOutline", icon: ReactSymbols.FolderSkyOutline },
  { name: "FolderSrc", icon: ReactSymbols.FolderSrc },
  { name: "FolderConfig", icon: ReactSymbols.FolderConfig },
+ { name: "FolderAndroid", icon: ReactSymbols.FolderAndroid },
+ { name: "FolderContext", icon: ReactSymbols.FolderContext },
+ { name: "FolderDatabase", icon: ReactSymbols.FolderDatabase },
+ { name: "FolderLayout", icon: ReactSymbols.FolderLayout },
+ { name: "FolderMiddleware", icon: ReactSymbols.FolderMiddleware },
+ { name: "FolderPrisma", icon: ReactSymbols.FolderPrisma },
+ { name: "FolderUtils", icon: ReactSymbols.FolderUtils },
 ]
