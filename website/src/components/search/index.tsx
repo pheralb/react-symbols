@@ -10,7 +10,7 @@ export interface InputProps
 }
 
 const Search = forwardRef<HTMLInputElement, InputProps>(
-  ({ className, type, clear, ...props }, ref) => {
+  ({ className, type, clear, clearaction, ...props }, ref) => {
     return (
       <div className="relative w-full">
         <div className="absolute inset-y-0 left-0 flex items-center pl-3 text-neutral-400">
@@ -21,14 +21,14 @@ const Search = forwardRef<HTMLInputElement, InputProps>(
         <input
           type="text"
           autoComplete="off"
-          className="w-full rounded-md border border-neutral-200 bg-neutral-200/50 p-3 pl-10 placeholder-neutral-500 focus:outline-none focus:ring-1 focus:ring-neutral-300 dark:border-neutral-800 dark:bg-neutral-700/10 dark:focus:ring-neutral-700"
+          className="w-full rounded-md border border-neutral-800 bg-neutral-700/10 p-3 pl-10 placeholder-neutral-500 focus:outline-none focus:ring-1 focus:ring-neutral-700"
           ref={ref}
           {...props}
         />
         {clear && (
           <div className="absolute inset-y-0 right-0 flex items-center pr-3 text-neutral-400">
             <button
-              onClick={props.clearaction}
+              onClick={clearaction}
               className="focus:ring-0.5 rounded-md border-neutral-700 p-1 hover:bg-neutral-700/10 focus:border focus:outline-none focus:ring-neutral-700"
             >
               <div className="pointer-events-none">
