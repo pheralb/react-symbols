@@ -12,7 +12,7 @@ import ExternalArrow from "../icons/externalArrow"
 import useCopyToClipboard from "@/hooks/useCopyToClipboard"
 
 const Hero = () => {
-  const [value, copy] = useCopyToClipboard()
+  const [copy, value] = useCopyToClipboard()
   const [popoverOpen, setPopoverOpen] = useState(false)
 
   const handleCopy = (command: iCommand) => {

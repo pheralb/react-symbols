@@ -1,4 +1,5 @@
 import type { ReactNode } from "react"
+import { useState } from "react"
 import { toast } from "sonner"
 import {
   Tooltip,
@@ -16,14 +17,16 @@ interface CardProps {
 }
 
 const Card = (props: CardProps) => {
-  const [value, copy] = useCopyToClipboard()
+  const [copy] = useCopyToClipboard()
+  const [isCopied, setIsCopied] = useState<Boolean>(false)
 
   const copyToClipboard = async (txt: string) => {
     copy(txt)
+    setIsCopied(true)
     toast("Copied to clipboard!", {
       icon: <Copy className="h-5 w-5 text-neutral-300" />,
       description: `${txt}`,
-      onAutoClose: () => copy(""),
+      onAutoClose: () => setIsCopied(false),
     })
   }
 
@@ -37,7 +40,7 @@ const Card = (props: CardProps) => {
           >
             {props.icon}
             <p className="mt-2 font-medium text-gray-300">
-              {value ? "Copied!" : props.name}
+              {isCopied ? "Copied!" : props.name}
             </p>
           </div>
         </TooltipTrigger>
