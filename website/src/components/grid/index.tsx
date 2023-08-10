@@ -6,9 +6,7 @@ interface GridProps {
 
 const Grid = (props: GridProps) => {
   return (
-    <div className="mx-auto mt-3 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-6">
-      {props.children}
-    </div>
+    <div className="grid-cols-fill mx-auto grid gap-4">{props.children}</div>
   )
 }
 
