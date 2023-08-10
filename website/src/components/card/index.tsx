@@ -16,6 +16,7 @@ const Card = (props: CardProps) => {
     toast("Copied to clipboard!", {
       icon: "✨",
       description: `${txt}`,
+      onAutoClose: () => copy(""),
     })
   }
 
@@ -26,7 +27,9 @@ const Card = (props: CardProps) => {
       onClick={() => copyToClipboard(`<${props.name} />`)}
     >
       {props.icon}
-      <p className="mt-2 font-medium text-gray-300">{props.name}</p>
+      <p className="mt-2 font-medium text-gray-300">
+        {value ? "Copied!" : props.name}
+      </p>
     </div>
   )
 }
