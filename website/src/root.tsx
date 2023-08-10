@@ -54,7 +54,7 @@ export const links: LinksFunction = () => [
     rel: "icon",
     type: "image/png",
     sizes: "32x32",
-    href: "/images/logo_svg.svg",
+    href: "/images/logo.png",
   },
   { rel: "manifest", href: "/manifest.webmanifest" },
   { rel: "icon", href: "/images/favicon.ico" },
