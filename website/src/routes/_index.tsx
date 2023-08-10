@@ -20,14 +20,16 @@ export default function Index() {
 
   return (
     <Container>
-      <Search
-        placeholder={`Search ${Icons.length} files icons...`}
-        value={search}
-        onChange={(e) => setSearch(e.target.value)}
-        autoFocus
-        clear={search.length > 0}
-        clearaction={() => setSearch("")}
-      />
+      <section className="sticky top-0 z-10 bg-neutral-900 py-3">
+        <Search
+          placeholder={`Search ${Icons.length} files icons...`}
+          value={search}
+          onChange={(e) => setSearch(e.target.value)}
+          autoFocus
+          clear={search.length > 0}
+          clearaction={() => setSearch("")}
+        />
+      </section>
       <Grid>
         {filteredIcons
           .sort((iconA, iconB) => (iconA.name > iconB.name ? 1 : -1))
