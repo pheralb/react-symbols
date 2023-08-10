@@ -36,10 +36,10 @@ const Hero = () => {
               Files & folders icons by Miguel Solorio
             </h1>
             <div className="flex items-center justify-between rounded-md border border-neutral-800 p-2">
-              <div className="flex items-center space-x-1">
+              <div className="flex items-center space-x-2">
                 <span>📦</span>
-                <p className="cursor-copy text-neutral-300 font-mono">
-                  {value ?? commands[0].command}
+                <p className="cursor-copy font-mono text-neutral-300">
+                  <span>{value ?? commands[0].command}</span>
                 </p>
               </div>
               <Popover open={popoverOpen} onOpenChange={setPopoverOpen}>
