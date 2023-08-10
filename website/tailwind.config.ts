@@ -8,6 +8,9 @@ export default {
         sans: ["General-Sans", "sans-serif"],
         mono: ["Hack", "monospace"],
       },
+      gridTemplateColumns: {
+        fill: "repeat(auto-fill, minmax(13rem, 1fr))",
+      },
     },
   },
   plugins: [require("tailwindcss-animate")],
