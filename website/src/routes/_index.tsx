@@ -1,9 +1,9 @@
 import { useState } from "react"
 import type { V2_MetaFunction } from "@remix-run/node"
+import { Icons } from "@/data/svgs"
+
 import Container from "@/components/container"
 import Search from "@/components/search"
-
-import { Icons } from "@/data/svgs"
 import Card from "@/components/card"
 import Grid from "@/components/grid"
 
