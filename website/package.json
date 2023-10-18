@@ -1,8 +1,9 @@
 {
   "name": "@react-symbols/website",
-  "version": "3.0.0",
+  "version": "3.1.0",
   "description": "Symbols by Miguel Solorio for React.",
   "author": "@pheralb_",
+  "type": "module",
   "keywords": [
     "react",
     "icons",
@@ -36,7 +37,7 @@
     "@remix-run/node": "2.1.0",
     "@remix-run/react": "2.1.0",
     "@remix-run/vercel": "1.19.3",
-    "@vercel/node": "3.0.7",
+    "@vercel/node": "2.4.0",
     "clsx": "2.0.0",
     "isbot": "3.7.0",
     "react": "18.2.0",
