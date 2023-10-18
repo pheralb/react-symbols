@@ -37,3 +37,23 @@ body::-webkit-scrollbar-track {
 body::-webkit-scrollbar-thumb {
   background: var(--sb-thumb-color);
 }
+
+div {
+  --sb-track-color: #171717;
+  --sb-thumb-color: #3f3f46;
+  --sb-size: 10px;
+
+  scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+}
+
+div::-webkit-scrollbar {
+  width: var(--sb-size);
+}
+
+div::-webkit-scrollbar-track {
+  background: var(--sb-track-color);
+}
+
+div::-webkit-scrollbar-thumb {
+  background: var(--sb-thumb-color);
+}

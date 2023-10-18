@@ -39,7 +39,7 @@ const Card = (props: CardProps) => {
 
   return (
     <div className="bg-midgnight flex transform flex-col items-center justify-center rounded-md border border-neutral-800 py-3 transition duration-200 ease-in-out hover:border-neutral-800 hover:bg-neutral-800/40">
-      <div className="flex flex-col space-y-2 items-center justify-center mb-2">
+      <div className="flex flex-col space-y-1 items-center justify-center mb-2 mt-1">
         {props.icon}
         <p>{props.name}</p>
       </div>
