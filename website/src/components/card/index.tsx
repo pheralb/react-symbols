@@ -1,20 +1,21 @@
 import type { ReactNode } from "react"
 import { useState } from "react"
 import { toast } from "sonner"
+import useCopyToClipboard from "@/hooks/useCopyToClipboard"
+import { lower } from "@/utils/lower"
+
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/tooltip"
+import { Button, buttonVariants } from "@/components/button"
+import ExternalLink from "@/components/externalLink"
 
-import useCopyToClipboard from "@/hooks/useCopyToClipboard"
-import Copy from "../icons/copy"
-import { Button, buttonVariants } from "../button"
-import Check from "../icons/check"
-import Code from "../icons/code"
-import ExternalLink from "../externalLink"
-import { lower } from "@/utils/lower"
+import Copy from "@/components/icons/copy"
+import Check from "@/components/icons/check"
+import Code from "@/components/icons/code"
 
 type Category = "folders" | "icon"
 interface CardProps {
