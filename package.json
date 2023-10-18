@@ -1,6 +1,8 @@
 {
+  "name": "@react-symbols/workspace",
   "author": "@pheralb_",
   "private": true,
+  "packageManager": "pnpm@8.6.10",
   "workspaces": [
     "website",
     "library"
@@ -20,9 +22,9 @@
   },
   "devDependencies": {
     "@types/node": "18.16.3",
-    "prettier": "2.8.8",
-    "prettier-plugin-tailwindcss": "0.3.0",
-    "turbo": "1.10.12"
+    "prettier": "3.0.3",
+    "prettier-plugin-tailwindcss": "0.5.6",
+    "turbo": "latest"
   },
   "engines": {
     "node": ">=18.0.0",
