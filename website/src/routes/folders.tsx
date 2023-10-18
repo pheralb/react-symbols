@@ -1,5 +1,5 @@
 import { useState } from "react"
-import type { V2_MetaFunction } from "@remix-run/node"
+import type { MetaFunction } from "@remix-run/node"
 import { Folders } from "@/data/svgs"
 
 import Container from "@/components/container"
@@ -7,7 +7,7 @@ import Search from "@/components/search"
 import Card from "@/components/card"
 import Grid from "@/components/grid"
 
-export const meta: V2_MetaFunction = () => {
+export const meta: MetaFunction = () => {
   return [{ title: "Folders - React-Symbols" }]
 }
 
@@ -34,7 +34,12 @@ export default function FoldersPage() {
         {filteredIcons
           .sort((iconA, iconB) => (iconA.name > iconB.name ? 1 : -1))
           .map(({ name, icon: SVGIcon }) => (
-            <Card key={name} name={name} icon={<SVGIcon width={50} />} />
+            <Card
+              key={name}
+              category="folders"
+              name={name}
+              icon={<SVGIcon width={50} />}
+            />
           ))}
       </Grid>
 
