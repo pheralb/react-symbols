@@ -137,6 +137,17 @@ export { default as CloudflareWorkers } from "./library/cloudflareWorkers.js"
 export { default as Gif } from "./library/gif.js"
 export { default as Rome } from "./library/rome.js"
 export { default as Turborepo } from "./library/turborepo.js"
+export { default as Biome } from "./library/biome.js"
+export { default as Bun } from "./library/bun.js"
+export { default as CMake } from "./library/cmake.js"
+export { default as Contentlayer } from "./library/contentlayer.js"
+export { default as Cucumber } from "./library/cucumber.js"
+export { default as Drizzle } from "./library/drizzle.js"
+export { default as Dune } from "./library/dune.js"
+export { default as Lock } from "./library/lock.js"
+export { default as OCalm } from "./library/ocalm.js"
+export { default as Razor } from "./library/razor.js"
+export { default as Stylelint } from "./library/stylelint.js"
 
 // Folders =>
 
