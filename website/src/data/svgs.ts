@@ -100,7 +100,7 @@ export const Icons = [
   { name: "Terraform", icon: ReactSymbols.Terraform },
   { name: "Text", icon: ReactSymbols.Text },
   { name: "Tex", icon: ReactSymbols.Tex },
-  { name: "Ts", icon: ReactSymbols.TypeScript },
+  { name: "Typescript", icon: ReactSymbols.TypeScript },
   { name: "TsTest", icon: ReactSymbols.TsTest },
   { name: "Tsconfig", icon: ReactSymbols.Tsconfig },
   { name: "Vite", icon: ReactSymbols.Vite },
@@ -149,6 +149,15 @@ export const Icons = [
   { name: "Ocalm", icon: ReactSymbols.OCalm },
   { name: "Razor", icon: ReactSymbols.Razor },
   { name: "Stylelint", icon: ReactSymbols.Stylelint },
+  { name: "Earthfile", icon: ReactSymbols.Earthfile },
+  { name: "Gatsbyjs", icon: ReactSymbols.Gatsbyjs },
+  { name: "Keystatic", icon: ReactSymbols.Keystatic },
+  { name: "Knip", icon: ReactSymbols.Knip },
+  { name: "PandaCSS", icon: ReactSymbols.PandaCSS },
+  { name: "Sanity", icon: ReactSymbols.Sanity },
+  { name: "Serverless", icon: ReactSymbols.Serverless },
+  { name: "Solidity", icon: ReactSymbols.Solidity },
+  { name: "UnoCSS", icon: ReactSymbols.UnoCSS },
 ]
 
 export const Folders = [
@@ -191,4 +200,7 @@ export const Folders = [
   { name: "FolderTarget", icon: ReactSymbols.FolderTarget },
   { name: "FolderTina", icon: ReactSymbols.FolderTina },
   { name: "FolderVercel", icon: ReactSymbols.FolderVercel },
+  { name: "FolderFirebase", icon: ReactSymbols.FolderFirebase },
+  { name: "FolderGithub", icon: ReactSymbols.FolderGithub },
+  { name: "FolderSupabase", icon: ReactSymbols.FolderSupabase },
 ]

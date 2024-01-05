@@ -1,4 +1,4 @@
-import type { LinksFunction, V2_MetaFunction } from "@remix-run/node"
+import type { LinksFunction, MetaFunction } from "@remix-run/node"
 
 import {
   Links,
@@ -61,7 +61,7 @@ export const links: LinksFunction = () => [
 ]
 
 // Meta tags:
-export const meta: V2_MetaFunction = () => {
+export const meta: MetaFunction = () => {
   return [
     { title: "React-Symbols" },
     {
