@@ -170,7 +170,6 @@ export { default as ReduxEffects } from "./library/reduxEffects.js"
 export { default as ReduxFacade } from "./library/reduxFacade.js"
 export { default as ReduxReducer } from "./library/reduxReducer.js"
 export { default as ReduxSelector } from "./library/reduxSelector.js"
-export { default as SWC } from "./library/swc.js"
 export { default as Twig } from "./library/twig.js"
 export { default as Vitest } from "./library/vitest.js"
 
