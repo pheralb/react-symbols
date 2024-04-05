@@ -26,7 +26,7 @@
 [**React-Symbols**](https://react-symbols.vercel.app/) is a library for React with the icons of the VSCode theme ["Symbols"](https://marketplace.visualstudio.com/items?itemName=miguelsolorio.symbols) by [Miguel Solorio (@miguelsolorio)](https://github.com/miguelsolorio):
 
 - **+100** files & folders icons.
-- Support React Server Components (RSC) & Next.js 13 /app directory.
+- Support React Server Components (RSC) & Next.js 13/14 /app directory.
 - **Lightweight**.
 - Ready to use with **Typescript**.
 - **SVG optimized** and **minified**.
@@ -69,7 +69,7 @@ const MyComponent = () => {
 export default MyComponent
 ```
 
-> Config for use the library with [**Remix**](https://remix.run/):
+> Config for use the library with [**Remix**](https://remix.run/) if you are using Remix with CJS (v1 uses CJS by default, v2 uses ESM):
 
 ```js
 // Add in the remix.config.js:
