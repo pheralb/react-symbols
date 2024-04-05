@@ -32,9 +32,17 @@ const Hero = () => {
       <Container>
         <div className="sm:flex sm:items-center sm:justify-between">
           <div className="flex flex-col space-y-4 text-center sm:text-left">
-            <h1 className="text-2xl font-medium text-neutral-100 sm:text-4xl">
-              Files & folders icons by Miguel Solorio
+            <h1 className="text-2xl font-medium text-neutral-100 sm:text-4xl tracking-tight">
+              Beautifully File & Folder Icons
             </h1>
+            <ExternalLink href="https://twitter.com/miguelsolorio_">
+              <p className="opacity-80 hover:opacity-100 transition-opacity duration-150">
+                🎨 Designed by{" "}
+                <span className="underline underline-offset-[6px] decoration-neutral-600 decoration-dotted">
+                  Miguel Solorio
+                </span>
+              </p>
+            </ExternalLink>
             <div className="flex items-center justify-between rounded-md border border-neutral-800 p-2">
               <div className="flex items-center space-x-2">
                 <span>📦</span>
