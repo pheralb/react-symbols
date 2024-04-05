@@ -26,18 +26,18 @@ import ArrowLeft from "./components/icons/arrowLeft"
 export const links: LinksFunction = () => [
   { rel: "stylesheet", href: stylesheet },
   {
-    rel: 'preload',
-    as: 'font',
-    href: '/fonts/GeneralSans-Variable.woff2',
-    type: 'font/woff2',
-    crossOrigin: 'anonymous',
+    rel: "preload",
+    as: "font",
+    href: "/fonts/GeneralSans-Variable.woff2",
+    type: "font/woff2",
+    crossOrigin: "anonymous",
   },
   {
-    rel: 'preload',
-    as: 'font',
-    href: '/fonts/Hack.woff2',
-    type: 'font/woff2',
-    crossOrigin: 'anonymous',
+    rel: "preload",
+    as: "font",
+    href: "/fonts/Hack.woff2",
+    type: "font/woff2",
+    crossOrigin: "anonymous",
   },
   {
     rel: "apple-touch-icon",
@@ -72,21 +72,31 @@ export const meta: MetaFunction = () => {
       name: "description",
       content: "Symbols VSCode Icons Theme by Miguel Solorio, for React.",
     },
-  ];
-};
+  ]
+}
 
 // Root Component:
 export default function App() {
   return (
-    <html lang="en">
+    <html lang="en" className="dark">
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width,initial-scale=1" />
-        <meta name="keywords" content="Symbols, VSCode, Icons, Theme, React, Miguel Solorio" />
+        <meta
+          name="keywords"
+          content="Symbols, VSCode, Icons, Theme, React, Miguel Solorio"
+        />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="React-Symbols" />
-        <meta property="og:description" content="Symbols VSCode Icons Theme by Miguel Solorio, for React." />
-        <meta name="image" property="og:image" content="https://react-symbols.vercel.app/images/og.png" />
+        <meta
+          property="og:description"
+          content="Symbols VSCode Icons Theme by Miguel Solorio, for React."
+        />
+        <meta
+          name="image"
+          property="og:image"
+          content="https://react-symbols.vercel.app/images/og.png"
+        />
         <meta property="og:image:width" content="1894" />
         <meta property="og:image:height" content="971" />
         <meta property="og:url" content="https://react-symbols.vercel.app/" />
@@ -96,10 +106,7 @@ export default function App() {
           name="twitter:image"
           content="https://react-symbols.vercel.app/images/og.png"
         />
-        <meta
-          name="twitter:card"
-          content="summary_large_image"
-        />
+        <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:creator" content="@pheralb_" />
         <meta name="twitter:site" content="@pheralb_" />
         <meta name="twitter:title" content="React-Symbols" />
@@ -129,7 +136,7 @@ export default function App() {
 
 // Custom error 4xx/5xx Page:
 export function ErrorBoundary() {
-  const error = useRouteError();
+  const error = useRouteError()
   if (isRouteErrorResponse(error)) {
     return (
       <html lang="en">
@@ -148,7 +155,10 @@ export function ErrorBoundary() {
                 <p className="text-xl">{error.status}</p>
                 <p className="font-mono">{error.statusText}</p>
               </div>
-              <a href="/" className="flex items-center space-x-2 hover:underline duration-75">
+              <a
+                href="/"
+                className="flex items-center space-x-2 hover:underline duration-75"
+              >
                 <ArrowLeft width={20} />
                 <span>Go Home</span>
               </a>
@@ -160,7 +170,7 @@ export function ErrorBoundary() {
           <LiveReload />
         </body>
       </html>
-    );
+    )
   }
-  return null;
+  return null
 }
