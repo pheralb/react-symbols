@@ -3,9 +3,9 @@ import type { Config } from "tailwindcss";
 // Plugins:
 import twAnimate from "tailwindcss-animate";
 
-export const config: Config = {
+const config: Config = {
   darkMode: ["class"],
-  content: ["./app/**/{**,.client,.server}/**/*.{js,jsx,ts,tsx}"],
+  content: ["./app/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
       borderRadius: {
@@ -18,3 +18,5 @@ export const config: Config = {
   },
   plugins: [twAnimate],
 };
+
+export default config;

@@ -1,4 +1,5 @@
-import type { LinksFunction } from "@remix-run/node";
+import type { ReactNode } from "react";
+import type { LinksFunction } from "@vercel/remix";
 
 import {
   Links,
@@ -10,6 +11,7 @@ import {
 
 // Styles:
 import tailwind from "./styles/globals.css?url";
+import { cn } from "./utils";
 
 // Links:
 export const links: LinksFunction = () => [
@@ -17,16 +19,22 @@ export const links: LinksFunction = () => [
 ];
 
 // App Layout:
-export function Layout({ children }: { children: React.ReactNode }) {
+export function Layout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="en" className="dark">
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <Meta />
         <Links />
       </head>
-      <body>
+      <body
+        className={cn(
+          "font-sans antialiased",
+          "bg-zinc-50 text-black dark:bg-zinc-900 dark:text-white",
+          "scroll-smooth",
+        )}
+      >
         {children}
         <ScrollRestoration />
         <Scripts />
