@@ -8,13 +8,13 @@
     "library"
   ],
   "scripts": {
-    "build": "turbo run build",
-    "dev": "turbo run dev --parallel",
+    "build": "turbo build",
+    "dev": "turbo dev",
+    "lint": "turbo lint",
     "format": "prettier --write .",
-    "lint": "turbo run lint",
     "changeset": "changeset",
     "version-packages": "changeset version",
-    "release": "turbo run build --filter=website^... && changeset publish"
+    "release": "turbo build --filter=@react-symbols/website^... && changeset publish"
   },
   "dependencies": {
     "@changesets/cli": "2.27.8"
