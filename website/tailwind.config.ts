@@ -1,9 +1,20 @@
 import type { Config } from "tailwindcss";
 
-export default {
+// Plugins:
+import twAnimate from "tailwindcss-animate";
+
+export const config: Config = {
+  darkMode: ["class"],
   content: ["./app/**/{**,.client,.server}/**/*.{js,jsx,ts,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      borderRadius: {
+        lg: "var(--radius)",
+        md: "calc(var(--radius) - 2px)",
+        sm: "calc(var(--radius) - 4px)",
+      },
+      colors: {},
+    },
   },
-  plugins: [],
-} satisfies Config;
+  plugins: [twAnimate],
+};
