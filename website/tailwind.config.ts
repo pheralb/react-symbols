@@ -1,17 +1,9 @@
-import type { Config } from "tailwindcss"
+import type { Config } from "tailwindcss";
 
 export default {
-  content: ["./src/**/*.{js,jsx,ts,tsx}"],
+  content: ["./app/**/{**,.client,.server}/**/*.{js,jsx,ts,tsx}"],
   theme: {
-    extend: {
-      fontFamily: {
-        sans: ["General-Sans", "sans-serif"],
-        mono: ["Hack", "monospace"],
-      },
-      gridTemplateColumns: {
-        fill: "repeat(auto-fill, minmax(13rem, 1fr))",
-      },
-    },
+    extend: {},
   },
-  plugins: [require("tailwindcss-animate")],
-} satisfies Config
+  plugins: [],
+} satisfies Config;
