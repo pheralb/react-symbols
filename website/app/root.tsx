@@ -2,24 +2,37 @@ import type { ReactNode } from "react";
 import type { LinksFunction } from "@vercel/remix";
 
 import {
+  json,
   Links,
   Meta,
   Outlet,
   Scripts,
   ScrollRestoration,
+  useLoaderData,
 } from "@remix-run/react";
+import { getLatestVersion } from "fast-npm-meta";
+import { globals } from "@/globals";
 
 // Styles:
 import tailwind from "./styles/globals.css?url";
 import { cn } from "./utils";
+
+// Layout:
+import Header from "./components/header";
 
 // Links:
 export const links: LinksFunction = () => [
   { rel: "stylesheet", href: tailwind },
 ];
 
+export async function loader() {
+  const metadata = await getLatestVersion(globals.npmPackageName);
+  return json({ version: metadata.version });
+}
+
 // App Layout:
 export function Layout({ children }: { children: ReactNode }) {
+  const data = useLoaderData<typeof loader>();
   return (
     <html lang="en" className="dark">
       <head>
@@ -35,6 +48,7 @@ export function Layout({ children }: { children: ReactNode }) {
           "scroll-smooth",
         )}
       >
+        <Header npmVersion={data.version!} />
         {children}
         <ScrollRestoration />
         <Scripts />
