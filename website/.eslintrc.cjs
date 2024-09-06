@@ -48,6 +48,9 @@ module.exports = {
           typescript: {},
         },
       },
+      rules: {
+        "import/no-unresolved": "off",
+      },
     },
 
     // Typescript
@@ -71,6 +74,9 @@ module.exports = {
         "plugin:import/recommended",
         "plugin:import/typescript",
       ],
+      rules: {
+        "import/no-unresolved": "off", // Aquí desactivamos la regla
+      },
     },
 
     // Node
