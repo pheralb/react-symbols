@@ -1,43 +1,39 @@
 import { useSearchParams } from "@remix-run/react";
-import { Icons, totalIcons } from "@/data/svgs";
+import { FoldersIcons, totalFolders } from "@/data/svgs";
 
 import Navbar from "@/components/navbar";
-import Grid from "@/components/grid";
 import Card from "@/components/card";
+import Grid from "@/components/grid";
 
 import { cn } from "@/utils";
 import { containerClasses } from "@/ui/container";
 import { useDeferredValue, useState } from "react";
 
-export default function Index() {
+const Folders = () => {
   const [searchParams] = useSearchParams();
   const [size, setSize] = useState<number>(45);
   const deferredSize = useDeferredValue(size);
   const search = searchParams.get("q") || "";
 
-  const filteredIcons = Icons.filter((icon) =>
+  const filteredIcons = FoldersIcons.filter((icon) =>
     icon.name.toLowerCase().includes(search.toLowerCase()),
   );
-
   return (
     <main>
       <Navbar
-        searchPlaceholder={`Search ${totalIcons} icons...`}
+        searchPlaceholder={`Search ${totalFolders} folder icons...`}
         iconSize={deferredSize}
         onChangeIconSize={setSize}
       />
       <Grid className={cn(containerClasses, "py-6")}>
         {filteredIcons.map((icon) => {
           return (
-            <Card
-              key={icon.name}
-              isFolder={false}
-              iconSize={deferredSize}
-              {...icon}
-            />
+            <Card key={icon.name} isFolder={true} iconSize={size} {...icon} />
           );
         })}
       </Grid>
     </main>
   );
-}
+};
+
+export default Folders;
