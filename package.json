@@ -11,6 +11,7 @@
     "build": "turbo build",
     "dev": "turbo dev",
     "lint": "turbo lint",
+    "typecheck": "turbo typecheck",
     "lint:website": "turbo lint --filter=@react-symbols/website",
     "format": "prettier --write .",
     "changeset": "changeset",
