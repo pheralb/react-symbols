@@ -9,6 +9,8 @@
   ],
   "scripts": {
     "build": "turbo build",
+    "build:website": "turbo build --filter=@react-symbols/website",
+    "build:library": "turbo build --filter=@react-symbols/icons",
     "dev": "turbo dev",
     "lint": "turbo lint",
     "typecheck": "turbo typecheck",
