@@ -13,7 +13,7 @@ const ExternalLink = (props: Props) => {
       href={props.href}
       rel="noreferrer"
       target="_blank"
-      className={cn("w-full", props.className)}
+      className={cn(props.className)}
     >
       {props.children}
     </a>

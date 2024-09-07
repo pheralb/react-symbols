@@ -54,7 +54,7 @@ const InstallCommand = () => {
     >
       <code className="font-mono text-sm">{fullCommand}</code>
       <DropdownMenu open={open} onOpenChange={setOpen}>
-        <DropdownMenuTrigger>
+        <DropdownMenuTrigger className="outline-none focus:outline-none focus-visible:text-white">
           {open ? (
             <CaretDown weight="regular" size={16} />
           ) : (

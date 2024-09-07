@@ -1,4 +1,4 @@
-import { NPM, Symbols } from "@react-symbols/icons";
+import { Github, NPM, Symbols } from "@react-symbols/icons";
 import { ArrowSquareOut } from "@phosphor-icons/react";
 import { cn } from "@/utils";
 
@@ -7,7 +7,9 @@ import { containerClasses } from "@/ui/container";
 
 import ExternalLink from "@/components/externalLink";
 import InstallCommand from "@/components/installCommand";
-import { Figma, VSCode, Github } from "@/components/icons";
+import { Figma, VSCode } from "@/components/icons";
+import { Link } from "@remix-run/react";
+import Divider from "@/ui/divider";
 
 const svgLogoSize = {
   width: 14,
@@ -34,17 +36,46 @@ const Header = (props: iHeaderProps) => {
       className={cn("py-10", "flex flex-col space-y-6", containerClasses)}
     >
       <div className="flex items-center gap-4">
-        <Symbols height={48} />
-        <div className="flex flex-col space-y-0">
-          <h2 className="text-2xl font-semibold tracking-tight">
+        <Symbols height={50} className="hover:animate-pulse" />
+        <div className="flex flex-col space-y-[2px]">
+          <Link
+            to="/"
+            className="text-2xl font-semibold tracking-tight transition-opacity hover:opacity-75"
+          >
             React-Symbols
-          </h2>
-          <p className="text-zinc-400">Beautifully File & Folder Icons</p>
+          </Link>
+          <p className="flex items-center gap-2 text-zinc-400">
+            Beautifully File & Folder Icons. Crafted by{" "}
+            <ExternalLink
+              href="/"
+              className="group flex items-center space-x-2 underline decoration-zinc-500 decoration-wavy underline-offset-[4px] transition-colors hover:text-white hover:decoration-white"
+            >
+              <img
+                className="h-6 w-6 rounded-full transition-all group-hover:ring-2 group-hover:ring-zinc-500"
+                src="https://avatars.githubusercontent.com/u/35271042?v=4"
+                alt="Miguel Solorio"
+              />
+              <span>Miguel Solorio</span>
+            </ExternalLink>{" "}
+            and website created by{" "}
+            <ExternalLink
+              href="https://pheralb.dev"
+              className="group flex items-center space-x-2 underline decoration-zinc-500 decoration-wavy underline-offset-[4px] transition-colors hover:text-white hover:decoration-white"
+            >
+              <img
+                className="h-6 w-6 rounded-full transition-all group-hover:ring-2 group-hover:ring-zinc-500"
+                src="https://avatars.githubusercontent.com/u/62877300?v=4"
+                alt="Pablo Hernández"
+              />
+              <span>Pablo Hernández</span>
+            </ExternalLink>
+            .
+          </p>
         </div>
       </div>
       <div className="flex items-center space-x-4">
         <InstallCommand />
-        <div className="h-7 w-[1.8px] bg-zinc-800" />
+        <Divider />
         <nav className="flex items-center space-x-2">
           <ExternalLink
             href="https://www.npmjs.com/package/@react-symbols/icons"
@@ -52,6 +83,14 @@ const Header = (props: iHeaderProps) => {
           >
             <NPM width={svgIconSize.width} height={svgIconSize.height} />
             <span>v{props.npmVersion}</span>
+            <ArrowSquareOut height={12} size={15} weight="bold" />
+          </ExternalLink>
+          <ExternalLink
+            href="https://github.com/pheralb/react-symbols"
+            className={linkClasses}
+          >
+            <Github width={svgIconSize.width} height={svgIconSize.height} />
+            <span>Docs</span>
             <ArrowSquareOut height={12} size={15} weight="bold" />
           </ExternalLink>
           <ExternalLink
@@ -68,14 +107,6 @@ const Header = (props: iHeaderProps) => {
           >
             <VSCode width={svgLogoSize.width} height={svgLogoSize.height} />
             <span>VS Code</span>
-            <ArrowSquareOut height={12} size={15} weight="bold" />
-          </ExternalLink>
-          <ExternalLink
-            href="https://github.com/pheralb/react-symbols"
-            className={linkClasses}
-          >
-            <Github width={svgLogoSize.width} height={svgLogoSize.height} />
-            <span>GitHub</span>
             <ArrowSquareOut height={12} size={15} weight="bold" />
           </ExternalLink>
         </nav>

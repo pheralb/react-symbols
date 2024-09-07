@@ -45,6 +45,7 @@ export function Layout({ children }: { children: ReactNode }) {
         className={cn(
           "font-sans antialiased",
           "bg-zinc-50 text-black dark:bg-zinc-900 dark:text-white",
+          "selection:bg-zinc-300 selection:text-zinc-900 dark:selection:bg-zinc-700 dark:selection:text-zinc-50",
           "scroll-smooth",
         )}
       >
