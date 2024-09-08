@@ -1,4 +1,4 @@
-import type { ComponentProps, FC } from "react"
+import type { ComponentProps, FC } from "react";
 
 const FolderTina: FC<ComponentProps<"svg">> = (props) => (
   <svg
@@ -8,8 +8,8 @@ const FolderTina: FC<ComponentProps<"svg">> = (props) => (
     {...props}
   >
     <path
-      fill-rule="evenodd"
-      clip-rule="evenodd"
+      fillRule="evenodd"
+      clipRule="evenodd"
       d="M2 7C2 5.34315 3.34315 4 5 4H7.78388C8.47841 4 9.15142 4.24098 9.6881 4.68182L12.0814 6.64773C12.2603 6.79467 12.4846 6.875 12.7161 6.875H19C19.0887 6.875 19.1765 6.87885 19.2633 6.88639V8.91002C19.1794 8.88719 19.0911 8.875 19 8.875H12.7161C12.0216 8.875 11.3486 8.63402 10.8119 8.19318L8.41862 6.22727C8.23973 6.08033 8.01539 6 7.78388 6H5C4.44772 6 4 6.44772 4 7V17C4 17.5523 4.44772 18 5 18H13V20H5C3.34315 20 2 18.6569 2 17V7Z"
       fill="#64748B"
     />
@@ -22,6 +22,6 @@ const FolderTina: FC<ComponentProps<"svg">> = (props) => (
       fill="#EA580C"
     />
   </svg>
-)
+);
 
-export default FolderTina
+export default FolderTina;
