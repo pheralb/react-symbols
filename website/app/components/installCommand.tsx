@@ -20,6 +20,10 @@ interface iInstallCommands {
   icon: FunctionComponent<SVGProps<SVGSVGElement>>;
 }
 
+interface iInstallCommandProps {
+  className?: string;
+}
+
 const installCommands: iInstallCommands[] = [
   {
     package: "npm",
@@ -38,7 +42,7 @@ const installCommands: iInstallCommands[] = [
   },
 ];
 
-const InstallCommand = () => {
+const InstallCommand = (props: iInstallCommandProps) => {
   const [selectedPackage, setSelectedPackage] = useState<iInstallCommands>(
     installCommands[0],
   );
@@ -51,6 +55,7 @@ const InstallCommand = () => {
           variant: "outline",
         }),
         "select-all space-x-3 rounded-3xl text-zinc-400 transition-colors hover:bg-transparent hover:text-white dark:hover:bg-transparent",
+        props.className,
       )}
     >
       <code className="font-mono text-sm">{fullCommand}</code>

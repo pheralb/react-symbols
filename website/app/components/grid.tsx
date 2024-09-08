@@ -10,7 +10,7 @@ const Grid = (props: iGrid) => {
   return (
     <section
       className={cn(
-        "grid grid-cols-1 gap-4 md:grid-cols-4 lg:grid-cols-6",
+        "grid grid-cols-2 gap-4 md:grid-cols-4 lg:grid-cols-6",
         props.className,
       )}
     >

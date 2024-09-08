@@ -19,6 +19,7 @@ import { cn } from "./utils";
 
 // Layout:
 import Header from "./components/header";
+import Footer from "./components/footer";
 
 // Links:
 export const links: LinksFunction = () => [
@@ -51,6 +52,7 @@ export function Layout({ children }: { children: ReactNode }) {
       >
         <Header npmVersion={data.version!} />
         {children}
+        <Footer />
         <ScrollRestoration />
         <Scripts />
       </body>

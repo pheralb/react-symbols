@@ -26,7 +26,7 @@ export default function Index() {
         iconSize={deferredSize}
         onChangeIconSize={setSize}
       />
-      <Grid className={cn(containerClasses, "py-6")}>
+      <Grid className={cn(containerClasses, "pb-14 pt-6")}>
         {filteredIcons.map((icon) => {
           return (
             <Card

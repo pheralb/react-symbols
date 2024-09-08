@@ -36,50 +36,32 @@ interface iHeaderProps {
 const Header = (props: iHeaderProps) => {
   return (
     <section
-      className={cn("py-10", "flex flex-col space-y-6", containerClasses)}
+      className={cn(
+        "pb-4 pt-8 md:py-10",
+        "flex flex-col space-y-6",
+        containerClasses,
+      )}
     >
       <div className="flex items-center gap-4">
         <Symbols height={50} className="hover:animate-pulse" />
         <div className="flex flex-col space-y-[2px]">
           <Link
             to="/"
-            className="text-2xl font-semibold tracking-tight transition-opacity hover:opacity-75"
+            className="w-auto text-2xl font-semibold tracking-tight transition-opacity hover:opacity-75"
           >
             React-Symbols
           </Link>
-          <p className="flex items-center gap-2 text-zinc-400">
-            Beautifully File & Folder Icons. Crafted by{" "}
-            <ExternalLink
-              href="/"
-              className="group flex items-center space-x-2 underline decoration-zinc-500 decoration-wavy underline-offset-[4px] transition-colors hover:text-white hover:decoration-white"
-            >
-              <img
-                className="h-6 w-6 rounded-full transition-all group-hover:ring-2 group-hover:ring-zinc-500"
-                src="https://avatars.githubusercontent.com/u/35271042?v=4"
-                alt="Miguel Solorio"
-              />
-              <span>Miguel Solorio</span>
-            </ExternalLink>{" "}
-            and website created by{" "}
-            <ExternalLink
-              href="https://pheralb.dev"
-              className="group flex items-center space-x-2 underline decoration-zinc-500 decoration-wavy underline-offset-[4px] transition-colors hover:text-white hover:decoration-white"
-            >
-              <img
-                className="h-6 w-6 rounded-full transition-all group-hover:ring-2 group-hover:ring-zinc-500"
-                src="https://avatars.githubusercontent.com/u/62877300?v=4"
-                alt="Pablo Hernández"
-              />
-              <span>Pablo Hernández</span>
-            </ExternalLink>
-            .
-          </p>
+          <div className="flex flex-col items-start space-x-0 space-y-2 text-sm text-zinc-400 md:flex-row md:space-x-2 md:space-y-0 md:text-[16px]">
+            <span>
+              Beautifully File & Folder Icons for your React projects.
+            </span>
+          </div>
         </div>
       </div>
-      <div className="flex items-center space-x-4">
-        <InstallCommand />
-        <Divider />
-        <nav className="flex items-center space-x-2">
+      <div className="flex w-full flex-col items-center space-x-0 space-y-4 md:w-auto md:flex-row md:space-x-4 md:space-y-0">
+        <InstallCommand className="w-full md:w-auto" />
+        <Divider className="hidden md:block" />
+        <nav className="container flex items-center space-x-2 overflow-y-auto md:w-auto">
           <ExternalLink
             href="https://www.npmjs.com/package/@react-symbols/icons"
             className={linkClasses}
