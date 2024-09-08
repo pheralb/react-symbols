@@ -1,10 +1,10 @@
 import { Folder, FolderOpen } from "@react-symbols/icons";
 import { NavLink, useLocation } from "@remix-run/react";
 
-import Search from "./search";
-import { FeatherSearch } from "../icons";
+import Search from "@/components/navbar/search";
 import { cn } from "@/utils";
 
+import { FeatherSearch } from "@/ui/icons/feather";
 import { containerClasses } from "@/ui/container";
 import { buttonVariants } from "@/ui/button";
 import Divider from "@/ui/divider";

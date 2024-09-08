@@ -1,15 +1,16 @@
+import { Link } from "@remix-run/react";
+
 import { Github, NPM, Symbols } from "@react-symbols/icons";
 import { ArrowSquareOut } from "@phosphor-icons/react";
 import { cn } from "@/utils";
 
 import { buttonVariants } from "@/ui/button";
 import { containerClasses } from "@/ui/container";
+import { Figma, VSCode } from "@/ui/icons/svgl";
+import Divider from "@/ui/divider";
 
 import ExternalLink from "@/components/externalLink";
 import InstallCommand from "@/components/installCommand";
-import { Figma, VSCode } from "@/components/icons";
-import { Link } from "@remix-run/react";
-import Divider from "@/ui/divider";
 
 const svgLogoSize = {
   width: 14,
