@@ -1,39 +1,49 @@
-import { useSearchParams } from "@remix-run/react";
-import { FoldersIcons, totalFolders } from "@/data/svgs";
+import { useLoaderData, useSearchParams } from "@remix-run/react";
+import { useDeferredValue } from "react";
 
-import Navbar from "@/components/navbar";
-import Card from "@/components/card";
+import { FoldersIcons, iIcons } from "@/data/svgs";
+import { searchParamKey, iconSizeParamKey } from "@/data/searchParams";
+
 import Grid from "@/components/grid";
+import Card from "@/components/card";
 
 import { cn } from "@/utils";
 import { containerClasses } from "@/ui/container";
-import { useDeferredValue, useState } from "react";
 
-const Folders = () => {
+export async function clientLoader() {
+  const data = FoldersIcons;
+  return data;
+}
+
+export function HydrateFallback() {
+  return <p>Loading Icons...</p>;
+}
+
+export default function Folders() {
+  const data = useLoaderData<typeof clientLoader>();
   const [searchParams] = useSearchParams();
-  const [size, setSize] = useState<number>(45);
-  const deferredSize = useDeferredValue(size);
-  const search = searchParams.get("q") || "";
+  const search = searchParams.get(searchParamKey) || "";
+  const iconSizeValue = searchParams.get(iconSizeParamKey) || 45;
+  const deferredSize = useDeferredValue(Number(iconSizeValue));
 
-  const filteredIcons = FoldersIcons.filter((icon) =>
+  const filteredIcons = data.filter((icon) =>
     icon.name.toLowerCase().includes(search.toLowerCase()),
-  );
+  ) as iIcons[];
+
   return (
     <main>
-      <Navbar
-        searchPlaceholder={`Search ${totalFolders} folder icons...`}
-        iconSize={deferredSize}
-        onChangeIconSize={setSize}
-      />
-      <Grid className={cn(containerClasses, "py-6")}>
+      <Grid className={cn(containerClasses, "pb-14 pt-6")}>
         {filteredIcons.map((icon) => {
           return (
-            <Card key={icon.name} isFolder={true} iconSize={size} {...icon} />
+            <Card
+              key={icon.name}
+              isFolder={false}
+              iconSize={deferredSize}
+              {...icon}
+            />
           );
         })}
       </Grid>
     </main>
   );
-};
-
-export default Folders;
+}
