@@ -47,7 +47,7 @@ const Header = (props: iHeaderProps) => {
         <div className="flex flex-col space-y-[2px]">
           <Link
             to="/"
-            className="w-auto text-2xl font-semibold tracking-tight transition-opacity hover:opacity-75"
+            className="w-auto text-xl font-semibold tracking-tight transition-opacity hover:opacity-75 md:text-2xl"
           >
             React-Symbols
           </Link>

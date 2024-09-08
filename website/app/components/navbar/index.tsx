@@ -30,7 +30,7 @@ interface iNavbarProps {
 const Navbar = (props: iNavbarProps) => {
   const location = useLocation();
   return (
-    <nav className="sticky top-0 z-50 border-y border-zinc-800 bg-zinc-900/80 py-2 backdrop-blur-sm">
+    <nav className="sticky -top-1 z-50 border-y border-zinc-800 bg-zinc-900/80 py-[10px] backdrop-blur-sm">
       <div
         className={cn(
           containerClasses,
