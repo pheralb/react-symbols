@@ -1,16 +1,18 @@
 import { Folder, FolderOpen } from "@react-symbols/icons";
 import { NavLink, useLocation } from "@remix-run/react";
 
-import Search from "@/components/navbar/search";
+import { totalFolders, totalIcons, totalLibraryIcons } from "@/data/svgs";
 import { cn } from "@/utils";
+
+import { IconSize, Search } from "@/components/navbar/options";
 
 import { SearchIcon } from "@/ui/icons/feather";
 import { containerClasses } from "@/ui/container";
 import { buttonVariants } from "@/ui/button";
 import Divider from "@/ui/divider";
-import { Slider } from "@/ui/slider";
 
-const NavLinks = [
+// Only Files & Folders Icons Routes:
+const NavIconsRoutes = [
   {
     title: "Icons",
     href: "/",
@@ -21,13 +23,7 @@ const NavLinks = [
   },
 ];
 
-interface iNavbarProps {
-  searchPlaceholder?: string;
-  iconSize: number;
-  onChangeIconSize: (size: number) => void;
-}
-
-const Navbar = (props: iNavbarProps) => {
+const Navbar = () => {
   const location = useLocation();
   return (
     <nav className="sticky -top-1 z-50 border-y border-zinc-800 bg-zinc-900/80 py-[10px] backdrop-blur-sm">
@@ -43,15 +39,23 @@ const Navbar = (props: iNavbarProps) => {
             className="absolute left-1 top-1/2 h-5 w-5 -translate-y-[47%] transform text-zinc-400 md:h-[22px] md:w-[22px]"
           />
           <Search
-            placeholder={props.searchPlaceholder}
+            placeholder={
+              location.pathname === "/"
+                ? `Search ${totalIcons} file icons...`
+                : location.pathname === "/folders"
+                  ? `Search ${totalFolders} folder icons...`
+                  : `Search ${totalLibraryIcons} icons...`
+            }
             className="rounded-none border-b border-l-0 border-r-0 border-t-0 pl-[34px] text-[16px] placeholder:text-[16px] focus:ring-0 md:border-none md:pl-[38px]"
           />
         </div>
         <Divider className="hidden md:block" />
         <div className="flex w-full items-center space-x-1 md:w-auto">
-          {NavLinks.map((link) => (
+          {NavIconsRoutes.map((link) => (
             <NavLink
-              to={link.href}
+              to={{
+                pathname: link.href,
+              }}
               key={link.href}
               unstable_viewTransition={true}
               className={cn(
@@ -78,13 +82,7 @@ const Navbar = (props: iNavbarProps) => {
         <Divider className="hidden md:block" />
         <div className="flex w-full flex-col space-y-1 pb-1 text-zinc-400 transition-colors hover:text-white md:w-56 md:pb-0">
           <p className="text-xs font-medium uppercase">Size</p>
-          <Slider
-            defaultValue={[props.iconSize]}
-            onValueChange={(value) => props.onChangeIconSize(value[0])}
-            max={70}
-            min={20}
-            step={1}
-          />
+          <IconSize />
         </div>
       </div>
     </nav>
