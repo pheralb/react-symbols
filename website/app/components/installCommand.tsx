@@ -1,6 +1,7 @@
 import { type FunctionComponent, type SVGProps, useState } from "react";
 
 import { globals } from "@/globals";
+
 import { buttonVariants } from "@/ui/button";
 import {
   DropdownMenu,
@@ -8,8 +9,8 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/ui/dropdown-menu";
+import { ChevronDownIcon, CopyIcon } from "@/ui/icons/feather";
 
-import { CaretDown, Copy } from "@phosphor-icons/react";
 import { NPM, PNPM, Yarn } from "@react-symbols/icons";
 import { cn } from "@/utils";
 
@@ -56,9 +57,9 @@ const InstallCommand = () => {
       <DropdownMenu open={open} onOpenChange={setOpen}>
         <DropdownMenuTrigger className="outline-none focus:outline-none focus-visible:text-white">
           {open ? (
-            <CaretDown weight="regular" size={16} />
+            <ChevronDownIcon width={14} height={14} strokeWidth={2} />
           ) : (
-            <Copy weight="regular" size={16} />
+            <CopyIcon width={14} height={14} strokeWidth={2} />
           )}
         </DropdownMenuTrigger>
         <DropdownMenuContent sideOffset={6} align="end">

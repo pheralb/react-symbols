@@ -2,7 +2,7 @@ import type { iIcons } from "@/data/svgs";
 import { lower } from "@/utils";
 
 import { Button, buttonVariants } from "@/ui/button";
-import { ArrowSquareOut, Code, Copy } from "@phosphor-icons/react";
+import { ArrowUpRightIcon, CodeIcon, CopyIcon } from "@/ui/icons/feather";
 import ExternalLink from "./externalLink";
 import {
   Tooltip,
@@ -11,6 +11,7 @@ import {
   TooltipTrigger,
 } from "@/ui/tooltip";
 import { Github, Reactjs } from "@react-symbols/icons";
+import { globals } from "@/globals";
 
 interface iCard extends iIcons {
   isFolder: boolean;
@@ -27,7 +28,7 @@ const Card = (props: iCard) => {
           <Tooltip>
             <TooltipTrigger asChild>
               <Button variant="ghost" size="icon">
-                <Copy size={17} />
+                <CopyIcon width={17} height={17} strokeWidth={1.5} />
               </Button>
             </TooltipTrigger>
             <TooltipContent
@@ -43,10 +44,10 @@ const Card = (props: iCard) => {
               <ExternalLink
                 href={
                   props.isFolder
-                    ? `https://github.com/pheralb/react-symbols/blob/main/library/src/library/folders/${lower(
+                    ? `${globals.githubSrcRepository}library/folders/${lower(
                         props.name,
                       )}.tsx`
-                    : `https://github.com/pheralb/react-symbols/blob/main/library/src/library/${lower(
+                    : `${globals.githubSrcRepository}library/${lower(
                         props.name,
                       )}.tsx`
                 }
@@ -55,7 +56,7 @@ const Card = (props: iCard) => {
                   size: "icon",
                 })}
               >
-                <Code size={17} />
+                <CodeIcon width={17} height={17} strokeWidth={1.5} />
               </ExternalLink>
             </TooltipTrigger>
             <TooltipContent
@@ -64,7 +65,7 @@ const Card = (props: iCard) => {
             >
               <Github width={20} height={20} className="fill-current" />
               <p>Check Source Code</p>
-              <ArrowSquareOut size={12} />
+              <ArrowUpRightIcon width={12} height={12} strokeWidth={1.5} />
             </TooltipContent>
           </Tooltip>
         </TooltipProvider>

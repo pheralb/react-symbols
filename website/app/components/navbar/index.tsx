@@ -4,7 +4,7 @@ import { NavLink, useLocation } from "@remix-run/react";
 import Search from "@/components/navbar/search";
 import { cn } from "@/utils";
 
-import { FeatherSearch } from "@/ui/icons/feather";
+import { SearchIcon } from "@/ui/icons/feather";
 import { containerClasses } from "@/ui/container";
 import { buttonVariants } from "@/ui/button";
 import Divider from "@/ui/divider";
@@ -35,7 +35,7 @@ const Navbar = (props: iNavbarProps) => {
         className={cn(containerClasses, "flex w-full items-center space-x-3")}
       >
         <div className="relative w-full">
-          <FeatherSearch
+          <SearchIcon
             width={20}
             height={20}
             strokeWidth={1.5}

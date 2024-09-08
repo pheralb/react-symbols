@@ -1,13 +1,15 @@
 import { Link } from "@remix-run/react";
 
 import { Github, NPM, Symbols } from "@react-symbols/icons";
-import { ArrowSquareOut } from "@phosphor-icons/react";
+
 import { cn } from "@/utils";
 
 import { buttonVariants } from "@/ui/button";
 import { containerClasses } from "@/ui/container";
-import { Figma, VSCode } from "@/ui/icons/svgl";
 import Divider from "@/ui/divider";
+
+import { Figma, VSCode } from "@/ui/icons/svgl";
+import { ArrowUpRightIcon } from "@/ui/icons/feather";
 
 import ExternalLink from "@/components/externalLink";
 import InstallCommand from "@/components/installCommand";
@@ -24,7 +26,7 @@ const svgIconSize = {
 
 const linkClasses = buttonVariants({
   variant: "outline",
-  className: "rounded-3xl w-auto",
+  className: "rounded-3xl w-auto group",
 });
 
 interface iHeaderProps {
@@ -84,7 +86,12 @@ const Header = (props: iHeaderProps) => {
           >
             <NPM width={svgIconSize.width} height={svgIconSize.height} />
             <span>v{props.npmVersion}</span>
-            <ArrowSquareOut height={12} size={15} weight="bold" />
+            <ArrowUpRightIcon
+              height={13}
+              width={13}
+              strokeWidth={2}
+              className="text-zinc-400 group-hover:text-white"
+            />
           </ExternalLink>
           <ExternalLink
             href="https://github.com/pheralb/react-symbols"
@@ -92,7 +99,12 @@ const Header = (props: iHeaderProps) => {
           >
             <Github width={svgIconSize.width} height={svgIconSize.height} />
             <span>Docs</span>
-            <ArrowSquareOut height={12} size={15} weight="bold" />
+            <ArrowUpRightIcon
+              height={13}
+              width={13}
+              strokeWidth={2}
+              className="text-zinc-400 group-hover:text-white"
+            />
           </ExternalLink>
           <ExternalLink
             href="https://www.figma.com/file/HYLMyRbIdSbIJQlqnd9pSN/Symbols---File-Icons?type=design&node-id=20537-804&t=F5YRpTBiNwKqtOsT-0"
@@ -100,7 +112,12 @@ const Header = (props: iHeaderProps) => {
           >
             <Figma width={svgLogoSize.width} height={svgLogoSize.height} />
             <span>Figma</span>
-            <ArrowSquareOut height={12} size={15} weight="bold" />
+            <ArrowUpRightIcon
+              height={13}
+              width={13}
+              strokeWidth={2}
+              className="text-zinc-400 group-hover:text-white"
+            />
           </ExternalLink>
           <ExternalLink
             href="https://marketplace.visualstudio.com/items?itemName=miguelsolorio.symbols"
@@ -108,7 +125,12 @@ const Header = (props: iHeaderProps) => {
           >
             <VSCode width={svgLogoSize.width} height={svgLogoSize.height} />
             <span>VS Code</span>
-            <ArrowSquareOut height={12} size={15} weight="bold" />
+            <ArrowUpRightIcon
+              height={13}
+              width={13}
+              strokeWidth={2}
+              className="text-zinc-400 group-hover:text-white"
+            />
           </ExternalLink>
         </nav>
       </div>
