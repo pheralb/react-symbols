@@ -5,23 +5,22 @@ export interface iIcons {
   icon: React.FC<React.SVGProps<SVGSVGElement>>;
 }
 
-export const Icons: iIcons[] = Object.keys(ReactSymbols)
-  .filter((key) => !key.startsWith("Folder"))
-  .map((key) => ({
-    name: key,
-    icon: (
-      ReactSymbols as Record<string, React.FC<React.SVGProps<SVGSVGElement>>>
-    )[key],
-  }));
+const getIcons = (filterFn: (key: string) => boolean): iIcons[] => {
+  return Object.keys(ReactSymbols)
+    .filter(filterFn)
+    .map((key) => ({
+      name: key,
+      icon: (
+        ReactSymbols as Record<string, React.FC<React.SVGProps<SVGSVGElement>>>
+      )[key],
+    }));
+};
 
-export const FoldersIcons: iIcons[] = Object.keys(ReactSymbols)
-  .filter((key) => key.startsWith("Folder"))
-  .map((key) => ({
-    name: key,
-    icon: (
-      ReactSymbols as Record<string, React.FC<React.SVGProps<SVGSVGElement>>>
-    )[key],
-  }));
+export const Icons: iIcons[] = getIcons((key) => !key.startsWith("Folder"));
+export const FoldersIcons: iIcons[] = getIcons((key) =>
+  key.startsWith("Folder"),
+);
 
+export const totalLibraryIcons = [...Icons, ...FoldersIcons].length;
 export const totalIcons = Icons.length;
 export const totalFolders = FoldersIcons.length;
