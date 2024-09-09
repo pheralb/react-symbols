@@ -13,7 +13,7 @@ const Loading = (props: iLoading) => (
   >
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      className="animate-spin-slow duration-[5000ms]"
+      className="animate-spin-slow"
       fill="none"
       viewBox="0 0 80 80"
       width={55}
