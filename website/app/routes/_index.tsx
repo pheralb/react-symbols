@@ -32,7 +32,7 @@ export default function Index() {
   ) as iIcons[];
 
   return (
-    <main className="animate-in fade-in-40 duration-500">
+    <main className="animate-in fade-in-60 duration-700">
       <Grid className={cn(containerClasses, "pb-14 pt-6")}>
         {filteredIcons.map((icon) => {
           return (

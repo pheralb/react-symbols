@@ -80,7 +80,7 @@ const Navbar = () => {
         </div>
         <Divider className="hidden md:block" />
         <div className="flex w-full flex-col space-y-1 pb-1 text-zinc-400 transition-colors hover:text-white md:w-56 md:pb-0">
-          <p className="text-xs font-medium uppercase">Size</p>
+          <p className="select-none text-xs font-medium uppercase">Size</p>
           <IconSize />
         </div>
       </div>

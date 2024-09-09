@@ -72,7 +72,7 @@ const Header = (props: iHeaderProps) => {
               height={13}
               width={13}
               strokeWidth={2}
-              className="text-zinc-400 group-hover:text-white"
+              className="text-zinc-400 transition-transform duration-200 group-hover:translate-x-[0.1rem] group-hover:text-white"
             />
           </ExternalLink>
           <ExternalLink
@@ -85,7 +85,7 @@ const Header = (props: iHeaderProps) => {
               height={13}
               width={13}
               strokeWidth={2}
-              className="text-zinc-400 group-hover:text-white"
+              className="text-zinc-400 transition-transform duration-200 group-hover:translate-x-[0.07rem] group-hover:text-white"
             />
           </ExternalLink>
           <ExternalLink
@@ -98,7 +98,7 @@ const Header = (props: iHeaderProps) => {
               height={13}
               width={13}
               strokeWidth={2}
-              className="text-zinc-400 group-hover:text-white"
+              className="text-zinc-400 transition-transform duration-200 group-hover:translate-x-[0.07rem] group-hover:text-white"
             />
           </ExternalLink>
           <ExternalLink
@@ -111,7 +111,7 @@ const Header = (props: iHeaderProps) => {
               height={13}
               width={13}
               strokeWidth={2}
-              className="text-zinc-400 group-hover:text-white"
+              className="text-zinc-400 transition-transform duration-200 group-hover:translate-x-[0.07rem] group-hover:text-white"
             />
           </ExternalLink>
         </nav>
