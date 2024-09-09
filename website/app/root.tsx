@@ -1,5 +1,5 @@
 import type { ReactNode } from "react";
-import type { LinksFunction } from "@vercel/remix";
+import type { LinksFunction, MetaFunction } from "@vercel/remix";
 
 import {
   json,
@@ -28,7 +28,59 @@ import { Toaster } from "./providers/sonner";
 // Links:
 export const links: LinksFunction = () => [
   { rel: "stylesheet", href: tailwind },
+  {
+    rel: "preload",
+    as: "font",
+    href: "/fonts/InterVariable.woff2",
+    type: "font/woff2",
+    crossOrigin: "anonymous",
+  },
+  {
+    rel: "preload",
+    as: "font",
+    href: "/fonts/GeistMonoVF.woff2",
+    type: "font/woff2",
+    crossOrigin: "anonymous",
+  },
+  {
+    rel: "apple-touch-icon",
+    sizes: "180x180",
+    href: "/images/apple-touch-icon-180x180.png",
+  },
+  {
+    rel: "icon",
+    type: "image/svg+xml",
+    sizes: "32x32",
+    href: "/images/logo_svg.svg",
+  },
+  {
+    rel: "icon",
+    type: "image/png",
+    sizes: "32x32",
+    href: "/images/logo.png",
+  },
+  { rel: "manifest", href: "/manifest.webmanifest" },
+  { rel: "icon", href: "/favicon.ico" },
 ];
+
+// Metadata:
+export const meta: MetaFunction = () => {
+  return [
+    {
+      title:
+        "React-Symbols - Beautifully File & Folder Icons for your React projects.",
+    },
+    {
+      property: "og:title",
+      content: "React-Symbols",
+    },
+    {
+      name: "description",
+      content:
+        "Beautifully File & Folder Icons for your React projects. Crafted by Miguel Solorio.",
+    },
+  ];
+};
 
 export async function loader() {
   const metadata = await getLatestVersion(globals.npmPackageName);
