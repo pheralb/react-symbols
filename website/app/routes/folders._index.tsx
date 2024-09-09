@@ -6,6 +6,7 @@ import { searchParamKey, iconSizeParamKey } from "@/data/searchParams";
 
 import Grid from "@/components/grid";
 import Card from "@/components/card";
+import Loading from "@/components/loading";
 
 import { cn } from "@/utils";
 import { containerClasses } from "@/ui/container";
@@ -16,7 +17,7 @@ export async function clientLoader() {
 }
 
 export function HydrateFallback() {
-  return <p>Loading Icons...</p>;
+  return <Loading className="my-10 flex items-center justify-center" />;
 }
 
 export default function Folders() {
@@ -31,7 +32,7 @@ export default function Folders() {
   ) as iIcons[];
 
   return (
-    <main>
+    <main className="animate-in fade-in-40 duration-500">
       <Grid className={cn(containerClasses, "pb-14 pt-6")}>
         {filteredIcons.map((icon) => {
           return (
