@@ -22,6 +22,9 @@ import Header from "./components/header";
 import Footer from "./components/footer";
 import Navbar from "./components/navbar";
 
+// Providers:
+import { Toaster } from "./providers/sonner";
+
 // Links:
 export const links: LinksFunction = () => [
   { rel: "stylesheet", href: tailwind },
@@ -55,6 +58,7 @@ export function Layout({ children }: { children: ReactNode }) {
         <Navbar />
         {children}
         <Footer />
+        <Toaster />
         <ScrollRestoration />
         <Scripts />
       </body>
