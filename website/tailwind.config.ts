@@ -13,6 +13,9 @@ const config: Config = {
         sans: ["InterVariable", ...defaultTheme.fontFamily.sans],
         mono: ["GeistMono", ...defaultTheme.fontFamily.mono],
       },
+      animation: {
+        "spin-slow": "spin 4s linear infinite",
+      },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
