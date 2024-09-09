@@ -36,7 +36,7 @@ const Navbar = () => {
         <div className="relative w-full">
           <SearchIcon
             strokeWidth={1.5}
-            className="absolute left-1 top-1/2 h-5 w-5 -translate-y-[47%] transform text-zinc-400 md:h-[22px] md:w-[22px]"
+            className="absolute left-1 top-1/2 h-5 w-5 -translate-y-1/2 transform text-zinc-400 md:h-[22px] md:w-[22px]"
           />
           <Search
             placeholder={
@@ -57,7 +57,6 @@ const Navbar = () => {
                 pathname: link.href,
               }}
               key={link.href}
-              unstable_viewTransition={true}
               className={cn(
                 buttonVariants({
                   variant:
