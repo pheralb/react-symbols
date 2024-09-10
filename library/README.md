@@ -1,15 +1,17 @@
 <div align="center">
 <a href="https://react-symbols.vercel.app/">
-<img src="../website/public/images/og.png">
+<img src="https://raw.githubusercontent.com/pheralb/react-symbols/next/website/public/images/og.png">
 </a>
 
 <p></p>
 
-<a href="https://react-symbols.vercel.app/">Explore</a>
+<a href="https://react-symbols.vercel.app">Website</a>
 <span>&nbsp;&nbsp;❖&nbsp;&nbsp;</span>
 <a href="#-getting-started">Getting Started</a>
 <span>&nbsp;&nbsp;❖&nbsp;&nbsp;</span>
 <a href="#-license">License</a>
+<span>&nbsp;&nbsp;❖&nbsp;&nbsp;</span>
+<a href="#-contribute">Contribute</a>
 <span>&nbsp;&nbsp;❖&nbsp;&nbsp;</span>
 <a href="https://marketplace.visualstudio.com/items?itemName=miguelsolorio.symbols">VSCode Theme</a>
 
@@ -23,15 +25,15 @@
 
 </div>
 
-## 👋 Introduction
+## 🧑‍🚀 Introduction
 
-[**React-Symbols**](https://react-symbols.vercel.app/) is a library for React with the icons of the VSCode theme ["Symbols"](https://marketplace.visualstudio.com/items?itemName=miguelsolorio.symbols) by [Miguel Solorio (@miguelsolorio)](https://github.com/miguelsolorio):
+[**React-Symbols**](https://react-symbols.vercel.app/) is a library for React with the icons of the VSCode theme [**Symbols**](https://marketplace.visualstudio.com/items?itemName=miguelsolorio.symbols) created by [Miguel Solorio (@miguelsolorio)](https://github.com/miguelsolorio):
 
-- **+100** files & folders icons.
-- Support React Server Components (RSC) & Next.js 13/14 /app directory.
-- **Lightweight**.
-- Ready to use with **Typescript**.
-- **SVG optimized** and **minified**.
+- 📦 **+100** files & folders icons.
+- ☁️ Support for **React Server Components** (RSC).
+- 🍃 **Lightweight**.
+- 💙 Built with **Typescript**.
+- 🚀 **SVG optimized** and **minified**.
 
 ## 🚀 Getting Started
 
@@ -46,11 +48,11 @@ npm install @react-symbols/icons
 # with pnpm:
 pnpm add @react-symbols/icons
 
-# with ultra:
-ultra install @react-symbols/icons
-
 # with yarn:
 yarn add @react-symbols/icons
+
+# with bun:
+bun add @react-symbols/icons
 ```
 
 ### - Usage
@@ -71,7 +73,7 @@ const MyComponent = () => {
 export default MyComponent;
 ```
 
-> Config for use the library with [**Remix Old Compiler**](https://remix.run/) if you are using CJS (v1 uses CJS by default, v2 uses ESM):
+> 💿 Config for use the library with [**Remix Old Compiler**](https://remix.run/) if you are using CJS (v1 uses CJS by default, v2 uses ESM):
 
 ```js
 // Add in the remix.config.js:
@@ -82,7 +84,7 @@ module.exports = {
 };
 ```
 
-> Change the name of the icon:
+> ✍️ Change the name of the icon:
 
 ```jsx
 import { Bun as BunIcon } from "@react-symbols/icons";
@@ -98,15 +100,14 @@ const MyComponent = () => {
 export default MyComponent;
 ```
 
-## ⚙️ Stack
+## 📦 Stack
 
 This is a [Turborepo](https://turbo.build/repo) project bootstrapped with [`create-turbo`](https://www.npmjs.com/package/create-turbo):
 
 **For library:**
 
 - [SWC](https://swc.rs/) - Rust-based platform for the Web.
-- [tsup (alternative)](https://tsup.egoist.dev/) - The simplest and fastest way to bundle your TypeScript libraries.
-- [React](https://reactjs.org/) - A JavaScript library for building user interfaces.
+- [React 18](https://reactjs.org/) - A JavaScript library for building user interfaces.
 - [Typescript](https://www.typescriptlang.org/) - TypeScript is JavaScript with syntax for types.
 
 **For website:**
@@ -118,7 +119,31 @@ This is a [Turborepo](https://turbo.build/repo) project bootstrapped with [`crea
 - [shadcn/ui + Radix UI](https://ui.shadcn.com/) - An opinionated toast component for React.
 - [Sonner](https://sonner.emilkowal.ski/) - An opinionated toast component for React.
 
-## 🙌 Contributing
+## 🙌 Contribute
+
+1. [Fork the repository](https://github.com/pheralb/react-symbols/fork) and clone it:
+
+```bash
+git clone git@github.com:YOUR_USERNAME/react-symbols.git
+```
+
+2. Install the dependencies:
+
+```bash
+# Install pnpm globally if you don't have it:
+npm install -g pnpm
+
+# Install the dependencies:
+pnpm install
+```
+
+3. Run the development server:
+
+```bash
+pnpm dev
+```
+
+and open [**localhost:5173**](http://localhost:5173) with your browser to see the website 🚀
 
 <a href="https://github.com/pheralb/react-symbols/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=pheralb/react-symbols" />
@@ -128,4 +153,4 @@ This is a [Turborepo](https://turbo.build/repo) project bootstrapped with [`crea
 
 ## 🔑 License
 
-- [MIT](https://github.com/pheralb/react-symbols/blob/main/LICENSE).
+- [MIT License](https://github.com/pheralb/react-symbols/blob/main/LICENSE).
