@@ -5,7 +5,8 @@ import {
   useState,
 } from "react";
 import { toast } from "sonner";
-import { NPM, PNPM, Yarn } from "@react-symbols/icons";
+import JSConfetti from "js-confetti";
+import { Bun, NPM, PNPM, Yarn } from "@react-symbols/icons";
 
 import { globals } from "@/globals";
 import { clipboard, cn } from "@/utils";
@@ -45,6 +46,11 @@ const installCommands: iInstallCommands[] = [
     command: "pnpm add",
     icon: PNPM,
   },
+  {
+    package: "bun",
+    command: "bun add",
+    icon: Bun,
+  },
 ];
 
 const InstallCommand = (props: iInstallCommandProps) => {
@@ -53,6 +59,12 @@ const InstallCommand = (props: iInstallCommandProps) => {
     useState<iInstallCommands>(installCommands[0]);
 
   const handleCopy = async (text: string, icon: ReactNode) => {
+    const jsConfetti = new JSConfetti();
+    jsConfetti.addConfetti({
+      confettiColors: ["#2563EB", "#0D9488", "#22D3EE", "#C084FC"],
+      confettiRadius: 3,
+      confettiNumber: 50,
+    });
     await clipboard(text);
     toast.success("Copied to clipboard", {
       description: text,
