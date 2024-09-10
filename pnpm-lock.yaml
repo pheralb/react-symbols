@@ -7,11 +7,10 @@ settings:
 importers:
 
   .:
-    dependencies:
+    devDependencies:
       '@changesets/cli':
         specifier: 2.27.8
         version: 2.27.8
-    devDependencies:
       '@types/node':
         specifier: 22.5.4
         version: 22.5.4
