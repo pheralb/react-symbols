@@ -11,7 +11,7 @@ export { default as BracketsPurple } from "./library/bracketsPurple.js";
 export { default as BracketsRed } from "./library/bracketsRed.js";
 export { default as BracketsSky } from "./library/bracketsSky.js";
 export { default as BracketsYellow } from "./library/bracketsYellow.js";
-export { default as C } from "./library/c.js";
+export { default as CLang } from "./library/cLang.js";
 export { default as Capacitor } from "./library/capacitor.js";
 export { default as Clojure } from "./library/clojure.js";
 export { default as CodeBlue } from "./library/codeBlue.js";
