@@ -1,6 +1,6 @@
 <div align="center">
 <a href="https://react-symbols.vercel.app/">
-<img src="website/public/images/og.png">
+<img src="../website/public/images/og.png">
 </a>
 
 <p></p>
@@ -56,7 +56,7 @@ yarn add @react-symbols/icons
 ### - Usage
 
 ```jsx
-import { Angular, Astro, Document } from "@react-symbols/icons"
+import { Angular, Astro, Document } from "@react-symbols/icons";
 
 const MyComponent = () => {
   return (
@@ -65,10 +65,10 @@ const MyComponent = () => {
       <Astro width={128} height={128} />
       <Document width={128} height={128} />
     </>
-  )
-}
+  );
+};
 
-export default MyComponent
+export default MyComponent;
 ```
 
 > Config for use the library with [**Remix Old Compiler**](https://remix.run/) if you are using CJS (v1 uses CJS by default, v2 uses ESM):
@@ -85,17 +85,17 @@ module.exports = {
 > Change the name of the icon:
 
 ```jsx
-import { Bun as BunIcon } from "@react-symbols/icons"
+import { Bun as BunIcon } from "@react-symbols/icons";
 
 const MyComponent = () => {
   return (
     <>
       <BunIcon width={128} height={128} />
     </>
-  )
-}
+  );
+};
 
-export default MyComponent
+export default MyComponent;
 ```
 
 ## ⚙️ Stack
