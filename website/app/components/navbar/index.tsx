@@ -53,20 +53,19 @@ const Navbar = () => {
         <div className="flex w-full items-center space-x-1 md:w-auto">
           {NavIconsRoutes.map((link) => (
             <NavLink
+              key={link.href}
               to={{
                 pathname: link.href,
+                search: location.search,
               }}
-              key={link.href}
               className={cn(
                 buttonVariants({
-                  variant:
-                    location.pathname === link.href ? "outline" : "ghost",
-                  className:
-                    location.pathname === link.href
-                      ? "text-white"
-                      : "text-zinc-400 hover:text-white",
+                  variant: "outline",
                 }),
                 "w-full md:w-auto",
+                location.pathname === link.href
+                  ? "border-zinc-400 text-white"
+                  : "border-none bg-transparent text-zinc-400 hover:text-white dark:bg-transparent",
               )}
             >
               {location.pathname === link.href ? (
