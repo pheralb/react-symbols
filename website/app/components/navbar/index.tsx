@@ -46,7 +46,7 @@ const Navbar = () => {
                   ? `Search ${totalFolders} folder icons...`
                   : `Search ${totalLibraryIcons} icons...`
             }
-            className="rounded-none border-b border-l-0 border-r-0 border-t-0 pl-[34px] text-[16px] placeholder:text-[16px] focus:ring-0 md:border-none md:pl-[38px]"
+            className="rounded-none border-b border-l-0 border-r-0 border-t-0 pl-[34px] text-[16px] placeholder:text-[16px] focus:border-none focus:ring-0 md:border-none md:pl-[38px] dark:focus:border-none"
           />
         </div>
         <Divider className="hidden md:block" />

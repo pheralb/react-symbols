@@ -7,6 +7,7 @@ import { searchParamKey, iconSizeParamKey } from "@/data/searchParams";
 import Grid from "@/components/grid";
 import Card from "@/components/card";
 import Loading from "@/components/loading";
+import NotFound from "@/components/notFound";
 
 import { cn } from "@/utils";
 import { containerClasses } from "@/ui/container";
@@ -33,18 +34,22 @@ export default function Index() {
 
   return (
     <main className="animate-in fade-in-60 duration-700">
-      <Grid className={cn(containerClasses, "pb-14 pt-6")}>
-        {filteredIcons.map((icon) => {
-          return (
-            <Card
-              key={icon.name}
-              isFolder={false}
-              iconSize={deferredSize}
-              {...icon}
-            />
-          );
-        })}
-      </Grid>
+      {filteredIcons.length === 0 ? (
+        <NotFound input={search} />
+      ) : (
+        <Grid className={cn(containerClasses, "pb-14 pt-6")}>
+          {filteredIcons.map((icon) => {
+            return (
+              <Card
+                key={icon.name}
+                isFolder={false}
+                iconSize={deferredSize}
+                {...icon}
+              />
+            );
+          })}
+        </Grid>
+      )}
     </main>
   );
 }
