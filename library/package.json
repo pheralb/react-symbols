@@ -3,6 +3,8 @@
   "version": "1.2.6",
   "description": "Symbols icons by Miguel Solorio for React",
   "author": "@pheralb_",
+  "license": "MIT",
+  "type": "module",
   "keywords": [
     "react",
     "icons",
@@ -17,7 +19,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/pheralb/react-symbols.git"
+    "url": "git+https://github.com/pheralb/react-symbols.git"
   },
   "contributors": [
     {
@@ -29,12 +31,10 @@
       "github": "https://github.com/miguelsolorio"
     }
   ],
-  "license": "MIT",
-  "main": "build/index.js",
-  "module": "build/index.js",
-  "types": "build/index.d.ts",
-  "typings": "build/index.d.ts",
-  "type": "module",
+  "main": "./build/index.js",
+  "module": "./build/index.js",
+  "types": "./build/index.d.ts",
+  "typings": "./build/index.d.ts",
   "exports": {
     ".": {
       "import": "./build/index.js",
