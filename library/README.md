@@ -102,7 +102,14 @@ export default MyComponent;
 
 ## 📦 Stack
 
-This is a [Turborepo](https://turbo.build/repo) project bootstrapped with [`create-turbo`](https://www.npmjs.com/package/create-turbo):
+This is a monorepo project created with:
+
+**For monorepo:**
+
+- [`create-turbo`](https://www.npmjs.com/package/create-turbo) Turborepo CLI.
+- [`pnpm`](https://pnpm.io/) + [pnpm workspaces](https://pnpm.io/workspaces) - Fast, disk space efficient package manager.
+- [Prettier](https://prettier.io/) - Opinionated code formatter.
+- [Sherif](https://github.com/QuiiBz/sherif) - Opinionated, zero-config linter for JavaScript monorepos.
 
 **For library:**
 
