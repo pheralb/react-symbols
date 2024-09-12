@@ -1,17 +1,30 @@
-import type { Config } from "tailwindcss"
+import type { Config } from "tailwindcss";
 
-export default {
-  content: ["./src/**/*.{js,jsx,ts,tsx}"],
+// Plugins:
+import twAnimate from "tailwindcss-animate";
+import defaultTheme from "tailwindcss/defaultTheme";
+
+const config: Config = {
+  darkMode: ["class"],
+  content: ["./app/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
       fontFamily: {
-        sans: ["General-Sans", "sans-serif"],
-        mono: ["Hack", "monospace"],
+        sans: ["InterVariable", ...defaultTheme.fontFamily.sans],
+        mono: ["GeistMono", ...defaultTheme.fontFamily.mono],
       },
-      gridTemplateColumns: {
-        fill: "repeat(auto-fill, minmax(13rem, 1fr))",
+      animation: {
+        "spin-slow": "spin 4s linear infinite",
       },
+      borderRadius: {
+        lg: "var(--radius)",
+        md: "calc(var(--radius) - 2px)",
+        sm: "calc(var(--radius) - 4px)",
+      },
+      colors: {},
     },
   },
-  plugins: [require("tailwindcss-animate")],
-} satisfies Config
+  plugins: [twAnimate],
+};
+
+export default config;

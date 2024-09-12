@@ -1,5 +1,9 @@
 {
+  "$schema": "https://swc.rs/schema.json",
   "minify": true,
+  "module": {
+    "type": "es6"
+  },
   "jsc": {
     "parser": {
       "syntax": "typescript",

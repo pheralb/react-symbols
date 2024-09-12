@@ -15,12 +15,16 @@ jobs:
       run:
         working-directory: library
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout Repo
+        uses: actions/checkout@v3
 
-      - name: Setup pnpm 8
-        uses: pnpm/action-setup@v2
+      - name: Install Node.js
+        uses: actions/setup-node@v4
         with:
-          version: 8
+          node-version: 20
+
+      - name: Setup pnpm 9
+        uses: pnpm/action-setup@v4
 
       - name: Install dependencies
         run: pnpm install
@@ -35,10 +39,13 @@ jobs:
       - name: Checkout Repo
         uses: actions/checkout@v3
 
-      - name: Setup pnpm 8
-        uses: pnpm/action-setup@v2
+      - name: Install Node.js
+        uses: actions/setup-node@v4
         with:
-          node-version: 8
+          node-version: 20
+
+      - name: Setup pnpm 9
+        uses: pnpm/action-setup@v4
 
       - name: Install Dependencies
         run: pnpm install
@@ -47,7 +54,6 @@ jobs:
         id: changesets
         uses: changesets/action@v1
         with:
-          # This expects you to have a script called release which does a build for your packages and calls changeset publish
           publish: pnpm run release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

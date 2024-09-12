@@ -1,0 +1,20 @@
+import { defineConfig } from "vite";
+
+// Plugins:
+import tsconfigPaths from "vite-tsconfig-paths";
+import { vitePlugin as remix } from "@remix-run/dev";
+import { vercelPreset } from "@vercel/remix/vite";
+
+export default defineConfig({
+  plugins: [
+    remix({
+      presets: [vercelPreset()],
+      future: {
+        v3_fetcherPersist: true,
+        v3_relativeSplatPath: true,
+        v3_throwAbortReason: true,
+      },
+    }),
+    tsconfigPaths(),
+  ],
+});

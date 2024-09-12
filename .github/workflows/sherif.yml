@@ -1,0 +1,28 @@
+name: 👮 Sherif
+on:
+  push:
+    branches:
+      - next
+  pull_request:
+    branches:
+      - main
+      - next
+
+jobs:
+  check:
+    name: Check
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v4
+
+      - name: Install Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+
+      - name: Run Sherif
+        run: pnpm dlx sherif@latest
