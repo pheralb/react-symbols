@@ -86,7 +86,10 @@ const InstallCommand = (props: iInstallCommandProps) => {
         {` ${selectedInstallCommand.command} ${globals.npmPackageName}`}
       </code>
       <DropdownMenu open={open} onOpenChange={setOpen}>
-        <DropdownMenuTrigger className="outline-none focus:outline-none focus-visible:text-white">
+        <DropdownMenuTrigger
+          className="outline-none focus:outline-none focus-visible:text-white"
+          title="Select package manager"
+        >
           {open ? (
             <ChevronDownIcon width={14} height={14} strokeWidth={2} />
           ) : (

@@ -38,7 +38,12 @@ const Card = (props: iCard) => {
         <TooltipProvider>
           <Tooltip>
             <TooltipTrigger asChild>
-              <Button variant="ghost" size="icon" onClick={handleCopy}>
+              <Button
+                variant="ghost"
+                size="icon"
+                onClick={handleCopy}
+                title="Copy React Component"
+              >
                 <CopyIcon width={17} height={17} strokeWidth={1.5} />
               </Button>
             </TooltipTrigger>
@@ -53,6 +58,7 @@ const Card = (props: iCard) => {
           <Tooltip>
             <TooltipTrigger>
               <ExternalLink
+                title="Check Source Code"
                 href={
                   props.isFolder
                     ? `${globals.githubSrcRepository}library/folders/${lower(

@@ -63,6 +63,7 @@ const Header = (props: iHeaderProps) => {
         <Divider className="hidden md:block" />
         <nav className="container flex items-center space-x-2 overflow-y-auto md:w-auto">
           <ExternalLink
+            title="NPM Package"
             href="https://www.npmjs.com/package/@react-symbols/icons"
             className={linkClasses}
           >
@@ -76,6 +77,7 @@ const Header = (props: iHeaderProps) => {
             />
           </ExternalLink>
           <ExternalLink
+            title="Docs"
             href="https://github.com/pheralb/react-symbols"
             className={linkClasses}
           >
@@ -89,6 +91,7 @@ const Header = (props: iHeaderProps) => {
             />
           </ExternalLink>
           <ExternalLink
+            title="Figma File"
             href="https://www.figma.com/file/HYLMyRbIdSbIJQlqnd9pSN/Symbols---File-Icons?type=design&node-id=20537-804&t=F5YRpTBiNwKqtOsT-0"
             className={linkClasses}
           >
@@ -102,6 +105,7 @@ const Header = (props: iHeaderProps) => {
             />
           </ExternalLink>
           <ExternalLink
+            title="VS Code Theme"
             href="https://marketplace.visualstudio.com/items?itemName=miguelsolorio.symbols"
             className={linkClasses}
           >

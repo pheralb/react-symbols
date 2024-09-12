@@ -9,6 +9,7 @@ const Footer = () => {
         className={cn(containerClasses, "flex items-center justify-between")}
       >
         <ExternalLink
+          title="Miguel Solorio"
           href="https://www.miguelsolorio.com/"
           className="group flex items-center space-x-2 transition-colors hover:text-white hover:decoration-white"
         >
@@ -23,6 +24,7 @@ const Footer = () => {
           </span>
         </ExternalLink>
         <ExternalLink
+          title="Pablo Hernández"
           href="https://pheralb.dev"
           className="group flex items-center space-x-2 transition-colors hover:text-white hover:decoration-white"
         >

@@ -54,6 +54,7 @@ export const IconSize = () => {
 
   return (
     <Slider
+      title="Icon Size"
       defaultValue={[Number(iconSizeValue)]}
       onValueChange={(value) => handleChange(value)}
       max={70}
