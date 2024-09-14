@@ -21,7 +21,10 @@ const config: Config = {
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
-      colors: {},
+      colors: {
+        'react-symbol-pink': '#c084fc',
+        'react-symbol-aqua': '#22d3ee',
+      },
     },
   },
   plugins: [twAnimate],
