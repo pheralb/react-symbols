@@ -3,6 +3,7 @@ import { useSearchParams } from "@remix-run/react";
 import { Input } from "@/ui/input";
 import { Slider } from "@/ui/slider";
 import { iconSizeParamKey, searchParamKey } from "@/data/searchParams";
+import { useEffect, useState } from "react";
 
 interface iSearchProps {
   className?: string;
@@ -40,7 +41,9 @@ export const Search = (props: iSearchProps) => {
 // 📏 Icon Size Slider:
 export const IconSize = () => {
   const [searchParams, setSearchParams] = useSearchParams();
-  const iconSizeValue = searchParams.get(iconSizeParamKey) || 45;
+  const [iconSizeValue, setIconSizeValue] = useState(
+    Number(searchParams.get(iconSizeParamKey)) || 45,
+  );
 
   const handleChange = (value: number[]) => {
     const newSearchParams = new URLSearchParams(searchParams);
@@ -52,11 +55,15 @@ export const IconSize = () => {
     setSearchParams(newSearchParams);
   };
 
+  useEffect(() => {
+    handleChange([iconSizeValue]);
+  }, [iconSizeValue]);
+
   return (
     <Slider
       title="Icon Size"
-      defaultValue={[Number(iconSizeValue)]}
-      onValueChange={(value) => handleChange(value)}
+      value={[Number(iconSizeValue)]}
+      onValueChange={(value) => setIconSizeValue(value[0])}
       max={70}
       min={20}
       step={1}
