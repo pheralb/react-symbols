@@ -42,7 +42,7 @@ export default function Folders() {
             return (
               <Card
                 key={icon.name}
-                isFolder={false}
+                isFolder={true}
                 iconSize={deferredSize}
                 {...icon}
               />
