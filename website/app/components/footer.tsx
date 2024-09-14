@@ -11,30 +11,30 @@ const Footer = () => {
         <ExternalLink
           title="Miguel Solorio"
           href="https://www.miguelsolorio.com/"
-          className="group flex items-center space-x-2 transition-colors hover:text-white hover:decoration-white"
+          className="group flex items-center space-x-2 transition-colors hover:text-white"
         >
           <span className="hidden md:block">Icons crafted by </span>
           <img
-            className="h-6 w-6 rounded-full transition-all group-hover:ring-2 group-hover:ring-zinc-500"
+            className="h-6 w-6 rounded-full transition-shadow group-hover:ring-2 group-hover:ring-react-symbol-pink"
             src="https://avatars.githubusercontent.com/u/35271042?v=4"
             alt="Miguel Solorio"
           />
-          <span className="underline decoration-zinc-500 decoration-wavy underline-offset-[4px]">
+          <span className="underline decoration-zinc-500 decoration-wavy underline-offset-[4px] group-hover:decoration-react-symbol-pink">
             Miguel Solorio
           </span>
         </ExternalLink>
         <ExternalLink
           title="Pablo Hernández"
           href="https://pheralb.dev"
-          className="group flex items-center space-x-2 transition-colors hover:text-white hover:decoration-white"
+          className="group flex items-center space-x-2 transition-colors hover:text-white"
         >
           <span className="hidden md:block">Website by</span>
           <img
-            className="h-6 w-6 rounded-full transition-all group-hover:ring-2 group-hover:ring-zinc-500"
+            className="h-6 w-6 rounded-full transition-shadow group-hover:ring-2 group-hover:ring-react-symbol-aqua"
             src="https://avatars.githubusercontent.com/u/62877300?v=4"
             alt="Pablo Hernández"
           />
-          <span className="underline decoration-zinc-500 decoration-wavy underline-offset-[4px]">
+          <span className="underline decoration-zinc-500 decoration-wavy underline-offset-[4px] group-hover:decoration-react-symbol-aqua">
             Pablo Hernández
           </span>
         </ExternalLink>
