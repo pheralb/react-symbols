@@ -5,8 +5,18 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
-export const lower = (str: string) =>
-  str.charAt(0).toLowerCase() + str.slice(1);
+export function lower(input: string): string {
+  return input
+    .split(/[^a-zA-Z0-9]+/)
+    .map((word, index) => {
+      if (index === 0) {
+        return word.charAt(0).toLowerCase() + word.slice(1);
+      } else {
+        return word.charAt(0).toUpperCase() + word.slice(1);
+      }
+    })
+    .join("");
+}
 
 const MIMETYPE = "text/plain";
 
