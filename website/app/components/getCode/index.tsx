@@ -1,6 +1,6 @@
 import { type FC, useState } from "react";
 
-import { Github } from "@react-symbols/icons";
+import { Github, Reactjs } from "@react-symbols/icons";
 import { toast } from "sonner";
 import axios from "axios";
 import { highlight } from "sugar-high";
@@ -16,7 +16,12 @@ import {
   DialogHeader,
   DialogTitle,
 } from "@/ui/dialog";
-import { ArrowUpRightIcon, CodeIcon } from "@/ui/icons/feather";
+import {
+  AlertIcon,
+  ArrowUpRightIcon,
+  CodeIcon,
+  CopyIcon,
+} from "@/ui/icons/feather";
 import ExternalLink from "@/components/externalLink";
 import Loading from "@/components/loading";
 
@@ -28,7 +33,7 @@ interface iGetCode {
 
 const GetCode = (props: iGetCode) => {
   const [open, setOpen] = useState<boolean>(false);
-  const [isLoading, setLoading] = useState<boolean>(false);
+  const [isLoading, setLoading] = useState<boolean>(true);
   const [fileContent, setFileContent] = useState<string>("");
 
   // ⚙️ Github Urls:
@@ -43,14 +48,10 @@ const GetCode = (props: iGetCode) => {
 
   const handleGetCode = async () => {
     setOpen(true);
-    setLoading(true);
     try {
       const response = await axios.get(ghRawUrl);
       setFileContent(response.data);
     } catch (error) {
-      toast.error("Error fetching file", {
-        description: "Unable to obtain component data.",
-      });
       console.error(
         "⚠️ React-Symbols Website - Error fetching the Github Raw URL. Please create a Github Issue.",
         error,
@@ -60,10 +61,9 @@ const GetCode = (props: iGetCode) => {
     }
   };
 
-  const handleCopyContent = async (code: string, description: string) => {
-    await clipboard(code);
-    toast.success("Copied to clipboard", {
-      description: description,
+  const handleCopyContent = async () => {
+    await clipboard(fileContent);
+    toast.success("Copied code to clipboard", {
       icon: <props.reactComponent width={24} height={24} />,
     });
   };
@@ -87,31 +87,37 @@ const GetCode = (props: iGetCode) => {
             </DialogTitle>
           </DialogHeader>
           {isLoading ? (
-            <Loading
-              size={40}
-              className="my-4 flex items-center justify-center"
-            />
+            <div className="my-4 flex flex-col items-center justify-center gap-1">
+              <Loading size={40} className="flex items-center justify-center" />
+              <p className="animate-pulse text-sm text-zinc-400">
+                Fetching component data
+              </p>
+            </div>
           ) : fileContent ? (
-            <div className="max-h-80 overflow-scroll overflow-y-auto rounded-lg border border-dashed border-zinc-700 p-3 font-mono text-sm">
-              <pre
-                className="select-all"
-                dangerouslySetInnerHTML={{ __html: highlight(fileContent) }}
-              />
+            <div className="my-1 flex flex-col space-y-1 overflow-hidden">
+              <div className="mr-1 flex items-center justify-end space-x-2 font-mono text-[12px] text-zinc-400">
+                <Reactjs width={16} height={16} />
+                <span>{lower(props.componentName)}.tsx</span>
+              </div>
+              <div className="max-h-80 rounded-lg border border-zinc-800 p-3 font-mono text-sm hover:overflow-auto">
+                <pre
+                  className="select-all"
+                  dangerouslySetInnerHTML={{ __html: highlight(fileContent) }}
+                />
+              </div>
             </div>
           ) : (
-            <p>Error</p>
+            <div className="my-4 flex flex-col items-center justify-center gap-2">
+              <AlertIcon
+                height={25}
+                className="flex items-center justify-center"
+              />
+              <p className="text-sm text-zinc-400">
+                Error fetching component data
+              </p>
+            </div>
           )}
           <DialogFooter>
-            <Button
-              onClick={() =>
-                handleCopyContent(
-                  `<${props.componentName} />`,
-                  `<${props.componentName} />`,
-                )
-              }
-            >
-              Copy React Component
-            </Button>
             <ExternalLink
               title="Check Source Code"
               href={ghUrl}
@@ -123,6 +129,10 @@ const GetCode = (props: iGetCode) => {
               <span>View on Github</span>
               <ArrowUpRightIcon width={13} height={13} />
             </ExternalLink>
+            <Button variant="outline" onClick={() => handleCopyContent()}>
+              <CopyIcon width={14} height={14} strokeWidth={1.5} />
+              <span>Copy code</span>
+            </Button>
           </DialogFooter>
         </DialogContent>
       </Dialog>
