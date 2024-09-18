@@ -1,19 +1,12 @@
 import type { iIcons } from "@/data/svgs";
-import { clipboard, lower } from "@/utils";
+import { clipboard } from "@/utils";
 
 import { toast } from "sonner";
-import { Github, Reactjs } from "@react-symbols/icons";
 
-import { Button, buttonVariants } from "@/ui/button";
-import { ArrowUpRightIcon, CodeIcon, CopyIcon } from "@/ui/icons/feather";
-import ExternalLink from "./externalLink";
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
-} from "@/ui/tooltip";
-import { globals } from "@/globals";
+import { Button } from "@/ui/button";
+import { CopyIcon } from "@/ui/icons/feather";
+
+import GetCode from "./getCode";
 
 interface iCard extends iIcons {
   isFolder: boolean;
@@ -35,57 +28,19 @@ const Card = (props: iCard) => {
       <props.icon width={props.iconSize} height={props.iconSize} />
       <p className="text-sm tracking-tight text-white">{props.name}</p>
       <div className="flex items-center space-x-1">
-        <TooltipProvider>
-          <Tooltip>
-            <TooltipTrigger asChild>
-              <Button
-                variant="ghost"
-                size="icon"
-                onClick={handleCopy}
-                title="Copy React Component"
-              >
-                <CopyIcon width={17} height={17} strokeWidth={1.5} />
-              </Button>
-            </TooltipTrigger>
-            <TooltipContent
-              side="bottom"
-              className="flex items-center space-x-2"
-            >
-              <Reactjs width={20} height={20} />
-              <p>Copy React Component</p>
-            </TooltipContent>
-          </Tooltip>
-          <Tooltip>
-            <TooltipTrigger>
-              <ExternalLink
-                title="Check Source Code"
-                href={
-                  props.isFolder
-                    ? `${globals.githubSrcRepository}library/folders/${lower(
-                        props.name,
-                      )}.tsx`
-                    : `${globals.githubSrcRepository}library/${lower(
-                        props.name,
-                      )}.tsx`
-                }
-                className={buttonVariants({
-                  variant: "ghost",
-                  size: "icon",
-                })}
-              >
-                <CodeIcon width={17} height={17} strokeWidth={1.5} />
-              </ExternalLink>
-            </TooltipTrigger>
-            <TooltipContent
-              side="bottom"
-              className="flex items-center space-x-2"
-            >
-              <Github width={20} height={20} className="fill-current" />
-              <p>Check Source Code</p>
-              <ArrowUpRightIcon width={12} height={12} strokeWidth={1.5} />
-            </TooltipContent>
-          </Tooltip>
-        </TooltipProvider>
+        <Button
+          variant="ghost"
+          size="icon"
+          onClick={handleCopy}
+          title="Copy to clipboard"
+        >
+          <CopyIcon width={17} height={17} strokeWidth={1.5} />
+        </Button>
+        <GetCode
+          reactComponent={props.icon}
+          componentName={props.name}
+          isFolder={props.isFolder}
+        />
       </div>
     </div>
   );
