@@ -125,3 +125,17 @@ export const BoxIcon = (props: SVGProps<SVGSVGElement>) => (
     <path d="M3.27 6.96 12 12.01l8.73-5.05M12 22.08V12" />
   </svg>
 );
+
+export const CrossIcon = (props: SVGProps<SVGSVGElement>) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    {...props}
+  >
+    <path d="M18 6 6 18M6 6l12 12" />
+  </svg>
+);
