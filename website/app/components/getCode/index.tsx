@@ -5,7 +5,7 @@ import { toast } from "sonner";
 import axios from "axios";
 import { highlight } from "sugar-high";
 
-import { clipboard, lower } from "@/utils";
+import { camelCase, clipboard } from "@/utils";
 import { globals } from "@/globals";
 
 import { Button, buttonVariants } from "@/ui/button";
@@ -38,13 +38,13 @@ const GetCode = (props: iGetCode) => {
 
   // ⚙️ Github Urls:
   const ghUrl = props.isFolder
-    ? `${globals.githubSrcRepository}library/folders/${lower(
+    ? `${globals.githubSrcRepository}library/folders/${camelCase(
         props.componentName,
       )}.tsx`
-    : `${globals.githubSrcRepository}library/${lower(props.componentName)}.tsx`;
+    : `${globals.githubSrcRepository}library/${camelCase(props.componentName)}.tsx`;
   const ghRawUrl = props.isFolder
-    ? `${globals.githubRawUrl}library/folders/${lower(props.componentName)}.tsx`
-    : `${globals.githubRawUrl}library/${lower(props.componentName)}.tsx`;
+    ? `${globals.githubRawUrl}library/folders/${camelCase(props.componentName)}.tsx`
+    : `${globals.githubRawUrl}library/${camelCase(props.componentName)}.tsx`;
 
   const handleGetCode = async () => {
     setOpen(true);
@@ -97,7 +97,7 @@ const GetCode = (props: iGetCode) => {
             <div className="my-1 flex flex-col space-y-1 overflow-hidden">
               <div className="mr-1 flex items-center justify-end space-x-2 font-mono text-[12px] text-zinc-400">
                 <Reactjs width={16} height={16} />
-                <span>{lower(props.componentName)}.tsx</span>
+                <span>{camelCase(props.componentName)}.tsx</span>
               </div>
               <div className="max-h-80 rounded-lg border border-zinc-800 p-3 font-mono text-sm hover:overflow-auto">
                 <pre
