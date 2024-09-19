@@ -5,22 +5,12 @@
 @layer base {
   :root {
     --radius: 0.5rem;
-
-    /* --sh-class: #7aa2f7;
-  --sh-sign: #89ddff;
-  --sh-string: #9ece6a;
-  --sh-keyword: #bb9af7;
-  --sh-comment: #565f89;
-  --sh-jsxliterals: #7aa2f7;
-  --sh-property: #73daca;
-  --sh-entity: #e0af68; */
-
-    --sh-class: #3b70e2;
+    --sh-class: #648de8;
     --sh-sign: #21cee8;
     --sh-string: #21cee8;
     --sh-keyword: #c084fc;
     --sh-comment: #565f89;
-    --sh-jsxliterals: #3b70e2;
+    --sh-jsxliterals: #648de8;
     --sh-property: #21cee8;
     --sh-entity: #c084fc;
   }
