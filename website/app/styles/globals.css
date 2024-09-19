@@ -5,6 +5,14 @@
 @layer base {
   :root {
     --radius: 0.5rem;
+    --sh-class: #648de8;
+    --sh-sign: #21cee8;
+    --sh-string: #21cee8;
+    --sh-keyword: #c084fc;
+    --sh-comment: #565f89;
+    --sh-jsxliterals: #648de8;
+    --sh-property: #21cee8;
+    --sh-entity: #c084fc;
   }
 }
 

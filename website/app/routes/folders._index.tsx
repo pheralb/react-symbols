@@ -18,7 +18,7 @@ export async function clientLoader() {
 }
 
 export function HydrateFallback() {
-  return <Loading className="my-10 flex items-center justify-center" />;
+  return <Loading size={55} className="my-10 flex items-center justify-center" />;
 }
 
 export default function Folders() {

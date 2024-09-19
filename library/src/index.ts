@@ -185,7 +185,7 @@ export { default as Cuda } from "./library/cuda.js";
 export { default as BracketsPink } from "./library/bracketsPink.js";
 export { default as CodePink } from "./library/codePink.js";
 export { default as Func } from "./library/func.js";
-export { default as Fresh } from "./library/denofresh.js";
+export { default as Fresh } from "./library/fresh.js";
 export { default as StatamicAntlers } from "./library/statamicAntlers.js";
 
 // Folders =>

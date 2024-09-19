@@ -1,6 +1,7 @@
 import { cn } from "@/utils";
 
 interface iLoading {
+  size: number;
   className?: string;
 }
 
@@ -16,8 +17,8 @@ const Loading = (props: iLoading) => (
       className="animate-spin-slow"
       fill="none"
       viewBox="0 0 80 80"
-      width={55}
-      height={55}
+      width={props.size}
+      height={props.size}
     >
       <path
         fill="#2563EB"
