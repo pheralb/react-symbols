@@ -1,0 +1,23 @@
+import type { ComponentProps, FC } from "react";
+
+const FolderPipes: FC<ComponentProps<"svg">> = (props) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    fill="none"
+    {...props}
+  >
+    <path
+      fill="#16A34A"
+      d="M24 17h-.5a.5.5 0 0 0-.5.5.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5V13a1 1 0 0 0-1-1h-3.5a.5.5 0 0 1-.5-.5.5.5 0 0 0-1 0v3a.5.5 0 0 0 1 0 .5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5V19a1 1 0 0 0 1 1h3.5a.5.5 0 0 1 .5.5.5.5 0 0 0 .5.5h.5"
+    />
+    <path
+      fill="#64748B"
+      fillRule="evenodd"
+      d="M5 4a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h8v-2H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h2.784a1 1 0 0 1 .635.227l2.393 1.966a3 3 0 0 0 1.904.682H19a1 1 0 0 1 1 1V10h2v-.125a3 3 0 0 0-3-3h-6.284a1 1 0 0 1-.635-.227L9.688 4.682A3 3 0 0 0 7.784 4H5Z"
+      clipRule="evenodd"
+    />
+  </svg>
+);
+
+export default FolderPipes;

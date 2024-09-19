@@ -1,13 +1,9 @@
 {
-  "$schema": "https://turborepo.org/schema.json",
-  "pipeline": {
+  "$schema": "https://turbo.build/schema.json",
+  "tasks": {
     "build": {
-      "outputs": ["dist/**", ".next/**", "public/dist/**"],
-      "dependsOn": ["^build"]
-    },
-    "remix-app#build": {
       "dependsOn": ["^build"],
-      "outputs": ["api/index.js", "api/build/**", "public/build/**"]
+      "outputs": [".cache", "build/**", "public/build/**", "dist/**"]
     },
     "test": {
       "outputs": ["coverage/**"],
@@ -18,7 +14,13 @@
       "outputs": []
     },
     "dev": {
-      "cache": false
+      "cache": false,
+      "persistent": true
+    },
+    "typecheck": {
+      "cache": false,
+      "persistent": true,
+      "outputs": []
     }
   }
 }

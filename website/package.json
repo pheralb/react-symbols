@@ -1,61 +1,62 @@
 {
   "name": "@react-symbols/website",
-  "version": "1.1.1",
-  "description": "Docs - File icons by Miguel Solorio for React",
+  "version": "3.0.0",
+  "description": "React Symbols icons website",
   "author": "@pheralb_",
-  "keywords": [
-    "react",
-    "icons",
-    "svg",
-    "icons",
-    "lightweight"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/pheralb/react-symbols.git"
-  },
-  "contributors": [
-    {
-      "name": "pheralb",
-      "github": "https://github.com/pheralb"
-    }
-  ],
-  "license": "MIT",
   "private": true,
   "sideEffects": false,
+  "type": "module",
   "scripts": {
-    "build": "npm run build:css && remix build",
-    "build:css": "tailwindcss -m -i ./styles/globals.css -o src/styles/tailwind.css",
-    "dev": "concurrently \"npm run dev:css\" \"remix dev\"",
-    "dev:css": "tailwindcss -w -i ./styles/globals.css -o src/styles/tailwind.css"
+    "build": "remix vite:build",
+    "dev": "remix vite:dev",
+    "lint": "eslint --cache --cache-location ./node_modules/.cache/eslint .",
+    "start": "remix-serve ./build/server/index.js",
+    "typecheck": "tsc"
   },
   "dependencies": {
-    "@react-symbols/icons": "*",
-    "@remix-run/node": "1.7.2",
-    "@remix-run/react": "1.7.2",
-    "@remix-run/vercel": "1.7.2",
-    "@vercel/node": "2.5.18",
-    "framer-motion": "7.3.6",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "react-hot-toast": "2.4.0",
-    "rehype-highlight": "5.0.2"
+    "@radix-ui/react-dialog": "1.1.1",
+    "@radix-ui/react-dropdown-menu": "2.1.1",
+    "@radix-ui/react-slider": "1.2.0",
+    "@radix-ui/react-slot": "1.1.0",
+    "@radix-ui/react-tooltip": "1.1.2",
+    "@react-symbols/icons": "workspace:*",
+    "@remix-run/node": "2.11.2",
+    "@remix-run/react": "2.11.2",
+    "@remix-run/serve": "2.11.2",
+    "@vercel/remix": "2.11.2",
+    "axios": "1.7.7",
+    "class-variance-authority": "0.7.0",
+    "clsx": "2.1.1",
+    "fast-npm-meta": "0.2.2",
+    "isbot": "4.1.0",
+    "js-confetti": "0.12.0",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "sonner": "1.5.0",
+    "sugar-high": "0.7.0",
+    "tailwind-merge": "2.5.2",
+    "tailwindcss-animate": "1.0.7"
   },
   "devDependencies": {
-    "@remix-run/dev": "1.7.2",
-    "@remix-run/eslint-config": "1.7.2",
-    "@remix-run/serve": "1.7.2",
-    "@tailwindcss/typography": "0.5.7",
-    "@types/react": "18.0.21",
-    "@types/react-dom": "18.0.6",
-    "autoprefixer": "10.4.12",
-    "concurrently": "7.4.0",
-    "eslint": "8.24.0",
-    "postcss": "8.4.16",
-    "tailwindcss": "3.1.8",
-    "typescript": "4.8.3"
+    "@remix-run/dev": "2.11.2",
+    "@types/react": "18.3.5",
+    "@types/react-dom": "18.3.0",
+    "@typescript-eslint/eslint-plugin": "8.4.0",
+    "@typescript-eslint/parser": "6.21.0",
+    "autoprefixer": "10.4.20",
+    "eslint": "8.57.0",
+    "eslint-import-resolver-typescript": "3.6.3",
+    "eslint-plugin-import": "2.30.0",
+    "eslint-plugin-jsx-a11y": "6.10.0",
+    "eslint-plugin-react": "7.35.2",
+    "eslint-plugin-react-hooks": "4.6.2",
+    "postcss": "8.4.45",
+    "tailwindcss": "3.4.10",
+    "typescript": "5.5.4",
+    "vite": "5.4.3",
+    "vite-tsconfig-paths": "5.0.1"
   },
   "engines": {
-    "node": ">=14"
+    "node": ">=20.0.0"
   }
 }

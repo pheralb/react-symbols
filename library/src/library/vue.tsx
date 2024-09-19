@@ -1,6 +1,6 @@
-import { ComponentProps, FC } from 'react';
+import type { ComponentProps, FC } from "react"
 
-const Vue: FC<ComponentProps<'svg'>> = (props) => (
+const Vue: FC<ComponentProps<"svg">> = (props) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     fill="none"
@@ -16,6 +16,6 @@ const Vue: FC<ComponentProps<'svg'>> = (props) => (
       d="M14.079 4.411L12 8.011l-2.078-3.6H6.6l5.4 9.353 5.4-9.353h-3.321z"
     ></path>
   </svg>
-);
+)
 
-export default Vue;
+export default Vue

@@ -1,6 +1,6 @@
-import { ComponentProps, FC } from 'react';
+import type { ComponentProps, FC } from "react"
 
-const Notebook: FC<ComponentProps<'svg'>> = (props) => (
+const Notebook: FC<ComponentProps<"svg">> = (props) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     fill="none"
@@ -15,6 +15,6 @@ const Notebook: FC<ComponentProps<'svg'>> = (props) => (
     ></path>
     <rect width="14" height="2" x="5" y="16" fill="#60A5FA" rx="1"></rect>
   </svg>
-);
+)
 
-export default Notebook;
+export default Notebook

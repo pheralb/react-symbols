@@ -3,7 +3,6 @@
 
 # Dependencies =>
 node_modules
-package-lock.json
 pnpm-lock.json
 yarn.lock
 
@@ -14,12 +13,16 @@ yarn.lock
 build
 
 # Remix =>
-api
 .cache
 .env
 .vercel
 .output
+api
+
 /build/
 /public/build
 /api/index.js
 /api/index.js.map
+
+# Tailwind CSS compiled files =>
+website/src/styles/tailwind.css

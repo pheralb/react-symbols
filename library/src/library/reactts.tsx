@@ -1,6 +1,6 @@
-import { ComponentProps, FC } from 'react';
+import type { ComponentProps, FC } from "react"
 
-const Reactts: FC<ComponentProps<'svg'>> = (props) => (
+const Reactts: FC<ComponentProps<"svg">> = (props) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     fill="none"
@@ -24,6 +24,6 @@ const Reactts: FC<ComponentProps<'svg'>> = (props) => (
       d="M9.024 10.282c-2.485 4.304-3.168 8.563-1.524 9.512 1.644.95 4.99-1.771 7.476-6.076 2.485-4.304 3.168-8.563 1.524-9.512-1.644-.95-4.99 1.771-7.476 6.076z"
     ></path>
   </svg>
-);
+)
 
-export default Reactts;
+export default Reactts

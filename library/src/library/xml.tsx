@@ -1,6 +1,6 @@
-import { ComponentProps, FC } from 'react';
+import type { ComponentProps, FC } from "react"
 
-const XML: FC<ComponentProps<'svg'>> = (props) => (
+const XML: FC<ComponentProps<"svg">> = (props) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     fill="none"
@@ -10,7 +10,7 @@ const XML: FC<ComponentProps<'svg'>> = (props) => (
     <circle cx="5" cy="19" r="2" fill="#EA580C"></circle>
     <mask
       id="mask0_20543_563"
-      style={{ maskType: 'alpha' }}
+      style={{ maskType: "alpha" }}
       width="20"
       height="22"
       x="4"
@@ -24,7 +24,7 @@ const XML: FC<ComponentProps<'svg'>> = (props) => (
     </g>
     <mask
       id="mask1_20543_563"
-      style={{ maskType: 'alpha' }}
+      style={{ maskType: "alpha" }}
       width="19"
       height="20"
       x="5"
@@ -37,6 +37,6 @@ const XML: FC<ComponentProps<'svg'>> = (props) => (
       <circle cx="5" cy="19" r="15" stroke="#EA580C" strokeWidth="2"></circle>
     </g>
   </svg>
-);
+)
 
-export default XML;
+export default XML
