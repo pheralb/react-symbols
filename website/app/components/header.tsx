@@ -29,6 +29,10 @@ const linkClasses = buttonVariants({
   className: "rounded-3xl w-auto group",
 });
 
+const arrowClasses = cn(
+  "text-zinc-400 transition-transform group-hover:translate-x-[0.1rem] group-hover:text-black dark:group-hover:text-white",
+);
+
 interface iHeaderProps {
   npmVersion: string;
 }
@@ -38,7 +42,7 @@ const Header = (props: iHeaderProps) => {
     <section
       className={cn(
         "pb-4 pt-8 md:py-10",
-        "flex flex-col space-y-6",
+        "flex flex-col space-y-5",
         containerClasses,
       )}
     >
@@ -51,17 +55,17 @@ const Header = (props: iHeaderProps) => {
           >
             React-Symbols
           </Link>
-          <div className="flex flex-col items-start space-x-0 space-y-2 text-sm text-zinc-400 md:flex-row md:space-x-2 md:space-y-0 md:text-[16px]">
+          <div className="flex flex-col items-start space-x-0 space-y-2 text-sm text-zinc-600 md:flex-row md:space-x-2 md:space-y-0 md:text-[16px] dark:text-zinc-400">
             <span>
               Beautifully File & Folder Icons for your React projects.
             </span>
           </div>
         </div>
       </div>
-      <div className="flex w-full flex-col items-center space-x-0 space-y-4 md:w-auto md:flex-row md:space-x-4 md:space-y-0">
+      <div className="mb-1 flex w-full flex-col items-center space-x-0 space-y-4 md:w-auto md:flex-row md:space-x-4 md:space-y-0">
         <InstallCommand className="w-full md:w-auto" />
         <Divider className="hidden md:block" />
-        <nav className="container flex items-center space-x-2 overflow-y-auto md:w-auto">
+        <nav className="container flex items-center space-x-2 overflow-y-auto pb-1 md:w-auto">
           <ExternalLink
             title="NPM Package"
             href="https://www.npmjs.com/package/@react-symbols/icons"
@@ -73,7 +77,7 @@ const Header = (props: iHeaderProps) => {
               height={13}
               width={13}
               strokeWidth={2}
-              className="text-zinc-400 transition-transform duration-200 group-hover:translate-x-[0.1rem] group-hover:text-white"
+              className={arrowClasses}
             />
           </ExternalLink>
           <ExternalLink
@@ -87,7 +91,7 @@ const Header = (props: iHeaderProps) => {
               height={13}
               width={13}
               strokeWidth={2}
-              className="text-zinc-400 transition-transform duration-200 group-hover:translate-x-[0.07rem] group-hover:text-white"
+              className={arrowClasses}
             />
           </ExternalLink>
           <ExternalLink
@@ -101,7 +105,7 @@ const Header = (props: iHeaderProps) => {
               height={13}
               width={13}
               strokeWidth={2}
-              className="text-zinc-400 transition-transform duration-200 group-hover:translate-x-[0.07rem] group-hover:text-white"
+              className={arrowClasses}
             />
           </ExternalLink>
           <ExternalLink
@@ -115,7 +119,7 @@ const Header = (props: iHeaderProps) => {
               height={13}
               width={13}
               strokeWidth={2}
-              className="text-zinc-400 transition-transform duration-200 group-hover:translate-x-[0.07rem] group-hover:text-white"
+              className={arrowClasses}
             />
           </ExternalLink>
         </nav>

@@ -24,14 +24,17 @@ const Card = (props: iCard) => {
   };
 
   return (
-    <div className="group flex flex-col items-center justify-center space-y-1 rounded-lg border border-zinc-800 px-4 pb-2 pt-4 transition-colors hover:bg-zinc-800/50">
+    <div className="group flex flex-col items-center justify-center space-y-1 rounded-lg border border-zinc-200 px-4 pb-2 pt-4 hover:bg-zinc-200/50 dark:border-zinc-800 dark:hover:bg-zinc-800/50">
       <props.icon width={props.iconSize} height={props.iconSize} />
-      <p className="text-sm tracking-tight text-white">{props.name}</p>
+      <p className="text-sm tracking-tight text-black dark:text-white">
+        {props.name}
+      </p>
       <div className="flex items-center space-x-1">
         <Button
           variant="ghost"
           size="icon"
           onClick={handleCopy}
+          className="transition-none"
           title="Copy to clipboard"
         >
           <CopyIcon width={17} height={17} strokeWidth={1.5} />
