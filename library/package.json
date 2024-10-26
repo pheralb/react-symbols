@@ -1,6 +1,6 @@
 {
   "name": "@react-symbols/icons",
-  "version": "1.2.6",
+  "version": "1.2.7",
   "description": "Symbols icons by Miguel Solorio for React",
   "author": "@pheralb_",
   "license": "MIT",
@@ -53,14 +53,13 @@
   },
   "devDependencies": {
     "@swc/cli": "0.4.0",
-    "@swc/core": "1.7.23",
-    "@types/node": "22.5.4",
-    "@types/react": "18.3.5",
-    "@types/react-dom": "18.3.0",
+    "@swc/core": "1.7.40",
+    "@types/react": "18.3.12",
+    "@types/react-dom": "18.3.1",
     "react": "18.3.1",
     "react-dom": "18.3.1",
-    "tsup": "8.2.4",
-    "typescript": "5.5.4"
+    "tsup": "8.3.5",
+    "typescript": "5.6.3"
   },
   "peerDependencies": {
     "react": ">= 16.8",

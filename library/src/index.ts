@@ -137,7 +137,7 @@ export { default as CloudflareWorkers } from "./library/cloudflareWorkers.js";
 export { default as Gif } from "./library/gif.js";
 export { default as Rome } from "./library/rome.js";
 export { default as Turborepo } from "./library/turborepo.js";
-export { default as BiomeOld } from "./library/biome_old.js";
+export { default as BiomeOld } from "./library/biomeOld.js";
 export { default as Biome } from "./library/biome.js";
 export { default as Bun } from "./library/bun.js";
 export { default as CMake } from "./library/cmake.js";
@@ -153,7 +153,7 @@ export { default as Earthfile } from "./library/earthfile.js";
 export { default as Gatsbyjs } from "./library/gatsbyjs.js";
 export { default as Keystatic } from "./library/keystatic.js";
 export { default as Knip } from "./library/knip.js";
-export { default as PandaCSS } from "./library/pandacss.js";
+export { default as PandaCSS } from "./library/panda.js";
 export { default as Sanity } from "./library/sanity.js";
 export { default as Serverless } from "./library/serverless.js";
 export { default as Solidity } from "./library/solidity.js";
@@ -187,6 +187,17 @@ export { default as CodePink } from "./library/codePink.js";
 export { default as Func } from "./library/func.js";
 export { default as Fresh } from "./library/fresh.js";
 export { default as StatamicAntlers } from "./library/statamicAntlers.js";
+export { default as NestGuard } from "./library/nestGuard.js";
+export { default as AngularDirective } from "./library/angularDirective.js";
+export { default as AngularGuard } from "./library/angularGuard.js";
+export { default as AngularModule } from "./library/angularModule.js";
+export { default as AngularPipe } from "./library/angularPipe.js";
+export { default as Fortran } from "./library/fortran.js";
+export { default as Oxlint } from "./library/oxlint.js";
+export { default as Luau } from "./library/luau.js";
+export { default as Docusaurus } from "./library/docusaurus.js";
+export { default as MongoDB } from "./library/mongodb.js";
+export { default as Bruno } from "./library/bruno.js";
 
 // Folders =>
 
@@ -256,3 +267,7 @@ export { default as FolderPinkOutline } from "./library/folders/folderPinkOutlin
 export { default as FolderPipes } from "./library/folders/folderPipes.js";
 export { default as FolderProviders } from "./library/folders/folderProviders.js";
 export { default as FolderServices } from "./library/folders/folderServices.js";
+export { default as FolderConstants } from "./library/folders/folderConstants.js";
+export { default as FolderHooks } from "./library/folders/folderHooks.js";
+export { default as FolderMongoDB } from "./library/folders/folderMongoDB.js";
+export { default as FolderBruno } from "./library/folders/folderBruno.js";

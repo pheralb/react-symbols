@@ -33,7 +33,7 @@ export default function Folders() {
   ) as iIcons[];
 
   return (
-    <main className="animate-in fade-in-60 duration-700">
+    <main className="animate-in fade-in-60">
       {filteredIcons.length === 0 ? (
         <NotFound input={search} isFolder={true} />
       ) : (

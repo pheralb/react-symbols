@@ -1,5 +1,9 @@
 import type { ReactNode } from "react";
-import type { LinksFunction, MetaFunction } from "@vercel/remix";
+import type {
+  LinksFunction,
+  LoaderFunctionArgs,
+  MetaFunction,
+} from "@vercel/remix";
 
 import {
   json,
@@ -24,6 +28,16 @@ import Navbar from "./components/navbar";
 
 // Providers:
 import { Toaster } from "./providers/sonner";
+
+// Theme:
+import {
+  ThemeBody,
+  ThemeHead,
+  ThemeProvider,
+  useTheme,
+} from "./theme/themeProvider";
+import { getThemeSession } from "./theme/themeServer";
+import Settings from "./components/settings";
 
 // Links:
 export const links: LinksFunction = () => [
@@ -82,16 +96,18 @@ export const meta: MetaFunction = () => {
   ];
 };
 
-export async function loader() {
+export async function loader({ request }: LoaderFunctionArgs) {
   const metadata = await getLatestVersion(globals.npmPackageName);
-  return json({ version: metadata.version });
+  const themeSession = await getThemeSession(request);
+  return json({ version: metadata.version, theme: themeSession.getTheme() });
 }
 
 // App Layout:
-export function Layout({ children }: { children: ReactNode }) {
+function App({ children }: { children: ReactNode }) {
   const data = useLoaderData<typeof loader>();
+  const [theme] = useTheme();
   return (
-    <html lang="en" className="dark" style={{ colorScheme: "dark" }}>
+    <html lang="en" className={cn(theme)} style={{ colorScheme: theme! }}>
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -125,18 +141,21 @@ export function Layout({ children }: { children: ReactNode }) {
         <meta name="twitter:title" content="React-Symbols" />
         <Meta />
         <Links />
+        <ThemeHead ssrTheme={Boolean(data.theme)} />
       </head>
       <body
         className={cn(
           "font-sans antialiased",
           "bg-zinc-50 text-black dark:bg-zinc-900 dark:text-white",
           "selection:bg-zinc-300 selection:text-zinc-900 dark:selection:bg-zinc-700 dark:selection:text-zinc-50",
-          "scroll-smooth",
+          "relative",
         )}
       >
         <Header npmVersion={data.version!} />
+        <Settings />
         <Navbar />
         {children}
+        <ThemeBody ssrTheme={Boolean(data.theme)} />
         <Footer />
         <Toaster />
         <ScrollRestoration />
@@ -146,6 +165,13 @@ export function Layout({ children }: { children: ReactNode }) {
   );
 }
 
-export default function App() {
-  return <Outlet />;
+export default function AppWithProviders() {
+  const data = useLoaderData<typeof loader>();
+  return (
+    <ThemeProvider specifiedTheme={data.theme}>
+      <App>
+        <Outlet />
+      </App>
+    </ThemeProvider>
+  );
 }

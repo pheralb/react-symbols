@@ -1,22 +1,20 @@
 import { clsx, type ClassValue } from "clsx";
 import { twMerge } from "tailwind-merge";
+import * as changeCase from "change-case";
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
-export function lower(input: string): string {
-  return input
-    .split(/[^a-zA-Z0-9]+/)
-    .map((word, index) => {
-      if (index === 0) {
-        return word.charAt(0).toLowerCase() + word.slice(1);
-      } else {
-        return word.charAt(0).toUpperCase() + word.slice(1);
-      }
-    })
-    .join("");
-}
+export const camelCase = (str: string) => {
+  if ((str.match(/[A-Z]/g) || []).length >= 2) {
+    return changeCase.camelCase(str);
+  }
+  if (str.includes("-")) {
+    return changeCase.camelCase(str);
+  }
+  return changeCase.camelCase(str);
+};
 
 const MIMETYPE = "text/plain";
 
