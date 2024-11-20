@@ -4,7 +4,7 @@ import { containerClasses } from "@/ui/container";
 
 const Footer = () => {
   return (
-    <footer className="animate-in slide-in-from-bottom-3 fade-in-30 fixed bottom-0 w-full bg-zinc-50 py-4 text-sm text-zinc-600 backdrop-blur-sm dark:bg-zinc-900/80 dark:text-zinc-400">
+    <footer className="animate-in slide-in-from-bottom-3 fade-in-30 fixed bottom-0 w-full bg-zinc-50/80 py-4 text-sm text-zinc-600 backdrop-blur-sm dark:bg-zinc-900/80 dark:text-zinc-400">
       <div
         className={cn(containerClasses, "flex items-center justify-between")}
       >
