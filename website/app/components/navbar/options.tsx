@@ -1,9 +1,9 @@
 import { useSearchParams } from "@remix-run/react";
+import { useEffect, useState } from "react";
 
 import { Input } from "@/ui/input";
 import { Slider } from "@/ui/slider";
 import { iconSizeParamKey, searchParamKey } from "@/data/searchParams";
-import { useEffect, useState } from "react";
 
 interface iSearchProps {
   className?: string;
@@ -38,30 +38,30 @@ export const Search = (props: iSearchProps) => {
   );
 };
 
-// 📏 Icon Size Slider:
 export const IconSize = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   const [iconSizeValue, setIconSizeValue] = useState(
     Number(searchParams.get(iconSizeParamKey)) || 45,
   );
 
-  const handleChange = (value: number[]) => {
-    const newSearchParams = new URLSearchParams(searchParams);
-    if (value[0] === 45) {
-      newSearchParams.delete(iconSizeParamKey);
-    } else {
-      newSearchParams.set(iconSizeParamKey, `${value[0]}`);
-    }
-    setSearchParams(newSearchParams);
-  };
-
   useEffect(() => {
+    const handleChange = (value: number[]) => {
+      const newSearchParams = new URLSearchParams(searchParams);
+      if (value[0] === 45) {
+        newSearchParams.delete(iconSizeParamKey);
+      } else {
+        newSearchParams.set(iconSizeParamKey, `${value[0]}`);
+      }
+      setSearchParams(newSearchParams);
+    };
+
     handleChange([iconSizeValue]);
-  }, [iconSizeValue]);
+  }, [iconSizeValue, searchParams, setSearchParams]);
 
   return (
     <Slider
-      title="Icon Size"
+      title={`Icon Size: ${iconSizeValue}px`}
+      showTooltip={true}
       value={[Number(iconSizeValue)]}
       onValueChange={(value) => setIconSizeValue(value[0])}
       max={70}
