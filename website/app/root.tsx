@@ -100,10 +100,10 @@ export const meta: MetaFunction = () => {
 export async function loader({ request }: LoaderFunctionArgs) {
   const metadata = await getLatestVersion(globals.npmPackageName);
   const themeSession = await getThemeSession(request);
-  return Response.json({
+  return {
     version: metadata.version,
     theme: themeSession.getTheme(),
-  });
+  };
 }
 
 // App Layout:

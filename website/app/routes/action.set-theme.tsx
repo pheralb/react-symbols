@@ -1,5 +1,5 @@
-import type { ActionFunctionArgs } from "@remix-run/node";
-import { json, redirect } from "@remix-run/node";
+import type { ActionFunctionArgs } from "@vercel/remix";
+import { redirect } from "@vercel/remix";
 
 import { isTheme } from "@/theme/themeProvider";
 import { getThemeSession } from "@/theme/themeServer";
@@ -11,17 +11,17 @@ export const action = async ({ request }: ActionFunctionArgs) => {
   const theme = form.get("theme");
 
   if (!isTheme(theme)) {
-    return json({
+    return {
       success: false,
       message: `theme value of ${theme} is not a valid theme`,
-    });
+    };
   }
 
   themeSession.setTheme(theme);
-  return json(
-    { success: true },
-    { headers: { "Set-Cookie": await themeSession.commit() } },
-  );
+  return {
+    success: true,
+    headers: { "Set-Cookie": await themeSession.commit() },
+  };
 };
 
 export const loader = async () => redirect("/", { status: 404 });
