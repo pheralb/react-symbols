@@ -6,7 +6,6 @@ import type {
 } from "@vercel/remix";
 
 import {
-  json,
   Links,
   Meta,
   Outlet,
@@ -19,6 +18,7 @@ import { globals } from "@/globals";
 
 // Styles:
 import tailwind from "./styles/globals.css?url";
+import sonnerStyles from "sonner/dist/styles.css?url";
 import { cn } from "./utils";
 
 // Layout:
@@ -42,6 +42,7 @@ import Settings from "./components/settings";
 // Links:
 export const links: LinksFunction = () => [
   { rel: "stylesheet", href: tailwind },
+  { rel: "stylesheet", href: sonnerStyles },
   {
     rel: "preload",
     as: "font",
@@ -99,7 +100,10 @@ export const meta: MetaFunction = () => {
 export async function loader({ request }: LoaderFunctionArgs) {
   const metadata = await getLatestVersion(globals.npmPackageName);
   const themeSession = await getThemeSession(request);
-  return json({ version: metadata.version, theme: themeSession.getTheme() });
+  return Response.json({
+    version: metadata.version,
+    theme: themeSession.getTheme(),
+  });
 }
 
 // App Layout:
