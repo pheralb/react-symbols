@@ -1,6 +1,6 @@
 {
   "name": "@react-symbols/icons",
-  "version": "1.2.7",
+  "version": "1.2.8",
   "description": "Symbols icons by Miguel Solorio for React",
   "author": "@pheralb_",
   "license": "MIT",
@@ -53,8 +53,8 @@
   },
   "devDependencies": {
     "@swc/cli": "0.5.2",
-    "@swc/core": "1.7.42",
-    "@types/react": "18.3.16",
+    "@swc/core": "1.10.4",
+    "@types/react": "18.3.18",
     "@types/react-dom": "18.3.5",
     "react": "18.3.1",
     "react-dom": "18.3.1",
