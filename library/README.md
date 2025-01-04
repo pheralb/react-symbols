@@ -15,7 +15,7 @@
 <span>&nbsp;&nbsp;❖&nbsp;&nbsp;</span>
 <a href="https://marketplace.visualstudio.com/items?itemName=miguelsolorio.symbols">VSCode Theme</a>
 
-![Remix Badge](https://img.shields.io/badge/Remix-000?logo=remix&logoColor=fff&style=flat)
+![React Badge](https://img.shields.io/badge/React-61DAFB?logo=react&logoColor=000&style=flat)
 ![SWC Badge](https://img.shields.io/badge/SWC-F8C457?logo=swc&logoColor=000&style=flat)
 [![Build Status](https://img.shields.io/endpoint.svg?url=https%3A%2F%2Factions-badge.atrox.dev%2Fpheralb%2Freact-symbols%2Fbadge%3Fref%3Dmain&style=flat)](https://actions-badge.atrox.dev/pheralb/react-symbols/goto?ref=main)
 ![GitHub releases](https://img.shields.io/github/release/pheralb/react-symbols)
@@ -31,7 +31,7 @@
 
 - 📦 **+100** files & folders icons.
 - ☁️ Support for **React Server Components** (RSC).
-- 🍃 **Lightweight**.
+- 🍃 **Lightweight** & **tree-shakable**.
 - 💙 Built with **Typescript**.
 - 🚀 **SVG optimized** and **minified**.
 
