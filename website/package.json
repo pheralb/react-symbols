@@ -9,7 +9,8 @@
     "build": "pnpm build:registry && react-router build",
     "build:registry": "node ./generate-registry.mjs",
     "dev": "react-router dev",
-    "lint": "react-router typegen && eslint --cache --cache-location ./node_modules/.cache/eslint .",
+    "lint": "react-router typegen && eslint ./app",
+    "lint:fix": "react-router typegen && eslint ./app --fix",
     "start": "react-router-serve ./build/server/index.js",
     "typecheck": "react-router typegen && tsc --noEmit"
   },
