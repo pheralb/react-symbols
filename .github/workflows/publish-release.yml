@@ -1,8 +1,7 @@
 name: 📦 Publish
 
 on:
-  workflow_dispatch:
-    release:
+  release:
     types: [published]
 
 concurrency: ${{ github.workflow }}-${{ github.ref }}
@@ -16,7 +15,7 @@ jobs:
         working-directory: library
     steps:
       - name: Checkout Repo
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Install Node.js
         uses: actions/setup-node@v4
@@ -37,7 +36,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repo
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Install Node.js
         uses: actions/setup-node@v4
