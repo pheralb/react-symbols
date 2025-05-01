@@ -10,7 +10,7 @@ interface iCard extends iIcons {
 
 const Card = (props: iCard) => {
   return (
-    <div className="group flex flex-col items-center justify-center rounded-lg border border-zinc-200 px-4 pb-2 pt-4 hover:bg-zinc-200/50 dark:border-zinc-800 dark:hover:bg-zinc-800/50">
+    <div className="group flex flex-col items-center justify-center rounded-lg border border-zinc-200 px-4 pb-2 pt-4 dark:border-zinc-800">
       <props.icon width={props.iconSize} height={props.iconSize} />
       <p className="mb-1.5 mt-2 text-sm tracking-tight text-black dark:text-white">
         {props.name}

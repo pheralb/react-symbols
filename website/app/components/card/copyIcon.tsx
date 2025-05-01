@@ -78,7 +78,10 @@ const CopyIconActions = ({ itemName, isFolder, ItemIcon }: CopyIconProps) => {
       setIsOpen(false);
     } catch (error) {
       console.error("⚠️ Error fetching or copying source code: ", error);
-      toast.error("Failed to copy source code. Please try again.");
+      toast.error("Failed to copy source code. Please try again.", {
+        closeButton: true,
+      });
+      setLoading(false);
     }
   };
 
