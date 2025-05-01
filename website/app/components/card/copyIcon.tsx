@@ -1,7 +1,7 @@
 import { useState, type FC, type SVGProps } from "react";
 
 import axios from "axios";
-import { toast } from "sonner";
+import { toast } from "@pheralb/toast";
 import { Symbols } from "@react-symbols/icons";
 import { CodeIcon, CopyIcon, LoaderIcon, XIcon } from "lucide-react";
 
@@ -26,8 +26,8 @@ const CopyIconActions = ({ itemName, isFolder, ItemIcon }: CopyIconProps) => {
   const handleCopyFromLibrary = async () => {
     const code = `<${itemName} />`;
     await clipboard(code);
-    toast.success("Copied to clipboard", {
-      description: code,
+    toast.success({
+      text: "Copied library import",
       icon: <ItemIcon width={24} height={24} />,
     });
     setIsOpen(false);
@@ -41,8 +41,8 @@ const CopyIconActions = ({ itemName, isFolder, ItemIcon }: CopyIconProps) => {
       : `${appConfig.shadcnCommand} ${appConfig.registryUrl}folders/${itemNameLower}.json`;
 
     await clipboard(makeCommand);
-    toast.success("Copied to clipboard", {
-      description: makeCommand,
+    toast.success({
+      text: "Copied shadcn/ui command",
       icon: <ItemIcon width={24} height={24} />,
     });
     setIsOpen(false);
@@ -70,16 +70,16 @@ const CopyIconActions = ({ itemName, isFolder, ItemIcon }: CopyIconProps) => {
       content = content.replace(/\r\n/g, "\n");
 
       await clipboard(content);
-      toast.success("Copied to clipboard", {
-        description: itemName,
+      toast.success({
+        text: "Copied source code",
         icon: <ItemIcon width={24} height={24} />,
       });
       setLoading(false);
       setIsOpen(false);
     } catch (error) {
       console.error("⚠️ Error fetching or copying source code: ", error);
-      toast.error("Failed to copy source code. Please try again.", {
-        closeButton: true,
+      toast.error({
+        text: "Failed to copy source code. Please try again.",
       });
       setLoading(false);
     }

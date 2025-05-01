@@ -27,7 +27,7 @@ import Navbar from "@/components/navbar";
 import Settings from "@/components/settings";
 
 // Providers:
-import { Toaster } from "@/providers/sonner";
+import CustomToaster from "@/providers/toaster";
 
 // Theme:
 import {
@@ -164,7 +164,7 @@ function App() {
         <Navbar />
         <Outlet />
         <Footer />
-        <Toaster />
+        <CustomToaster />
         <ScrollRestoration />
         <Scripts />
       </body>
