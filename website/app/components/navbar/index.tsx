@@ -1,15 +1,16 @@
 import { Folder, FolderOpen } from "@react-symbols/icons";
 import { NavLink, useLocation } from "react-router";
+import { SearchIcon } from "lucide-react";
 
 import { totalFolders, totalIcons, totalLibraryIcons } from "@/data/svgs";
 import { cn } from "@/utils";
 
-import { IconSize, Search } from "@/components/navbar/options";
-
 import { containerClasses } from "@/ui/container";
 import { buttonVariants } from "@/ui/button";
 import Divider from "@/ui/divider";
-import { SearchIcon } from "lucide-react";
+
+import Search from "@/components/navbar/search";
+import IconSize from "@/components/navbar/iconSize";
 
 // Only Files & Folders Icons Routes:
 const NavIconsRoutes = [
