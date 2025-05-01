@@ -5,7 +5,7 @@ import { FoldersIcons, type iIcons } from "@/data/svgs";
 import { searchParamKey, iconSizeParamKey } from "@/data/searchParams";
 
 import Grid from "@/components/grid";
-import Card from "@/components/card";
+import Card from "@/components/card/cardItem";
 import Loading from "@/components/loading";
 import NotFound from "@/components/notFound";
 

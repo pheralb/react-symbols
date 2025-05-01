@@ -1,6 +1,6 @@
 import { buttonVariants } from "@/ui/button";
 import { containerClasses } from "@/ui/container";
-import { BoxIcon } from "@/ui/icons/feather";
+import { BoxIcon } from "lucide-react";
 import { cn } from "@/utils";
 import { Link } from "react-router";
 

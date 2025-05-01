@@ -18,7 +18,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/ui/dropdown-menu";
-import { ChevronDownIcon, CopyIcon } from "@/ui/icons/feather";
+import { ChevronDownIcon, CopyIcon } from "lucide-react";
 
 interface iInstallCommands {
   package: string;

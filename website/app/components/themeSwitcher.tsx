@@ -1,5 +1,5 @@
 import { type Theme, useTheme } from "@/theme/themeProvider";
-import { MoonIcon, SunIcon } from "@/ui/icons/feather";
+import { MoonIcon, SunIcon } from "lucide-react";
 import { cn } from "@/utils";
 
 const ThemeSwitcher = () => {

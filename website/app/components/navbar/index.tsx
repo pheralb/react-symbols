@@ -6,10 +6,10 @@ import { cn } from "@/utils";
 
 import { IconSize, Search } from "@/components/navbar/options";
 
-import { SearchIcon } from "@/ui/icons/feather";
 import { containerClasses } from "@/ui/container";
 import { buttonVariants } from "@/ui/button";
 import Divider from "@/ui/divider";
+import { SearchIcon } from "lucide-react";
 
 // Only Files & Folders Icons Routes:
 const NavIconsRoutes = [
