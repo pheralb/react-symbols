@@ -13,10 +13,11 @@ const OpenWithV0 = ({ itemName, isFolder }: OpenWithV0Props) => {
   return (
     <ExternalLink
       title="Open with V0"
-      href={new URL(
-        isFolder ? `folders/${itemName}.json` : `${itemName}.json`,
-        appConfig.registryUrl,
-      ).toString()}
+      href={
+        !isFolder
+          ? `${appConfig.v0URL}${appConfig.registryUrl}${itemName}.json`
+          : `${appConfig.v0URL}${appConfig.registryUrl}folders/${itemName}.json`
+      }
       className={buttonVariants({
         variant: "ghost",
         size: "icon",

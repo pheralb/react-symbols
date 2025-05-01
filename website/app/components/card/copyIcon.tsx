@@ -36,10 +36,10 @@ const CopyIconActions = ({ itemName, isFolder, ItemIcon }: CopyIconProps) => {
   // Copy shadcn/ui command:
   const handleCopyShadcnCommand = async () => {
     const itemNameLower = itemName.charAt(0).toLowerCase() + itemName.slice(1);
-    const makeCommand = new URL(
-      isFolder ? `folders/${itemNameLower}.json` : `${itemNameLower}.json`,
-      appConfig.registryUrl,
-    ).toString();
+    const makeCommand = !isFolder
+      ? `${appConfig.shadcnCommand} ${appConfig.registryUrl}${itemNameLower}.json`
+      : `${appConfig.shadcnCommand} ${appConfig.registryUrl}folders/${itemNameLower}.json`;
+
     await clipboard(makeCommand);
     toast.success("Copied to clipboard", {
       description: makeCommand,
