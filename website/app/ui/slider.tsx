@@ -62,6 +62,7 @@ const Slider = React.forwardRef<
   const renderThumb = (value: number, index: number) => {
     const thumb = (
       <SliderPrimitive.Thumb
+        title="Update size"
         className="block h-4 w-4 rounded-full border border-zinc-400 bg-zinc-200 ring-offset-1 transition-shadow hover:bg-zinc-300 focus-visible:outline-none data-[disabled]:cursor-not-allowed dark:border-zinc-600 dark:bg-zinc-500 dark:hover:bg-zinc-700"
         onPointerDown={handlePointerDown}
       />

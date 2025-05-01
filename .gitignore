@@ -1,23 +1,24 @@
-# Turbo =>
+# Turbo
 .turbo
 
-# Dependencies =>
+# Dependencies
 node_modules
 pnpm-lock.json
 yarn.lock
 
-# Optional npm cache directory =>
+# Optional npm cache directory
 .npm
 
-# Build folder =>
+# Build folder
 build
 
-# Remix =>
+# Remix
 .cache
 .env
 .vercel
 .output
 api
+.react-router
 
 /build/
 /public/build

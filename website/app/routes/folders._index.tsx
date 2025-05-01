@@ -1,11 +1,11 @@
-import { useLoaderData, useSearchParams } from "@remix-run/react";
+import { useLoaderData, useSearchParams } from "react-router";
 import { useDeferredValue } from "react";
 
-import { FoldersIcons, iIcons } from "@/data/svgs";
+import { FoldersIcons, type iIcons } from "@/data/svgs";
 import { searchParamKey, iconSizeParamKey } from "@/data/searchParams";
 
 import Grid from "@/components/grid";
-import Card from "@/components/card";
+import Card from "@/components/card/cardItem";
 import Loading from "@/components/loading";
 import NotFound from "@/components/notFound";
 
@@ -18,7 +18,9 @@ export async function clientLoader() {
 }
 
 export function HydrateFallback() {
-  return <Loading size={55} className="my-10 flex items-center justify-center" />;
+  return (
+    <Loading size={55} className="my-10 flex items-center justify-center" />
+  );
 }
 
 export default function Folders() {
@@ -30,7 +32,7 @@ export default function Folders() {
 
   const filteredIcons = data.filter((icon) =>
     icon.name.toLowerCase().includes(search.toLowerCase()),
-  ) as iIcons[];
+  ) as unknown as iIcons[];
 
   return (
     <main className="animate-in fade-in-60">

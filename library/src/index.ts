@@ -206,6 +206,7 @@ export { default as GoRed } from "./library/goRed.js";
 export { default as GoYellow } from "./library/goYellow.js";
 export { default as NestDecorator } from "./library/nestDecorator.js";
 export { default as NestMiddleware } from "./library/nestMiddleware.js";
+export { default as Commitlint } from "./library/commitlint.js";
 
 // Folders =>
 

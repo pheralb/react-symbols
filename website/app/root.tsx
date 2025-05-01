@@ -1,9 +1,8 @@
-import type { ReactNode } from "react";
 import type {
   LinksFunction,
   LoaderFunctionArgs,
   MetaFunction,
-} from "@vercel/remix";
+} from "react-router";
 
 import {
   Links,
@@ -12,37 +11,37 @@ import {
   Scripts,
   ScrollRestoration,
   useLoaderData,
-} from "@remix-run/react";
+} from "react-router";
 import { getLatestVersion } from "fast-npm-meta";
 import { globals } from "@/globals";
 
 // Styles:
-import tailwind from "./styles/globals.css?url";
-import sonnerStyles from "sonner/dist/styles.css?url";
-import { cn } from "./utils";
+import tailwind from "@/styles/globals.css?url";
+import pheralbToast from "@pheralb/toast/dist/styles.css?url";
+import { cn } from "@/utils";
 
 // Layout:
-import Header from "./components/header";
-import Footer from "./components/footer";
-import Navbar from "./components/navbar";
+import Header from "@/components/header";
+import Footer from "@/components/footer";
+import Navbar from "@/components/navbar";
+import Settings from "@/components/settings";
 
 // Providers:
-import { Toaster } from "./providers/sonner";
+import CustomToaster from "@/providers/toaster";
 
 // Theme:
 import {
-  ThemeBody,
-  ThemeHead,
+  PreventFlashOnWrongTheme,
   ThemeProvider,
   useTheme,
-} from "./theme/themeProvider";
-import { getThemeSession } from "./theme/themeServer";
-import Settings from "./components/settings";
+} from "remix-themes";
+import { themeSessionResolver } from "./sessions.server";
+import clsx from "clsx";
 
 // Links:
 export const links: LinksFunction = () => [
   { rel: "stylesheet", href: tailwind },
-  { rel: "stylesheet", href: sonnerStyles },
+  { rel: "stylesheet", href: pheralbToast },
   {
     rel: "preload",
     as: "font",
@@ -53,7 +52,7 @@ export const links: LinksFunction = () => [
   {
     rel: "preload",
     as: "font",
-    href: "/fonts/GeistMonoVF.woff2",
+    href: "/fonts/GeistMono.woff2",
     type: "font/woff2",
     crossOrigin: "anonymous",
   },
@@ -99,19 +98,24 @@ export const meta: MetaFunction = () => {
 
 export async function loader({ request }: LoaderFunctionArgs) {
   const metadata = await getLatestVersion(globals.npmPackageName);
-  const themeSession = await getThemeSession(request);
+  const { getTheme } = await themeSessionResolver(request);
   return {
     version: metadata.version,
-    theme: themeSession.getTheme(),
+    theme: getTheme(),
   };
 }
 
 // App Layout:
-function App({ children }: { children: ReactNode }) {
+function App() {
   const data = useLoaderData<typeof loader>();
   const [theme] = useTheme();
   return (
-    <html lang="en" className={cn(theme)} style={{ colorScheme: theme! }}>
+    <html
+      lang="en"
+      data-theme={theme}
+      className={clsx(theme)}
+      style={{ colorScheme: clsx(theme) }}
+    >
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -144,8 +148,8 @@ function App({ children }: { children: ReactNode }) {
         <meta name="twitter:site" content="@pheralb_" />
         <meta name="twitter:title" content="React-Symbols" />
         <Meta />
+        <PreventFlashOnWrongTheme ssrTheme={Boolean(data.theme)} />
         <Links />
-        <ThemeHead ssrTheme={Boolean(data.theme)} />
       </head>
       <body
         className={cn(
@@ -158,10 +162,9 @@ function App({ children }: { children: ReactNode }) {
         <Header npmVersion={data.version!} />
         <Settings />
         <Navbar />
-        {children}
-        <ThemeBody ssrTheme={Boolean(data.theme)} />
+        <Outlet />
         <Footer />
-        <Toaster />
+        <CustomToaster />
         <ScrollRestoration />
         <Scripts />
       </body>
@@ -172,10 +175,8 @@ function App({ children }: { children: ReactNode }) {
 export default function AppWithProviders() {
   const data = useLoaderData<typeof loader>();
   return (
-    <ThemeProvider specifiedTheme={data.theme}>
-      <App>
-        <Outlet />
-      </App>
+    <ThemeProvider specifiedTheme={data.theme} themeAction="/action/set-theme">
+      <App />
     </ThemeProvider>
   );
 }

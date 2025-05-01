@@ -1,4 +1,4 @@
-import { Link } from "@remix-run/react";
+import { Link } from "react-router";
 
 import { Github, NPM, Symbols } from "@react-symbols/icons";
 
@@ -9,10 +9,10 @@ import { containerClasses } from "@/ui/container";
 import Divider from "@/ui/divider";
 
 import { Figma, VSCode } from "@/ui/icons/svgl";
-import { ArrowUpRightIcon } from "@/ui/icons/feather";
 
 import ExternalLink from "@/components/externalLink";
 import InstallCommand from "@/components/installCommand";
+import { ArrowUpRightIcon } from "lucide-react";
 
 const svgLogoSize = {
   width: 14,

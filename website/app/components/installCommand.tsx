@@ -1,11 +1,10 @@
 import {
   type FunctionComponent,
-  ReactNode,
+  type ReactNode,
   type SVGProps,
   useState,
 } from "react";
-import { toast } from "sonner";
-import JSConfetti from "js-confetti";
+import { toast } from "@pheralb/toast";
 import { Bun, NPM, PNPM, Yarn } from "@react-symbols/icons";
 
 import { globals } from "@/globals";
@@ -18,7 +17,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/ui/dropdown-menu";
-import { ChevronDownIcon, CopyIcon } from "@/ui/icons/feather";
+import { ChevronDownIcon, CopyIcon } from "lucide-react";
 
 interface iInstallCommands {
   package: string;
@@ -58,16 +57,14 @@ const InstallCommand = (props: iInstallCommandProps) => {
   const [selectedInstallCommand, setSelectedInstallCommand] =
     useState<iInstallCommands>(installCommands[0]);
 
-  const handleCopy = async (text: string, icon: ReactNode) => {
-    const jsConfetti = new JSConfetti();
-    jsConfetti.addConfetti({
-      confettiColors: ["#2563EB", "#0D9488", "#22D3EE", "#C084FC"],
-      confettiRadius: 3,
-      confettiNumber: 50,
-    });
+  const handleCopy = async (
+    text: string,
+    packageManager: string,
+    icon: ReactNode,
+  ) => {
     await clipboard(text);
-    toast.success("Copied to clipboard", {
-      description: text,
+    toast.success({
+      text: `Copied ${packageManager} command`,
       icon: icon,
     });
   };
@@ -77,9 +74,9 @@ const InstallCommand = (props: iInstallCommandProps) => {
       className={cn(
         buttonVariants({
           variant: "outline",
-          className: "active:scale-100",
+          className: "cursor-default active:scale-100",
         }),
-        "select-all space-x-3 rounded-3xl text-zinc-600 transition-colors hover:bg-transparent dark:text-zinc-400 dark:hover:bg-transparent dark:hover:text-white",
+        "select-all space-x-3 rounded-3xl text-zinc-600 hover:bg-transparent dark:text-zinc-400 dark:hover:bg-transparent dark:hover:text-white",
         props.className,
       )}
     >
@@ -88,7 +85,7 @@ const InstallCommand = (props: iInstallCommandProps) => {
       </code>
       <DropdownMenu open={open} onOpenChange={setOpen}>
         <DropdownMenuTrigger
-          className="outline-none focus:outline-none focus-visible:text-white"
+          className="cursor-pointer outline-none focus:outline-none focus-visible:text-white"
           title="Select package manager"
         >
           {open ? (
@@ -104,7 +101,11 @@ const InstallCommand = (props: iInstallCommandProps) => {
               onSelect={() => {
                 setSelectedInstallCommand(item);
                 const fullCommand = `${item.command} ${globals.npmPackageName}`;
-                handleCopy(fullCommand, <item.icon width={24} height={24} />);
+                handleCopy(
+                  fullCommand,
+                  item.package,
+                  <item.icon width={20} height={20} />,
+                );
               }}
             >
               <item.icon width={16} height={16} />

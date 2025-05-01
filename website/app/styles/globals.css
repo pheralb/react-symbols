@@ -1,33 +1,10 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@import "tw-animate-css";
 
-@layer base {
-  :root {
-    --radius: 0.5rem;
-    --sh-class: #648de8;
-    --sh-sign: #14abc2;
-    --sh-string: #14abc2;
-    --sh-keyword: #c084fc;
-    --sh-comment: #565f89;
-    --sh-jsxliterals: #648de8;
-    --sh-property: #14abc2;
-    --sh-entity: #c084fc;
-  }
+/* Dark Mode */
+@custom-variant dark (&:is(.dark *));
 
-  .dark {
-    --radius: 0.5rem;
-    --sh-class: #648de8;
-    --sh-sign: #21cee8;
-    --sh-string: #21cee8;
-    --sh-keyword: #c084fc;
-    --sh-comment: #565f89;
-    --sh-jsxliterals: #648de8;
-    --sh-property: #21cee8;
-    --sh-entity: #c084fc;
-  }
-}
-
+/* Fonts */
 @font-face {
   font-family: InterVariable;
   font-style: normal;
@@ -38,6 +15,21 @@
 
 @font-face {
   font-family: "GeistMono";
-  src: url("/fonts/GeistMonoVF.woff2") format("woff2");
+  src: url("/fonts/GeistMono.woff2") format("woff2");
   font-display: swap;
+}
+
+@theme {
+  /* Colors */
+  --color-react-symbol-pink: #c084fc;
+  --color-react-symbol-aqua: #22d3ee;
+
+  /* Fonts */
+  --font-sans: "InterVariable", ui-sans-serif, system-ui, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-mono: "GeistMono", ui-monospace, SFMono-Regular, Consolas,
+    "Liberation Mono";
+
+  /* Animations */
+  --animate-spin-slow: spin 4s linear infinite;
 }
