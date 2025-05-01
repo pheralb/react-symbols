@@ -1,20 +1,9 @@
 import { clsx, type ClassValue } from "clsx";
 import { twMerge } from "tailwind-merge";
-import * as changeCase from "change-case";
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
-
-export const camelCase = (str: string) => {
-  if ((str.match(/[A-Z]/g) || []).length >= 2) {
-    return changeCase.camelCase(str);
-  }
-  if (str.includes("-")) {
-    return changeCase.camelCase(str);
-  }
-  return changeCase.camelCase(str);
-};
 
 const MIMETYPE = "text/plain";
 
