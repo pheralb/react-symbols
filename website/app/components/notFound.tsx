@@ -2,7 +2,7 @@ import { buttonVariants } from "@/ui/button";
 import { containerClasses } from "@/ui/container";
 import { BoxIcon } from "@/ui/icons/feather";
 import { cn } from "@/utils";
-import { Link } from "@remix-run/react";
+import { Link } from "react-router";
 
 interface NotFoundProps {
   input: string;

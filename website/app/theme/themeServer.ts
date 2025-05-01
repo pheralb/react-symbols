@@ -1,6 +1,6 @@
 import type { Theme } from "./themeProvider";
 
-import { createCookieSessionStorage } from "@vercel/remix";
+import { createCookieSessionStorage } from "react-router";
 import { isTheme } from "./themeProvider";
 
 const sessionSecret = process.env.SESSION_SECRET ?? "DEFAULT_SECRET";

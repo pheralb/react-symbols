@@ -3,7 +3,7 @@ import type {
   LinksFunction,
   LoaderFunctionArgs,
   MetaFunction,
-} from "@vercel/remix";
+} from "react-router";
 
 import {
   Links,
@@ -12,22 +12,22 @@ import {
   Scripts,
   ScrollRestoration,
   useLoaderData,
-} from "@remix-run/react";
+} from "react-router";
 import { getLatestVersion } from "fast-npm-meta";
 import { globals } from "@/globals";
 
 // Styles:
-import tailwind from "./styles/globals.css?url";
+import tailwind from "@/styles/globals.css?url";
 import sonnerStyles from "sonner/dist/styles.css?url";
-import { cn } from "./utils";
+import { cn } from "@/utils";
 
 // Layout:
-import Header from "./components/header";
-import Footer from "./components/footer";
-import Navbar from "./components/navbar";
+import Header from "@/components/header";
+import Footer from "@/components/footer";
+import Navbar from "@/components/navbar";
 
 // Providers:
-import { Toaster } from "./providers/sonner";
+import { Toaster } from "@/providers/sonner";
 
 // Theme:
 import {
@@ -35,9 +35,9 @@ import {
   ThemeHead,
   ThemeProvider,
   useTheme,
-} from "./theme/themeProvider";
-import { getThemeSession } from "./theme/themeServer";
-import Settings from "./components/settings";
+} from "@/theme/themeProvider";
+import { getThemeSession } from "@/theme/themeServer";
+import Settings from "@/components/settings";
 
 // Links:
 export const links: LinksFunction = () => [

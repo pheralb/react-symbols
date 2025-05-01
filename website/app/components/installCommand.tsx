@@ -1,6 +1,6 @@
 import {
   type FunctionComponent,
-  ReactNode,
+  type ReactNode,
   type SVGProps,
   useState,
 } from "react";

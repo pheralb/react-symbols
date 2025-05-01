@@ -1,5 +1,5 @@
 import { Folder, FolderOpen } from "@react-symbols/icons";
-import { NavLink, useLocation } from "@remix-run/react";
+import { NavLink, useLocation } from "react-router";
 
 import { totalFolders, totalIcons, totalLibraryIcons } from "@/data/svgs";
 import { cn } from "@/utils";

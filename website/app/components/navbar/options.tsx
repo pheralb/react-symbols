@@ -1,4 +1,4 @@
-import { useSearchParams } from "@remix-run/react";
+import { useSearchParams } from "react-router";
 import { useEffect, useState } from "react";
 
 import { Input } from "@/ui/input";

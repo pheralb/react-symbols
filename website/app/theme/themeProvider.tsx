@@ -1,6 +1,6 @@
 import type { Dispatch, ReactNode, SetStateAction } from "react";
 
-import { useFetcher } from "@remix-run/react";
+import { useFetcher } from "react-router";
 import {
   createContext,
   createElement,

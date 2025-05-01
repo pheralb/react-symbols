@@ -1,7 +1,7 @@
 import { useDeferredValue } from "react";
-import { useLoaderData, useSearchParams } from "@remix-run/react";
+import { useLoaderData, useSearchParams } from "react-router";
 
-import { Icons, iIcons } from "@/data/svgs";
+import { Icons, type iIcons } from "@/data/svgs";
 import { searchParamKey, iconSizeParamKey } from "@/data/searchParams";
 
 import Grid from "@/components/grid";
@@ -32,7 +32,7 @@ export default function Index() {
 
   const filteredIcons = data.filter((icon) =>
     icon.name.toLowerCase().includes(search.toLowerCase()),
-  ) as iIcons[];
+  ) as unknown as iIcons[];
 
   return (
     <main className="animate-in fade-in-60">
