@@ -17,7 +17,7 @@ import { globals } from "@/globals";
 
 // Styles:
 import tailwind from "@/styles/globals.css?url";
-import sonnerStyles from "sonner/dist/styles.css?url";
+import pheralbToast from "@pheralb/toast/dist/styles.css?url";
 import { cn } from "@/utils";
 
 // Layout:
@@ -41,7 +41,7 @@ import clsx from "clsx";
 // Links:
 export const links: LinksFunction = () => [
   { rel: "stylesheet", href: tailwind },
-  { rel: "stylesheet", href: sonnerStyles },
+  { rel: "stylesheet", href: pheralbToast },
   {
     rel: "preload",
     as: "font",
