@@ -79,7 +79,7 @@ const InstallCommand = (props: iInstallCommandProps) => {
           variant: "outline",
           className: "active:scale-100",
         }),
-        "select-all space-x-3 rounded-3xl text-zinc-600 transition-colors hover:bg-transparent dark:text-zinc-400 dark:hover:bg-transparent dark:hover:text-white",
+        "select-all space-x-3 rounded-3xl text-zinc-600 hover:bg-transparent dark:text-zinc-400 dark:hover:bg-transparent dark:hover:text-white",
         props.className,
       )}
     >
@@ -88,7 +88,7 @@ const InstallCommand = (props: iInstallCommandProps) => {
       </code>
       <DropdownMenu open={open} onOpenChange={setOpen}>
         <DropdownMenuTrigger
-          className="outline-none focus:outline-none focus-visible:text-white"
+          className="cursor-pointer outline-none focus:outline-none focus-visible:text-white"
           title="Select package manager"
         >
           {open ? (

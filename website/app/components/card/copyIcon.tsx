@@ -104,7 +104,7 @@ const CopyIconActions = ({ itemName, isFolder, ItemIcon }: CopyIconProps) => {
         <Button
           variant="outline"
           onClick={handleCopyFromLibrary}
-          className="justify-start"
+          className="justify-start shadow-none"
           title="Copy with library import"
         >
           <Symbols width={16} height={16} />
@@ -113,7 +113,7 @@ const CopyIconActions = ({ itemName, isFolder, ItemIcon }: CopyIconProps) => {
         <Button
           variant="outline"
           onClick={handleCopyShadcnCommand}
-          className="justify-start"
+          className="justify-start shadow-none"
           title="Copy shadcn/ui command"
         >
           <Shadcnui width={16} height={16} />
@@ -122,7 +122,7 @@ const CopyIconActions = ({ itemName, isFolder, ItemIcon }: CopyIconProps) => {
         <Button
           variant="outline"
           onClick={handleCopySource}
-          className="justify-start"
+          className="justify-start shadow-none"
           title="Copy source code"
           disabled={loading}
         >
