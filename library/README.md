@@ -114,15 +114,15 @@ This is a monorepo project created with:
 **For library:**
 
 - [SWC](https://swc.rs/) - Rust-based platform for the Web.
-- [React 18](https://reactjs.org/) - A JavaScript library for building user interfaces.
+- [React 19](https://reactjs.org/) - A JavaScript library for building user interfaces.
 - [Typescript](https://www.typescriptlang.org/) - TypeScript is JavaScript with syntax for types.
 
 **For website:**
 
-- [Remix](https://remix.run/) - Create modern, resilient user experiences with web fundamentals.
+- [React Router v7](https://reactrouter.com/) - Create modern, resilient user experiences with web fundamentals.
 - [Typescript](https://www.typescriptlang.org/) - TypeScript is JavaScript with syntax for types.
 - [Tailwind CSS](https://tailwindcss.com/) - A utility-first CSS framework for rapidly building custom designs.
-- [tailwindcss-animate](https://github.com/jamiebuilds/tailwindcss-animate) - A Tailwind CSS plugin for creating beautiful animations.
+- [tw-animate-css](https://github.com/Wombosvideo/tw-animate-css) - A collection of Tailwind CSS v4.0 utilities for creating beautiful animations.
 - [shadcn/ui + Radix UI](https://ui.shadcn.com/) - An opinionated toast component for React.
 - [Sonner](https://sonner.emilkowal.ski/) - An opinionated toast component for React.
 
