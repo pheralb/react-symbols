@@ -22,8 +22,8 @@ const config: Config = {
         sm: "calc(var(--radius) - 4px)",
       },
       colors: {
-        'react-symbol-pink': '#c084fc',
-        'react-symbol-aqua': '#22d3ee',
+        "react-symbol-pink": "#c084fc",
+        "react-symbol-aqua": "#22d3ee",
       },
     },
   },

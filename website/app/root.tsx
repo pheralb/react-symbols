@@ -53,7 +53,7 @@ export const links: LinksFunction = () => [
   {
     rel: "preload",
     as: "font",
-    href: "/fonts/GeistMonoVF.woff2",
+    href: "/fonts/GeistMono.woff2",
     type: "font/woff2",
     crossOrigin: "anonymous",
   },
