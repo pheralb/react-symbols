@@ -1,6 +1,6 @@
 import { buttonVariants } from "@/ui/button";
 import { containerClasses } from "@/ui/container";
-import { BoxIcon } from "lucide-react";
+import { BoxIcon, FolderSearchIcon } from "lucide-react";
 import { cn } from "@/utils";
 import { Link } from "react-router";
 
@@ -33,7 +33,10 @@ const NotFound = (props: NotFoundProps) => {
             variant: "outline",
           })}
         >
-          Show all {props.isFolder ? "folders icons" : "files icons"}
+          <FolderSearchIcon size={18} strokeWidth={1.5} />
+          <span>
+            Show all {props.isFolder ? "folders icons" : "files icons"}
+          </span>
         </Link>
       </div>
     </div>

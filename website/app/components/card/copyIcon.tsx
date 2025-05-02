@@ -52,7 +52,9 @@ const CopyIconActions = ({ itemName, isFolder, ItemIcon }: CopyIconProps) => {
   const handleCopySource = async () => {
     setLoading(true);
     const itemNameLower = itemName.charAt(0).toLowerCase() + itemName.slice(1);
-    const jsonUrl = `${appConfig.registryUrl}${itemNameLower}.json`;
+    const jsonUrl = !isFolder
+      ? `${appConfig.registryUrl}${itemNameLower}.json`
+      : `${appConfig.registryUrl}folders/${itemNameLower}.json`;
 
     try {
       const response = await axios.get(jsonUrl);
