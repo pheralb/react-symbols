@@ -35,7 +35,7 @@ const CopyIconActions = ({ itemName, isFolder, ItemIcon }: CopyIconProps) => {
 
   // Copy shadcn/ui command:
   const handleCopyShadcnCommand = async () => {
-    const itemNameLower = itemName.charAt(0).toLowerCase() + itemName.slice(1);
+    const itemNameLower = itemName.toLowerCase();
     const makeCommand = !isFolder
       ? `${appConfig.shadcnCommand} ${appConfig.registryUrl}${itemNameLower}.json`
       : `${appConfig.shadcnCommand} ${appConfig.registryUrl}folders/${itemNameLower}.json`;
@@ -51,7 +51,7 @@ const CopyIconActions = ({ itemName, isFolder, ItemIcon }: CopyIconProps) => {
   // Copy source code:
   const handleCopySource = async () => {
     setLoading(true);
-    const itemNameLower = itemName.charAt(0).toLowerCase() + itemName.slice(1);
+    const itemNameLower = itemName.toLowerCase();
     const jsonUrl = !isFolder
       ? `${appConfig.registryUrl}${itemNameLower}.json`
       : `${appConfig.registryUrl}folders/${itemNameLower}.json`;

@@ -15,8 +15,8 @@ const OpenWithV0 = ({ itemName, isFolder }: OpenWithV0Props) => {
       title="Open with V0"
       href={
         !isFolder
-          ? `${appConfig.v0URL}${appConfig.registryUrl}${itemName}.json`
-          : `${appConfig.v0URL}${appConfig.registryUrl}folders/${itemName}.json`
+          ? `${appConfig.v0URL}${appConfig.registryUrl}${itemName.toLowerCase()}.json`
+          : `${appConfig.v0URL}${appConfig.registryUrl}folders/${itemName.toLowerCase()}.json`
       }
       className={buttonVariants({
         variant: "ghost",
