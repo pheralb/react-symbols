@@ -207,6 +207,9 @@ export { default as GoYellow } from "./library/goYellow.js";
 export { default as NestDecorator } from "./library/nestDecorator.js";
 export { default as NestMiddleware } from "./library/nestMiddleware.js";
 export { default as Commitlint } from "./library/commitlint.js";
+export { default as Orval } from "./library/orval.js";
+export { default as Tauri } from "./library/tauri.js";
+export { default as YummaCSS } from "./library/yummacss.js";
 
 // Folders =>
 
@@ -282,3 +285,14 @@ export { default as FolderMongoDB } from "./library/folders/folderMongoDB.js";
 export { default as FolderBruno } from "./library/folders/folderBruno.js";
 export { default as FolderExpo } from "./library/folders/folderExpo.js";
 export { default as FolderGradle } from "./library/folders/folderGradle.js";
+export { default as FolderAws } from "./library/folders/folderAws.js";
+export { default as FolderAzure } from "./library/folders/folderAzure.js";
+export { default as FolderBuild } from "./library/folders/folderBuild.js";
+export { default as FolderCypress } from "./library/folders/folderCypress.js";
+export { default as FolderFonts } from "./library/folders/folderFonts.js";
+export { default as FolderJs } from "./library/folders/folderJs.js";
+export { default as FolderNginx } from "./library/folders/folderNginx.js";
+export { default as FolderNodeModules } from "./library/folders/folderNodeModules.js";
+export { default as FolderReact } from "./library/folders/folderReact.js";
+export { default as FolderSass } from "./library/folders/folderSass.js";
+export { default as FolderVSCode } from "./library/folders/folderVSCode.js";
