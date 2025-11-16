@@ -10,7 +10,7 @@ import {
 import { cn } from "@/utils";
 
 const Slider = React.forwardRef<
-  React.ElementRef<typeof SliderPrimitive.Root>,
+  React.ComponentRef<typeof SliderPrimitive.Root>,
   React.ComponentPropsWithoutRef<typeof SliderPrimitive.Root> & {
     showTooltip?: boolean;
     className?: string;
@@ -63,7 +63,7 @@ const Slider = React.forwardRef<
     const thumb = (
       <SliderPrimitive.Thumb
         title="Update size"
-        className="block h-4 w-4 rounded-full border border-zinc-400 bg-zinc-200 ring-offset-1 transition-shadow hover:bg-zinc-300 focus-visible:outline-none data-[disabled]:cursor-not-allowed dark:border-zinc-600 dark:bg-zinc-500 dark:hover:bg-zinc-700"
+        className="data-disabled:cursor-not-allowed block h-4 w-4 rounded-full border border-zinc-400 bg-zinc-200 ring-offset-1 transition-shadow hover:bg-zinc-300 focus-visible:outline-none dark:border-zinc-600 dark:bg-zinc-500 dark:hover:bg-zinc-700"
         onPointerDown={handlePointerDown}
       />
     );
@@ -89,7 +89,7 @@ const Slider = React.forwardRef<
     <SliderPrimitive.Root
       ref={ref}
       className={cn(
-        "relative flex w-full touch-none select-none items-center data-[orientation=vertical]:h-full data-[orientation=vertical]:w-auto data-[orientation=vertical]:flex-col data-[disabled]:opacity-50",
+        "data-disabled:opacity-50 relative flex w-full touch-none select-none items-center data-[orientation=vertical]:h-full data-[orientation=vertical]:w-auto data-[orientation=vertical]:flex-col",
         className,
       )}
       onValueChange={handleValueChange}

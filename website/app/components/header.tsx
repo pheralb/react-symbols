@@ -48,7 +48,7 @@ const Header = (props: iHeaderProps) => {
     >
       <div className="flex items-center gap-4">
         <Symbols height={50} className="hover:animate-pulse" />
-        <div className="flex flex-col space-y-[2px]">
+        <div className="flex flex-col space-y-0.5">
           <Link
             to="/"
             className="w-auto text-xl font-semibold tracking-tight transition-opacity hover:opacity-75 md:text-2xl"

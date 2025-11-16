@@ -27,7 +27,7 @@ const NavIconsRoutes = [
 const Navbar = () => {
   const location = useLocation();
   return (
-    <nav className="sticky -top-1 z-40 border-y border-zinc-200 bg-zinc-100/80 py-[10px] backdrop-blur-sm dark:border-zinc-800 dark:bg-zinc-900/80">
+    <nav className="sticky -top-1 z-40 border-y border-zinc-200 bg-zinc-100/80 py-2.5 backdrop-blur-sm dark:border-zinc-800 dark:bg-zinc-900/80">
       <div
         className={cn(
           containerClasses,

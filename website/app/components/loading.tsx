@@ -8,7 +8,7 @@ interface iLoading {
 const Loading = (props: iLoading) => (
   <div
     className={cn(
-      "animate-in animate-out fade-in-40 flex flex-col space-y-2 ",
+      "animate-in fade-in-40 flex flex-col space-y-2",
       props.className,
     )}
   >
