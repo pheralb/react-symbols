@@ -24,10 +24,10 @@
     "release": "turbo build --filter=@react-symbols/website^... && changeset publish"
   },
   "devDependencies": {
-    "@changesets/cli": "2.29.2",
-    "@types/node": "22.15.3",
-    "prettier": "3.5.3",
-    "prettier-plugin-tailwindcss": "0.6.11",
+    "@changesets/cli": "2.29.7",
+    "@types/node": "22.15.35",
+    "prettier": "3.6.2",
+    "prettier-plugin-tailwindcss": "0.7.1",
     "turbo": "latest"
   },
   "engines": {
