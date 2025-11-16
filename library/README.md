@@ -1,9 +1,7 @@
 <div align="center">
 <a href="https://react-symbols.vercel.app/">
-<img src="https://raw.githubusercontent.com/pheralb/react-symbols/main/website/public/images/logo_svg.svg" alt="React-Symbols Logo" width="56px" />
-</a>
-
 <img src="https://raw.githubusercontent.com/pheralb/react-symbols/main/website/public/images/og.png" alt="React-Symbols Screenshot" />
+</a>
 
 <p></p>
 
