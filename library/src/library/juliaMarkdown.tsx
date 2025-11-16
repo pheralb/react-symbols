@@ -1,4 +1,4 @@
-import type { ComponentProps, FC } from "react"
+import type { ComponentProps, FC } from "react";
 
 const JuliaMarkdown: FC<ComponentProps<"svg">> = (props) => (
   <svg
@@ -16,6 +16,6 @@ const JuliaMarkdown: FC<ComponentProps<"svg">> = (props) => (
       d="M21 16.177a4.177 4.177 0 11-8.354 0 4.177 4.177 0 018.354 0z"
     ></path>
   </svg>
-)
+);
 
-export default JuliaMarkdown
+export default JuliaMarkdown;

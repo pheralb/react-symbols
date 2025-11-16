@@ -1,4 +1,4 @@
-import type { ComponentProps, FC } from "react"
+import type { ComponentProps, FC } from "react";
 
 const Keystatic: FC<ComponentProps<"svg">> = (props) => (
   <svg
@@ -29,6 +29,6 @@ const Keystatic: FC<ComponentProps<"svg">> = (props) => (
       </linearGradient>
     </defs>
   </svg>
-)
+);
 
-export default Keystatic
+export default Keystatic;

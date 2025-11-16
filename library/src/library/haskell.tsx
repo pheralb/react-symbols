@@ -1,4 +1,4 @@
-import type { ComponentProps, FC } from "react"
+import type { ComponentProps, FC } from "react";
 
 const Haskell: FC<ComponentProps<"svg">> = (props) => (
   <svg
@@ -20,6 +20,6 @@ const Haskell: FC<ComponentProps<"svg">> = (props) => (
       d="M18.078 14.994l-1.568-2.352H22v2.352h-3.922zm-2.352-3.527l-1.57-2.352H22v2.352h-6.274z"
     ></path>
   </svg>
-)
+);
 
-export default Haskell
+export default Haskell;

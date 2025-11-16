@@ -1,4 +1,4 @@
-import type { ComponentProps, FC } from "react"
+import type { ComponentProps, FC } from "react";
 
 const Vlang: FC<ComponentProps<"svg">> = (props) => (
   <svg
@@ -57,6 +57,6 @@ const Vlang: FC<ComponentProps<"svg">> = (props) => (
       </filter>
     </defs>
   </svg>
-)
+);
 
-export default Vlang
+export default Vlang;

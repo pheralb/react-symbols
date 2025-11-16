@@ -1,4 +1,4 @@
-import type { ComponentProps, FC } from "react"
+import type { ComponentProps, FC } from "react";
 
 const Lua: FC<ComponentProps<"svg">> = (props) => (
   <svg
@@ -18,6 +18,6 @@ const Lua: FC<ComponentProps<"svg">> = (props) => (
       d="M21 5.298a2.3 2.3 0 00-4.598 0 2.3 2.3 0 004.598 0z"
     ></path>
   </svg>
-)
+);
 
-export default Lua
+export default Lua;

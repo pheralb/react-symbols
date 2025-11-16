@@ -1,4 +1,4 @@
-import type { ComponentProps, FC } from "react"
+import type { ComponentProps, FC } from "react";
 
 const Stylelint: FC<ComponentProps<"svg">> = (props) => (
   <svg
@@ -30,6 +30,6 @@ const Stylelint: FC<ComponentProps<"svg">> = (props) => (
       d="M12.305 9.22a.65.65 0 00.647-.651.65.65 0 00-.647-.652.65.65 0 00-.647.652c0 .36.29.65.647.65zM12.305 13.094a.65.65 0 00.647-.651.65.65 0 00-.647-.652.65.65 0 00-.647.652c0 .36.29.651.647.651zM12.305 16.968a.65.65 0 00.647-.65.65.65 0 00-.647-.652.65.65 0 00-.647.651c0 .36.29.651.647.651z"
     ></path>
   </svg>
-)
+);
 
-export default Stylelint
+export default Stylelint;

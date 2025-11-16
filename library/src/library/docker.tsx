@@ -1,4 +1,4 @@
-import type { ComponentProps, FC } from "react"
+import type { ComponentProps, FC } from "react";
 
 const Docker: FC<ComponentProps<"svg">> = (props) => (
   <svg
@@ -16,6 +16,6 @@ const Docker: FC<ComponentProps<"svg">> = (props) => (
       fill="#60A5FA"
     />
   </svg>
-)
+);
 
-export default Docker
+export default Docker;

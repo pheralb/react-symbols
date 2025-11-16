@@ -1,4 +1,4 @@
-import type { ComponentProps, FC } from "react"
+import type { ComponentProps, FC } from "react";
 
 const FolderMail: FC<ComponentProps<"svg">> = (props) => (
   <svg
@@ -24,6 +24,6 @@ const FolderMail: FC<ComponentProps<"svg">> = (props) => (
       </g>
     </g>
   </svg>
-)
+);
 
-export default FolderMail
+export default FolderMail;

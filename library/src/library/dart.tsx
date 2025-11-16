@@ -1,4 +1,4 @@
-import type { ComponentProps, FC } from "react"
+import type { ComponentProps, FC } from "react";
 
 const Dart: FC<ComponentProps<"svg">> = (props) => (
   <svg
@@ -20,6 +20,6 @@ const Dart: FC<ComponentProps<"svg">> = (props) => (
       fill="#075985"
     />
   </svg>
-)
+);
 
-export default Dart
+export default Dart;

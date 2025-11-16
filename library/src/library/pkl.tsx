@@ -1,4 +1,4 @@
-import type { ComponentProps, FC } from "react"
+import type { ComponentProps, FC } from "react";
 
 const PKL: FC<ComponentProps<"svg">> = (props) => (
   <svg
@@ -32,6 +32,6 @@ const PKL: FC<ComponentProps<"svg">> = (props) => (
       d="M15.599 13.492c.7-1.213.732-2.505.072-2.887-.66-.381-1.764.293-2.464 1.506s-.733 2.506-.072 2.887c.66.381 1.764-.293 2.464-1.506z"
     ></path>
   </svg>
-)
+);
 
-export default PKL
+export default PKL;

@@ -1,4 +1,4 @@
-import type { ComponentProps, FC } from "react"
+import type { ComponentProps, FC } from "react";
 
 const FolderGrayOutline: FC<ComponentProps<"svg">> = (props) => (
   <svg
@@ -15,6 +15,6 @@ const FolderGrayOutline: FC<ComponentProps<"svg">> = (props) => (
     ></path>
     <circle cx="20" cy="16" r="3" stroke="#71717A" strokeWidth="2"></circle>
   </svg>
-)
+);
 
-export default FolderGrayOutline
+export default FolderGrayOutline;

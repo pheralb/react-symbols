@@ -1,4 +1,4 @@
-import type { ComponentProps, FC } from "react"
+import type { ComponentProps, FC } from "react";
 
 const PNPM: FC<ComponentProps<"svg">> = (props) => (
   <svg
@@ -16,6 +16,6 @@ const PNPM: FC<ComponentProps<"svg">> = (props) => (
       d="M14.384 13.384a1 1 0 01-1 1h-2.768a1 1 0 01-1-1v-2.768a1 1 0 011-1h2.768a1 1 0 011 1v2.768zM14.384 19a1 1 0 01-1 1h-2.768a1 1 0 01-1-1v-2.768a1 1 0 011-1h2.768a1 1 0 011 1V19zM20 19a1 1 0 01-1 1h-2.768a1 1 0 01-1-1v-2.768a1 1 0 011-1H19a1 1 0 011 1V19zM8.768 19a1 1 0 01-1 1H5a1 1 0 01-1-1v-2.768a1 1 0 011-1h2.768a1 1 0 011 1V19z"
     ></path>
   </svg>
-)
+);
 
-export default PNPM
+export default PNPM;

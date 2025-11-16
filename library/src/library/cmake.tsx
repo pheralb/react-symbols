@@ -1,4 +1,4 @@
-import type { ComponentProps, FC } from "react"
+import type { ComponentProps, FC } from "react";
 
 const CMake: FC<ComponentProps<"svg">> = (props) => (
   <svg
@@ -17,6 +17,6 @@ const CMake: FC<ComponentProps<"svg">> = (props) => (
       d="M21 19.802L12.223 2.347l1.29 14.43L21 19.802z"
     ></path>
   </svg>
-)
+);
 
-export default CMake
+export default CMake;

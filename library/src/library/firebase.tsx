@@ -1,4 +1,4 @@
-import type { ComponentProps, FC } from "react"
+import type { ComponentProps, FC } from "react";
 
 const Firebase: FC<ComponentProps<"svg">> = (props) => (
   <svg
@@ -118,6 +118,6 @@ const Firebase: FC<ComponentProps<"svg">> = (props) => (
       ></image>
     </defs>
   </svg>
-)
+);
 
-export default Firebase
+export default Firebase;

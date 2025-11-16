@@ -1,4 +1,4 @@
-import type { ComponentProps, FC } from "react"
+import type { ComponentProps, FC } from "react";
 
 const Next: FC<ComponentProps<"svg">> = (props) => (
   <svg
@@ -14,6 +14,6 @@ const Next: FC<ComponentProps<"svg">> = (props) => (
       clipRule="evenodd"
     ></path>
   </svg>
-)
+);
 
-export default Next
+export default Next;

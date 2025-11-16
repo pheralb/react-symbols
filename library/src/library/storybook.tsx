@@ -1,4 +1,4 @@
-import type { ComponentProps, FC } from "react"
+import type { ComponentProps, FC } from "react";
 
 const Storybook: FC<ComponentProps<"svg">> = (props) => (
   <svg
@@ -30,6 +30,6 @@ const Storybook: FC<ComponentProps<"svg">> = (props) => (
       ></path>
     </g>
   </svg>
-)
+);
 
-export default Storybook
+export default Storybook;

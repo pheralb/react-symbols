@@ -1,4 +1,4 @@
-import type { ComponentProps, FC } from "react"
+import type { ComponentProps, FC } from "react";
 
 const FolderDrizzle: FC<ComponentProps<"svg">> = (props) => (
   <svg
@@ -20,6 +20,6 @@ const FolderDrizzle: FC<ComponentProps<"svg">> = (props) => (
       d="M13.95 14.654a.566.566 0 00-.216-.777.578.578 0 00-.782.217l-1.441 2.515a.566.566 0 00.215.777.578.578 0 00.782-.216l1.442-2.516zm3.607-1.929a.566.566 0 00-.215-.777.578.578 0 00-.783.217l-1.441 2.515a.566.566 0 00.215.778.578.578 0 00.783-.217l1.441-2.516zm5.781 0a.566.566 0 00-.215-.777.578.578 0 00-.783.217L20.9 14.681a.566.566 0 00.215.777.578.578 0 00.783-.217l1.441-2.515zm-3.608 1.93a.566.566 0 00-.215-.778.578.578 0 00-.782.217l-1.442 2.515a.566.566 0 00.215.777.578.578 0 00.783-.216l1.441-2.516z"
     ></path>
   </svg>
-)
+);
 
-export default FolderDrizzle
+export default FolderDrizzle;

@@ -1,4 +1,4 @@
-import type { ComponentProps, FC } from "react"
+import type { ComponentProps, FC } from "react";
 
 const Crystal: FC<ComponentProps<"svg">> = (props) => (
   <svg
@@ -13,6 +13,6 @@ const Crystal: FC<ComponentProps<"svg">> = (props) => (
     ></path>
     <path fill="#000" d="M2 7.23l7.993-1.41-2.776 7.627L2 7.23z"></path>
   </svg>
-)
+);
 
-export default Crystal
+export default Crystal;

@@ -1,4 +1,4 @@
-import type { ComponentProps, FC } from "react"
+import type { ComponentProps, FC } from "react";
 
 const Vercel: FC<ComponentProps<"svg">> = (props) => (
   <svg
@@ -9,6 +9,6 @@ const Vercel: FC<ComponentProps<"svg">> = (props) => (
   >
     <path d="M12 4L21 19.5886H3L12 4Z" fill="#64748B" />
   </svg>
-)
+);
 
-export default Vercel
+export default Vercel;
