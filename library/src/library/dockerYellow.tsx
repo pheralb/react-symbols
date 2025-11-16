@@ -4,11 +4,10 @@ const DockerYellow: FC<ComponentProps<"svg">> = (props) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     id="svg10"
-    width="24"
-    height="24"
     fill="none"
     version="1.1"
     viewBox="0 0 24 24"
+    {...props}
   >
     <path
       id="path1"
