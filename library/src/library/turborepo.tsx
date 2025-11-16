@@ -1,4 +1,4 @@
-import type { ComponentProps, FC } from "react"
+import type { ComponentProps, FC } from "react";
 
 const Turborepo: FC<ComponentProps<"svg">> = (props) => (
   <svg
@@ -31,6 +31,6 @@ const Turborepo: FC<ComponentProps<"svg">> = (props) => (
       </linearGradient>
     </defs>
   </svg>
-)
+);
 
-export default Turborepo
+export default Turborepo;

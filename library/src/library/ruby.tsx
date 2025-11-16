@@ -1,4 +1,4 @@
-import type { ComponentProps, FC } from "react"
+import type { ComponentProps, FC } from "react";
 
 const Ruby: FC<ComponentProps<"svg">> = (props) => (
   <svg
@@ -44,6 +44,6 @@ const Ruby: FC<ComponentProps<"svg">> = (props) => (
       clipRule="evenodd"
     ></path>
   </svg>
-)
+);
 
-export default Ruby
+export default Ruby;

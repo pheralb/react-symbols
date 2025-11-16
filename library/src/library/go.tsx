@@ -1,4 +1,4 @@
-import type { ComponentProps, FC } from "react"
+import type { ComponentProps, FC } from "react";
 
 const Go: FC<ComponentProps<"svg">> = (props) => (
   <svg
@@ -21,6 +21,6 @@ const Go: FC<ComponentProps<"svg">> = (props) => (
       </clipPath>
     </defs>
   </svg>
-)
+);
 
-export default Go
+export default Go;

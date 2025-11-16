@@ -1,4 +1,4 @@
-import type { ComponentProps, FC } from "react"
+import type { ComponentProps, FC } from "react";
 
 const PostCSS: FC<ComponentProps<"svg">> = (props) => (
   <svg
@@ -28,6 +28,6 @@ const PostCSS: FC<ComponentProps<"svg">> = (props) => (
       d="M8.885 9.174h6.23v6.23h-6.23v-6.23z"
     ></path>
   </svg>
-)
+);
 
-export default PostCSS
+export default PostCSS;

@@ -12,7 +12,7 @@ interface OpenWithV0Props {
 const OpenWithV0 = ({ itemName, isFolder }: OpenWithV0Props) => {
   return (
     <ExternalLink
-      title="Open with V0"
+      title="Open with v0"
       href={
         !isFolder
           ? `${appConfig.v0URL}${appConfig.registryUrl}${itemName.toLowerCase()}.json`

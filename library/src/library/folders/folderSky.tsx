@@ -1,4 +1,4 @@
-import type { ComponentProps, FC } from "react"
+import type { ComponentProps, FC } from "react";
 
 const FolderSky: FC<ComponentProps<"svg">> = (props) => (
   <svg
@@ -15,6 +15,6 @@ const FolderSky: FC<ComponentProps<"svg">> = (props) => (
     ></path>
     <circle cx="20" cy="16" r="4" fill="#0EA5E9"></circle>
   </svg>
-)
+);
 
-export default FolderSky
+export default FolderSky;

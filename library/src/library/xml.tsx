@@ -1,4 +1,4 @@
-import type { ComponentProps, FC } from "react"
+import type { ComponentProps, FC } from "react";
 
 const XML: FC<ComponentProps<"svg">> = (props) => (
   <svg
@@ -37,6 +37,6 @@ const XML: FC<ComponentProps<"svg">> = (props) => (
       <circle cx="5" cy="19" r="15" stroke="#EA580C" strokeWidth="2"></circle>
     </g>
   </svg>
-)
+);
 
-export default XML
+export default XML;

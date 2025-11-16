@@ -1,4 +1,4 @@
-import type { ComponentProps, FC } from "react"
+import type { ComponentProps, FC } from "react";
 
 const FolderAuth: FC<ComponentProps<"svg">> = (props) => (
   <svg
@@ -26,6 +26,6 @@ const FolderAuth: FC<ComponentProps<"svg">> = (props) => (
       clipRule="evenodd"
     ></path>
   </svg>
-)
+);
 
-export default FolderAuth
+export default FolderAuth;

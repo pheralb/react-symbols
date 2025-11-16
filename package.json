@@ -2,7 +2,7 @@
   "name": "@react-symbols/workspace",
   "author": "@pheralb_",
   "private": true,
-  "packageManager": "pnpm@9.9.0",
+  "packageManager": "pnpm@10.13.1",
   "workspaces": [
     "website",
     "library"
@@ -16,16 +16,18 @@
     "lint": "turbo lint",
     "typecheck": "turbo typecheck",
     "lint:website": "turbo lint --filter=@react-symbols/website",
-    "format": "prettier --write .",
+    "format:website": "prettier --write \"website/**/*.{ts,tsx,js,jsx,mdx}\" --cache",
+    "format:library": "prettier --write \"library/**/*.{ts,tsx,js,jsx,mdx}\" --cache",
+    "format:check": "prettier --check \"**/*.{ts,tsx,js,jsx,mdx}\" --cache",
     "changeset": "changeset",
     "version-packages": "changeset version",
     "release": "turbo build --filter=@react-symbols/website^... && changeset publish"
   },
   "devDependencies": {
-    "@changesets/cli": "2.29.2",
-    "@types/node": "22.15.3",
-    "prettier": "3.5.3",
-    "prettier-plugin-tailwindcss": "0.6.11",
+    "@changesets/cli": "2.29.7",
+    "@types/node": "22.19.1",
+    "prettier": "3.6.2",
+    "prettier-plugin-tailwindcss": "0.7.1",
     "turbo": "latest"
   },
   "engines": {

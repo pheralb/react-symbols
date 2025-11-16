@@ -1,4 +1,4 @@
-import type { ComponentProps, FC } from "react"
+import type { ComponentProps, FC } from "react";
 
 const FolderOrangeCode: FC<ComponentProps<"svg">> = (props) => (
   <svg
@@ -21,6 +21,6 @@ const FolderOrangeCode: FC<ComponentProps<"svg">> = (props) => (
       d="M15.146 13.797L13 15.943l2.146 2.146M21.077 13.797l2.145 2.146-2.145 2.146M16.561 19.52l3.1-7.153"
     ></path>
   </svg>
-)
+);
 
-export default FolderOrangeCode
+export default FolderOrangeCode;

@@ -1,4 +1,4 @@
-import type { ComponentProps, FC } from "react"
+import type { ComponentProps, FC } from "react";
 
 const Vitest: FC<ComponentProps<"svg">> = (props) => (
   <svg
@@ -20,6 +20,6 @@ const Vitest: FC<ComponentProps<"svg">> = (props) => (
       d="M12.502 21.6a.957.957 0 01-.685-.286L7.3 16.76a.98.98 0 01.002-1.378.964.964 0 011.368-.002l3.833 3.864 8.35-8.419a.964.964 0 011.364.006.98.98 0 01.006 1.375l-9.036 9.108a.964.964 0 01-.684.286z"
     ></path>
   </svg>
-)
+);
 
-export default Vitest
+export default Vitest;

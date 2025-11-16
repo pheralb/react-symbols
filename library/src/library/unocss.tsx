@@ -1,4 +1,4 @@
-import type { ComponentProps, FC } from "react"
+import type { ComponentProps, FC } from "react";
 
 const Unocss: FC<ComponentProps<"svg">> = (props) => (
   <svg
@@ -27,6 +27,6 @@ const Unocss: FC<ComponentProps<"svg">> = (props) => (
       </clipPath>
     </defs>
   </svg>
-)
+);
 
-export default Unocss
+export default Unocss;

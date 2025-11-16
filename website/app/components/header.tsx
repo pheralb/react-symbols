@@ -41,28 +41,28 @@ const Header = (props: iHeaderProps) => {
   return (
     <section
       className={cn(
-        "pb-4 pt-8 md:py-10",
+        "pt-8 pb-4 md:py-10",
         "flex flex-col space-y-5",
         containerClasses,
       )}
     >
       <div className="flex items-center gap-4">
         <Symbols height={50} className="hover:animate-pulse" />
-        <div className="flex flex-col space-y-[2px]">
+        <div className="flex flex-col space-y-0.5">
           <Link
             to="/"
             className="w-auto text-xl font-semibold tracking-tight transition-opacity hover:opacity-75 md:text-2xl"
           >
             React-Symbols
           </Link>
-          <div className="flex flex-col items-start space-x-0 space-y-2 text-sm text-zinc-600 md:flex-row md:space-x-2 md:space-y-0 md:text-[16px] dark:text-zinc-400">
+          <div className="flex flex-col items-start space-y-2 space-x-0 text-sm text-zinc-600 md:flex-row md:space-y-0 md:space-x-2 md:text-[16px] dark:text-zinc-400">
             <span>
               Beautifully File & Folder Icons for your React projects.
             </span>
           </div>
         </div>
       </div>
-      <div className="mb-1 flex w-full flex-col items-center space-x-0 space-y-4 md:w-auto md:flex-row md:space-x-4 md:space-y-0">
+      <div className="mb-1 flex w-full flex-col items-center space-y-4 space-x-0 md:w-auto md:flex-row md:space-y-0 md:space-x-4">
         <InstallCommand className="w-full md:w-auto" />
         <Divider className="hidden md:block" />
         <nav className="container flex items-center space-x-2 overflow-y-auto pb-1 md:w-auto">

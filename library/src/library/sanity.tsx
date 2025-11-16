@@ -1,4 +1,4 @@
-import type { ComponentProps, FC } from "react"
+import type { ComponentProps, FC } from "react";
 
 const Sanity: FC<ComponentProps<"svg">> = (props) => (
   <svg
@@ -16,6 +16,6 @@ const Sanity: FC<ComponentProps<"svg">> = (props) => (
       d="M15.485 14.931c1.227.772 1.765 1.85 1.765 3.398-1.015 1.279-2.8 1.996-4.897 1.996-3.53 0-6-1.707-6.55-4.673h3.39c.437 1.361 1.592 1.992 3.135 1.992 1.883 0 3.135-.987 3.16-2.718M8.891 9.565a3.575 3.575 0 01-1.33-1.36 3.495 3.495 0 01-.432-1.839c.98-1.267 2.685-2.041 4.763-2.041 3.596 0 5.677 1.866 6.19 4.493H14.82c-.36-1.036-1.26-1.842-2.902-1.842-1.754 0-2.95 1.003-3.02 2.589"
     ></path>
   </svg>
-)
+);
 
-export default Sanity
+export default Sanity;

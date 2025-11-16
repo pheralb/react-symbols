@@ -1,4 +1,4 @@
-import type { ComponentProps, FC } from "react"
+import type { ComponentProps, FC } from "react";
 
 const Symbols: FC<ComponentProps<"svg">> = (props) => (
   <svg
@@ -25,6 +25,6 @@ const Symbols: FC<ComponentProps<"svg">> = (props) => (
       d="M48.455 22.295c1.34-3.622 6.463-3.622 7.803 0a4.16 4.16 0 002.458 2.458c3.622 1.34 3.622 6.463 0 7.804a4.16 4.16 0 00-2.458 2.457c-1.34 3.622-6.463 3.622-7.803 0a4.16 4.16 0 00-2.458-2.457c-3.622-1.34-3.622-6.464 0-7.804a4.16 4.16 0 002.458-2.458z"
     ></path>
   </svg>
-)
+);
 
-export default Symbols
+export default Symbols;

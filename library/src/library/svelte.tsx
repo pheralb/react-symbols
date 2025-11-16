@@ -1,4 +1,4 @@
-import type { ComponentProps, FC } from "react"
+import type { ComponentProps, FC } from "react";
 
 const Svelte: FC<ComponentProps<"svg">> = (props) => (
   <svg
@@ -25,6 +25,6 @@ const Svelte: FC<ComponentProps<"svg">> = (props) => (
       mask="url(#path-1-outside-1_20571_794)"
     ></path>
   </svg>
-)
+);
 
-export default Svelte
+export default Svelte;

@@ -1,4 +1,4 @@
-import type { ComponentProps, FC } from "react"
+import type { ComponentProps, FC } from "react";
 
 const FolderEffects: FC<ComponentProps<"svg">> = (props) => (
   <svg
@@ -20,6 +20,6 @@ const FolderEffects: FC<ComponentProps<"svg">> = (props) => (
       clipRule="evenodd"
     ></path>
   </svg>
-)
+);
 
-export default FolderEffects
+export default FolderEffects;

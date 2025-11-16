@@ -1,4 +1,4 @@
-import type { ComponentProps, FC } from "react"
+import type { ComponentProps, FC } from "react";
 
 const AngularService: FC<ComponentProps<"svg">> = (props) => (
   <svg
@@ -12,6 +12,6 @@ const AngularService: FC<ComponentProps<"svg">> = (props) => (
       fill="#FBBF24"
     />
   </svg>
-)
+);
 
-export default AngularService
+export default AngularService;

@@ -38,7 +38,6 @@ import {
 import { themeSessionResolver } from "./sessions.server";
 import clsx from "clsx";
 
-
 // Links:
 export const links: LinksFunction = () => [
   { rel: "stylesheet", href: tailwind },
@@ -157,7 +156,7 @@ function App() {
           "font-sans antialiased",
           "bg-zinc-50 text-black dark:bg-zinc-900 dark:text-white",
           "selection:bg-zinc-300 selection:text-zinc-900 dark:selection:bg-zinc-700 dark:selection:text-zinc-50",
-          "relative",
+          "relative overscroll-none",
         )}
       >
         <Header npmVersion={data.version!} />

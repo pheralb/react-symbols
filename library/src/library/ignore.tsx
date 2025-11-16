@@ -1,4 +1,4 @@
-import type { ComponentProps, FC } from "react"
+import type { ComponentProps, FC } from "react";
 
 const Ignore: FC<ComponentProps<"svg">> = (props) => (
   <svg
@@ -20,6 +20,6 @@ const Ignore: FC<ComponentProps<"svg">> = (props) => (
       d="M2.296 16.481L20.981 6.204"
     ></path>
   </svg>
-)
+);
 
-export default Ignore
+export default Ignore;

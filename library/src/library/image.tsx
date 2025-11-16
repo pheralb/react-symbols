@@ -1,4 +1,4 @@
-import type { ComponentProps, FC } from "react"
+import type { ComponentProps, FC } from "react";
 
 const Image: FC<ComponentProps<"svg">> = (props) => (
   <svg
@@ -25,6 +25,6 @@ const Image: FC<ComponentProps<"svg">> = (props) => (
       d="M5 19l5.586-5.586a2 2 0 012.828 0L19 19"
     ></path>
   </svg>
-)
+);
 
-export default Image
+export default Image;

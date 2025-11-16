@@ -1,4 +1,4 @@
-import type { ComponentProps, FC } from "react"
+import type { ComponentProps, FC } from "react";
 
 const FolderOrange: FC<ComponentProps<"svg">> = (props) => (
   <svg
@@ -15,6 +15,6 @@ const FolderOrange: FC<ComponentProps<"svg">> = (props) => (
     ></path>
     <circle cx="20" cy="16" r="4" fill="#EA580C"></circle>
   </svg>
-)
+);
 
-export default FolderOrange
+export default FolderOrange;

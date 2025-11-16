@@ -1,4 +1,4 @@
-import type { ComponentProps, FC } from "react"
+import type { ComponentProps, FC } from "react";
 
 const Csv: FC<ComponentProps<"svg">> = (props) => (
   <svg
@@ -35,6 +35,6 @@ const Csv: FC<ComponentProps<"svg">> = (props) => (
     <rect x="13" y="11" width="4" height="2" rx="1" fill="#14B8A6" />
     <rect x="13" y="15" width="4" height="2" rx="1" fill="#14B8A6" />
   </svg>
-)
+);
 
-export default Csv
+export default Csv;

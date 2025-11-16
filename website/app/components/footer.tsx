@@ -19,7 +19,7 @@ const Footer = () => {
             src="https://avatars.githubusercontent.com/u/35271042?v=4"
             alt="Miguel Solorio"
           />
-          <span className="group-hover:decoration-react-symbol-pink underline decoration-zinc-500 decoration-wavy underline-offset-[4px]">
+          <span className="group-hover:decoration-react-symbol-pink underline decoration-zinc-500 decoration-wavy underline-offset-4">
             Miguel Solorio
           </span>
         </ExternalLink>
@@ -34,7 +34,7 @@ const Footer = () => {
             src="https://avatars.githubusercontent.com/u/62877300?v=4"
             alt="Pablo Hernández"
           />
-          <span className="group-hover:decoration-react-symbol-aqua underline decoration-zinc-500 decoration-wavy underline-offset-[4px]">
+          <span className="group-hover:decoration-react-symbol-aqua underline decoration-zinc-500 decoration-wavy underline-offset-4">
             Pablo Hernández
           </span>
         </ExternalLink>

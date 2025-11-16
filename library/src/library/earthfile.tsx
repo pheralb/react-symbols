@@ -1,4 +1,4 @@
-import type { ComponentProps, FC } from "react"
+import type { ComponentProps, FC } from "react";
 
 const Earthfile: FC<ComponentProps<"svg">> = (props) => (
   <svg
@@ -137,6 +137,6 @@ const Earthfile: FC<ComponentProps<"svg">> = (props) => (
       ></path>
     </g>
   </svg>
-)
+);
 
-export default Earthfile
+export default Earthfile;

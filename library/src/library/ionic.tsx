@@ -1,4 +1,4 @@
-import type { ComponentProps, FC } from "react"
+import type { ComponentProps, FC } from "react";
 
 const Ionic: FC<ComponentProps<"svg">> = (props) => (
   <svg
@@ -14,6 +14,6 @@ const Ionic: FC<ComponentProps<"svg">> = (props) => (
       clipRule="evenodd"
     ></path>
   </svg>
-)
+);
 
-export default Ionic
+export default Ionic;

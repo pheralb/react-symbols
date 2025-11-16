@@ -1,4 +1,4 @@
-import type { ComponentProps, FC } from "react"
+import type { ComponentProps, FC } from "react";
 
 const CoffeeScript: FC<ComponentProps<"svg">> = (props) => (
   <svg
@@ -37,6 +37,6 @@ const CoffeeScript: FC<ComponentProps<"svg">> = (props) => (
       ></circle>
     </g>
   </svg>
-)
+);
 
-export default CoffeeScript
+export default CoffeeScript;

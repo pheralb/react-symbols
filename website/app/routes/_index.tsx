@@ -39,7 +39,7 @@ export default function Index() {
       {filteredIcons.length === 0 ? (
         <NotFound input={search} />
       ) : (
-        <Grid className={cn(containerClasses, "pb-14 pt-6")}>
+        <Grid className={cn(containerClasses, "pt-6 pb-14")}>
           {filteredIcons.map((icon) => {
             return (
               <Card

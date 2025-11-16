@@ -1,4 +1,4 @@
-import type { ComponentProps, FC } from "react"
+import type { ComponentProps, FC } from "react";
 
 const Razor: FC<ComponentProps<"svg">> = (props) => (
   <svg
@@ -12,6 +12,6 @@ const Razor: FC<ComponentProps<"svg">> = (props) => (
       fill="#14B8A6"
     />
   </svg>
-)
+);
 
-export default Razor
+export default Razor;

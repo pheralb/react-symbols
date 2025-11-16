@@ -1,4 +1,4 @@
-import type { ComponentProps, FC } from "react"
+import type { ComponentProps, FC } from "react";
 
 const Java: FC<ComponentProps<"svg">> = (props) => (
   <svg
@@ -43,6 +43,6 @@ const Java: FC<ComponentProps<"svg">> = (props) => (
       ></circle>
     </g>
   </svg>
-)
+);
 
-export default Java
+export default Java;

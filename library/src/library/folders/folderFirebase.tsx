@@ -1,4 +1,4 @@
-import type { ComponentProps, FC } from "react"
+import type { ComponentProps, FC } from "react";
 
 const FolderFirebase: FC<ComponentProps<"svg">> = (props) => (
   <svg
@@ -121,6 +121,6 @@ const FolderFirebase: FC<ComponentProps<"svg">> = (props) => (
       ></image>
     </defs>
   </svg>
-)
+);
 
-export default FolderFirebase
+export default FolderFirebase;

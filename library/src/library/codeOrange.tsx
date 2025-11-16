@@ -1,4 +1,4 @@
-import type { ComponentProps, FC } from "react"
+import type { ComponentProps, FC } from "react";
 
 const CodeOrange: FC<ComponentProps<"svg">> = (props) => (
   <svg
@@ -15,6 +15,6 @@ const CodeOrange: FC<ComponentProps<"svg">> = (props) => (
       d="M6.778 8.519L3 12.297l3.778 3.779M17.222 8.519L21 12.297l-3.778 3.779M9.271 18.595L14.73 6"
     ></path>
   </svg>
-)
+);
 
-export default CodeOrange
+export default CodeOrange;

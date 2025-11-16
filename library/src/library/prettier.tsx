@@ -1,4 +1,4 @@
-import type { ComponentProps, FC } from "react"
+import type { ComponentProps, FC } from "react";
 
 const Prettier: FC<ComponentProps<"svg">> = (props) => (
   <svg
@@ -88,6 +88,6 @@ const Prettier: FC<ComponentProps<"svg">> = (props) => (
       d="M14.714 3H4.43a.429.429 0 000 .857h10.285a.429.429 0 100-.857z"
     ></path>
   </svg>
-)
+);
 
-export default Prettier
+export default Prettier;

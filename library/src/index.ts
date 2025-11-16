@@ -210,6 +210,15 @@ export { default as Commitlint } from "./library/commitlint.js";
 export { default as Orval } from "./library/orval.js";
 export { default as Tauri } from "./library/tauri.js";
 export { default as YummaCSS } from "./library/yummacss.js";
+export { default as Claude } from "./library/claude.js";
+export { default as DockerGreen } from "./library/dockerGreen.js";
+export { default as DockerOrange } from "./library/dockerOrange.js";
+export { default as DockerPink } from "./library/dockerPink.js";
+export { default as DockerPurple } from "./library/dockerPurple.js";
+export { default as DockerRed } from "./library/dockerRed.js";
+export { default as DockerYellow } from "./library/dockerYellow.js";
+export { default as Shadcn } from "./library/shadcn.js";
+export { default as SWC } from "./library/swc.js";
 
 // Folders =>
 
@@ -296,3 +305,4 @@ export { default as FolderNodeModules } from "./library/folders/folderNodeModule
 export { default as FolderReact } from "./library/folders/folderReact.js";
 export { default as FolderSass } from "./library/folders/folderSass.js";
 export { default as FolderVSCode } from "./library/folders/folderVSCode.js";
+export { default as FolderClaude } from "./library/folders/folderClaude.js";

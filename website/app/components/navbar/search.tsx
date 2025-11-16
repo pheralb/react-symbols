@@ -54,7 +54,7 @@ const Search = (props: iSearchProps) => {
         onBlur={() => setIsFocused(false)}
       />
       {!isFocused && !search && (
-        <kbd className="pointer-events-none absolute right-2 top-1/2 flex -translate-y-1/2 items-center gap-1 rounded bg-zinc-200 p-1 font-mono text-xs text-zinc-600 dark:bg-zinc-800 dark:text-zinc-400">
+        <kbd className="pointer-events-none absolute top-1/2 right-2 flex -translate-y-1/2 items-center gap-1 rounded bg-zinc-200 p-1 font-mono text-xs text-zinc-600 dark:bg-zinc-800 dark:text-zinc-400">
           <CommandIcon size={14} />
           <span>K</span>
         </kbd>
