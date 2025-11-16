@@ -15,14 +15,14 @@ jobs:
         working-directory: library
     steps:
       - name: Checkout Repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Install Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         with:
-          node-version: 20
+          node-version: 22
 
-      - name: Setup pnpm 9
+      - name: Setup pnpm
         uses: pnpm/action-setup@v4
 
       - name: Install dependencies
@@ -36,14 +36,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Install Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         with:
-          node-version: 20
+          node-version: 22
 
-      - name: Setup pnpm 9
+      - name: Setup pnpm
         uses: pnpm/action-setup@v4
 
       - name: Install Dependencies
