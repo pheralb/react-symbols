@@ -92,7 +92,7 @@ const processFiles = (
 
         const outputFilePath = path.join(
           target,
-          `${nameWithoutExtension}.json`,
+          `${nameWithoutExtension.toLowerCase()}.json`,
         );
         fs.writeFileSync(outputFilePath, JSON.stringify(json, null, 2), "utf8");
         totalUpdated++;
