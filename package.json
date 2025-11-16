@@ -2,7 +2,7 @@
   "name": "@react-symbols/workspace",
   "author": "@pheralb_",
   "private": true,
-  "packageManager": "pnpm@9.9.0",
+  "packageManager": "pnpm@10.13.1",
   "workspaces": [
     "website",
     "library"
