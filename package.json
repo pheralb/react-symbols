@@ -16,7 +16,9 @@
     "lint": "turbo lint",
     "typecheck": "turbo typecheck",
     "lint:website": "turbo lint --filter=@react-symbols/website",
-    "format": "prettier --write .",
+    "format:website": "prettier --write \"website/**/*.{ts,tsx,js,jsx,mdx}\" --cache",
+    "format:library": "prettier --write \"library/**/*.{ts,tsx,js,jsx,mdx}\" --cache",
+    "format:check": "prettier --check \"**/*.{ts,tsx,js,jsx,mdx}\" --cache",
     "changeset": "changeset",
     "version-packages": "changeset version",
     "release": "turbo build --filter=@react-symbols/website^... && changeset publish"
