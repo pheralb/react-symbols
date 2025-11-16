@@ -76,7 +76,7 @@ const InstallCommand = (props: iInstallCommandProps) => {
           variant: "outline",
           className: "cursor-default active:scale-100",
         }),
-        "select-all space-x-3 rounded-3xl text-zinc-600 hover:bg-transparent dark:text-zinc-400 dark:hover:bg-transparent dark:hover:text-white",
+        "space-x-3 rounded-3xl text-zinc-600 select-all hover:bg-transparent dark:text-zinc-400 dark:hover:bg-transparent dark:hover:text-white",
         props.className,
       )}
     >

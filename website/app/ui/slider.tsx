@@ -63,7 +63,7 @@ const Slider = React.forwardRef<
     const thumb = (
       <SliderPrimitive.Thumb
         title="Update size"
-        className="data-disabled:cursor-not-allowed block h-4 w-4 rounded-full border border-zinc-400 bg-zinc-200 ring-offset-1 transition-shadow hover:bg-zinc-300 focus-visible:outline-none dark:border-zinc-600 dark:bg-zinc-500 dark:hover:bg-zinc-700"
+        className="block h-4 w-4 rounded-full border border-zinc-400 bg-zinc-200 ring-offset-1 transition-shadow hover:bg-zinc-300 focus-visible:outline-none data-disabled:cursor-not-allowed dark:border-zinc-600 dark:bg-zinc-500 dark:hover:bg-zinc-700"
         onPointerDown={handlePointerDown}
       />
     );
@@ -89,13 +89,13 @@ const Slider = React.forwardRef<
     <SliderPrimitive.Root
       ref={ref}
       className={cn(
-        "data-disabled:opacity-50 relative flex w-full touch-none select-none items-center data-[orientation=vertical]:h-full data-[orientation=vertical]:w-auto data-[orientation=vertical]:flex-col",
+        "relative flex w-full touch-none items-center select-none data-disabled:opacity-50 data-[orientation=vertical]:h-full data-[orientation=vertical]:w-auto data-[orientation=vertical]:flex-col",
         className,
       )}
       onValueChange={handleValueChange}
       {...props}
     >
-      <SliderPrimitive.Track className="relative grow overflow-hidden rounded-full bg-zinc-200 data-[orientation=horizontal]:h-2 data-[orientation=vertical]:h-full data-[orientation=horizontal]:w-full data-[orientation=vertical]:w-2 dark:bg-zinc-800">
+      <SliderPrimitive.Track className="relative grow overflow-hidden rounded-full bg-zinc-200 data-[orientation=horizontal]:h-2 data-[orientation=horizontal]:w-full data-[orientation=vertical]:h-full data-[orientation=vertical]:w-2 dark:bg-zinc-800">
         <SliderPrimitive.Range className="absolute bg-zinc-400 data-[orientation=horizontal]:h-full data-[orientation=vertical]:w-full dark:bg-zinc-700" />
       </SliderPrimitive.Track>
       {internalValue?.map((value, index) => (
