@@ -6,18 +6,13 @@ import { V0Icon } from "@/ui/icons/svgl";
 
 interface OpenWithV0Props {
   itemName: string;
-  isFolder?: boolean;
 }
 
-const OpenWithV0 = ({ itemName, isFolder }: OpenWithV0Props) => {
+const OpenWithV0 = ({ itemName }: OpenWithV0Props) => {
   return (
     <ExternalLink
       title="Open with v0"
-      href={
-        !isFolder
-          ? `${appConfig.v0URL}${appConfig.registryUrl}${itemName.toLowerCase()}.json`
-          : `${appConfig.v0URL}${appConfig.registryUrl}folders/${itemName.toLowerCase()}.json`
-      }
+      href={`${appConfig.v0URL}${appConfig.registryUrl}${itemName}.json`}
       className={buttonVariants({
         variant: "ghost",
         size: "icon",

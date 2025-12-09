@@ -1,6 +1,6 @@
 import type { iIcons } from "@/data/svgs";
 
-import { cn } from "@/utils";
+import { cn, titleToPascal } from "@/utils";
 
 import CopySource from "@/components/card/copySource";
 import CopyShadcnCommand from "@/components/card/copyShadcnCommand";
@@ -14,6 +14,7 @@ interface iCard extends iIcons {
 
 const Card = (props: iCard) => {
   const cardItemSize = 16;
+  const itemName = titleToPascal(props.name);
   return (
     <div
       className={cn(
@@ -33,29 +34,20 @@ const Card = (props: iCard) => {
           "rounded-bl-md border-b border-l border-zinc-200 dark:border-zinc-800",
         )}
       >
-        <CopySource
-          iconSize={14}
-          itemName={props.name}
-          isFolder={props.isFolder}
-          ItemIcon={props.icon}
-        />
+        <CopySource iconSize={14} itemName={itemName} ItemIcon={props.icon} />
       </div>
       <div className="flex items-center space-x-1">
         <CopyLibraryImport
           iconSize={cardItemSize}
-          itemName={props.name}
+          itemName={itemName}
           ItemIcon={props.icon}
         />
         <CopyShadcnCommand
           iconSize={cardItemSize}
-          itemName={props.name}
-          isFolder={props.isFolder}
+          itemName={itemName}
           ItemIcon={props.icon}
         />
-        <OpenWithV0
-          itemName={props.name.charAt(0).toLowerCase() + props.name.slice(1)}
-          isFolder={props.isFolder}
-        />
+        <OpenWithV0 itemName={itemName} />
       </div>
     </div>
   );

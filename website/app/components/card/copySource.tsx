@@ -9,24 +9,15 @@ import { CodeIcon, LoaderIcon } from "lucide-react";
 interface CopySourceProps {
   itemName: string;
   iconSize: number;
-  isFolder?: boolean;
   ItemIcon: FC<SVGProps<SVGSVGElement>>;
 }
 
-const CopySource = ({
-  itemName,
-  iconSize,
-  isFolder,
-  ItemIcon,
-}: CopySourceProps) => {
+const CopySource = ({ itemName, iconSize, ItemIcon }: CopySourceProps) => {
   const [isLoading, setLoading] = useState<boolean>(false);
 
   const handleCopySource = async () => {
     setLoading(true);
-    const itemNameLower = itemName.charAt(0).toLowerCase() + itemName.slice(1);
-    const jsonUrl = !isFolder
-      ? `${appConfig.registryUrl}${itemNameLower}.json`
-      : `${appConfig.registryUrl}folders/${itemNameLower}.json`;
+    const jsonUrl = `${appConfig.registryUrl}${itemName}.json`;
 
     try {
       const response = await axios.get(jsonUrl);

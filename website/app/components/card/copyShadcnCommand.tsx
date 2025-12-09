@@ -9,21 +9,16 @@ import { Shadcnui } from "@/ui/icons/svgl";
 interface CopyShadcnCommandProps {
   itemName: string;
   iconSize: number;
-  isFolder?: boolean;
   ItemIcon: FC<SVGProps<SVGSVGElement>>;
 }
 
 const CopyShadcnCommand = ({
   itemName,
   iconSize,
-  isFolder,
   ItemIcon,
 }: CopyShadcnCommandProps) => {
   const handleCopyShadcnCommand = async () => {
-    const itemNameLower = itemName.charAt(0).toLowerCase() + itemName.slice(1);
-    const makeCommand = !isFolder
-      ? `${appConfig.shadcnCommand} ${appConfig.registryUrl}${itemNameLower}.json`
-      : `${appConfig.shadcnCommand} ${appConfig.registryUrl}folders/${itemNameLower}.json`;
+    const makeCommand = `${appConfig.shadcnCommand} ${appConfig.registryUrl}${itemName}.json`;
 
     await clipboard(makeCommand);
     toast.success({
