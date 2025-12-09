@@ -8,6 +8,7 @@
   "scripts": {
     "build": "pnpm build:registry && react-router build",
     "build:registry": "tsx ./generate-registry.ts",
+    "build:shadcn": "shadcn build",
     "dev": "react-router dev",
     "lint": "react-router typegen && eslint ./app",
     "lint:fix": "react-router typegen && eslint ./app --fix",
@@ -36,6 +37,7 @@
     "react-dom": "19.2.1",
     "react-router": "7.10.1",
     "remix-themes": "2.0.4",
+    "shadcn": "3.5.2",
     "sugar-high": "0.9.5",
     "tailwind-merge": "3.4.0"
   },
