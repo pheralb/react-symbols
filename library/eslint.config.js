@@ -1,6 +1,6 @@
 import globals from "globals";
 import { dirname } from "node:path";
-import { fileURLToPath } from "node:url";
+import { fileURLToPath, URL } from "node:url";
 import { includeIgnoreFile } from "@eslint/compat";
 import { defineConfig, globalIgnores } from "eslint/config";
 
@@ -19,7 +19,7 @@ export default defineConfig([
   {
     files: ["**/*.{ts,tsx}"],
     languageOptions: {
-      ecmaVersion: 2020,
+      ecmaVersion: 2022,
       globals: globals.browser,
       parserOptions: {
         projectService: true,
