@@ -1,4 +1,5 @@
 import globals from "globals";
+import { dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 import { includeIgnoreFile } from "@eslint/compat";
 import { defineConfig, globalIgnores } from "eslint/config";
@@ -25,6 +26,10 @@ export default defineConfig([
     languageOptions: {
       ecmaVersion: 2020,
       globals: globals.browser,
+      parserOptions: {
+        projectService: true,
+        tsconfigRootDir: dirname(fileURLToPath(import.meta.url)),
+      },
     },
     plugins: {
       "react-hooks": reactHooks,
@@ -33,6 +38,14 @@ export default defineConfig([
     rules: {
       ...reactHooks.configs.recommended.rules,
       "react-refresh/only-export-components": ["off"],
+      "@typescript-eslint/no-unused-vars": [
+        "warn",
+        { argsIgnorePattern: "^_" },
+      ],
+      "@typescript-eslint/consistent-type-imports": [
+        "warn",
+        { prefer: "type-imports", fixStyle: "inline-type-imports" },
+      ],
     },
     linterOptions: {
       reportUnusedDisableDirectives: "error",
