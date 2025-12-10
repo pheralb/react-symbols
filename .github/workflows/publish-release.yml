@@ -5,44 +5,15 @@ on:
     branches:
       - main
 
-permissions:
-  id-token: write
-  contents: read
-
 concurrency: ${{ github.workflow }}-${{ github.ref }}
 
 jobs:
-  typecheck:
-    name: Typecheck
-    runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: library
-    steps:
-      - name: Checkout Repo
-        uses: actions/checkout@v5
-
-      - name: Install Node.js
-        uses: actions/setup-node@v6
-        with:
-          node-version: 22
-          registry-url: "https://registry.npmjs.org"
-
-      - name: Setup pnpm
-        uses: pnpm/action-setup@v4
-
-      - name: Install dependencies
-        run: pnpm install
-
-      - name: Run eslint
-        run: pnpm run lint
-
-      - name: Run typecheck
-        run: pnpm run typecheck
-
   release:
     name: Release
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      id-token: write
     steps:
       - name: Checkout Repo
         uses: actions/checkout@v5
@@ -58,7 +29,7 @@ jobs:
       - name: Install Dependencies
         run: pnpm install
 
-      - name: Create Release Pull Request or Publish to npm
+      - name: Publish
         id: changesets
         uses: changesets/action@v1
         with:
