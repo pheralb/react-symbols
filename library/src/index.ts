@@ -219,6 +219,12 @@ export { default as DockerRed } from "./library/dockerRed.js";
 export { default as DockerYellow } from "./library/dockerYellow.js";
 export { default as Shadcn } from "./library/shadcn.js";
 export { default as SWC } from "./library/swc.js";
+export { default as Zip } from "./library/zip.js";
+export { default as Cursor } from "./library/cursor.js";
+export { default as Nx } from "./library/nx.js";
+export { default as Nim } from "./library/nim.js";
+export { default as Svx } from "./library/svx.js";
+export { default as TsTypes } from "./library/tsTypes.js";
 
 // Folders =>
 
