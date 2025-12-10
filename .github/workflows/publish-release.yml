@@ -22,6 +22,8 @@ jobs:
         uses: actions/setup-node@v6
         with:
           node-version: 22
+          registry-url: "https://registry.npmjs.org"
+          scope: "@react-symbols"
 
       - name: Setup pnpm
         uses: pnpm/action-setup@v4
