@@ -150,6 +150,11 @@ function App() {
         <Meta />
         <PreventFlashOnWrongTheme ssrTheme={Boolean(data.theme)} />
         <Links />
+        <script
+          defer
+          src="https://umami.pheralb.dev/script.js"
+          data-website-id="e0aa51a9-e16b-4247-9227-65024a233aed"
+        ></script>
       </head>
       <body
         className={cn(
