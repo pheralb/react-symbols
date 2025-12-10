@@ -1,8 +1,9 @@
 name: 📦 Publish
 
 on:
-  release:
-    types: [published]
+  push:
+    branches:
+      - main
 
 permissions:
   id-token: write
