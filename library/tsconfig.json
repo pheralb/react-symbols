@@ -5,9 +5,9 @@
     "declaration": true,
     "esModuleInterop": true,
     "jsx": "react-jsx",
-    "lib": ["es5", "es2015", "es2016", "dom", "esnext"],
-    //"types": ["node"],
-    "module": "es2015",
+    "lib": ["es5", "es2015", "es2016", "es2022", "dom", "esnext"],
+    "types": ["node"],
+    "module": "es2022",
     "moduleResolution": "node",
     "noImplicitAny": true,
     "noUnusedLocals": true,
@@ -15,7 +15,7 @@
     "sourceMap": true,
     "strict": true,
     "target": "es6",
-    "typeRoots": ["node_modules/@types", "src/interfaces"]
+    "typeRoots": ["node_modules/@types"]
   },
-  "include": ["src/**/*.ts", "src/**/*.tsx"]
+  "include": ["eslint.config.js", "src/**/*.ts", "src/**/*.tsx"]
 }

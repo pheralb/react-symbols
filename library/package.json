@@ -1,6 +1,6 @@
 {
   "name": "@react-symbols/icons",
-  "version": "1.2.11",
+  "version": "1.2.12",
   "description": "Symbols icons by Miguel Solorio for React",
   "author": "@pheralb_",
   "license": "MIT",
@@ -49,16 +49,24 @@
     "build:swc-tsc": "tsc && swc ./src -d ./build && tsc --emitDeclarationOnly --declaration --outDir build/types",
     "build": "tsc && swc ./src -d ./build",
     "prepublishOnly": "npm run build",
+    "lint": "eslint ./src",
     "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
+    "@eslint/compat": "2.0.0",
+    "@eslint/js": "9.39.1",
     "@swc/cli": "0.7.9",
     "@swc/core": "1.15.3",
+    "@types/node": "22.19.1",
     "@types/react": "19.2.7",
     "@types/react-dom": "19.2.3",
+    "eslint": "9.39.1",
+    "eslint-plugin-react-hooks": "7.0.1",
+    "globals": "16.5.0",
     "react": "19.2.1",
     "react-dom": "19.2.1",
-    "typescript": "5.9.3"
+    "typescript": "5.9.3",
+    "typescript-eslint": "8.49.0"
   },
   "peerDependencies": {
     "react": ">= 16.8",
