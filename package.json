@@ -7,6 +7,9 @@
     "website",
     "library"
   ],
+  "publishConfig": {
+    "provenance": true
+  },
   "scripts": {
     "sherif": "pnpm dlx sherif@latest",
     "build": "turbo build",

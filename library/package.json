@@ -17,6 +17,9 @@
     "ux",
     "interface"
   ],
+  "publishConfig": {
+    "provenance": true
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/pheralb/react-symbols.git"
