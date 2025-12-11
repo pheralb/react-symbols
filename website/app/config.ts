@@ -1,6 +1,6 @@
 export const appConfig = {
-  prodUrl: "https://react-symbols.vercel.app",
+  prodUrl: "https://react-symbols.pheralb.dev",
   v0URL: "https://v0.dev/chat/api/open?url=",
-  registryUrl: "https://react-symbols.vercel.app/r/",
+  registryUrl: "https://react-symbols.pheralb.dev/r/",
   shadcnCommand: "npx shadcn@latest add",
 };
