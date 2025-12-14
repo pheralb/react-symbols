@@ -37,7 +37,7 @@ const Navbar = () => {
         <div className="relative w-full">
           <SearchIcon
             strokeWidth={1.5}
-            className="absolute top-1/2 left-1 h-5 w-5 -translate-y-1/2 transform text-zinc-400 md:h-[22px] md:w-[22px]"
+            className="absolute top-1/2 left-1 h-5 w-5 -translate-y-1/2 transform text-zinc-400 md:h-5.5 md:w-5.5"
           />
           <Search
             placeholder={
@@ -47,7 +47,7 @@ const Navbar = () => {
                   ? `Search ${totalFolders} folder icons...`
                   : `Search ${totalLibraryIcons} icons...`
             }
-            className="rounded-none border-t-0 border-r-0 border-b border-l-0 pl-[34px] text-[16px] shadow-none placeholder:text-[16px] focus:border-none focus:ring-0 focus-visible:ring-0 md:border-none md:pl-[38px] dark:focus:border-none dark:focus:ring-0"
+            className="rounded-none border-t-0 border-r-0 border-b border-l-0 pl-8.5 text-[16px] shadow-none placeholder:text-[16px] focus:border-none focus:ring-0 focus-visible:ring-0 md:border-none md:pl-9.5 dark:focus:border-none dark:focus:ring-0"
           />
         </div>
         <Divider className="hidden md:block" />

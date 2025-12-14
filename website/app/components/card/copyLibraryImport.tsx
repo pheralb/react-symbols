@@ -17,6 +17,7 @@ const CopyLibraryImport = ({
   ItemIcon,
 }: CopyLibraryImportProps) => {
   const handleCopyFromLibrary = async () => {
+    itemName = itemName.charAt(0).toUpperCase() + itemName.slice(1);
     const code = `import { ${itemName} } from "@react-symbols/icons";`;
     await clipboard(code);
     toast.success({
