@@ -2,10 +2,9 @@ import type { iIcons } from "@/data/svgs";
 
 import { cn, titleToPascal } from "@/utils";
 
-import CopySource from "@/components/card/copySource";
 import CopyShadcnCommand from "@/components/card/copyShadcnCommand";
 import CopyLibraryImport from "@/components/card/copyLibraryImport";
-import OpenWithV0 from "@/components/card/openWithv0";
+import SvgExportOptions from "@/components/card/svgExportOptions";
 
 interface iCard extends iIcons {
   isFolder: boolean;
@@ -34,21 +33,24 @@ const Card = (props: iCard) => {
           "rounded-bl-md border-b border-l border-zinc-200 dark:border-zinc-800",
         )}
       >
-        <CopySource iconSize={14} itemName={itemName} ItemIcon={props.icon} />
+        {/* <CopySource iconSize={14} itemName={itemName} ItemIcon={props.icon} /> */}
       </div>
       <div className="flex items-center space-x-1">
-        <CopyLibraryImport
-          isFolder={props.isFolder}
-          iconSize={cardItemSize}
-          itemName={itemName}
-          ItemIcon={props.icon}
-        />
         <CopyShadcnCommand
           iconSize={cardItemSize}
           itemName={itemName}
           ItemIcon={props.icon}
         />
-        <OpenWithV0 itemName={itemName} />
+        <CopyLibraryImport
+          iconSize={cardItemSize}
+          itemName={itemName}
+          ItemIcon={props.icon}
+        />
+        <SvgExportOptions
+          iconSize={cardItemSize}
+          itemName={itemName}
+          ItemIcon={props.icon}
+        />
       </div>
     </div>
   );

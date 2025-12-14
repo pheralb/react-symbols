@@ -3,6 +3,7 @@ import { defineConfig } from "vite";
 
 // Plugins:
 import tailwindcss from "@tailwindcss/vite";
+import devtoolsJson from "vite-plugin-devtools-json";
 import { reactRouter } from "@react-router/dev/vite";
 
 export default defineConfig({
@@ -16,5 +17,5 @@ export default defineConfig({
       ),
     },
   },
-  plugins: [reactRouter(), tailwindcss()],
+  plugins: [reactRouter(), tailwindcss(), devtoolsJson()],
 });
