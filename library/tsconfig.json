@@ -17,5 +17,10 @@
     "target": "es6",
     "typeRoots": ["node_modules/@types"]
   },
-  "include": ["eslint.config.js", "src/**/*.ts", "src/**/*.tsx"]
+  "include": [
+    "eslint.config.js",
+    "tsdown.config.ts",
+    "src/**/*.ts",
+    "src/**/*.tsx"
+  ]
 }
