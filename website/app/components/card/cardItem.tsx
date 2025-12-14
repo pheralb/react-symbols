@@ -42,6 +42,7 @@ const Card = (props: iCard) => {
           ItemIcon={props.icon}
         />
         <CopyLibraryImport
+          isFolder={props.isFolder}
           iconSize={cardItemSize}
           itemName={itemName}
           ItemIcon={props.icon}
