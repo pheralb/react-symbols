@@ -90,3 +90,4 @@ export { default as FolderDocuments } from "./library/folders/folderDocuments";
 export { default as FolderLock } from "./library/folders/folderLock";
 export { default as FolderDocker } from "./library/folders/folderDocker";
 export { default as FolderI18n } from "./library/folders/folderI18n";
+export { default as FolderTauri } from "./library/folders/folderTauri";

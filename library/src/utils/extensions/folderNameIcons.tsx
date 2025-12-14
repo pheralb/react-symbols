@@ -33,6 +33,8 @@ const folderNameIcons: ExtensionType = {
   ".drizzle": ReactSymbol.FolderDrizzle,
   drizzle: ReactSymbol.FolderDrizzle,
   tina: ReactSymbol.FolderTina,
+  "src-tauri": ReactSymbol.FolderTauri,
+  tauri: ReactSymbol.FolderTauri,
   ".claude-code": ReactSymbol.FolderClaude,
   ".claude": ReactSymbol.FolderClaude,
   claude: ReactSymbol.FolderClaude,
