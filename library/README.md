@@ -9,14 +9,16 @@
 <span>&nbsp;&nbsp;❖&nbsp;&nbsp;</span>
 <a href="#-getting-started">Getting Started</a>
 <span>&nbsp;&nbsp;❖&nbsp;&nbsp;</span>
+<a href="#-utilities">Utilities</a>
+<span>&nbsp;&nbsp;❖&nbsp;&nbsp;</span>
 <a href="#-license">License</a>
 <span>&nbsp;&nbsp;❖&nbsp;&nbsp;</span>
 <a href="#-contribute">Contribute</a>
 <span>&nbsp;&nbsp;❖&nbsp;&nbsp;</span>
 <a href="https://marketplace.visualstudio.com/items?itemName=miguelsolorio.symbols">VSCode Theme</a>
 
-![React Badge](https://img.shields.io/badge/React-61DAFB?logo=react&logoColor=000&style=flat)
-![SWC Badge](https://img.shields.io/badge/SWC-F8C457?logo=swc&logoColor=000&style=flat)
+![React Badge](https://img.shields.io/badge/Library-61DAFB?logo=react&logoColor=000&style=flat)
+![React Router Badge](https://img.shields.io/badge/Website-CA4245?logo=reactrouter&logoColor=fff&style=flat)
 [![Build Status](https://img.shields.io/endpoint.svg?url=https%3A%2F%2Factions-badge.atrox.dev%2Fpheralb%2Freact-symbols%2Fbadge%3Fref%3Dmain&style=flat)](https://actions-badge.atrox.dev/pheralb/react-symbols/goto?ref=main)
 ![GitHub releases](https://img.shields.io/github/release/pheralb/react-symbols)
 ![GitHub stars](https://img.shields.io/github/stars/pheralb/react-symbols)
@@ -57,15 +59,50 @@ bun add @react-symbols/icons
 
 ### - Usage
 
+**Using file and folder icons:**
+
 ```jsx
-import { Angular, Astro, Document } from "@react-symbols/icons";
+import { Astro, FolderBlue } from "@react-symbols/icons";
 
 const MyComponent = () => {
   return (
     <>
       <Angular width={128} height={128} />
-      <Astro width={128} height={128} />
-      <Document width={128} height={128} />
+      <FolderBlue width={128} height={128} />
+    </>
+  );
+};
+
+export default MyComponent;
+```
+
+**Only file icons:**
+
+```jsx
+import { Astro, Docker } from "@react-symbols/icons/files";
+
+const MyComponent = () => {
+  return (
+    <>
+      <Angular width={128} height={128} />
+      <Docker width={128} height={128} />
+    </>
+  );
+};
+
+export default MyComponent;
+```
+
+**Only folder icons:**
+
+```jsx
+import { FolderConfig, FolderApp } from "@react-symbols/icons/folders";
+
+const MyComponent = () => {
+  return (
+    <>
+      <FolderConfig width={128} height={128} />
+      <FolderApp width={128} height={128} />
     </>
   );
 };
@@ -98,6 +135,76 @@ const MyComponent = () => {
 };
 
 export default MyComponent;
+```
+
+## ⚙️ Utilities
+
+### `FileIcon`
+
+Get the [file icon](https://react-symbols.pheralb.dev) component for a given file name or extension.
+
+- `getIconForFile` function:
+
+```tsx
+import { getIconForFile } from "@react-symbols/icons/utils";
+
+const Page = () => {
+  return (
+    <main>
+      {getIconForFile({
+        fileName: "example.ts",
+      })}
+    </main>
+  );
+};
+```
+
+- `FileIcon` component:
+
+```tsx
+import { FileIcon } from "@react-symbols/icons/utils";
+
+const Page = () => {
+  return (
+    <main>
+      <FileIcon fileName="example.ts" />
+    </main>
+  );
+};
+```
+
+### `FolderIcon`
+
+Get the [folder icon](https://react-symbols.pheralb.dev/folders) component for a given folder name.
+
+- `getIconForFolder` function:
+
+```tsx
+import { getIconForFolder } from "@react-symbols/icons/utils";
+
+const Page = () => {
+  return (
+    <main>
+      {getIconForFolder({
+        folderName: "github",
+      })}
+    </main>
+  );
+};
+```
+
+- `FolderIcon` component:
+
+```tsx
+import { FolderIcon } from "@react-symbols/icons/utils";
+
+const Page = () => {
+  return (
+    <main>
+      <FolderIcon folderName="github" />
+    </main>
+  );
+};
 ```
 
 ## 📦 Stack
