@@ -38,6 +38,7 @@ const Card = (props: iCard) => {
       </div>
       <div className="flex items-center space-x-1">
         <CopyLibraryImport
+          isFolder={props.isFolder}
           iconSize={cardItemSize}
           itemName={itemName}
           ItemIcon={props.icon}
