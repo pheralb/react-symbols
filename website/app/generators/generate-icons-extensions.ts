@@ -35,7 +35,7 @@ async function fetchIconTheme(): Promise<IconTheme> {
 function generateTsxFile(
   fileExtensions: Record<string, string>,
   fileNames: Record<string, string>,
-  iconDefinitions: Record<string, IconDefinition>,
+  folderNames: Record<string, string>,
 ): string {
   const imports = `import type { FC, SVGProps } from "react";\nimport * as ReactSymbol from "../index";\n\n`;
   const fileExtensionType = `interface FileExtensionType {\n  [extension: string]: FC<SVGProps<SVGSVGElement>>;\n}\n\n`;
@@ -59,22 +59,18 @@ function generateTsxFile(
 
   const fileNameMapping = `const fileNameIcons: FileNameType = {\n${fileNameMappingEntries}\n};\n\n`;
 
-  const folderExtensionType = `interface FolderExtensionType {\n  [folderName: string]: FC<SVGProps<SVGSVGElement>>;\n}\n\n`;
+  const folderNameType = `interface FolderNameType {\n  [folderName: string]: FC<SVGProps<SVGSVGElement>>;\n}\n\n`;
 
-  const folderIcons = Object.keys(iconDefinitions).filter((key) =>
-    key.startsWith("folder-"),
-  );
-
-  const folderMappingEntries = folderIcons
-    .map((iconName) => {
+  const folderNameMappingEntries = Object.entries(folderNames)
+    .map(([name, iconName]) => {
       const componentName = toPascalCase(iconName);
-      return `  "${iconName}": ReactSymbol.${componentName},`;
+      return `  "${name}": ReactSymbol.${componentName},`;
     })
     .join("\n");
 
-  const folderMapping = `const folderExtensionIcons: FolderExtensionType = {\n${folderMappingEntries}\n};\n\n`;
+  const folderNameMapping = `const folderNameIcons: FolderNameType = {\n${folderNameMappingEntries}\n};\n\n`;
 
-  const exports = `export { fileExtensionIcons, FileExtensionType, fileNameIcons, FileNameType, folderExtensionIcons, FolderExtensionType };\n`;
+  const exports = `export { fileExtensionIcons, FileExtensionType, fileNameIcons, FileNameType, folderNameIcons, FolderNameType };\n`;
 
   return (
     imports +
@@ -82,8 +78,8 @@ function generateTsxFile(
     fileMapping +
     fileNameType +
     fileNameMapping +
-    folderExtensionType +
-    folderMapping +
+    folderNameType +
+    folderNameMapping +
     exports
   );
 }
@@ -93,22 +89,22 @@ async function main() {
     console.log("|- 🔍 Fetching icon theme from GitHub...");
     const iconTheme = await fetchIconTheme();
 
-    console.log("|- ⚙️ Processing file extensions and file names...");
+    console.log(
+      "|- ⚙️ Processing file extensions, file names and folder names...",
+    );
     const fileExtensions = iconTheme.fileExtensions;
     const fileNames = iconTheme.fileNames || {};
-    const iconDefinitions = iconTheme.iconDefinitions;
+    const folderNames = iconTheme.folderNames || {};
 
     const totalExtensions = Object.keys(fileExtensions).length;
     const totalFileNames = Object.keys(fileNames).length;
+    const totalFolderNames = Object.keys(folderNames).length;
     console.log(`✅ Found ${totalExtensions} file extensions`);
-    console.log(`✅ Found ${totalFileNames} file names\n`);
+    console.log(`✅ Found ${totalFileNames} file names`);
+    console.log(`✅ Found ${totalFolderNames} folder names\n`);
 
     console.log("|- 📝 Generating TSX file...");
-    const tsxContent = generateTsxFile(
-      fileExtensions,
-      fileNames,
-      iconDefinitions,
-    );
+    const tsxContent = generateTsxFile(fileExtensions, fileNames, folderNames);
 
     const fs = await import("fs/promises");
     const path = await import("path");
