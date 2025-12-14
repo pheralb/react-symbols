@@ -13,8 +13,8 @@ import FolderOpenIcon from "../library/folders/folderOpen";
 
 interface GetIconForFileOptions extends SVGProps<SVGSVGElement> {
   fileName: string;
-  autoAssign?: boolean;
-  extendAssignmentData?: ExtensionType;
+  autoAssign?: boolean | undefined;
+  extendAssignmentData?: ExtensionType | undefined;
 }
 
 interface GetIconForFolderOptions extends SVGProps<SVGSVGElement> {
@@ -119,8 +119,7 @@ const getIconForFolder = ({
   folderName,
   ...props
 }: GetIconForFolderOptions): JSX.Element => {
-  const folderKey = `folder-${folderName.toLowerCase()}`;
-  const Icon = folderNameIcons[folderKey] ?? DEFAULT_FOLDER_ICON;
+  const Icon = folderNameIcons[folderName] ?? DEFAULT_FOLDER_ICON;
   return <Icon {...props} />;
 };
 
