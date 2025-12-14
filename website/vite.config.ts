@@ -9,9 +9,10 @@ export default defineConfig({
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "app"),
-      "@react-symbols/icons": path.resolve(
+      "@react-symbols/icons": path.resolve(__dirname, "../library/src"),
+      "@react-symbols/icons/utils": path.resolve(
         __dirname,
-        "../library/src/index.ts",
+        "../library/src/utils",
       ),
     },
   },

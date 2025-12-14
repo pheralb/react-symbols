@@ -16,7 +16,8 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["./app/*"],
-      "@react-symbols/icons": ["../library/src/index.ts"]
+      "@react-symbols/icons": ["../library/src/index.tsx"],
+      "@react-symbols/icons/utils": ["../library/src/utils/index.tsx"]
     },
     "esModuleInterop": true,
     "verbatimModuleSyntax": true,
