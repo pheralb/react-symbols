@@ -9,7 +9,7 @@
 <span>&nbsp;&nbsp;❖&nbsp;&nbsp;</span>
 <a href="#-getting-started">Getting Started</a>
 <span>&nbsp;&nbsp;❖&nbsp;&nbsp;</span>
-<a href="#-utilities">Utilities</a>
+<a href="#️-utilities">Utilities</a>
 <span>&nbsp;&nbsp;❖&nbsp;&nbsp;</span>
 <a href="#-license">License</a>
 <span>&nbsp;&nbsp;❖&nbsp;&nbsp;</span>
@@ -143,7 +143,7 @@ export default MyComponent;
 
 Get the [file icon](https://react-symbols.pheralb.dev) component for a given file name or extension.
 
-- `getIconForFile` function:
+**`getIconForFile`** function:
 
 ```tsx
 import { getIconForFile } from "@react-symbols/icons/utils";
@@ -159,7 +159,7 @@ const Page = () => {
 };
 ```
 
-- `FileIcon` component:
+**`FileIcon`** component:
 
 ```tsx
 import { FileIcon } from "@react-symbols/icons/utils";
@@ -173,11 +173,31 @@ const Page = () => {
 };
 ```
 
+**Options**:
+
+- `fileName` (`string`): The name of the file (e.g., "example.ts", "index.html").
+
+- `autoAssign` (`boolean`, optional): If `true`, the utility will automatically assign the icon based on the file name (e.g., "vite.config.js" -> Vite icon). [Full list of file names can be found here](https://github.com/pheralb/react-symbols/blob/main/library/src/utils/extensions/fileNameIcons.tsx). Example:
+
+```tsx
+<FileIcon autoAssign={true} />
+```
+
+- `extendAssignmentData` (`ExtensionType`, optional): An object that allows you to extend or override the default file name to icon mapping. Example:
+
+```tsx
+<FileIcon
+  extendAssignmentData={{
+    "myservice.config.ts": AngularService,
+  }}
+/>
+```
+
 ### `FolderIcon`
 
 Get the [folder icon](https://react-symbols.pheralb.dev/folders) component for a given folder name.
 
-- `getIconForFolder` function:
+**`getIconForFolder`** function:
 
 ```tsx
 import { getIconForFolder } from "@react-symbols/icons/utils";
@@ -193,7 +213,7 @@ const Page = () => {
 };
 ```
 
-- `FolderIcon` component:
+**`FolderIcon`** component:
 
 ```tsx
 import { FolderIcon } from "@react-symbols/icons/utils";
@@ -205,6 +225,29 @@ const Page = () => {
     </main>
   );
 };
+```
+
+**Options**:
+
+- `folderName` (`string`): The name of the folder (e.g., "src", "config").
+- `extendAssignmentData` (`ExtensionType`, optional): An object that allows you to extend or override the default folder name to icon mapping. Example:
+
+```tsx
+<FolderIcon
+  extendAssignmentData={{
+    customfolder: CustomFolderIcon,
+  }}
+/>
+```
+
+### `ExtensionType`
+
+Type definition for extending or overriding the default file/folder name to icon mapping.
+
+```ts
+interface ExtensionType {
+  [extension: string]: FC<SVGProps<SVGSVGElement>>;
+}
 ```
 
 ## 📦 Stack
