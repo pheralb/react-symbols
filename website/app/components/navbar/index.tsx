@@ -15,7 +15,7 @@ import IconSize from "@/components/navbar/iconSize";
 // Only Files & Folders Icons Routes:
 const NavIconsRoutes = [
   {
-    title: "Icons",
+    title: "Files",
     href: "/",
   },
   {
