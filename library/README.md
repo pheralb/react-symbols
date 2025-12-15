@@ -31,7 +31,7 @@
 
 [**React-Symbols**](https://react-symbols.vercel.app/) is a library for React with the icons of the VSCode theme [**Symbols**](https://marketplace.visualstudio.com/items?itemName=miguelsolorio.symbols) created by [Miguel Solorio (@miguelsolorio)](https://github.com/miguelsolorio):
 
-- 📦 **+100** files & folders icons.
+- 📦 **+200** files & folders icons.
 - ☁️ Support for **React Server Components** (RSC).
 - 🍃 **Lightweight** & **tree-shakable**.
 - 💙 Built with **Typescript**.
@@ -175,15 +175,19 @@ const Page = () => {
 
 **Options**:
 
-- `fileName` (`string`): The name of the file (e.g., "example.ts", "index.html").
+- `fileName` (`string`): The name of the file (e.g., "example.ts", "index.html"). [The full list of extensions can be found here](https://github.com/pheralb/react-symbols/blob/next/library/src/utils/extensions/fileExtensionIcons.tsx).
 
-- `autoAssign` (`boolean`, optional): If `true`, the utility will automatically assign the icon based on the file name (e.g., "vite.config.js" -> Vite icon). [Full list of file names can be found here](https://github.com/pheralb/react-symbols/blob/main/library/src/utils/extensions/fileNameIcons.tsx). Example:
+```tsx
+<FileIcon fileName="example.ts" />
+```
+
+- `autoAssign` (`boolean`, optional): If `true`, the utility will automatically assign the icon based on the file name (e.g., "vite.config.js" -> Vite icon). [The full list of file names can be found here](https://github.com/pheralb/react-symbols/blob/main/library/src/utils/extensions/fileNameIcons.tsx).
 
 ```tsx
 <FileIcon autoAssign={true} />
 ```
 
-- `extendAssignmentData` (`ExtensionType`, optional): An object that allows you to extend or override the default file name to icon mapping. Example:
+- `extendAssignmentData` (`ExtensionType`, optional): An object that allows you to extend or override the default file name to icon mapping.
 
 ```tsx
 <FileIcon
@@ -191,6 +195,12 @@ const Page = () => {
     "myservice.config.ts": AngularService,
   }}
 />
+```
+
+- `SVGProps<SVGSVGElement>`: SVG properties to customize the icon.
+
+```tsx
+<FileIcon width={48} height={48} />
 ```
 
 ### `FolderIcon`
@@ -229,8 +239,13 @@ const Page = () => {
 
 **Options**:
 
-- `folderName` (`string`): The name of the folder (e.g., "src", "config").
-- `extendAssignmentData` (`ExtensionType`, optional): An object that allows you to extend or override the default folder name to icon mapping. Example:
+- `folderName` (`string`): The name of the folder (e.g., "src", "config"). [The full list of folder names can be found here](https://github.com/pheralb/react-symbols/blob/next/library/src/utils/extensions/folderNameIcons.tsx).
+
+```tsx
+<FolderIcon folderName="src" />
+```
+
+- `extendAssignmentData` (`ExtensionType`, optional): An object that allows you to extend or override the default folder name to icon mapping.
 
 ```tsx
 <FolderIcon
@@ -238,6 +253,12 @@ const Page = () => {
     customfolder: CustomFolderIcon,
   }}
 />
+```
+
+- `SVGProps<SVGSVGElement>`: SVG properties to customize the icon.
+
+```tsx
+<FolderIcon width={48} height={48} />
 ```
 
 ### `ExtensionType`
@@ -263,7 +284,7 @@ This is a monorepo project created with:
 
 **For library:**
 
-- [SWC](https://swc.rs/) - Rust-based platform for the Web.
+- [tsdown](https://tsdown.dev/) - The elegant bundler for libraries powered by Rolldown.
 - [React 19](https://reactjs.org/) - A JavaScript library for building user interfaces.
 - [Typescript](https://www.typescriptlang.org/) - TypeScript is JavaScript with syntax for types.
 
@@ -272,9 +293,8 @@ This is a monorepo project created with:
 - [React Router v7](https://reactrouter.com/) - Create modern, resilient user experiences with web fundamentals.
 - [Typescript](https://www.typescriptlang.org/) - TypeScript is JavaScript with syntax for types.
 - [Tailwind CSS](https://tailwindcss.com/) - A utility-first CSS framework for rapidly building custom designs.
-- [tw-animate-css](https://github.com/Wombosvideo/tw-animate-css) - A collection of Tailwind CSS v4.0 utilities for creating beautiful animations.
 - [shadcn/ui + Radix UI](https://ui.shadcn.com/) - An opinionated toast component for React.
-- [Sonner](https://sonner.emilkowal.ski/) - An opinionated toast component for React.
+- [pheralb/toast](https://toast.pheralb.dev/) - An accessible and beautiful toast library for React.
 
 ## 🙌 Contribute
 
@@ -310,4 +330,4 @@ and open [**localhost:5173**](http://localhost:5173) with your browser to see th
 
 ## 🔑 License
 
-- [MIT License](https://github.com/pheralb/react-symbols/blob/main/LICENSE).
+[MIT License](https://github.com/pheralb/react-symbols/blob/main/LICENSE).
