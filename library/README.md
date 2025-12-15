@@ -175,7 +175,7 @@ const Page = () => {
 
 **Options**:
 
-- `fileName` (`string`): The name of the file (e.g., "example.ts", "index.html"). [The full list of extensions can be found here](https://github.com/pheralb/react-symbols/blob/next/library/src/utils/extensions/fileExtensionIcons.tsx). If does not match any file name or extension, the `DefaultFileIcon` component will be used.
+- `fileName` (`string`): The name of the file (e.g., "example.ts", "index.html"). [The full list of extensions can be found here](https://github.com/pheralb/react-symbols/blob/main/library/src/utils/extensions/fileExtensionIcons.tsx). If does not match any file name or extension, the `DefaultFileIcon` component will be used.
 
 ```tsx
 import { FileIcon } from "@react-symbols/icons/utils";
@@ -224,7 +224,7 @@ const Page = () => {
   return (
     <main>
       {getIconForFolder({
-        folderName: "github",
+        folderName: "node_modules",
       })}
     </main>
   );
@@ -239,7 +239,7 @@ import { FolderIcon } from "@react-symbols/icons/utils";
 const Page = () => {
   return (
     <main>
-      <FolderIcon folderName="github" />
+      <FolderIcon folderName="node_modules" />
     </main>
   );
 };
@@ -247,7 +247,7 @@ const Page = () => {
 
 **Options**:
 
-- `folderName` (`string`): The name of the folder (e.g., "src", "config"). [The full list of folder names can be found here](https://github.com/pheralb/react-symbols/blob/next/library/src/utils/extensions/folderNameIcons.tsx). If does not match any folder name, the `DefaultFolderIcon` component will be used.
+- `folderName` (`string`): The name of the folder (e.g., "src", "config"). [The full list of folder names can be found here](https://github.com/pheralb/react-symbols/blob/main/library/src/utils/extensions/folderNameIcons.tsx). If does not match any folder name, the `DefaultFolderIcon` component will be used.
 
 ```tsx
 import { FolderIcon } from "@react-symbols/icons/utils";
