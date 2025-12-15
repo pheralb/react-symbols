@@ -3,10 +3,12 @@ import path from "path";
 
 import { fileURLToPath } from "url";
 import { execSync } from "child_process";
-import { pascalToTitle } from "./app/utils";
+import { pascalToTitle } from "../utils";
 
 const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(path.dirname(__filename));
+const __dirname = path.dirname(
+  path.dirname(path.dirname(path.dirname(__filename))),
+);
 
 interface RegistryFile {
   path: string;

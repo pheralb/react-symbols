@@ -74,7 +74,7 @@ const InstallCommand = (props: iInstallCommandProps) => {
       className={cn(
         buttonVariants({
           variant: "outline",
-          className: "cursor-default active:scale-100",
+          className: "cursor-default shadow-xs active:scale-100",
         }),
         "space-x-3 rounded-3xl text-zinc-600 select-all hover:bg-transparent dark:text-zinc-400 dark:hover:bg-transparent dark:hover:text-white",
         props.className,

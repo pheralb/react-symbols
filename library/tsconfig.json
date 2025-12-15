@@ -1,21 +1,17 @@
 {
+  "extends": "@tsconfig/strictest/tsconfig.json",
   "compilerOptions": {
-    "baseUrl": ".",
-    "allowSyntheticDefaultImports": true,
-    "declaration": true,
-    "esModuleInterop": true,
+    "target": "esnext",
     "jsx": "react-jsx",
-    "lib": ["es5", "es2015", "es2016", "es2022", "dom", "esnext"],
+    "lib": ["es2023", "DOM"],
+    "moduleDetection": "force",
+    "module": "preserve",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
     "types": ["node"],
-    "module": "es2022",
-    "moduleResolution": "node",
-    "noImplicitAny": true,
-    "noUnusedLocals": true,
-    "outDir": "build",
-    "sourceMap": true,
-    "strict": true,
-    "target": "es6",
-    "typeRoots": ["node_modules/@types"]
+    "declaration": true,
+    "emitDeclarationOnly": true,
+    "verbatimModuleSyntax": true
   },
-  "include": ["eslint.config.js", "src/**/*.ts", "src/**/*.tsx"]
+  "include": ["**/*.ts", "**/*.tsx", "**/*.js"]
 }

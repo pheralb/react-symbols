@@ -7,17 +7,25 @@ import { CopyIcon } from "lucide-react";
 
 interface CopyLibraryImportProps {
   itemName: string;
+  isFolder?: boolean;
   iconSize: number;
   ItemIcon: FC<SVGProps<SVGSVGElement>>;
 }
 
 const CopyLibraryImport = ({
   itemName,
+  isFolder,
   iconSize,
   ItemIcon,
 }: CopyLibraryImportProps) => {
   const handleCopyFromLibrary = async () => {
-    const code = `import { ${itemName} } from "@react-symbols/icons";`;
+    itemName = itemName.charAt(0).toUpperCase() + itemName.slice(1);
+    let code = "";
+    if (isFolder) {
+      code = `import { ${itemName} } from "@react-symbols/icons/folders";`;
+    } else {
+      code = `import { ${itemName} } from "@react-symbols/icons/files";`;
+    }
     await clipboard(code);
     toast.success({
       text: "Copied library import",

@@ -1,13 +1,15 @@
 <div align="center">
-<a href="https://react-symbols.vercel.app/">
+<a href="https://react-symbols.pheralb.dev">
 <img src="https://raw.githubusercontent.com/pheralb/react-symbols/main/website/public/images/og.png" alt="React-Symbols Screenshot" />
 </a>
 
 <p></p>
 
-<a href="https://react-symbols.vercel.app">Website</a>
+<a href="https://react-symbols.pheralb.dev">Website</a>
 <span>&nbsp;&nbsp;❖&nbsp;&nbsp;</span>
 <a href="#-getting-started">Getting Started</a>
+<span>&nbsp;&nbsp;❖&nbsp;&nbsp;</span>
+<a href="#️-utilities">Utilities</a>
 <span>&nbsp;&nbsp;❖&nbsp;&nbsp;</span>
 <a href="#-license">License</a>
 <span>&nbsp;&nbsp;❖&nbsp;&nbsp;</span>
@@ -15,8 +17,8 @@
 <span>&nbsp;&nbsp;❖&nbsp;&nbsp;</span>
 <a href="https://marketplace.visualstudio.com/items?itemName=miguelsolorio.symbols">VSCode Theme</a>
 
-![React Badge](https://img.shields.io/badge/React-61DAFB?logo=react&logoColor=000&style=flat)
-![SWC Badge](https://img.shields.io/badge/SWC-F8C457?logo=swc&logoColor=000&style=flat)
+![React Badge](https://img.shields.io/badge/Library-61DAFB?logo=react&logoColor=000&style=flat)
+![React Router Badge](https://img.shields.io/badge/Website-CA4245?logo=reactrouter&logoColor=fff&style=flat)
 [![Build Status](https://img.shields.io/endpoint.svg?url=https%3A%2F%2Factions-badge.atrox.dev%2Fpheralb%2Freact-symbols%2Fbadge%3Fref%3Dmain&style=flat)](https://actions-badge.atrox.dev/pheralb/react-symbols/goto?ref=main)
 ![GitHub releases](https://img.shields.io/github/release/pheralb/react-symbols)
 ![GitHub stars](https://img.shields.io/github/stars/pheralb/react-symbols)
@@ -27,12 +29,12 @@
 
 ## 🧑‍🚀 Introduction
 
-[**React-Symbols**](https://react-symbols.vercel.app/) is a library for React with the icons of the VSCode theme [**Symbols**](https://marketplace.visualstudio.com/items?itemName=miguelsolorio.symbols) created by [Miguel Solorio (@miguelsolorio)](https://github.com/miguelsolorio):
+[**React-Symbols**](https://react-symbols.pheralb.dev/) is a library for React with the icons of the VSCode theme [**Symbols**](https://marketplace.visualstudio.com/items?itemName=miguelsolorio.symbols) created by [Miguel Solorio (@miguelsolorio)](https://github.com/miguelsolorio):
 
-- 📦 **+100** files & folders icons.
+- 📦 **+200** files & folders icons.
 - ☁️ Support for **React Server Components** (RSC).
 - 🍃 **Lightweight** & **tree-shakable**.
-- 💙 Built with **Typescript**.
+- 💙 Built with **TypeScript**.
 - 🚀 **SVG optimized** and **minified**.
 
 ## 🚀 Getting Started
@@ -57,15 +59,50 @@ bun add @react-symbols/icons
 
 ### - Usage
 
+**Using file and folder icons:**
+
 ```jsx
-import { Angular, Astro, Document } from "@react-symbols/icons";
+import { Astro, FolderBlue } from "@react-symbols/icons";
 
 const MyComponent = () => {
   return (
     <>
       <Angular width={128} height={128} />
-      <Astro width={128} height={128} />
-      <Document width={128} height={128} />
+      <FolderBlue width={128} height={128} />
+    </>
+  );
+};
+
+export default MyComponent;
+```
+
+**Only file icons:**
+
+```jsx
+import { Astro, Docker } from "@react-symbols/icons/files";
+
+const MyComponent = () => {
+  return (
+    <>
+      <Angular width={128} height={128} />
+      <Docker width={128} height={128} />
+    </>
+  );
+};
+
+export default MyComponent;
+```
+
+**Only folder icons:**
+
+```jsx
+import { FolderConfig, FolderApp } from "@react-symbols/icons/folders";
+
+const MyComponent = () => {
+  return (
+    <>
+      <FolderConfig width={128} height={128} />
+      <FolderApp width={128} height={128} />
     </>
   );
 };
@@ -100,6 +137,201 @@ const MyComponent = () => {
 export default MyComponent;
 ```
 
+## ⚙️ Utilities
+
+### `FileIcon`
+
+Get the [file icon](https://react-symbols.pheralb.dev) component for a given file name or extension.
+
+**`getIconForFile`** function:
+
+```tsx
+import { getIconForFile } from "@react-symbols/icons/utils";
+
+const Page = () => {
+  return (
+    <main>
+      {getIconForFile({
+        fileName: "example.ts",
+      })}
+    </main>
+  );
+};
+```
+
+**`FileIcon`** component:
+
+```tsx
+import { FileIcon } from "@react-symbols/icons/utils";
+
+const Page = () => {
+  return (
+    <main>
+      <FileIcon fileName="example.ts" />
+    </main>
+  );
+};
+```
+
+**Options**:
+
+- `fileName` (`string`): The name of the file (e.g., "example.ts", "index.html"). [The full list of extensions can be found here](https://github.com/pheralb/react-symbols/blob/main/library/src/utils/extensions/fileExtensionIcons.tsx). If does not match any file extension, the `DefaultFileIcon` component will be rendered.
+
+```tsx
+import { FileIcon } from "@react-symbols/icons/utils";
+
+<FileIcon fileName="example.ts" />;
+```
+
+- `autoAssign` (`boolean`, optional): If `true`, the utility will automatically assign the icon based on the file name (e.g., "vite.config.js" -> Vite icon). [The full list of file names can be found here](https://github.com/pheralb/react-symbols/blob/main/library/src/utils/extensions/fileNameIcons.tsx). If does not match any file name, it will fallback to the file extension mapping.
+
+```tsx
+import { FileIcon } from "@react-symbols/icons/utils";
+
+<FileIcon fileName="package.json" autoAssign={true} />;
+```
+
+- `editFileExtensionData` (`ExtensionType`, optional): An object that allows you to extend or override the default file extension to icon mapping.
+
+```tsx
+import { Js } from "@react-symbols/icons/files";
+import { FileIcon } from "@react-symbols/icons/utils";
+
+<FileIcon
+  fileName="customfile.ts"
+  editFileExtensionData={{
+    ts: Js,
+  }}
+/>;
+```
+
+- `editFileNameData` (`ExtensionType`, optional. Activate `autoAssign` first): An object that allows you to extend or override the default file name to icon mapping.
+
+```tsx
+import { Ts } from "@react-symbols/icons/files";
+import { FileIcon } from "@react-symbols/icons/utils";
+
+<FileIcon
+  autoAssign={true}
+  fileName="eslint.config.ts"
+  editFileNameData={{
+    "eslint.config.ts": Ts,
+  }}
+/>;
+```
+
+- `SVGProps<SVGSVGElement>`: SVG properties to customize the icon.
+
+```tsx
+import { FileIcon } from "@react-symbols/icons/utils";
+
+<FileIcon fileName="myfile.ts" width={48} height={48} />;
+```
+
+### `FolderIcon`
+
+Get the [folder icon](https://react-symbols.pheralb.dev/folders) component for a given folder name.
+
+**`getIconForFolder`** function:
+
+```tsx
+import { getIconForFolder } from "@react-symbols/icons/utils";
+
+const Page = () => {
+  return (
+    <main>
+      {getIconForFolder({
+        folderName: "node_modules",
+      })}
+    </main>
+  );
+};
+```
+
+**`FolderIcon`** component:
+
+```tsx
+import { FolderIcon } from "@react-symbols/icons/utils";
+
+const Page = () => {
+  return (
+    <main>
+      <FolderIcon folderName="node_modules" />
+    </main>
+  );
+};
+```
+
+**Options**:
+
+- `folderName` (`string`): The name of the folder (e.g., "src", "config"). [The full list of folder names can be found here](https://github.com/pheralb/react-symbols/blob/main/library/src/utils/extensions/folderNameIcons.tsx). If does not match any folder name, the `DefaultFolderIcon` component will be used.
+
+```tsx
+import { FolderIcon } from "@react-symbols/icons/utils";
+
+<FolderIcon folderName="src" />;
+```
+
+- `editFolderNameData` (`ExtensionType`, optional): An object that allows you to extend or override the default folder name to icon mapping.
+
+```tsx
+import { FolderIcon } from "@react-symbols/icons/utils";
+import { FolderAngular } from "@react-symbols/icons/folders";
+
+<FolderIcon
+  editFolderNameData={{
+    app: FolderAngular,
+  }}
+/>;
+```
+
+- `SVGProps<SVGSVGElement>`: SVG properties to customize the icon.
+
+```tsx
+import { FolderIcon } from "@react-symbols/icons/utils";
+
+<FolderIcon folderName="app" width={48} height={48} />;
+```
+
+### `ExtensionType`
+
+Type definition for extending or overriding the default file/folder name to icon mapping.
+
+```ts
+import type { ExtensionType } from "@react-symbols/icons/utils";
+
+const moreExtensions: ExtensionType = {
+  "customfile.ext": CustomFileIcon,
+  customfolder: CustomFolderIcon,
+};
+```
+
+### Icons for file explorers
+
+- `DefaultFileIcon`: The default icon component for unknown files.
+
+```tsx
+import { DefaultFileIcon } from "@react-symbols/icons/utils";
+
+<DefaultFileIcon width={48} height={48} />;
+```
+
+- `DefaultFolderIcon`: The default icon component for unknown folders.
+
+```tsx
+import { DefaultFolderIcon } from "@react-symbols/icons/utils";
+
+<DefaultFolderIcon width={48} height={48} />;
+```
+
+- `DefaultFolderOpenedIcon`: The default icon component for opened folders.
+
+```tsx
+import { DefaultFolderOpenedIcon } from "@react-symbols/icons/utils";
+
+<DefaultFolderOpenedIcon width={48} height={48} />;
+```
+
 ## 📦 Stack
 
 This is a monorepo project created with:
@@ -113,7 +345,7 @@ This is a monorepo project created with:
 
 **For library:**
 
-- [SWC](https://swc.rs/) - Rust-based platform for the Web.
+- [tsdown](https://tsdown.dev/) - The elegant bundler for libraries powered by Rolldown.
 - [React 19](https://reactjs.org/) - A JavaScript library for building user interfaces.
 - [Typescript](https://www.typescriptlang.org/) - TypeScript is JavaScript with syntax for types.
 
@@ -122,9 +354,8 @@ This is a monorepo project created with:
 - [React Router v7](https://reactrouter.com/) - Create modern, resilient user experiences with web fundamentals.
 - [Typescript](https://www.typescriptlang.org/) - TypeScript is JavaScript with syntax for types.
 - [Tailwind CSS](https://tailwindcss.com/) - A utility-first CSS framework for rapidly building custom designs.
-- [tw-animate-css](https://github.com/Wombosvideo/tw-animate-css) - A collection of Tailwind CSS v4.0 utilities for creating beautiful animations.
 - [shadcn/ui + Radix UI](https://ui.shadcn.com/) - An opinionated toast component for React.
-- [Sonner](https://sonner.emilkowal.ski/) - An opinionated toast component for React.
+- [pheralb/toast](https://toast.pheralb.dev/) - An accessible and beautiful toast library for React.
 
 ## 🙌 Contribute
 
@@ -160,4 +391,4 @@ and open [**localhost:5173**](http://localhost:5173) with your browser to see th
 
 ## 🔑 License
 
-- [MIT License](https://github.com/pheralb/react-symbols/blob/main/LICENSE).
+[MIT License](https://github.com/pheralb/react-symbols/blob/main/LICENSE).

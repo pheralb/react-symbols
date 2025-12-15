@@ -9,6 +9,7 @@
   ],
   "scripts": {
     "sherif": "pnpm dlx sherif@latest",
+    "fix:sherif": "pnpm dlx sherif@latest --fix",
     "build": "turbo build",
     "build:website": "turbo build --filter=@react-symbols/website",
     "build:library": "turbo build --filter=@react-symbols/icons",
@@ -21,14 +22,14 @@
     "format:check": "prettier --check \"**/*.{ts,tsx,js,jsx,mdx}\" --cache",
     "changeset": "changeset",
     "version-packages": "changeset version",
-    "release": "turbo build --filter=@react-symbols/website^... && changeset publish"
+    "release": "turbo build --filter=@react-symbols/website^... && changeset publish",
+    "beta:release": "turbo build --filter=@react-symbols/website^... && changeset publish --tag beta"
   },
   "devDependencies": {
-    "@changesets/changelog-github": "0.5.2",
     "@changesets/cli": "2.29.8",
-    "@types/node": "22.19.1",
-    "prettier": "3.6.2",
-    "prettier-plugin-tailwindcss": "0.7.1",
+    "@types/node": "22.19.3",
+    "prettier": "3.7.4",
+    "prettier-plugin-tailwindcss": "0.7.2",
     "turbo": "latest"
   },
   "engines": {
