@@ -26,7 +26,7 @@ const svgIconSize = {
 
 const linkClasses = buttonVariants({
   variant: "outline",
-  className: "rounded-3xl w-auto group",
+  className: "rounded-3xl w-auto group shadow-xs",
 });
 
 const arrowClasses = cn(
