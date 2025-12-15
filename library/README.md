@@ -175,7 +175,7 @@ const Page = () => {
 
 **Options**:
 
-- `fileName` (`string`): The name of the file (e.g., "example.ts", "index.html"). [The full list of extensions can be found here](https://github.com/pheralb/react-symbols/blob/main/library/src/utils/extensions/fileExtensionIcons.tsx). If does not match any file name or extension, the `DefaultFileIcon` component will be used.
+- `fileName` (`string`): The name of the file (e.g., "example.ts", "index.html"). [The full list of extensions can be found here](https://github.com/pheralb/react-symbols/blob/main/library/src/utils/extensions/fileExtensionIcons.tsx). If does not match any file extension, the `DefaultFileIcon` component will be rendered.
 
 ```tsx
 import { FileIcon } from "@react-symbols/icons/utils";
@@ -183,22 +183,39 @@ import { FileIcon } from "@react-symbols/icons/utils";
 <FileIcon fileName="example.ts" />;
 ```
 
-- `autoAssign` (`boolean`, optional): If `true`, the utility will automatically assign the icon based on the file name (e.g., "vite.config.js" -> Vite icon). [The full list of file names can be found here](https://github.com/pheralb/react-symbols/blob/main/library/src/utils/extensions/fileNameIcons.tsx). If does not match any file name or extension, the `DefaultFileIcon` component will be used.
+- `autoAssign` (`boolean`, optional): If `true`, the utility will automatically assign the icon based on the file name (e.g., "vite.config.js" -> Vite icon). [The full list of file names can be found here](https://github.com/pheralb/react-symbols/blob/main/library/src/utils/extensions/fileNameIcons.tsx). If does not match any file name, it will fallback to the file extension mapping.
 
 ```tsx
 import { FileIcon } from "@react-symbols/icons/utils";
 
-<FileIcon autoAssign={true} />;
+<FileIcon fileName="package.json" autoAssign={true} />;
 ```
 
-- `extendAssignmentData` (`ExtensionType`, optional): An object that allows you to extend or override the default file name to icon mapping.
+- `editFileExtensionData` (`ExtensionType`, optional): An object that allows you to extend or override the default file extension to icon mapping.
 
 ```tsx
+import { Js } from "@react-symbols/icons/files";
 import { FileIcon } from "@react-symbols/icons/utils";
 
 <FileIcon
-  extendAssignmentData={{
-    "myservice.config.ts": AngularService,
+  fileName="customfile.ts"
+  editFileExtensionData={{
+    ts: Js,
+  }}
+/>;
+```
+
+- `editFileNameData` (`ExtensionType`, optional. Activate `autoAssign` first): An object that allows you to extend or override the default file name to icon mapping.
+
+```tsx
+import { Ts } from "@react-symbols/icons/files";
+import { FileIcon } from "@react-symbols/icons/utils";
+
+<FileIcon
+  autoAssign={true}
+  fileName="eslint.config.ts"
+  editFileNameData={{
+    "eslint.config.ts": Ts,
   }}
 />;
 ```
@@ -208,7 +225,7 @@ import { FileIcon } from "@react-symbols/icons/utils";
 ```tsx
 import { FileIcon } from "@react-symbols/icons/utils";
 
-<FileIcon width={48} height={48} />;
+<FileIcon fileName="myfile.ts" width={48} height={48} />;
 ```
 
 ### `FolderIcon`
@@ -255,14 +272,15 @@ import { FolderIcon } from "@react-symbols/icons/utils";
 <FolderIcon folderName="src" />;
 ```
 
-- `extendAssignmentData` (`ExtensionType`, optional): An object that allows you to extend or override the default folder name to icon mapping.
+- `editFolderNameData` (`ExtensionType`, optional): An object that allows you to extend or override the default folder name to icon mapping.
 
 ```tsx
 import { FolderIcon } from "@react-symbols/icons/utils";
+import { FolderAngular } from "@react-symbols/icons/folders";
 
 <FolderIcon
-  extendAssignmentData={{
-    customfolder: CustomFolderIcon,
+  editFolderNameData={{
+    app: FolderAngular,
   }}
 />;
 ```
@@ -272,7 +290,7 @@ import { FolderIcon } from "@react-symbols/icons/utils";
 ```tsx
 import { FolderIcon } from "@react-symbols/icons/utils";
 
-<FolderIcon width={48} height={48} />;
+<FolderIcon folderName="app" width={48} height={48} />;
 ```
 
 ### `ExtensionType`
