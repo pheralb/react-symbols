@@ -19,6 +19,7 @@ interface GetIconForFileOptions extends SVGProps<SVGSVGElement> {
 
 interface GetIconForFolderOptions extends SVGProps<SVGSVGElement> {
   folderName: string;
+  extendAssignmentData?: ExtensionType | undefined;
 }
 
 /**
@@ -117,8 +118,12 @@ const FileIcon = ({
  */
 const getIconForFolder = ({
   folderName,
+  extendAssignmentData,
   ...props
 }: GetIconForFolderOptions): JSX.Element => {
+  if (extendAssignmentData) {
+    Object.assign(folderNameIcons, extendAssignmentData);
+  }
   const Icon = folderNameIcons[folderName] ?? DEFAULT_FOLDER_ICON;
   return <Icon {...props} />;
 };
@@ -126,11 +131,16 @@ const getIconForFolder = ({
 /**
  * React component to render a folder icon based on its name.
  * @param folderName Folder name.
+ * @param extendAssignmentData Optional additional extension-to-icon mappings.
  * @param props Optional SVG properties for the icon.
  * @returns JSX element of the corresponding icon.
  */
-const FolderIcon = ({ folderName, ...props }: GetIconForFolderOptions) => {
-  return getIconForFolder({ folderName, ...props });
+const FolderIcon = ({
+  folderName,
+  extendAssignmentData,
+  ...props
+}: GetIconForFolderOptions) => {
+  return getIconForFolder({ folderName, extendAssignmentData, ...props });
 };
 
 export {
