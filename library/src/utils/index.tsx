@@ -9,7 +9,7 @@ import { fileExtensionIcons } from "./extensions/fileExtensionIcons";
 // Default Icons
 import RsDocumentIcon from "../library/document";
 import RsFolderIcon from "../library/folders/folder";
-import FolderOpenIcon from "../library/folders/folderOpen";
+import RsFolderOpenIcon from "../library/folders/folderOpen";
 
 interface GetIconForFileOptions extends SVGProps<SVGSVGElement> {
   fileName: string;
@@ -26,19 +26,19 @@ interface GetIconForFolderOptions extends SVGProps<SVGSVGElement> {
  * Default icon for unknown files.
  * @constant
  */
-const DEFAULT_FILE_ICON = RsDocumentIcon;
+const DefaultFileIcon = RsDocumentIcon;
 
 /**
  * Default icon for unknown folders.
  * @constant
  */
-const DEFAULT_FOLDER_ICON = RsFolderIcon;
+const DefaultFolderIcon = RsFolderIcon;
 
 /**
  * Default icon for opened folders.
  * @constant
  */
-const DEFAULT_FOLDER_OPENED_ICON = FolderOpenIcon;
+const DefaultFolderOpenedIcon = RsFolderOpenIcon;
 
 /**
  * Gets the best matching extension for a file name.
@@ -81,10 +81,10 @@ const getIconForFile = ({
     const Icon =
       fileNameIcons[fileKey] ??
       fileExtensionIcons[extension] ??
-      DEFAULT_FILE_ICON;
+      DefaultFileIcon;
     return <Icon {...props} />;
   }
-  const Icon = fileExtensionIcons[extension] ?? DEFAULT_FILE_ICON;
+  const Icon = fileExtensionIcons[extension] ?? DefaultFileIcon;
   return <Icon {...props} />;
 };
 
@@ -124,7 +124,7 @@ const getIconForFolder = ({
   if (extendAssignmentData) {
     Object.assign(folderNameIcons, extendAssignmentData);
   }
-  const Icon = folderNameIcons[folderName] ?? DEFAULT_FOLDER_ICON;
+  const Icon = folderNameIcons[folderName] ?? DefaultFolderIcon;
   return <Icon {...props} />;
 };
 
@@ -148,7 +148,8 @@ export {
   FolderIcon,
   getIconForFile,
   getIconForFolder,
-  DEFAULT_FILE_ICON,
-  DEFAULT_FOLDER_ICON,
-  DEFAULT_FOLDER_OPENED_ICON,
+  DefaultFileIcon,
+  DefaultFolderIcon,
+  DefaultFolderOpenedIcon,
+  type ExtensionType,
 };
