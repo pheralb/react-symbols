@@ -14,12 +14,13 @@ import RsFolderOpenIcon from "../library/folders/folderOpen";
 interface GetIconForFileOptions extends SVGProps<SVGSVGElement> {
   fileName: string;
   autoAssign?: boolean | undefined;
-  extendAssignmentData?: ExtensionType | undefined;
+  editFileNameData?: ExtensionType | undefined;
+  editFileExtensionData?: ExtensionType | undefined;
 }
 
 interface GetIconForFolderOptions extends SVGProps<SVGSVGElement> {
   folderName: string;
-  extendAssignmentData?: ExtensionType | undefined;
+  editFolderNameData?: ExtensionType | undefined;
 }
 
 /**
@@ -62,29 +63,37 @@ const getFileExtension = (fileTitle: string): string => {
  * Gets the icon for a file based on its extension.
  * @param fileName File name (e.g., "example.ts", "example.css").
  * @param autoAssign Auto-assign icons based on file name (e.g., "vite.config.js" -> Vite icon).
- * @param extendAssignmentData Optional additional extension-to-icon mappings (activate ``autoAssign`` first).
+ * @param editFileNameData Optional additional file name-to-icon mappings (activate `autoAssign` first).
+ * @param editFileExtensionData Optional additional extension-to-icon mappings.
  * @param props Optional SVG properties for the icon.
  * @returns JSX element of the corresponding icon.
  */
 const getIconForFile = ({
   fileName,
   autoAssign,
-  extendAssignmentData,
+  editFileNameData,
+  editFileExtensionData,
   ...props
 }: GetIconForFileOptions): JSX.Element => {
   const extension = getFileExtension(fileName);
-  if (extendAssignmentData) {
-    Object.assign(fileNameIcons, extendAssignmentData);
-  }
+
+  const mergedFileNameIcons = editFileNameData
+    ? { ...fileNameIcons, ...editFileNameData }
+    : fileNameIcons;
+
+  const mergedFileExtensionIcons = editFileExtensionData
+    ? { ...fileExtensionIcons, ...editFileExtensionData }
+    : fileExtensionIcons;
+
   if (autoAssign) {
     const fileKey = fileName.toLowerCase();
     const Icon =
-      fileNameIcons[fileKey] ??
-      fileExtensionIcons[extension] ??
+      mergedFileNameIcons[fileKey] ??
+      mergedFileExtensionIcons[extension] ??
       DefaultFileIcon;
     return <Icon {...props} />;
   }
-  const Icon = fileExtensionIcons[extension] ?? DefaultFileIcon;
+  const Icon = mergedFileExtensionIcons[extension] ?? DefaultFileIcon;
   return <Icon {...props} />;
 };
 
@@ -92,20 +101,21 @@ const getIconForFile = ({
  * React component to render a file icon based on its extension.
  * @param fileName File name (e.g., "example.ts").
  * @param autoAssign Auto-assign icons based on file name (e.g., "vite.config.js" -> Vite icon).
- * @param extendAssignmentData Optional additional extension-to-icon mappings (activate ``autoAssign`` first).
+ * @param editFileNameData Optional additional file name-to-icon mappings (activate `autoAssign` first).
+ * @param editFileExtensionData Optional additional extension-to-icon mappings.
  * @param props Optional SVG properties for the icon.
  * @returns JSX element of the corresponding icon.
  */
 const FileIcon = ({
   fileName,
   autoAssign,
-  extendAssignmentData,
+  editFileNameData,
   ...props
 }: GetIconForFileOptions) => {
   return getIconForFile({
     fileName,
     autoAssign,
-    extendAssignmentData,
+    editFileNameData,
     ...props,
   });
 };
@@ -118,29 +128,30 @@ const FileIcon = ({
  */
 const getIconForFolder = ({
   folderName,
-  extendAssignmentData,
+  editFolderNameData,
   ...props
 }: GetIconForFolderOptions): JSX.Element => {
-  if (extendAssignmentData) {
-    Object.assign(folderNameIcons, extendAssignmentData);
-  }
-  const Icon = folderNameIcons[folderName] ?? DefaultFolderIcon;
+  const mergedFolderNameIcons = editFolderNameData
+    ? { ...folderNameIcons, ...editFolderNameData }
+    : folderNameIcons;
+
+  const Icon = mergedFolderNameIcons[folderName] ?? DefaultFolderIcon;
   return <Icon {...props} />;
 };
 
 /**
  * React component to render a folder icon based on its name.
  * @param folderName Folder name.
- * @param extendAssignmentData Optional additional extension-to-icon mappings.
+ * @param editFolderNameData Optional additional folder name-to-icon mappings.
  * @param props Optional SVG properties for the icon.
  * @returns JSX element of the corresponding icon.
  */
 const FolderIcon = ({
   folderName,
-  extendAssignmentData,
+  editFolderNameData,
   ...props
 }: GetIconForFolderOptions) => {
-  return getIconForFolder({ folderName, extendAssignmentData, ...props });
+  return getIconForFolder({ folderName, editFolderNameData, ...props });
 };
 
 export {
