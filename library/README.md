@@ -1,11 +1,11 @@
 <div align="center">
-<a href="https://react-symbols.vercel.app/">
+<a href="https://react-symbols.pheralb.dev">
 <img src="https://raw.githubusercontent.com/pheralb/react-symbols/main/website/public/images/og.png" alt="React-Symbols Screenshot" />
 </a>
 
 <p></p>
 
-<a href="https://react-symbols.vercel.app">Website</a>
+<a href="https://react-symbols.pheralb.dev">Website</a>
 <span>&nbsp;&nbsp;❖&nbsp;&nbsp;</span>
 <a href="#-getting-started">Getting Started</a>
 <span>&nbsp;&nbsp;❖&nbsp;&nbsp;</span>
@@ -29,12 +29,12 @@
 
 ## 🧑‍🚀 Introduction
 
-[**React-Symbols**](https://react-symbols.vercel.app/) is a library for React with the icons of the VSCode theme [**Symbols**](https://marketplace.visualstudio.com/items?itemName=miguelsolorio.symbols) created by [Miguel Solorio (@miguelsolorio)](https://github.com/miguelsolorio):
+[**React-Symbols**](https://react-symbols.pheralb.dev/) is a library for React with the icons of the VSCode theme [**Symbols**](https://marketplace.visualstudio.com/items?itemName=miguelsolorio.symbols) created by [Miguel Solorio (@miguelsolorio)](https://github.com/miguelsolorio):
 
 - 📦 **+200** files & folders icons.
 - ☁️ Support for **React Server Components** (RSC).
 - 🍃 **Lightweight** & **tree-shakable**.
-- 💙 Built with **Typescript**.
+- 💙 Built with **TypeScript**.
 - 🚀 **SVG optimized** and **minified**.
 
 ## 🚀 Getting Started
@@ -175,32 +175,40 @@ const Page = () => {
 
 **Options**:
 
-- `fileName` (`string`): The name of the file (e.g., "example.ts", "index.html"). [The full list of extensions can be found here](https://github.com/pheralb/react-symbols/blob/next/library/src/utils/extensions/fileExtensionIcons.tsx).
+- `fileName` (`string`): The name of the file (e.g., "example.ts", "index.html"). [The full list of extensions can be found here](https://github.com/pheralb/react-symbols/blob/next/library/src/utils/extensions/fileExtensionIcons.tsx). If does not match any file name or extension, the `DefaultFileIcon` component will be used.
 
 ```tsx
-<FileIcon fileName="example.ts" />
+import { FileIcon } from "@react-symbols/icons/utils";
+
+<FileIcon fileName="example.ts" />;
 ```
 
-- `autoAssign` (`boolean`, optional): If `true`, the utility will automatically assign the icon based on the file name (e.g., "vite.config.js" -> Vite icon). [The full list of file names can be found here](https://github.com/pheralb/react-symbols/blob/main/library/src/utils/extensions/fileNameIcons.tsx).
+- `autoAssign` (`boolean`, optional): If `true`, the utility will automatically assign the icon based on the file name (e.g., "vite.config.js" -> Vite icon). [The full list of file names can be found here](https://github.com/pheralb/react-symbols/blob/main/library/src/utils/extensions/fileNameIcons.tsx). If does not match any file name or extension, the `DefaultFileIcon` component will be used.
 
 ```tsx
-<FileIcon autoAssign={true} />
+import { FileIcon } from "@react-symbols/icons/utils";
+
+<FileIcon autoAssign={true} />;
 ```
 
 - `extendAssignmentData` (`ExtensionType`, optional): An object that allows you to extend or override the default file name to icon mapping.
 
 ```tsx
+import { FileIcon } from "@react-symbols/icons/utils";
+
 <FileIcon
   extendAssignmentData={{
     "myservice.config.ts": AngularService,
   }}
-/>
+/>;
 ```
 
 - `SVGProps<SVGSVGElement>`: SVG properties to customize the icon.
 
 ```tsx
-<FileIcon width={48} height={48} />
+import { FileIcon } from "@react-symbols/icons/utils";
+
+<FileIcon width={48} height={48} />;
 ```
 
 ### `FolderIcon`
@@ -239,26 +247,32 @@ const Page = () => {
 
 **Options**:
 
-- `folderName` (`string`): The name of the folder (e.g., "src", "config"). [The full list of folder names can be found here](https://github.com/pheralb/react-symbols/blob/next/library/src/utils/extensions/folderNameIcons.tsx).
+- `folderName` (`string`): The name of the folder (e.g., "src", "config"). [The full list of folder names can be found here](https://github.com/pheralb/react-symbols/blob/next/library/src/utils/extensions/folderNameIcons.tsx). If does not match any folder name, the `DefaultFolderIcon` component will be used.
 
 ```tsx
-<FolderIcon folderName="src" />
+import { FolderIcon } from "@react-symbols/icons/utils";
+
+<FolderIcon folderName="src" />;
 ```
 
 - `extendAssignmentData` (`ExtensionType`, optional): An object that allows you to extend or override the default folder name to icon mapping.
 
 ```tsx
+import { FolderIcon } from "@react-symbols/icons/utils";
+
 <FolderIcon
   extendAssignmentData={{
     customfolder: CustomFolderIcon,
   }}
-/>
+/>;
 ```
 
 - `SVGProps<SVGSVGElement>`: SVG properties to customize the icon.
 
 ```tsx
-<FolderIcon width={48} height={48} />
+import { FolderIcon } from "@react-symbols/icons/utils";
+
+<FolderIcon width={48} height={48} />;
 ```
 
 ### `ExtensionType`
@@ -266,9 +280,38 @@ const Page = () => {
 Type definition for extending or overriding the default file/folder name to icon mapping.
 
 ```ts
-interface ExtensionType {
-  [extension: string]: FC<SVGProps<SVGSVGElement>>;
-}
+import type { ExtensionType } from "@react-symbols/icons/utils";
+
+const moreExtensions: ExtensionType = {
+  "customfile.ext": CustomFileIcon,
+  customfolder: CustomFolderIcon,
+};
+```
+
+### Icons for file explorers
+
+- `DefaultFileIcon`: The default icon component for unknown files.
+
+```tsx
+import { DefaultFileIcon } from "@react-symbols/icons/utils";
+
+<DefaultFileIcon width={48} height={48} />;
+```
+
+- `DefaultFolderIcon`: The default icon component for unknown folders.
+
+```tsx
+import { DefaultFolderIcon } from "@react-symbols/icons/utils";
+
+<DefaultFolderIcon width={48} height={48} />;
+```
+
+- `DefaultFolderOpenedIcon`: The default icon component for opened folders.
+
+```tsx
+import { DefaultFolderOpenedIcon } from "@react-symbols/icons/utils";
+
+<DefaultFolderOpenedIcon width={48} height={48} />;
 ```
 
 ## 📦 Stack
