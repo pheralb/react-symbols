@@ -64,20 +64,20 @@
     "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
-    "@eslint/compat": "2.0.1",
-    "@eslint/js": "9.39.2",
+    "@eslint/compat": "2.0.3",
+    "@eslint/js": "9.39.4",
     "@tsconfig/strictest": "2.0.8",
-    "@types/node": "22.19.3",
-    "@types/react": "19.2.7",
+    "@types/node": "22.19.15",
+    "@types/react": "19.2.14",
     "@types/react-dom": "19.2.3",
-    "eslint": "9.39.2",
+    "eslint": "9.39.4",
     "eslint-plugin-react-hooks": "7.0.1",
-    "globals": "17.0.0",
-    "react": "19.2.3",
-    "react-dom": "19.2.3",
-    "tsdown": "0.18.4",
+    "globals": "17.4.0",
+    "react": "19.2.4",
+    "react-dom": "19.2.4",
+    "tsdown": "0.21.2",
     "typescript": "5.9.3",
-    "typescript-eslint": "8.52.0"
+    "typescript-eslint": "8.57.0"
   },
   "peerDependencies": {
     "react": ">= 16.8",
