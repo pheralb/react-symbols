@@ -1,10 +1,11 @@
 {
   "name": "@react-symbols/icons",
-  "version": "1.3.0",
+  "version": "1.3.1",
   "description": "Symbols icons by Miguel Solorio for React",
   "author": "@pheralb_",
   "license": "MIT",
   "type": "module",
+  "homepage": "https://react-symbols.pheralb.dev",
   "keywords": [
     "react",
     "icons",
