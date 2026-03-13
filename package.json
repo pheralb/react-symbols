@@ -2,7 +2,7 @@
   "name": "@react-symbols/workspace",
   "author": "@pheralb_",
   "private": true,
-  "packageManager": "pnpm@10.13.1",
+  "packageManager": "pnpm@10.32.1",
   "workspaces": [
     "website",
     "library"
@@ -26,9 +26,9 @@
     "beta:release": "turbo build --filter=@react-symbols/website^... && changeset publish --tag beta"
   },
   "devDependencies": {
-    "@changesets/cli": "2.29.8",
-    "@types/node": "22.19.3",
-    "prettier": "3.7.4",
+    "@changesets/cli": "2.30.0",
+    "@types/node": "22.19.15",
+    "prettier": "3.8.1",
     "prettier-plugin-tailwindcss": "0.7.2",
     "turbo": "latest"
   },
