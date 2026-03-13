@@ -72,7 +72,9 @@ const Header = (props: iHeaderProps) => {
             className={linkClasses}
           >
             <NPM width={svgIconSize.width} height={svgIconSize.height} />
-            <span>v{props.npmVersion}</span>
+            <span className="font-mono tracking-tight">
+              v{props.npmVersion}
+            </span>
             <ArrowUpRightIcon
               height={13}
               width={13}
