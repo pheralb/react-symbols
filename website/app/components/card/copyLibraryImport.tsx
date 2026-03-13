@@ -4,6 +4,7 @@ import { clipboard } from "@/utils";
 import { toast } from "@pheralb/toast";
 import { Button } from "@/ui/button";
 import { CopyIcon } from "lucide-react";
+import { Tooltip, TooltipContent, TooltipTrigger } from "@/ui/tooltip";
 
 interface CopyLibraryImportProps {
   itemName: string;
@@ -34,14 +35,21 @@ const CopyLibraryImport = ({
   };
 
   return (
-    <Button
-      title="Copy library import"
-      variant="ghost"
-      size="icon"
-      onClick={handleCopyFromLibrary}
-    >
-      <CopyIcon size={iconSize} />
-    </Button>
+    <Tooltip>
+      <TooltipTrigger asChild>
+        <Button
+          title="Copy library import"
+          variant="ghost"
+          size="icon"
+          onClick={handleCopyFromLibrary}
+        >
+          <CopyIcon size={iconSize} />
+        </Button>
+      </TooltipTrigger>
+      <TooltipContent side="bottom" sideOffset={4}>
+        <p>Copy library import</p>
+      </TooltipContent>
+    </Tooltip>
   );
 };
 

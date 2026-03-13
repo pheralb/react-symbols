@@ -38,15 +38,20 @@ const IconSize = () => {
   }, [iconSizeValue, searchParams, setSearchParams]);
 
   return (
-    <Slider
-      title={`Icon Size: ${iconSizeValue}px`}
-      showTooltip={true}
-      value={[Number(iconSizeValue)]}
-      onValueChange={(value) => setIconSizeValue(value[0])}
-      max={MAX_SIZE}
-      min={MIN_SIZE}
-      step={1}
-    />
+    <div className="flex w-full flex-col space-y-1.5 pb-1 text-zinc-600 hover:text-black md:w-56 md:pb-0 dark:text-zinc-400 dark:hover:text-white">
+      <div className="flex w-full items-center justify-between">
+        <p className="text-xs font-medium uppercase select-none">Size</p>
+        <span className="font-mono text-xs text-zinc-600 dark:text-zinc-400">{`${iconSizeValue}px`}</span>
+      </div>
+      <Slider
+        title={`Icon Size: ${iconSizeValue}px`}
+        value={[Number(iconSizeValue)]}
+        onValueChange={(value) => setIconSizeValue(value[0])}
+        max={MAX_SIZE}
+        min={MIN_SIZE}
+        step={1}
+      />
+    </div>
   );
 };
 

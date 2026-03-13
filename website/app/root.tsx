@@ -37,6 +37,7 @@ import {
 } from "remix-themes";
 import { themeSessionResolver } from "./sessions.server";
 import clsx from "clsx";
+import { TooltipProvider } from "./ui/tooltip";
 
 // Links:
 export const links: LinksFunction = () => [
@@ -181,7 +182,9 @@ export default function AppWithProviders() {
   const data = useLoaderData<typeof loader>();
   return (
     <ThemeProvider specifiedTheme={data.theme} themeAction="/action/set-theme">
-      <App />
+      <TooltipProvider>
+        <App />
+      </TooltipProvider>
     </ThemeProvider>
   );
 }

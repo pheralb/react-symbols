@@ -5,6 +5,7 @@ import { toast } from "@pheralb/toast";
 import { appConfig } from "@/config";
 import { Button } from "@/ui/button";
 import { Shadcnui } from "@/ui/icons/svgl";
+import { Tooltip, TooltipContent, TooltipTrigger } from "@/ui/tooltip";
 
 interface CopyShadcnCommandProps {
   itemName: string;
@@ -27,14 +28,21 @@ const CopyShadcnCommand = ({
     });
   };
   return (
-    <Button
-      title="Copy shadcn/ui command"
-      variant="ghost"
-      size="icon"
-      onClick={handleCopyShadcnCommand}
-    >
-      <Shadcnui width={iconSize} height={iconSize} />
-    </Button>
+    <Tooltip>
+      <TooltipTrigger asChild>
+        <Button
+          title="Copy shadcn/ui command"
+          variant="ghost"
+          size="icon"
+          onClick={handleCopyShadcnCommand}
+        >
+          <Shadcnui width={iconSize} height={iconSize} />
+        </Button>
+      </TooltipTrigger>
+      <TooltipContent side="bottom" sideOffset={4}>
+        <p>Copy shadcn/ui command</p>
+      </TooltipContent>
+    </Tooltip>
   );
 };
 

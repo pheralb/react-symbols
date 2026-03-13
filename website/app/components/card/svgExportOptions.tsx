@@ -4,7 +4,12 @@ import { appConfig } from "@/config";
 
 import axios from "axios";
 import { toast } from "@pheralb/toast";
-import { CloudDownloadIcon, DownloadIcon, LoaderIcon } from "lucide-react";
+import {
+  CloudDownloadIcon,
+  EllipsisIcon,
+  LoaderIcon,
+  XIcon,
+} from "lucide-react";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -18,6 +23,7 @@ import { React } from "@/ui/icons/react";
 
 import { clipboard } from "@/utils";
 import { downloadFile, tsxToSvg } from "@/utils/svgExport";
+import { Tooltip, TooltipContent, TooltipTrigger } from "@/ui/tooltip";
 
 interface DownloadSVGProps {
   itemName: string;
@@ -30,6 +36,7 @@ const SvgExportOptions = ({
   iconSize,
   ItemIcon,
 }: DownloadSVGProps) => {
+  const [isOpen, setOpen] = useState<boolean>(false);
   const [isLoading, setLoading] = useState<boolean>(false);
 
   const handleDownloadAsSvg = async () => {
@@ -125,21 +132,30 @@ const SvgExportOptions = ({
   };
 
   return (
-    <DropdownMenu>
-      <DropdownMenuTrigger
-        title="Export options"
-        disabled={isLoading}
-        className={buttonVariants({
-          variant: "ghost",
-          size: "icon",
-        })}
-      >
-        {isLoading ? (
-          <LoaderIcon size={iconSize} className="animate-spin" />
-        ) : (
-          <DownloadIcon size={iconSize} />
-        )}
-      </DropdownMenuTrigger>
+    <DropdownMenu open={isOpen} onOpenChange={setOpen}>
+      <Tooltip>
+        <TooltipTrigger asChild>
+          <DropdownMenuTrigger
+            title="More options"
+            disabled={isLoading}
+            className={buttonVariants({
+              variant: "ghost",
+              size: "icon",
+            })}
+          >
+            {isLoading ? (
+              <LoaderIcon size={iconSize} className="animate-spin" />
+            ) : isOpen ? (
+              <XIcon size={iconSize} />
+            ) : (
+              <EllipsisIcon size={iconSize} />
+            )}
+          </DropdownMenuTrigger>
+        </TooltipTrigger>
+        <TooltipContent side="bottom" sideOffset={4}>
+          <p>More options</p>
+        </TooltipContent>
+      </Tooltip>
       <DropdownMenuContent sideOffset={3}>
         <DropdownMenuItem onClick={handleCopyReactComponent}>
           <React width={16} height={16} />
