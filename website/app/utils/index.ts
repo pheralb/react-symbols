@@ -34,6 +34,10 @@ export const pascalToTitle = (str: string): string => {
 export const titleToPascal = (str: string): string => {
   return str
     .split(" ")
-    .map((word) => word.charAt(0).toLowerCase() + word.slice(1))
+    .map((word) =>
+      word === word.toUpperCase()
+        ? word.toLowerCase()
+        : word.charAt(0).toLowerCase() + word.slice(1),
+    )
     .join("");
 };
