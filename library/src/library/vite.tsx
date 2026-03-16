@@ -1,6 +1,6 @@
 import type { ComponentProps, FC } from "react";
 
-const Vite_Old: FC<ComponentProps<"svg">> = (props) => (
+const ViteOld: FC<ComponentProps<"svg">> = (props) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     fill="none"
@@ -34,4 +34,4 @@ const Vite: FC<ComponentProps<"svg">> = (props) => (
   </svg>
 );
 
-export { Vite, Vite_Old };
+export { Vite, ViteOld };
