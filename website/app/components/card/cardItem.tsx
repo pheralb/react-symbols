@@ -21,20 +21,13 @@ const Card = (props: iCard) => {
         "relative overflow-hidden",
         "group flex flex-col items-center justify-center space-y-2.5 rounded-md",
         "border border-zinc-200 dark:border-zinc-800",
+        "transition-shadow hover:shadow-sm",
       )}
     >
       <props.icon width={props.iconSize} height={props.iconSize} />
-      <p className="text-sm tracking-tight text-black dark:text-white">
+      <p className="font-mono text-sm font-medium tracking-tighter text-black dark:text-white">
         {props.name}
       </p>
-      <div
-        className={cn(
-          "absolute top-0 right-0",
-          "rounded-bl-md border-b border-l border-zinc-200 dark:border-zinc-800",
-        )}
-      >
-        {/* <CopySource iconSize={14} itemName={itemName} ItemIcon={props.icon} /> */}
-      </div>
       <div className="flex items-center space-x-1">
         <CopyShadcnCommand
           iconSize={cardItemSize}

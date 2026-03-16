@@ -1,5 +1,6 @@
 import { createCookieSessionStorage } from "react-router";
 import { createThemeSessionResolver } from "remix-themes";
+
 const isProduction = process.env.NODE_ENV === "production";
 
 const sessionStorage = createCookieSessionStorage({
@@ -10,7 +11,7 @@ const sessionStorage = createCookieSessionStorage({
     sameSite: "lax",
     secrets: ["s3cr3t"],
     ...(isProduction
-      ? { domain: "react-symbols.vercel.app", secure: true }
+      ? { domain: "react-symbols.pheralb.dev", secure: true }
       : {}),
   },
 });

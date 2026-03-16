@@ -67,7 +67,7 @@ import { Astro, FolderBlue } from "@react-symbols/icons";
 const MyComponent = () => {
   return (
     <>
-      <Angular width={128} height={128} />
+      <Astro width={128} height={128} />
       <FolderBlue width={128} height={128} />
     </>
   );
@@ -84,7 +84,7 @@ import { Astro, Docker } from "@react-symbols/icons/files";
 const MyComponent = () => {
   return (
     <>
-      <Angular width={128} height={128} />
+      <Astro width={128} height={128} />
       <Docker width={128} height={128} />
     </>
   );
