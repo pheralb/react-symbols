@@ -20,13 +20,10 @@ const CopyLibraryImport = ({
   ItemIcon,
 }: CopyLibraryImportProps) => {
   const handleCopyFromLibrary = async () => {
-    itemName = itemName.charAt(0).toUpperCase() + itemName.slice(1);
-    let code = "";
-    if (isFolder) {
-      code = `import { ${itemName} } from "@react-symbols/icons/folders";`;
-    } else {
-      code = `import { ${itemName} } from "@react-symbols/icons/files";`;
-    }
+    const capitalizedItemName = itemName.charAt(0).toUpperCase() + itemName.slice(1);
+    const code = isFolder
+      ? `import { ${capitalizedItemName} } from "@react-symbols/icons/folders";`
+      : `import { ${capitalizedItemName} } from "@react-symbols/icons/files";`;
     await clipboard(code);
     toast.success({
       text: "Copied library import",
