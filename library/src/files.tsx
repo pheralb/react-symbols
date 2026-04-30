@@ -34,7 +34,7 @@ export { default as Drawio } from "./library/drawio";
 export { default as Eslint } from "./library/eslint";
 export { default as Elixir } from "./library/elixir";
 export { default as Exe } from "./library/exe";
-export { default as Firebase } from "./library/firebase";
+export { Firebase, FirebaseOld } from "./library/firebase";
 export { default as Fsharp } from "./library/fsharp";
 export { default as Gear } from "./library/gear";
 export { default as Git } from "./library/git";

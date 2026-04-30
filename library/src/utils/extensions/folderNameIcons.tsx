@@ -7,6 +7,7 @@ const folderNameIcons: ExtensionType = {
   locales: ReactSymbol.FolderI18n,
   ".venv": ReactSymbol.FolderLock,
   ".gitlab": ReactSymbol.FolderGitlab,
+  ".zed": ReactSymbol.FolderZed,
   auth: ReactSymbol.FolderLock,
   core: ReactSymbol.FolderCore,
   models: ReactSymbol.FolderModels,

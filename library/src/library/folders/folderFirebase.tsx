@@ -1,6 +1,6 @@
 import type { ComponentProps, FC } from "react";
 
-const FolderFirebase: FC<ComponentProps<"svg">> = (props) => (
+const FolderFirebaseOld: FC<ComponentProps<"svg">> = (props) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     xmlnsXlink="http://www.w3.org/1999/xlink"
@@ -123,4 +123,34 @@ const FolderFirebase: FC<ComponentProps<"svg">> = (props) => (
   </svg>
 );
 
-export default FolderFirebase;
+const FolderFirebase: FC<ComponentProps<"svg">> = (props) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    viewBox="0 0 24 24"
+    {...props}
+  >
+    <path
+      fill="#FF9100"
+      d="M17.743 21.684a4.38 4.38 0 0 0 3.471-.087 6.2 6.2 0 0 1-1.937-1.217 3.3 3.3 0 0 1-1.534 1.304"
+    ></path>
+    <path
+      fill="#FFC400"
+      d="M19.277 20.38a6.18 6.18 0 0 1-1.976-4.945 3.3 3.3 0 0 0-1.726.018 4.38 4.38 0 0 0 2.168 6.23 3.3 3.3 0 0 0 1.534-1.303"
+    ></path>
+    <path
+      fill="#FF9100"
+      d="M19.277 20.38a3.304 3.304 0 0 0-1.976-4.945l-.01.183a6.18 6.18 0 0 0 1.986 4.762"
+    ></path>
+    <path
+      fill="#DD2C00"
+      d="M19.61 11a6.172 6.172 0 0 0-2.31 4.435 3.305 3.305 0 0 1 1.976 4.946c.56.517 1.214.932 1.938 1.216a4.38 4.38 0 0 0 2.541-3.823c.04-1.107-.386-2.094-.987-2.926C22.134 13.968 19.61 11 19.61 11"
+    ></path>
+    <path
+      fill="#64748B"
+      d="M7.784 4a3 3 0 0 1 1.904.682l2.393 1.965a1 1 0 0 0 .635.228H19a3 3 0 0 1 3 3V10h-2v-.125a1 1 0 0 0-1-1h-6.284a3 3 0 0 1-1.904-.682L8.419 6.228A1 1 0 0 0 7.784 6H5a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h8v2H5a3 3 0 0 1-3-3V7a3 3 0 0 1 3-3z"
+    ></path>
+  </svg>
+);
+
+export { FolderFirebase, FolderFirebaseOld };
