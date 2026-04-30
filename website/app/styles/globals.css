@@ -6,11 +6,11 @@
 
 /* Fonts */
 @font-face {
-  font-family: InterVariable;
+  font-family: "Geist";
   font-style: normal;
   font-weight: 100 900;
   font-display: swap;
-  src: url("/fonts/InterVariable.woff2") format("woff2");
+  src: url("/fonts/Geist.woff2") format("woff2");
 }
 
 @font-face {
@@ -25,7 +25,7 @@
   --color-react-symbol-aqua: #22d3ee;
 
   /* Fonts */
-  --font-sans: "InterVariable", ui-sans-serif, system-ui, sans-serif,
+  --font-sans: "Geist", ui-sans-serif, system-ui, sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --font-mono: "GeistMono", ui-monospace, SFMono-Regular, Consolas,
     "Liberation Mono";
