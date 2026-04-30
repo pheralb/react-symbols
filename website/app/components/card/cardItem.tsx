@@ -25,7 +25,7 @@ const Card = (props: iCard) => {
       )}
     >
       <props.icon width={props.iconSize} height={props.iconSize} />
-      <p className="text-sm text-zinc-800 dark:text-zinc-200">
+      <p className="text-sm text-zinc-950 dark:text-zinc-50">
         {props.name}
       </p>
       <div className="flex items-center space-x-1">
