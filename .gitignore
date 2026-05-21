@@ -27,3 +27,6 @@ api
 
 # Tailwind CSS compiled files =>
 website/src/styles/tailwind.css
+
+# Agents
+.agents
