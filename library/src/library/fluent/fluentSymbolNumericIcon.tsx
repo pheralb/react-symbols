@@ -1,0 +1,14 @@
+import type { ComponentProps, FC } from "react";
+const FluentSymbolNumericIcon: FC<ComponentProps<"svg">> = (props) => (
+  <svg
+    width={16}
+    height={16}
+    viewBox="0 0 16 16"
+    xmlns="http://www.w3.org/2000/svg"
+    fill="currentColor"
+    {...props}
+  >
+    <path d="M11.992 2.853a.75.75 0 0 0-1.485-.212l-.336 2.36H6.686l.306-2.145a.75.75 0 1 0-1.484-.212L5.17 5H3.75a.75.75 0 0 0-.001 1.5h1.207l-.428 3H2.75a.75.75 0 1 0 0 1.5h1.565l-.306 2.144a.75.75 0 0 0 1.485.212L5.83 11h3.485l-.306 2.144a.75.75 0 1 0 1.485.212L10.831 11h1.419a.75.75 0 0 0 0-1.5h-1.206l.428-3 1.778.001a.75.75 0 0 0 0-1.5h-1.564zM9.957 6.501 9.529 9.5H6.044l.428-3h3.485z" />
+  </svg>
+);
+export default FluentSymbolNumericIcon;
