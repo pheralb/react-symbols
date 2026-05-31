@@ -30,3 +30,6 @@ website/src/styles/tailwind.css
 
 # Agents
 .agents
+
+# shadcn/ui Registry
+website/public/r
