@@ -31,7 +31,7 @@
 
 [**React-Symbols**](https://react-symbols.pheralb.dev/) is a library for React with the icons of the VSCode theme [**Symbols**](https://marketplace.visualstudio.com/items?itemName=miguelsolorio.symbols) created by [Miguel Solorio (@miguelsolorio)](https://github.com/miguelsolorio):
 
-- 📦 **+200** files & folders icons.
+- 📦 **+400** file, folder & fluent icons.
 - ☁️ Support for **React Server Components** (RSC).
 - 🍃 **Lightweight** & **tree-shakable**.
 - 💙 Built with **TypeScript**.
@@ -59,16 +59,17 @@ bun add @react-symbols/icons
 
 ### - Usage
 
-**Using file and folder icons:**
+**Using file, folder & fluent icons:**
 
 ```jsx
-import { Astro, FolderBlue } from "@react-symbols/icons";
+import { Astro, FolderBlue, FluentBell } from "@react-symbols/icons";
 
 const MyComponent = () => {
   return (
     <>
       <Astro width={128} height={128} />
       <FolderBlue width={128} height={128} />
+      <FluentBell width={128} height={128} />
     </>
   );
 };
@@ -108,6 +109,21 @@ const MyComponent = () => {
 };
 
 export default MyComponent;
+```
+
+**Only fluent icons:**
+
+```jsx
+import { FluentAdd, FluentBell } from "@react-symbols/icons/fluent";
+
+const MyComponent = () => {
+  return (
+    <>
+      <FluentAdd width={128} height={128} />
+      <FluentBell width={128} height={128} />
+    </>
+  );
+};
 ```
 
 > 💿 Config for use the library with [**Remix Old Compiler**](https://remix.run/) if you are using CJS (v1 uses CJS by default, v2 uses ESM):

@@ -1,13 +1,13 @@
-import { Folder, FolderOpen } from "@react-symbols/icons";
+import { Folder, Fluent, Symbols } from "@react-symbols/icons";
 import { NavLink, useLocation } from "react-router";
 import { SearchIcon } from "lucide-react";
 
-import { totalFolders, totalIcons, totalLibraryIcons } from "@/data/svgs";
 import { cn } from "@/utils";
+import { totalFolders, totalFluentIcons, totalIcons } from "@/data/svgs";
 
-import { containerClasses } from "@/ui/container";
-import { buttonVariants } from "@/ui/button";
 import Divider from "@/ui/divider";
+import { buttonVariants } from "@/ui/button";
+import { containerClasses } from "@/ui/container";
 
 import Search from "@/components/navbar/search";
 import IconSize from "@/components/navbar/iconSize";
@@ -17,10 +17,20 @@ const NavIconsRoutes = [
   {
     title: "Files",
     href: "/",
+    icon: Symbols,
+    iconSize: 24,
   },
   {
     title: "Folders",
     href: "/folders",
+    icon: Folder,
+    iconSize: 20,
+  },
+  {
+    title: "Fluent",
+    href: "/fluent",
+    icon: Fluent,
+    iconSize: 18,
   },
 ];
 
@@ -45,7 +55,9 @@ const Navbar = () => {
                 ? `Search ${totalIcons} file icons...`
                 : location.pathname === "/folders"
                   ? `Search ${totalFolders} folder icons...`
-                  : `Search ${totalLibraryIcons} icons...`
+                  : location.pathname === "/fluent"
+                    ? `Search ${totalFluentIcons} Fluent icons...`
+                    : undefined
             }
             className="rounded-none border-t-0 border-r-0 border-b border-l-0 pl-8.5 text-[16px] shadow-none placeholder:text-[16px] focus:border-none focus:ring-0 focus-visible:ring-0 md:border-none md:pl-9.5 dark:focus:border-none dark:focus:ring-0"
           />
@@ -62,19 +74,18 @@ const Navbar = () => {
               className={cn(
                 buttonVariants({
                   variant: "outline",
-                  className: "shadow-none",
                 }),
-                "w-full md:w-auto",
-                location.pathname === link.href
-                  ? "border-zinc-200 text-black dark:border-zinc-800 dark:text-white"
-                  : "border-none bg-transparent text-zinc-600 hover:text-black dark:bg-transparent dark:text-zinc-400 dark:hover:text-white",
+                "w-full border-transparent bg-transparent shadow-none hover:border-zinc-200 md:w-auto dark:border-transparent dark:bg-transparent dark:hover:border-zinc-800",
+                "text-zinc-500 hover:text-zinc-800 dark:text-zinc-400 dark:hover:text-zinc-100",
+                location.pathname === link.href &&
+                  "border-zinc-200 bg-zinc-50 text-zinc-900 hover:border-zinc-700 hover:bg-zinc-100 hover:text-zinc-900 dark:border-zinc-700/50 dark:bg-zinc-800 dark:text-white dark:hover:border-zinc-600 dark:hover:text-white",
               )}
             >
-              {location.pathname === link.href ? (
-                <FolderOpen width={20} height={20} />
-              ) : (
-                <Folder width={20} height={20} />
-              )}
+              <link.icon
+                width={link.iconSize}
+                height={link.iconSize}
+                className="text-react-symbol-gray"
+              />
               <span>{link.title}</span>
             </NavLink>
           ))}

@@ -27,3 +27,10 @@ api
 
 # Tailwind CSS compiled files =>
 website/src/styles/tailwind.css
+
+# Agents
+.agents
+skills-lock.json
+
+# shadcn/ui Registry
+website/public/r

@@ -2,7 +2,7 @@
   "name": "@react-symbols/workspace",
   "author": "@pheralb_",
   "private": true,
-  "packageManager": "pnpm@10.32.1",
+  "packageManager": "pnpm@11.1.1",
   "workspaces": [
     "website",
     "library"
@@ -23,13 +23,14 @@
     "changeset": "changeset",
     "version-packages": "changeset version",
     "release": "turbo build --filter=@react-symbols/website^... && changeset publish",
-    "beta:release": "turbo build --filter=@react-symbols/website^... && changeset publish --tag beta"
+    "beta:release": "turbo build --filter=@react-symbols/website^... && changeset publish --tag beta",
+    "gen-from-vstheme": "node utils/gen-from-icon-vstheme.mjs"
   },
   "devDependencies": {
-    "@changesets/cli": "2.30.0",
-    "@types/node": "22.19.15",
-    "prettier": "3.8.1",
-    "prettier-plugin-tailwindcss": "0.7.2",
+    "@changesets/cli": "2.31.0",
+    "@types/node": "22.19.17",
+    "prettier": "3.8.3",
+    "prettier-plugin-tailwindcss": "0.8.0",
     "turbo": "latest"
   },
   "engines": {

@@ -1,16 +1,44 @@
+import type { ComponentType } from "react";
+
 import { buttonVariants } from "@/ui/button";
 import { containerClasses } from "@/ui/container";
-import { BoxIcon, FolderSearchIcon } from "lucide-react";
+import { BoxIcon, SearchXIcon, FolderSearchIcon } from "lucide-react";
 import { cn } from "@/utils";
 import { Link } from "react-router";
 
-interface NotFoundProps {
-  input: string;
-  onClearResults?: () => void;
-  isFolder?: boolean;
+type IconType = "symbols" | "folders" | "fluent";
+
+interface IconTypeConfig {
+  label: string;
+  pathname: string;
+  Icon: ComponentType<{ size?: number; strokeWidth?: number }>;
 }
 
-const NotFound = (props: NotFoundProps) => {
+const iconTypeConfig: Record<IconType, IconTypeConfig> = {
+  symbols: { label: "Files icons", pathname: "/", Icon: SearchXIcon },
+  folders: {
+    label: "Folders icons",
+    pathname: "/folders",
+    Icon: FolderSearchIcon,
+  },
+  fluent: {
+    label: "Fluent icons",
+    pathname: "/fluent",
+    Icon: FolderSearchIcon,
+  },
+};
+
+interface NotFoundProps {
+  input: string;
+  iconType?: IconType;
+}
+
+const NotFound = ({ input, iconType = "symbols" }: NotFoundProps) => {
+  const current = iconTypeConfig[iconType];
+  const alternatives = (
+    Object.entries(iconTypeConfig) as [IconType, IconTypeConfig][]
+  ).filter(([key]) => key !== iconType);
+
   return (
     <div
       className={cn(
@@ -21,23 +49,26 @@ const NotFound = (props: NotFoundProps) => {
       <BoxIcon className="mb-3 h-10 w-10 text-zinc-500" />
       <h1 className="text-xl font-bold">Not Found</h1>
       <p className="mt-2 text-gray-500">
-        No results for &quot;{props.input}&quot; in{" "}
-        {props.isFolder ? "folders icons" : "files icons"}
+        No results for &quot;{input}&quot; in {current.label}
       </p>
-      <div className="mt-2 flex items-center space-x-2">
+      <div className="mt-4 flex flex-wrap items-center justify-center gap-2">
         <Link
-          to={{
-            pathname: props.isFolder ? "/folders" : "/",
-          }}
-          className={buttonVariants({
-            variant: "outline",
-          })}
+          to={{ pathname: current.pathname, search: "" }}
+          className={buttonVariants({ variant: "default" })}
         >
-          <FolderSearchIcon size={18} strokeWidth={1.5} />
-          <span>
-            Show all {props.isFolder ? "folders icons" : "files icons"}
-          </span>
+          <current.Icon size={18} strokeWidth={1.5} />
+          <span>Clear</span>
         </Link>
+        {alternatives.map(([, config]) => (
+          <Link
+            key={config.pathname}
+            to={{ pathname: config.pathname, search: `?q=${input}` }}
+            className={buttonVariants({ variant: "outline" })}
+          >
+            <config.Icon size={18} strokeWidth={1.5} />
+            <span>{config.label}</span>
+          </Link>
+        ))}
       </div>
     </div>
   );

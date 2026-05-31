@@ -35,16 +35,16 @@ export default function Folders() {
   ) as unknown as iIcons[];
 
   return (
-    <main className="animate-in fade-in-60">
+    <main>
       {filteredIcons.length === 0 ? (
-        <NotFound input={search} isFolder={true} />
+        <NotFound input={search} iconType="folders" />
       ) : (
         <Grid className={cn(containerClasses, "pt-6 pb-16")}>
           {filteredIcons.map((icon) => {
             return (
               <Card
                 key={icon.name}
-                isFolder={true}
+                iconType="folders"
                 iconSize={deferredSize}
                 {...icon}
               />

@@ -6,27 +6,32 @@ import { Button } from "@/ui/button";
 import { CopyIcon } from "lucide-react";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/ui/tooltip";
 
+type IconType = "symbols" | "folders" | "fluent";
+
+const importPathMap: Record<IconType, string> = {
+  symbols: "@react-symbols/icons/files",
+  folders: "@react-symbols/icons/folders",
+  fluent: "@react-symbols/icons/fluent",
+};
+
 interface CopyLibraryImportProps {
   itemName: string;
-  isFolder?: boolean;
+  iconType: IconType;
   iconSize: number;
   ItemIcon: FC<SVGProps<SVGSVGElement>>;
 }
 
 const CopyLibraryImport = ({
   itemName,
-  isFolder,
+  iconType,
   iconSize,
   ItemIcon,
 }: CopyLibraryImportProps) => {
   const handleCopyFromLibrary = async () => {
-    itemName = itemName.charAt(0).toUpperCase() + itemName.slice(1);
-    let code = "";
-    if (isFolder) {
-      code = `import { ${itemName} } from "@react-symbols/icons/folders";`;
-    } else {
-      code = `import { ${itemName} } from "@react-symbols/icons/files";`;
-    }
+    const capitalizedItemName =
+      itemName.charAt(0).toUpperCase() + itemName.slice(1);
+    const code = `import { ${capitalizedItemName} } from "${importPathMap[iconType]}";`;
+
     await clipboard(code);
     toast.success({
       text: "Copied library import",

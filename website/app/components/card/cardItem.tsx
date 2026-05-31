@@ -5,10 +5,12 @@ import { cn, titleToPascal } from "@/utils";
 import CopyShadcnCommand from "@/components/card/copyShadcnCommand";
 import CopyLibraryImport from "@/components/card/copyLibraryImport";
 import SvgExportOptions from "@/components/card/svgExportOptions";
+import { Tooltip, TooltipContent, TooltipTrigger } from "@/ui/tooltip";
 
 interface iCard extends iIcons {
-  isFolder: boolean;
+  iconType: "symbols" | "folders" | "fluent";
   iconSize: number;
+  iconStrokeWidth?: number;
 }
 
 const Card = (props: iCard) => {
@@ -24,10 +26,24 @@ const Card = (props: iCard) => {
         "transition-shadow hover:shadow-sm",
       )}
     >
-      <props.icon width={props.iconSize} height={props.iconSize} />
-      <p className="font-mono text-sm font-medium tracking-tighter text-black dark:text-white">
-        {props.name}
-      </p>
+      <props.icon
+        width={props.iconSize}
+        height={props.iconSize}
+        strokeWidth={props.iconStrokeWidth}
+      />
+      <Tooltip delayDuration={400}>
+        <TooltipTrigger asChild>
+          <p className="max-w-36 cursor-help truncate text-sm text-zinc-950 dark:text-zinc-50">
+            {props.name}
+          </p>
+        </TooltipTrigger>
+        <TooltipContent side="bottom" sideOffset={4}>
+          <p className="text-sm text-zinc-950 dark:text-zinc-50">
+            &lt;{props.name} /&gt;
+          </p>
+        </TooltipContent>
+      </Tooltip>
+
       <div className="flex items-center space-x-1">
         <CopyShadcnCommand
           iconSize={cardItemSize}
@@ -35,7 +51,7 @@ const Card = (props: iCard) => {
           ItemIcon={props.icon}
         />
         <CopyLibraryImport
-          isFolder={props.isFolder}
+          iconType={props.iconType}
           iconSize={cardItemSize}
           itemName={itemName}
           ItemIcon={props.icon}
