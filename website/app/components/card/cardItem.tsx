@@ -31,9 +31,9 @@ const Card = (props: iCard) => {
         height={props.iconSize}
         strokeWidth={props.iconStrokeWidth}
       />
-      <Tooltip delayDuration={200}>
+      <Tooltip delayDuration={400}>
         <TooltipTrigger asChild>
-          <p className="max-w-36 truncate text-sm text-zinc-950 dark:text-zinc-50">
+          <p className="max-w-36 cursor-help truncate text-sm text-zinc-950 dark:text-zinc-50">
             {props.name}
           </p>
         </TooltipTrigger>
