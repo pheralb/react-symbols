@@ -19,16 +19,24 @@
   font-display: swap;
 }
 
+/* Scrollbar */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: gray transparent;
+}
+
 @theme {
   /* Colors */
+  --color-react-symbol-gray: #64748b;
   --color-react-symbol-pink: #c084fc;
   --color-react-symbol-aqua: #22d3ee;
 
   /* Fonts */
-  --font-sans: "Geist", ui-sans-serif, system-ui, sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --font-mono: "GeistMono", ui-monospace, SFMono-Regular, Consolas,
-    "Liberation Mono";
+  --font-sans:
+    "Geist", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-mono:
+    "GeistMono", ui-monospace, SFMono-Regular, Consolas, "Liberation Mono";
 
   /* Animations */
   --animate-spin-slow: spin 4s linear infinite;
