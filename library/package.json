@@ -5,6 +5,9 @@
   "author": "@pheralb_",
   "license": "MIT",
   "type": "module",
+  "publishConfig": {
+    "access": "public"
+  },
   "homepage": "https://react-symbols.pheralb.dev",
   "keywords": [
     "react",
@@ -63,7 +66,7 @@
   ],
   "scripts": {
     "dev": "tsdown --watch",
-    "build": "eslint ./src && tsdown",
+    "build": "tsdown",
     "prepublishOnly": "pnpm run build",
     "lint": "eslint ./src",
     "typecheck": "tsc --noEmit"
