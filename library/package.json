@@ -45,6 +45,10 @@
       "import": "./build/files/index.mjs",
       "types": "./build/files/index.d.mts"
     },
+    "./fluent": {
+      "import": "./build/fluent/index.mjs",
+      "types": "./build/fluent/index.d.mts"
+    },
     "./folders": {
       "import": "./build/folders/index.mjs",
       "types": "./build/folders/index.d.mts"

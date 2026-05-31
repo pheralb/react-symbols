@@ -4,6 +4,7 @@ export default defineConfig({
   entry: {
     index: "src/index.tsx",
     "files/index": "src/files.tsx",
+    "fluent/index": "src/fluent.tsx",
     "folders/index": "src/folders.tsx",
     "utils/index": "src/utils/index.tsx",
   },
