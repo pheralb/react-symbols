@@ -113,17 +113,18 @@ export default MyComponent;
 
 **Only fluent icons:**
 
-````jsx
-import { FluentBell, FluentSearch } from "@react-symbols/icons/fluent";
+```jsx
+import { FluentAdd, FluentBell } from "@react-symbols/icons/fluent";
 
 const MyComponent = () => {
   return (
     <>
+      <FluentAdd width={128} height={128} />
       <FluentBell width={128} height={128} />
-      <FluentSearch width={128} height={128} />
     </>
   );
 };
+```
 
 > 💿 Config for use the library with [**Remix Old Compiler**](https://remix.run/) if you are using CJS (v1 uses CJS by default, v2 uses ESM):
 
@@ -134,7 +135,7 @@ module.exports = {
   serverDependenciesToBundle: ["@react-symbols/icons"],
   ...
 };
-````
+```
 
 > ✍️ Change the name of the icon:
 
