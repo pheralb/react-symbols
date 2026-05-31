@@ -139,6 +139,15 @@ const folderNameIcons: ExtensionType = {
   javascript: ReactSymbol.FolderJs,
   sass: ReactSymbol.FolderSass,
   scss: ReactSymbol.FolderSass,
+  locale: ReactSymbol.FolderI18n,
+  l10n: ReactSymbol.FolderI18n,
+  translation: ReactSymbol.FolderI18n,
+  translations: ReactSymbol.FolderI18n,
+  intl: ReactSymbol.FolderI18n,
+  lang: ReactSymbol.FolderI18n,
+  langs: ReactSymbol.FolderI18n,
+  languages: ReactSymbol.FolderI18n,
+  ".godot": ReactSymbol.FolderGodot,
 };
 
 export { folderNameIcons };

@@ -732,6 +732,22 @@ const fileNameIcons: ExtensionType = {
   "oxlint.config.cts": ReactSymbol.Oxc,
   ".oxfmtrc.json": ReactSymbol.Oxc,
   ".oxfmtrc.jsonc": ReactSymbol.Oxc,
+  "prettier.config.ts": ReactSymbol.Prettier,
+  "prettier.config.cts": ReactSymbol.Prettier,
+  "prettier.config.mts": ReactSymbol.Prettier,
+  ".prettierrc.ts": ReactSymbol.Prettier,
+  ".prettierrc.cts": ReactSymbol.Prettier,
+  ".prettierrc.mts": ReactSymbol.Prettier,
+  ".cursorignore": ReactSymbol.Cursor,
+  ".cursorindexingignore": ReactSymbol.Cursor,
+  "eslint.config.cts": ReactSymbol.Eslint,
+  "eslint.config.mts": ReactSymbol.Eslint,
+  "oxfmt.config.js": ReactSymbol.Oxc,
+  "oxfmt.config.cjs": ReactSymbol.Oxc,
+  "oxfmt.config.mjs": ReactSymbol.Oxc,
+  "oxfmt.config.ts": ReactSymbol.Oxc,
+  "oxfmt.config.mts": ReactSymbol.Oxc,
+  "oxfmt.config.cts": ReactSymbol.Oxc,
 };
 
 export { fileNameIcons };
