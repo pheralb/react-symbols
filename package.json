@@ -23,7 +23,8 @@
     "changeset": "changeset",
     "version-packages": "changeset version",
     "release": "turbo build --filter=@react-symbols/website^... && changeset publish",
-    "beta:release": "turbo build --filter=@react-symbols/website^... && changeset publish --tag beta"
+    "beta:release": "turbo build --filter=@react-symbols/website^... && changeset publish --tag beta",
+    "gen-from-vstheme": "node utils/gen-from-icon-vstheme.mjs"
   },
   "devDependencies": {
     "@changesets/cli": "2.31.0",
