@@ -16,11 +16,18 @@ const getIcons = (filterFn: (key: string) => boolean): iIcons[] => {
     }));
 };
 
-export const Icons: iIcons[] = getIcons((key) => !key.startsWith("Folder"));
+export const Icons: iIcons[] = getIcons(
+  (key) => !key.startsWith("Folder") && !key.startsWith("Fluent"),
+);
 export const FoldersIcons: iIcons[] = getIcons((key) =>
   key.startsWith("Folder"),
 );
+export const FluentIcons: iIcons[] = getIcons((key) =>
+  key.startsWith("Fluent"),
+);
 
-export const totalLibraryIcons = [...Icons, ...FoldersIcons].length;
+export const totalLibraryIcons = [...Icons, ...FoldersIcons, ...FluentIcons]
+  .length;
 export const totalIcons = Icons.length;
 export const totalFolders = FoldersIcons.length;
+export const totalFluentIcons = FluentIcons.length;

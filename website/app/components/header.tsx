@@ -1,6 +1,6 @@
 import { Link } from "react-router";
 
-import { Github, NPM, Symbols } from "@react-symbols/icons";
+import { Github, NPM, SymbolsFill } from "@react-symbols/icons";
 
 import { cn } from "@/utils";
 
@@ -13,6 +13,7 @@ import { Figma, VSCode } from "@/ui/icons/svgl";
 import ExternalLink from "@/components/externalLink";
 import InstallCommand from "@/components/installCommand";
 import { ArrowUpRightIcon } from "lucide-react";
+import { totalLibraryIcons } from "@/data/svgs";
 
 const svgLogoSize = {
   width: 14,
@@ -47,7 +48,7 @@ const Header = (props: iHeaderProps) => {
       )}
     >
       <div className="flex items-center gap-4">
-        <Symbols height={50} className="hover:animate-pulse" />
+        <SymbolsFill height={50} className="hover:animate-pulse" />
         <div className="flex flex-col space-y-0.5">
           <Link
             to="/"
@@ -57,7 +58,8 @@ const Header = (props: iHeaderProps) => {
           </Link>
           <div className="flex flex-col items-start space-y-2 space-x-0 text-sm text-zinc-600 md:flex-row md:space-y-0 md:space-x-2 md:text-[16px] dark:text-zinc-400">
             <span>
-              Beautifully File & Folder Icons for your React projects.
+              {totalLibraryIcons} Beautifully File & Folder Icons for your React
+              projects.
             </span>
           </div>
         </div>
@@ -84,7 +86,7 @@ const Header = (props: iHeaderProps) => {
           </ExternalLink>
           <ExternalLink
             title="Docs"
-            href="https://github.com/pheralb/react-symbols"
+            href="https://github.com/pheralb/react-symbols#-getting-started"
             className={linkClasses}
           >
             <Github width={svgIconSize.width} height={svgIconSize.height} />

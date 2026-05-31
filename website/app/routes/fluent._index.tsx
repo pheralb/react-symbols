@@ -1,19 +1,19 @@
 import { useLoaderData, useSearchParams } from "react-router";
 import { useDeferredValue } from "react";
 
-import { FoldersIcons, type iIcons } from "@/data/svgs";
+import { FluentIcons, type iIcons } from "@/data/svgs";
 import { searchParamKey, iconSizeParamKey } from "@/data/searchParams";
 
 import Grid from "@/components/grid";
-import Card from "@/components/card/cardItem";
 import Loading from "@/components/loading";
 import NotFound from "@/components/notFound";
+import Card from "@/components/card/cardItem";
 
 import { cn } from "@/utils";
 import { containerClasses } from "@/ui/container";
 
 export async function clientLoader() {
-  const data = FoldersIcons;
+  const data = FluentIcons;
   return data;
 }
 
@@ -23,11 +23,11 @@ export function HydrateFallback() {
   );
 }
 
-export default function Folders() {
+export default function Fluent() {
   const data = useLoaderData<typeof clientLoader>();
   const [searchParams] = useSearchParams();
   const search = searchParams.get(searchParamKey) || "";
-  const iconSizeValue = searchParams.get(iconSizeParamKey) || 45;
+  const iconSizeValue = searchParams.get(iconSizeParamKey) || 30;
   const deferredSize = useDeferredValue(Number(iconSizeValue));
 
   const filteredIcons = data.filter((icon) =>
@@ -37,14 +37,14 @@ export default function Folders() {
   return (
     <main>
       {filteredIcons.length === 0 ? (
-        <NotFound input={search} iconType="folders" />
+        <NotFound input={search} iconType="fluent" />
       ) : (
         <Grid className={cn(containerClasses, "pt-6 pb-16")}>
           {filteredIcons.map((icon) => {
             return (
               <Card
                 key={icon.name}
-                iconType="folders"
+                iconType="fluent"
                 iconSize={deferredSize}
                 {...icon}
               />
